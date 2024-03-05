@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UI
+    uniqueID: 3841673925
+    locked: 0
+  - name: Mob
+    uniqueID: 324573977
+    locked: 0
+  - name: Weather
+    uniqueID: 1773813399
+    locked: 0
