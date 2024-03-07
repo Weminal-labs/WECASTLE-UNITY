@@ -35,12 +35,9 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse1) && SelectionManager.Instance.SelectedUnits.Count > 0)
         {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(target);
 
             foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
             {
-                Debug.Log(unit);
-
                 unit.MoveTo(new Vector3(target.x, target.y, transform.position.z));
             }
 
