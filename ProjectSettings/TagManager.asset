@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Ally
+  - Tree
+  - Gold Mine
+  - Main House
+  - House
+  - Worker
   layers:
   - Default
   - TransparentFX
@@ -16,7 +21,7 @@ TagManager:
   - Enemy
   - 
   - Mob
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -48,6 +53,9 @@ TagManager:
     locked: 0
   - name: Mob
     uniqueID: 324573977
+    locked: 0
+  - name: Tree
+    uniqueID: 1621431699
     locked: 0
   - name: Weather
     uniqueID: 1773813399

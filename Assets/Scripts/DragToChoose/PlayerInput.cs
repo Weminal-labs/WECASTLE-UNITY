@@ -13,6 +13,9 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private LayerMask FloorLayers;
     [SerializeField]
+    private LayerMask WorkLayers;
+
+    [SerializeField]
     private float DragDelay = 0.1f;
 
     private float MouseDownTime;
@@ -49,6 +52,7 @@ public class PlayerInput : MonoBehaviour
                     unit.MoveTo(Hit.point);
                 }
             }*/
+
         }
     }
 
