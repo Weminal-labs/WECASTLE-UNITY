@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 
@@ -34,12 +34,31 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Mouse1) && SelectionManager.Instance.SelectedUnits.Count > 0)
         {
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mousePosition = Input.mousePosition;
+            Vector3 target = Camera.main.ScreenToWorldPoint(mousePosition);
+            target.z = -1.9f;
+            Debug.Log("Target position: " + target);
 
             foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
             {
-                unit.MoveTo(new Vector3(target.x, target.y, transform.position.z));
+                unit.MoveTo(target);
             }
+
+            /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, FloorLayers))
+            {
+                Vector3 target = hit.point;
+
+                Debug.Log("Hit position: " + target);
+
+                foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
+                {
+                    unit.MoveTo(target);
+                }
+            }*/
+
 
             //This is orginal code
             /*if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))

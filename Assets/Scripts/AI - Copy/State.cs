@@ -20,13 +20,10 @@ public class IdleState : IState
         smartOnes.PlayAnimation(MovementState.idle);
 
         // Enter logic for Idle state
-        Debug.Log("Entering Idle state");
     }
 
     public void Update()
     {
-        Debug.Log("Updating Idle state");
-
         if (smartOnes.ShouldInRadius(smartOnes.detectionRadius,out Transform closestEnemy))
         {
             Debug.Log("Transitioning to Chase state");
@@ -38,7 +35,6 @@ public class IdleState : IState
     public void Exit()
     {
         // Exit logic for Idle state
-        Debug.Log("Exiting Idle state");
     }
 
 }

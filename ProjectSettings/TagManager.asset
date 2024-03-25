@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Ally
+  - Slope
+  - MobInfo
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Walkable
   - Mob
   - 
   - 
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: Weather
     uniqueID: 1773813399
+    locked: 0
+  - name: Rock
+    uniqueID: 94926423
     locked: 0
