@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -7,9 +7,9 @@ using UnityEngine;
 public class IdleState : IState
 {
     private readonly StateManager stateMachine;
-    private readonly SmartOnes smartOnes;
+    private readonly SmartOne smartOnes;
 
-    public IdleState(StateManager stateMachine, SmartOnes smartOnes)
+    public IdleState(StateManager stateMachine, SmartOne smartOnes)
     {
         this.stateMachine = stateMachine;
         this.smartOnes = smartOnes;
@@ -17,7 +17,7 @@ public class IdleState : IState
 
     public void Enter()
     {
-        smartOnes.PlayAnimation(MovementState.idle);
+        smartOnes.PlayAnimation(WarriorMovementState.idle);
 
         // Enter logic for Idle state
         Debug.Log("Entering Idle state");
@@ -27,7 +27,7 @@ public class IdleState : IState
     {
         Debug.Log("Updating Idle state");
 
-        if (smartOnes.ShouldInRadius(smartOnes.detectionRadius,smartOnes.Tag,out GameObject closestEnemy))
+        if (smartOnes.ShouldInRadius(smartOnes.detectionRadius,smartOnes.Tag,out Transform closestEnemy))
         {
             Debug.Log("Transitioning to Chase state");
 
@@ -48,10 +48,10 @@ public class IdleState : IState
 public class ChaseState : IState
 {
     private readonly StateManager stateMachine;
-    private readonly SmartOnes smartOnes;
-    private readonly GameObject closestEnemy;
+    private readonly SmartOne smartOnes;
+    private readonly Transform closestEnemy;
 
-    public ChaseState(StateManager stateMachine,SmartOnes smartOnes, GameObject closestEnemy)
+    public ChaseState(StateManager stateMachine,SmartOne smartOnes, Transform closestEnemy)
     {
         this.stateMachine = stateMachine;
         this.smartOnes = smartOnes;
@@ -60,7 +60,7 @@ public class ChaseState : IState
 
     public void Enter()
     {
-        smartOnes.PlayAnimation(MovementState.run);
+        smartOnes.PlayAnimation(WarriorMovementState.run);
 
         // Enter logic for Chase state
         Debug.Log("Entering Chase state");
@@ -72,11 +72,11 @@ public class ChaseState : IState
     {
 
         // Update logic for Chase state
-        if (smartOnes.ShouldInRadius(smartOnes.doRadius, smartOnes.Tag ,out GameObject closestEnemy))
+        if (smartOnes.ShouldInRadius(smartOnes.doRadius, smartOnes.Tag ,out Transform closestEnemy))
         {
             stateMachine.TransitionToState(new AttackState(stateMachine, smartOnes,closestEnemy));
         }
-        else if (!smartOnes.ShouldInRadius(smartOnes.detectionRadius, smartOnes.Tag , out GameObject newClosestEnemy))
+        else if (!smartOnes.ShouldInRadius(smartOnes.detectionRadius, smartOnes.Tag , out Transform newClosestEnemy))
         {
             Debug.Log("Transitioning to Idle state");
 
@@ -109,9 +109,9 @@ public class AttackState : IState
     public float attackAngleThreshold = 45f; // Threshold angle for attacking
 
     private readonly StateManager stateMachine;
-    private readonly SmartOnes smartOnes;
-    private readonly GameObject closestEnemy;
-    public AttackState(StateManager stateMachine,SmartOnes smartOnes, GameObject closestEnemy)
+    private readonly SmartOne smartOnes;
+    private readonly Transform closestEnemy;
+    public AttackState(StateManager stateMachine,SmartOne smartOnes, Transform closestEnemy)
     {
         this.stateMachine = stateMachine;
         this.smartOnes = smartOnes;
@@ -124,25 +124,20 @@ public class AttackState : IState
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Determine the direction to attack based on the angle
-        if (Mathf.Abs(angle) < attackAngleThreshold)
+        if (Mathf.Abs(angle) < attackAngleThreshold || angle > 180 - attackAngleThreshold || angle < -180 + attackAngleThreshold)
         {
             // Attack to the right
-            smartOnes.PlayAnimation(MovementState.attackSide);
+            smartOnes.PlayAnimation(WarriorMovementState.attackSide);
         }
         else if (angle > 90 - attackAngleThreshold && angle < 90 + attackAngleThreshold)
         {
             // Attack upwards
-            smartOnes.PlayAnimation(MovementState.attackUp);
-        }
-        else if (angle > 180 - attackAngleThreshold || angle < -180 + attackAngleThreshold)
-        {
-            // Attack to the left
-            smartOnes.PlayAnimation(MovementState.attackSide);
+            smartOnes.PlayAnimation(WarriorMovementState.attackUp);
         }
         else if (angle < -90 + attackAngleThreshold && angle > -90 - attackAngleThreshold)
         {
             // Attack downwards
-            smartOnes.PlayAnimation(MovementState.attackDown);
+            smartOnes.PlayAnimation(WarriorMovementState.attackDown);
         }
         // Enter logic for Attack state
             Debug.Log("Entering Attack state");
@@ -151,10 +146,10 @@ public class AttackState : IState
     public void Update()
     {
         // Update logic for Attack state
-        if (smartOnes.HasAttackAnimationCompleted())
+        if (smartOnes.HasAnimationCompleted())
         {
             // Check if there's still an enemy in attack radius
-            if (smartOnes.ShouldInRadius(smartOnes.detectionRadius, smartOnes.Tag, out GameObject newClosestEnemy))
+            if (smartOnes.ShouldInRadius(smartOnes.detectionRadius, smartOnes.Tag, out Transform newClosestEnemy))
             {
                 // Transition to Chase state with the new closest enemy
                 stateMachine.TransitionToState(new ChaseState(stateMachine, smartOnes, newClosestEnemy));
@@ -204,4 +199,6 @@ public class DieState : IState
         Debug.Log("Exiting Die state");
     }
 }
+
+*/
 

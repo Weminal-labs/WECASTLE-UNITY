@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -7,9 +7,9 @@ using UnityEngine;
 public class WorkerIdleState : IState
 {
     private readonly StateManager stateMachine;
-    private readonly SmartOnes smartOnes;
+    private readonly SmartOne smartOnes;
 
-    public WorkerIdleState(StateManager stateMachine, SmartOnes smartOnes)
+    public WorkerIdleState(StateManager stateMachine, SmartOne smartOnes)
     {
         this.stateMachine = stateMachine;
         this.smartOnes = smartOnes;
@@ -45,10 +45,10 @@ public class WorkerIdleState : IState
 public class WorkerGoState : IState
 {
     private readonly StateManager stateMachine;
-    private readonly SmartOnes smartOnes;
+    private readonly SmartOne smartOnes;
     private readonly GameObject closestEnemy;
 
-    public WorkerGoState(StateManager stateMachine, SmartOnes smartOnes, GameObject closestEnemy)
+    public WorkerGoState(StateManager stateMachine, SmartOne smartOnes, GameObject closestEnemy)
     {
         this.stateMachine = stateMachine;
         this.smartOnes = smartOnes;
@@ -99,10 +99,10 @@ public class WorkerGoState : IState
 public class WorkerChopState : IState
 {
     private readonly StateManager stateMachine;
-    private readonly SmartOnes smartOnes;
+    private readonly SmartOne smartOnes;
     private readonly GameObject closestEnemy;
 
-    public WorkerChopState(StateManager stateMachine, SmartOnes smartOnes, GameObject closestEnemy)
+    public WorkerChopState(StateManager stateMachine, SmartOne smartOnes, GameObject closestEnemy)
     {
         this.stateMachine = stateMachine;
         this.smartOnes = smartOnes;
@@ -133,10 +133,10 @@ public class WorkerChopState : IState
 public class WorkerBuildState : IState
 {
     private readonly StateManager stateMachine;
-    private readonly SmartOnes smartOnes;
+    private readonly SmartOne smartOnes;
     private readonly GameObject closestEnemy;
 
-    public WorkerBuildState(StateManager stateMachine, SmartOnes smartOnes, GameObject closestEnemy)
+    public WorkerBuildState(StateManager stateMachine, SmartOne smartOnes, GameObject closestEnemy)
     {
         this.stateMachine = stateMachine;
         this.smartOnes = smartOnes;
@@ -163,4 +163,4 @@ public class WorkerBuildState : IState
         Debug.Log("Exiting WorkerWorkState state");
     }
 
-}
+}*/

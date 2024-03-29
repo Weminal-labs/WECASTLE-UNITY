@@ -11,6 +11,7 @@ TagManager:
   - Main House
   - House
   - Worker
+  - Archer
   layers:
   - Default
   - TransparentFX

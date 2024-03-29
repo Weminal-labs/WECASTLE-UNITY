@@ -1,13 +1,7 @@
-using System.Collections;
+/*using System.Collections;
 using UnityEngine;
 
 
-public interface IState
-{
-    void Enter();
-    void Update();
-    void Exit();
-}
 
 
 public class StateManager
@@ -33,3 +27,4 @@ public class StateManager
     }
 
 }
+*/

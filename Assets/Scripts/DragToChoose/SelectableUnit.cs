@@ -8,12 +8,11 @@ public class SelectableUnit : MonoBehaviour
     private NavMeshAgent Agent;
     [SerializeField]
     private SpriteRenderer SelectionSprite;
-    public SmartOnes smartOnes;
+
     private void Awake()
     {
         SelectionManager.Instance.AvailableUnits.Add(this);
         Agent = GetComponent<NavMeshAgent>();
-        smartOnes = GetComponent<SmartOnes>();
         SelectionSprite = GetComponent<SpriteRenderer>();
 
     }
@@ -23,14 +22,13 @@ public class SelectableUnit : MonoBehaviour
         Agent.updateUpAxis = false;
         SelectionSprite.color = new Color(0.7f, 0.7f, 0.7f);
     }
+
+
     public void MoveTo(Vector3 Position)
     {
-        //smartOnes.stateMachine.SetInitialState(new WanderState(smartOnes.stateMachine, smartOnes));
-
         Agent.SetDestination(Position);
-
-        //smartOnes.stateMachine.EndState();
     }
+
 
     public void OnSelected()
     {

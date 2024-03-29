@@ -37,21 +37,22 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Mouse1) && SelectionManager.Instance.SelectedUnits.Count > 0)
         {
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            /*            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
-            {
-                unit.MoveTo(new Vector3(target.x, target.y, transform.position.z));
-            }
+                        foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
+                        {
+                            unit.MoveTo(new Vector3(target.x, target.y, transform.position.z));
+                        }*/
 
             //This is orginal code
-            /*if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))
+            if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))
             {
                 foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
                 {
                     unit.MoveTo(Hit.point);
                 }
-            }*/
+            }
+
 
         }
     }
