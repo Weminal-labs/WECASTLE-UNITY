@@ -30,7 +30,7 @@ public class SummonBanner : MonoBehaviour
     private GameObject[] spawnUnit;
     private int unit;
     [SerializeField]
-    private GameObject PlaceHolder, Animation, loadMobInfo;
+    private GameObject PlaceHolder, Animation;
     // Start is called before the first frame update
     void Start()
     {
@@ -146,9 +146,8 @@ public class SummonBanner : MonoBehaviour
         tempColor.a = 0f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;
         Animation.GetComponent<Animator>().SetTrigger("StartSummon");
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(14.5f);
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
-        yield return new WaitForSeconds(1f);
         tempColor = this.gameObject.GetComponent<RawImage>().color;
         tempColor.a = 100f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;

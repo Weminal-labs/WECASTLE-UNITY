@@ -13,12 +13,14 @@ public class LoadMobInfo : MonoBehaviour
     private Button buttonClose;
     private int unit;
     [SerializeField]
-    private Sprite selectUnit, unSelectUnit;
+    private Sprite[] unitIcons;
     [SerializeField]
-    private GameObject health, damage, speed, exp, lv;
+    private GameObject health, damage, speed, exp, lv, iconUnit, placeHolderUnit;
     private TextMeshProUGUI healthText, damageText, speedText, expText, lvText;
     [SerializeField]
     private GameObject name, history, placeHolder;
+    [SerializeField]
+    private RuntimeAnimatorController[] unitAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,5 +68,7 @@ public class LoadMobInfo : MonoBehaviour
         speedText.SetText(m_Stats.getSpeed().ToString());
         expText.SetText(m_Stats.getExp().ToString() + "/ " + m_Stats.getMaxExp().ToString());
         lvText.SetText(m_Stats.getLevel().ToString());
+        iconUnit.GetComponent<Image>().sprite = unitIcons[m_Stats.getMobType()];
+        placeHolderUnit.GetComponent<Animator>().runtimeAnimatorController = unitAnim[m_Stats.getMobType()] as RuntimeAnimatorController;
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -14,7 +15,7 @@ public class MobStats
     public MobStats(int mob_type, int minHealth, int maxHealth, int minDamage, int maxDamage, int minSpeed, int maxSpeed, string name, string history)
     {
         this.mob_type = mob_type;
-        this.id_mob = "DEMO_00001";
+        this.id_mob = generateID();
         this.maxHealth = Random.Range(minHealth, maxHealth);
         this.health = this.maxHealth;
         this.damage = Random.Range(minDamage, maxDamage);
@@ -42,6 +43,10 @@ public class MobStats
         this.position[0] = position.x;
         this.position[1] = position.y;
         this.position[2] = position.z;
+    }
+    public int getMobType()
+    {
+        return this.mob_type;
     }
     public string getId()
     {
@@ -115,5 +120,10 @@ public class MobStats
         this.position[0] = position.x;
         this.position[1] = position.y;
         this.position[2] = position.z;
+    }
+
+    private string generateID()
+    {
+        return new string(System.Guid.NewGuid().ToString());
     }
 }

@@ -9,7 +9,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     private MobStats stats;
     [SerializeField]
     private int curHealth, maxHealth, damage, speed, exp, maxExp, lv;
-
+    [SerializeField]
     private string name, history, id;
 
 

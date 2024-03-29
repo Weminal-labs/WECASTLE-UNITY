@@ -57,3 +57,6 @@ TagManager:
   - name: Rock
     uniqueID: 94926423
     locked: 0
+  - name: Rune
+    uniqueID: 3969781741
+    locked: 0
