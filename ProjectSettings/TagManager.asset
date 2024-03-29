@@ -6,12 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Ally
-  - Tree
-  - Gold Mine
-  - Main House
-  - House
-  - Worker
-  - Archer
+  - Slope
+  - MobInfo
   layers:
   - Default
   - TransparentFX
@@ -20,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Walkable
   - Mob
   - Interactable
   - 
@@ -60,4 +56,10 @@ TagManager:
     locked: 0
   - name: Weather
     uniqueID: 1773813399
+    locked: 0
+  - name: Rock
+    uniqueID: 94926423
+    locked: 0
+  - name: Rune
+    uniqueID: 3969781741
     locked: 0
