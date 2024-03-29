@@ -1,3 +1,5 @@
+using MBT;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,27 +10,61 @@ public class SelectableUnit : MonoBehaviour
     private NavMeshAgent Agent;
     [SerializeField]
     private SpriteRenderer SelectionSprite;
+    private Animator animator;
+    private Blackboard blackboard;
+    private BoolVariable isUnderControl ;
+
 
     private void Awake()
     {
         SelectionManager.Instance.AvailableUnits.Add(this);
         Agent = GetComponent<NavMeshAgent>();
         SelectionSprite = GetComponent<SpriteRenderer>();
-
+        animator = GetComponent<Animator>();
+        blackboard = GetComponent<Blackboard>();
     }
     private void Start()
     {
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
         SelectionSprite.color = new Color(0.7f, 0.7f, 0.7f);
+        isUnderControl = blackboard.GetVariable<BoolVariable>("isUnderControl");
+
     }
 
+    public void Update()
+    {
+        if(Agent.remainingDistance == 0)
+        {
+            isUnderControl.Value = false;
+        }
+
+    }
 
     public void MoveTo(Vector3 Position)
     {
+
+        isUnderControl.Value = true;
+        if (transform.position.x >= Position.x)
+        {
+            FlipLeft();
+        }
+        else if(transform.position.x < Position.x)
+        {
+            FlipRight();
+        }
         Agent.SetDestination(Position);
     }
 
+    public void FlipLeft()
+    {
+        gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.y, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+    }
+
+    public void FlipRight()
+    {
+        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.y, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+    }
 
     public void OnSelected()
     {

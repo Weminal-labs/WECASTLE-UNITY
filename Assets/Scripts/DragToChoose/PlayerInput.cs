@@ -64,13 +64,13 @@ public class PlayerInput : MonoBehaviour
 
 
             //This is orginal code
-            if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))
+/*            if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))
             {
                 foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
                 {
                     unit.MoveTo(Hit.point);
                 }
-            }
+            }*/
 
 
         }

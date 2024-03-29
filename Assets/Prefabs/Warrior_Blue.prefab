@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 81090961868095825}
   - component: {fileID: 81090961868095827}
   - component: {fileID: 81090961868095824}
-  - component: {fileID: 7815313339606433357}
-  - component: {fileID: 7815313339606433350}
+  - component: {fileID: 1114120795275111548}
   - component: {fileID: 7815313339606433348}
+  - component: {fileID: 4473383205475697441}
   - component: {fileID: 7815313339606433346}
   - component: {fileID: 7815313339606433335}
   - component: {fileID: 7815313339606433333}
@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 7815313339606433290}
   - component: {fileID: 7815313339606432246}
   - component: {fileID: 7815313339606432247}
-  - component: {fileID: 81090961868095839}
   - component: {fileID: 81090961868095838}
   - component: {fileID: 81090961868095834}
   - component: {fileID: 81090961868095835}
@@ -95,6 +94,7 @@ GameObject:
   - component: {fileID: 81090961868095821}
   - component: {fileID: 81090961868095810}
   - component: {fileID: 81090961868095811}
+  - component: {fileID: 1819355507721895854}
   m_Layer: 8
   m_Name: Warrior_Blue
   m_TagString: Ally
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 922654372022921524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.41, y: 14.29, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7815313340026031088}
@@ -191,53 +191,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!50 &7815313339606433357
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!65 &1114120795275111548
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922654372022921524}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &7815313339606433350
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922654372022921524}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01846528, y: 0.010652542}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.42307693, y: 0.43956047}
-    oldSize: {x: 1.21875, y: 1.421875}
-    newSize: {x: 1.21875, y: 1.421875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.61647177, y: 1.0078087}
-  m_EdgeRadius: 0
+  m_Size: {x: 1.21875, y: 1.421875, z: 0.2}
+  m_Center: {x: 0.09375, y: 0.0859375, z: 0}
 --- !u!195 &7815313339606433348
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -260,6 +226,30 @@ NavMeshAgent:
   m_BaseOffset: 0.33
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4473383205475697441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922654372022921524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b08f5ffb9bc2f4d8af85cce1698e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoMob: {fileID: 0}
+  curHealth: 0
+  maxHealth: 0
+  damage: 0
+  speed: 0
+  exp: 0
+  maxExp: 0
+  lv: 0
+  name: 
+  history: 
+  id: 
+  isDoubleClick: 0
 --- !u!114 &7815313339606433346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,11 +371,11 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 1400
+    x: 1380
     y: 180
     width: 160
     height: 45
-  parent: {fileID: 7815313339606433352}
+  parent: {fileID: 1819355507721895854}
   children:
   - {fileID: 7815313339606433358}
   - {fileID: 7815313339606433359}
@@ -415,8 +405,7 @@ MonoBehaviour:
   parent: {fileID: 7815313339606433312}
   children:
   - {fileID: 7815313339606433340}
-  - {fileID: 7815313339606433289}
-  - {fileID: 7815313339606433353}
+  - {fileID: 1819355507721895854}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -437,7 +426,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 420
-    y: -60
+    y: -100
     width: 160
     height: 45
   parent: {fileID: 0}
@@ -2017,7 +2006,7 @@ MonoBehaviour:
     y: 220
     width: 160
     height: 45
-  parent: {fileID: 7815313339606433352}
+  parent: {fileID: 0}
   children:
   - {fileID: 81090961868095816}
   behaviourTree: {fileID: 0}
@@ -2177,18 +2166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: angleToPatrol
   val: 0
---- !u!114 &81090961868095839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922654372022921524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cde1ede236dfbe94e8983819168b9203, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &81090961868095838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2357,8 +2334,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 81090961868095839}
-        m_TargetAssemblyTypeName: MobController, Assembly-CSharp
+      - m_Target: {fileID: 7815313339606433346}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
         m_MethodName: FlipLeft
         m_Mode: 1
         m_Arguments:
@@ -2545,8 +2522,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 81090961868095839}
-        m_TargetAssemblyTypeName: MobController, Assembly-CSharp
+      - m_Target: {fileID: 7815313339606433346}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -2705,8 +2682,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 81090961868095839}
-        m_TargetAssemblyTypeName: MobController, Assembly-CSharp
+      - m_Target: {fileID: 7815313339606433346}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -3023,8 +3000,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 81090961868095839}
-        m_TargetAssemblyTypeName: MobController, Assembly-CSharp
+      - m_Target: {fileID: 7815313339606433346}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
         m_MethodName: FlipLeft
         m_Mode: 1
         m_Arguments:
@@ -3132,8 +3109,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 81090961868095839}
-        m_TargetAssemblyTypeName: MobController, Assembly-CSharp
+      - m_Target: {fileID: 7815313339606433346}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -3241,8 +3218,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 81090961868095839}
-        m_TargetAssemblyTypeName: MobController, Assembly-CSharp
+      - m_Target: {fileID: 7815313339606433346}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -3274,6 +3251,34 @@ MonoBehaviour:
   vector2Event:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1819355507721895854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922654372022921524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056841afaed742d4e909e76361b5173f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Repeater
+  rect:
+    serializedVersion: 2
+    x: 1260
+    y: 120
+    width: 160
+    height: 45
+  parent: {fileID: 7815313339606433352}
+  children:
+  - {fileID: 7815313339606433353}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  loops: 1
+  infinite: 0
+  breakOnFailure: 0
 --- !u!1 &7815313340026031089
 GameObject:
   m_ObjectHideFlags: 0

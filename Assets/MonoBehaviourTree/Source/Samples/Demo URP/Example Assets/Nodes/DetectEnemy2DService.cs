@@ -17,7 +17,7 @@ namespace MBTExample
         public override void Task()
         {
             // Find target in radius and feed blackboard variable with results
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range, mask);
+            Collider[] colliders = Physics.OverlapSphere(transform.position, range, mask);
             if (colliders.Length > 0)
             {
                 variableToSet.Value = colliders[0].transform;
