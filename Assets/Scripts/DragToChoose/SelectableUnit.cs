@@ -8,7 +8,7 @@ public class SelectableUnit : MonoBehaviour
     private NavMeshAgent Agent;
     [SerializeField]
     private SpriteRenderer SelectionSprite;
-    private SmartOnes smartOnes;
+    public SmartOnes smartOnes;
     private void Awake()
     {
         SelectionManager.Instance.AvailableUnits.Add(this);
