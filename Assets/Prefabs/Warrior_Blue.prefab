@@ -100,6 +100,8 @@ GameObject:
   - component: {fileID: 3555184498659454375}
   - component: {fileID: 3555184498659454427}
   - component: {fileID: 3555184498659454426}
+  - component: {fileID: 4388193544943223355}
+  - component: {fileID: 5590259885322971775}
   m_Layer: 8
   m_Name: Warrior_Blue
   m_TagString: Ally
@@ -301,6 +303,7 @@ MonoBehaviour:
   - {fileID: 6630152597534282489}
   - {fileID: 6630152597534283034}
   - {fileID: 3555184498659454425}
+  - {fileID: 5590259885322971775}
   masterBlackboard: {fileID: 0}
 --- !u!114 &6630152597534282402
 MonoBehaviour:
@@ -409,8 +412,8 @@ MonoBehaviour:
     height: 45
   parent: {fileID: 6630152597534282445}
   children:
-  - {fileID: 6630152597534282449}
   - {fileID: 3555184498659454424}
+  - {fileID: 6630152597534282449}
   - {fileID: 3555184498659454374}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -453,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 0}
+  selectedEditorNode: {fileID: 4388193544943223355}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -3324,8 +3327,8 @@ MonoBehaviour:
   title: Is Set Condition
   rect:
     serializedVersion: 2
-    x: 420
-    y: 120
+    x: -780
+    y: 80
     width: 160
     height: 45
   parent: {fileID: 6630152597534282405}
@@ -3370,8 +3373,8 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 540
-    y: 280
+    x: -620
+    y: 220
     width: 160
     height: 45
   parent: {fileID: 3555184498659454426}
@@ -3402,8 +3405,8 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 300
-    y: 260
+    x: -1020
+    y: 220
     width: 160
     height: 45
   parent: {fileID: 3555184498659454426}
@@ -3429,18 +3432,66 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 420
-    y: 200
+    x: -780
+    y: 140
     width: 160
     height: 45
   parent: {fileID: 3555184498659454424}
   children:
   - {fileID: 3555184498659454427}
+  - {fileID: 4388193544943223355}
   - {fileID: 3555184498659454375}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
   random: 0
+--- !u!114 &4388193544943223355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376223373040403929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Move Navmesh Agent Vector 3
+  rect:
+    serializedVersion: 2
+    x: -820
+    y: 220
+    width: 160
+    height: 59
+  parent: {fileID: 3555184498659454426}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  destination:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 6630152597534282456}
+    key: pointToMove
+    constantValue: {x: 0, y: 0, z: 0}
+  agent: {fileID: 6630152597534282409}
+  stopDistance: 2
+  updateInterval: 1
+--- !u!114 &5590259885322971775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376223373040403929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51272808e3662eb4286c82f38f91fae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: pointToMove
+  val: {x: 0, y: 0, z: 0}
 --- !u!1 &6630152596913481500
 GameObject:
   m_ObjectHideFlags: 0

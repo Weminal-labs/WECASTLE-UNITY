@@ -13,6 +13,7 @@ public class SelectableUnit : MonoBehaviour
     private Animator animator;
     private Blackboard blackboard;
     private BoolVariable isUnderControl ;
+    private TransformVariable pointToMove;
 
 
     private void Awake()
@@ -29,31 +30,42 @@ public class SelectableUnit : MonoBehaviour
         Agent.updateUpAxis = false;
         SelectionSprite.color = new Color(0.7f, 0.7f, 0.7f);
         isUnderControl = blackboard.GetVariable<BoolVariable>("isUnderControl");
+        pointToMove = blackboard.GetVariable<TransformVariable>("pointToMove");
 
     }
 
-    public void Update()
-    {
-        if(Agent.remainingDistance == 0)
+
+    /*    public void MoveTo(Vector3 Position)
         {
-            isUnderControl.Value = false;
-        }
 
-    }
+            isUnderControl.Value = true;
+            if (transform.position.x >= Position.x)
+            {
+                FlipLeft();
+            }
+            else if(transform.position.x < Position.x)
+            {
+                FlipRight();
+            }
+            //pointToMove.Value = Position;
+            Agent.SetDestination(Position);
+            pointToMove.Value = 
+        }*/
 
-    public void MoveTo(Vector3 Position)
+    public void MoveTo(GameObject Position)
     {
 
         isUnderControl.Value = true;
-        if (transform.position.x >= Position.x)
+        if (transform.position.x >= Position.transform.position.x)
         {
             FlipLeft();
         }
-        else if(transform.position.x < Position.x)
+        else if (transform.position.x < Position.transform.position.x)
         {
             FlipRight();
         }
-        Agent.SetDestination(Position);
+        //pointToMove.Value = Position;
+        pointToMove.Value = Position.transform;
     }
 
     public void FlipLeft()
