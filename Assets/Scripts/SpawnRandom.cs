@@ -26,7 +26,7 @@ public class SpawnRandom : MonoBehaviour
     IEnumerator Spawn()
     {
         float stop = 0f;
-        while (stop < 10f)
+        while (stop < 3f)
         {
             float x;
             float y;
