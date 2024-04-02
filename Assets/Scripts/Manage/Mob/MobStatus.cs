@@ -8,7 +8,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     private GameObject infoMob;
     private MobStats stats;
     [SerializeField]
-    private int curHealth, maxHealth, damage, speed, exp, maxExp, lv;
+    private int curHealth, maxHealth, damage, speed, exp, maxExp, lv, type;
     [SerializeField]
     private string name, history, id;
 
@@ -27,6 +27,10 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         }else
             return false;
     }
+    public int getType()
+    {
+        return type;
+    }
 
     public void LoadData(MobStats data)
     {
@@ -41,6 +45,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         this.lv = data.getLevel();
         this.history = data.getHistory();
         this.stats = data;
+        this.type = data.getMobType();
     }
     public void SaveData(ref MobStats data,int exp)
     {
