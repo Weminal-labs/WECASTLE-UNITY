@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -11,6 +12,7 @@ public class MobStats
     private int health, maxHealth, damage, speed, level, exp, maxExp;
     private float[] position;
     private string name, history;
+    private bool inBuilding;
     public MobStats() { }
     public MobStats(int mob_type, int minHealth, int maxHealth, int minDamage, int maxDamage, int minSpeed, int maxSpeed, string name, string history)
     {
@@ -25,6 +27,7 @@ public class MobStats
         this.maxExp = 5;
         this.name = name;
         this.history = history;
+        this.inBuilding = false;
     }
     public MobStats(MobStats mob, Vector3 position)
     {
@@ -39,6 +42,7 @@ public class MobStats
         this.maxExp = mob.maxExp;
         this.name = mob.name;
         this.history = mob.history;
+        this.inBuilding = false;
         this.position = new float[3];
         this.position[0] = position.x;
         this.position[1] = position.y;
@@ -125,5 +129,14 @@ public class MobStats
     private string generateID()
     {
         return new string(System.Guid.NewGuid().ToString());
+    }
+
+    public void setInBuilding(bool inbuilding)
+    {
+        this.inBuilding = inbuilding;
+    }
+    public bool isInBuilding()
+    {
+        return this.inBuilding;
     }
 }

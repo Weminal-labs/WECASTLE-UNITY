@@ -22,6 +22,10 @@ public class ManageMobData : MonoBehaviour
         this.dataPersistances = FindAllMobData();
         loadMob();
     }
+    public List<MobStats> getListMob()
+    {
+        return mobStats;
+    }
     public void newMob()
     {
         mobStats = new List<MobStats>();

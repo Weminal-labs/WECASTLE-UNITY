@@ -14,11 +14,11 @@ public class SummonEffect : MonoBehaviour
     }
     IEnumerator Gravity()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         this.gravity.gameObject.SetActive(true);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         this.gravity.GetComponent<Animator>().SetTrigger("End");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         this.gravity.gameObject.SetActive(false);
     }
 }

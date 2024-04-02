@@ -163,8 +163,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 324573977
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -5517611178949128519, guid: c0f2596c0306a5a4783c496a198d7b9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -437,7 +437,7 @@ MonoBehaviour:
     x: 420.66666
     y: -120
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 0}
   children:
   - {fileID: 6630152597534282445}
@@ -792,7 +792,7 @@ MonoBehaviour:
     x: 860
     y: 560
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 0}
   children: []
   behaviourTree: {fileID: 0}
@@ -3538,10 +3538,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 6.36
+  m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 50
+  m_InnerSpotAngle: 25
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -3575,7 +3575,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4294967295
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
