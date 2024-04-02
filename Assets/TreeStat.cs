@@ -30,6 +30,7 @@ public class TreeStat : MonoBehaviour
                 y = Random.RandomRange(this.transform.position.y - 5f, this.transform.position.y + 5f);
                 Instantiate(w_pref,new Vector3(x,y,transform.position.z),Quaternion.identity);
                 this.gameObject.GetComponent<Animator>().SetTrigger("Chopped");
+                Destroy(this.gameObject);
             }
         }
         else

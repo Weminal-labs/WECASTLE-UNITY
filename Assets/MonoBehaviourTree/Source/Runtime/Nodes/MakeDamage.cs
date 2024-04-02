@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class MakeDamage : MonoBehaviour
+namespace MBT
 {
-    // Start is called before the first frame update
-    void Start()
+    [AddComponentMenu("")]
+    [MBTNode(name = "Tasks/MakeDamage")]
+    public class MakeDamge : Leaf
     {
-        
-    }
+        public GameObjectReference target;
+        public GameObjectReference self;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+        public override NodeResult Execute()
+        {
+            if (target == null || self == null)
+            {
+                Debug.LogError("Prefap reference is not set in Set Prefap node.");
+                return NodeResult.failure;
+            }
+            /*
+                        MobStatus mobStatus = self.Value.GetComponent<MobStatus>();
+
+                        NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
+
+                        newBehaviourScript.TakeDmg(mobStatus.getDamage());*/
+            
+            return NodeResult.success;
+        }
+
+        public override bool IsValid()
+        {
+            return target != null && self != null;
+        }
     }
 }

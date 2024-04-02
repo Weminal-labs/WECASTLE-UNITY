@@ -105,4 +105,8 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         leftClickNum = 0;
         isTimeCheckAllowed = true;
     }
+    public int getDamage()
+    {
+        return damage;
+    }
 }
