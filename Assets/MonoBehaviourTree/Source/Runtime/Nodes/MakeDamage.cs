@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 namespace MBT
 {
     [AddComponentMenu("")]
-    [MBTNode(name = "Tasks/MakeDamage")]
-    public class MakeDamge : Leaf
+    [MBTNode(name = "Tasks/Make Damage")]
+    public class MakeDamage : Leaf
     {
         public GameObjectReference target;
         public GameObjectReference self;
@@ -20,13 +20,15 @@ namespace MBT
                 Debug.LogError("Prefap reference is not set in Set Prefap node.");
                 return NodeResult.failure;
             }
-            /*
-                        MobStatus mobStatus = self.Value.GetComponent<MobStatus>();
-
-                        NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
-
-                        newBehaviourScript.TakeDmg(mobStatus.getDamage());*/
             
+/*
+            MobStatus mobStatus = self.Value.GetComponent<MobStatus>();
+
+            NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
+
+            newBehaviourScript.TakeDmg(mobStatus.getDamage());*/
+            // 
+
             return NodeResult.success;
         }
 
