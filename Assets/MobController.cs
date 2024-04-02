@@ -16,12 +16,5 @@ public class MobController : MonoBehaviour
         
     }
 
-    public void FlipLeft() {
-        gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-    }
 
-    public void FlipRight()
-    {
-        gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-    }
 }
