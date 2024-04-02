@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 28783766725779268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.059999, y: 8.71, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6145845913094696332}
@@ -463,7 +463,12 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 64
-  range: 15
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
   variableToSet:
     useConstant: 0
     mode: 1

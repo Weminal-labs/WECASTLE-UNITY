@@ -294,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 6007164415344536163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.38, y: 13.97, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3739609905326639271}
@@ -1008,7 +1008,12 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 64
-  range: 10
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
   variableToSet:
     useConstant: 0
     mode: 1
@@ -3956,6 +3961,7 @@ MonoBehaviour:
   exp: 0
   maxExp: 0
   lv: 0
+  type: 0
   name: 
   history: 
   id: 
