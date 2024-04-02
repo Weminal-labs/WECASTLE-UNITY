@@ -6,13 +6,13 @@ using MBT;
 namespace MBTExample
 {
     [AddComponentMenu("")]
-    [MBTNode("Example/Detect Enemy 2D Service")]
-    public class DetectEnemy2DService : Service
+    [MBTNode("Example/Detect Enemy GameObject Service")]
+    public class DetectEnemyGameObjectService : Service
     {
         public LayerMask mask = -1;
         [Tooltip("Circle radius")]
-        public FloatReference range ;
-        public TransformReference variableToSet = new TransformReference(VarRefMode.DisableConstant);
+        public FloatReference range;
+        public GameObjectReference variableToSet = new GameObjectReference(VarRefMode.DisableConstant);
 
         public override void Task()
         {
@@ -20,7 +20,7 @@ namespace MBTExample
             Collider[] colliders = Physics.OverlapSphere(transform.position, range.Value, mask);
             if (colliders.Length > 0)
             {
-                variableToSet.Value = colliders[colliders.Length-1].transform;
+                variableToSet.Value = colliders[colliders.Length-1].gameObject;
             }
             else
             {
