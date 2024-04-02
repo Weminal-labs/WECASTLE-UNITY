@@ -31,7 +31,7 @@ public class UnitChose : MonoBehaviour
     private void loadListMob()
     {
         container.SetActive(true);
-        container.GetComponent<CanUseUnit>().loadMobCanUse();
+        container.GetComponent<CanUseUnit>().loadMobCanUse(buildingObj.GetComponent<MobInBuilding>().returnType());
         container.GetComponent<CanUseUnit>().setPlaceHolder(this.gameObject);
     }
     private void minusMob()
@@ -54,7 +54,7 @@ public class UnitChose : MonoBehaviour
     }
     public void setMobStat(MobStats mob)
     {
-        container.GetComponent<CanUseUnit>().loadMobCanUse();
+        container.GetComponent<CanUseUnit>().loadMobCanUse(buildingObj.GetComponent<MobInBuilding>().returnType());
         this.mobStats = mob;
         this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
@@ -79,7 +79,7 @@ public class UnitChose : MonoBehaviour
 
     public void loadMobStat(MobStats mob)
     {
-        container.GetComponent<CanUseUnit>().loadMobCanUse();
+        container.GetComponent<CanUseUnit>().loadMobCanUse(buildingObj.GetComponent<MobInBuilding>().returnType());
         this.mobStats = mob;
         this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         this.gameObject.transform.GetChild(1).gameObject.SetActive(true);

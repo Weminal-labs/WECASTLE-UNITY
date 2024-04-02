@@ -87,7 +87,6 @@ public class SummonBanner : MonoBehaviour
         int maxSpeed = Int32.Parse(split[1]);
         string nameMob = name.GetComponentInChildren<TMP_InputField>().text;
         string historyMob = history.GetComponentInChildren<TMP_InputField>().text;
-
         MobStats mob = new MobStats(this.unit, minHealth,  maxHealth, minDamage, maxDamage, minSpeed, maxSpeed, nameMob, historyMob);
         MobStats mobSummon = new MobStats(mob, spawnPosition.transform.position);
         managerDataMob.GetComponent<ManageMobData>().addMob(mobSummon);

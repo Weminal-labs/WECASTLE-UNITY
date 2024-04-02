@@ -29,7 +29,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Start()
     {
-        flagToMove.SetActive(false);
+        //flagToMove.SetActive(false);
     }
 
     private void Update()

@@ -8,6 +8,8 @@ TagManager:
   - Ally
   - Slope
   - MobInfo
+  - Tree
+  - Mob
   layers:
   - Default
   - TransparentFX

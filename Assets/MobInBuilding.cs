@@ -6,6 +6,8 @@ public class MobInBuilding : MonoBehaviour
 {
     [SerializeField]
     private List<MobStats> mob;
+    [SerializeField]
+    private int type;
     private void Start()
     {
         mob = new List<MobStats>();
@@ -31,5 +33,9 @@ public class MobInBuilding : MonoBehaviour
     public MobStats getMob(int i)
     {
         return this.mob[i];
+    }
+    public int returnType()
+    {
+        return type;
     }
 }
