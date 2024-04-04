@@ -20,11 +20,11 @@ namespace MBT
                 Debug.LogError("Prefap reference is not set in Set Prefap node.");
                 return NodeResult.failure;
             }
-            
-/*
+
+
             MobStatus mobStatus = self.Value.GetComponent<MobStatus>();
 
-            NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
+/*            NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
 
             newBehaviourScript.TakeDmg(mobStatus.getDamage());*/
             // 

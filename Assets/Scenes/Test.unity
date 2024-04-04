@@ -17582,6 +17582,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pawn_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 6464482481600815728, guid: 176d772e33b60e844bfaf57f0fb858a6, type: 3}
+      propertyPath: rect.x
+      value: 660
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464482481600815728, guid: 176d772e33b60e844bfaf57f0fb858a6, type: 3}
+      propertyPath: rect.y
+      value: 1200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 176d772e33b60e844bfaf57f0fb858a6, type: 3}
 --- !u!1001 &3560912595643823183
