@@ -388,7 +388,7 @@ MonoBehaviour:
     x: 500
     y: -40
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 0}
   children:
   - {fileID: 2664328406842757357}
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 500
-    y: 880
+    y: 900
     width: 160
     height: 45
   parent: {fileID: 2664328406842757279}
