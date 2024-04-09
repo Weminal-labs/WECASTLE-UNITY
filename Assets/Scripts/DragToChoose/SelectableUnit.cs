@@ -10,25 +10,25 @@ public class SelectableUnit : MonoBehaviour
     private NavMeshAgent Agent;
     [SerializeField]
     private SpriteRenderer SelectionSprite;
-    private Animator animator;
     private Blackboard blackboard;
     private BoolVariable isUnderControl ;
     private TransformVariable pointToMove;
 
+    public void SetIsUnderControl(bool value)
+    {
+        isUnderControl.Value = value;
+    }
 
     private void Awake()
     {
         SelectionManager.Instance.AvailableUnits.Add(this);
         Agent = GetComponent<NavMeshAgent>();
-        SelectionSprite = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
         blackboard = GetComponent<Blackboard>();
     }
     private void Start()
     {
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
-        SelectionSprite.color = new Color(0.7f, 0.7f, 0.7f);
         isUnderControl = blackboard.GetVariable<BoolVariable>("isUnderControl");
         pointToMove = blackboard.GetVariable<TransformVariable>("pointToMove");
 
@@ -55,7 +55,6 @@ public class SelectableUnit : MonoBehaviour
     public void MoveTo(GameObject Position)
     {
 
-        isUnderControl.Value = true;
         if (transform.position.x >= Position.transform.position.x)
         {
             FlipLeft();
@@ -80,15 +79,13 @@ public class SelectableUnit : MonoBehaviour
 
     public void OnSelected()
     {
-        //SelectionSprite.gameObject.SetActive(true);
-        SelectionSprite.color = new Color(1f, 1f, 1f);
+        SelectionSprite.gameObject.SetActive(true);
 
     }
 
     public void OnDeselected()
     {
-        //SelectionSprite.gameObject.SetActive(false);
-        SelectionSprite.color = new Color(0.7f, 0.7f, 0.7f);
+        SelectionSprite.gameObject.SetActive(false);
     }
 }
 
@@ -120,12 +117,16 @@ public class SelectionManager
 
     public void Select(SelectableUnit Unit)
     {
+        Unit.SetIsUnderControl(true);
+
         SelectedUnits.Add(Unit);
         Unit.OnSelected();
     }
 
     public void Deselect(SelectableUnit Unit)
     {
+        Unit.SetIsUnderControl(false);
+
         Unit.OnDeselected();
         SelectedUnits.Remove(Unit);
     }

@@ -20,7 +20,25 @@ namespace MBTExample
             Collider[] colliders = Physics.OverlapSphere(transform.position, range.Value, mask);
             if (colliders.Length > 0)
             {
-                variableToSet.Value = colliders[colliders.Length-1].gameObject;
+                // Initialize variables for storing closest distance and closest GameObject
+                float closestDistance = Mathf.Infinity;
+                GameObject closestGameObject = null;
+
+                // Iterate through each detected GameObject
+                foreach (Collider collider in colliders)
+                {
+                    // Calculate distance between current GameObject and detected GameObject
+                    float distance = Vector3.Distance(transform.position, collider.transform.position);
+                    // Check if current detected GameObject is closer than the previous closest GameObject
+                    if (distance < closestDistance)
+                    {
+                        // Update closest distance and closest GameObject
+                        closestDistance = distance;
+                        closestGameObject = collider.gameObject;
+                    }
+                }
+                // Assign closest GameObject to the variableToSet
+                variableToSet.Value =  closestGameObject;
             }
             else
             {

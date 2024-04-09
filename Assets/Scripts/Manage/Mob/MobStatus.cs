@@ -1,3 +1,4 @@
+using MBT;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     [SerializeField]
     private string name, history, id;
 
+    Blackboard blackboard ;
+    BoolVariable isDead;
+    IntVariable blackBoardDamage;
 
     //DoubleClick to Open
     private float firstLeftClickTime;
@@ -59,6 +63,10 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         infoMob = GameObject.FindWithTag("MobInfo");
         StartCoroutine(openMobStatus());
         //infoMob.GetComponent<LoadMobInfo>().LoadData(stats);
+        blackboard = this.GetComponent<Blackboard>();
+        isDead = blackboard.GetVariable<BoolVariable>("isDead");
+        blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
+        blackBoardDamage.Value = damage;
     }
 
     // Update is called once per frame
@@ -108,5 +116,27 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     public int getDamage()
     {
         return damage;
+    }
+
+    public void takeDame(int damage)
+    {
+        if (curHealth - damage < 0)
+        {
+            isDead.Value = true;            
+        }
+        else
+        {
+            curHealth -= damage;
+            DamageEffect damageEffect = GetComponent<DamageEffect>();
+            if (damageEffect != null)
+            {
+                damageEffect.Flash();
+            }
+        }
+    }
+
+    public void die()
+    { 
+        Destroy(this.gameObject);
     }
 }
