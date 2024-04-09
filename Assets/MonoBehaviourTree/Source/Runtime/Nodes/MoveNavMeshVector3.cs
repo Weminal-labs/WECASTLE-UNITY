@@ -8,7 +8,7 @@ namespace MBTExample
 {
     [AddComponentMenu("")]
     [MBTNode("Example/Move Navmesh Agent Vector 3")]
-    public class MoveNavmeshAgentVector3 : Leaf
+    public class MoveNavMeshVector3 : Leaf
     {
         public Vector3Reference destination;
         public NavMeshAgent agent;
