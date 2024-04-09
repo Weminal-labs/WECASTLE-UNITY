@@ -15,6 +15,6 @@ public class ControllOrderLayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        render.sortingOrder = (int)(transform.position.z * -1-2);
+        render.sortingOrder = (int)(transform.position.z * -1);
     }
 }
