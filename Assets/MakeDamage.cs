@@ -22,12 +22,14 @@ namespace MBT
             }
 
 
-            MobStatus mobStatus = self.Value.GetComponent<MobStatus>();
+            target.Value.GetComponent<TreeStat>().takeDame(self.Value.GetComponent<MobStatus>().getDamage());
 
-/*            NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
+            /*            NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
 
-            newBehaviourScript.TakeDmg(mobStatus.getDamage());*/
+                        newBehaviourScript.TakeDmg(mobStatus.getDamage());*/
             // 
+
+
 
             return NodeResult.success;
         }
