@@ -6,23 +6,16 @@ using UnityEngine;
 public class PlayerInfo
 {
     private string idPlayer;
-    private string name;
-    private int lv, exp, maxExp, curGold, curOre, curWood, curMeat, maxStock;
-    public PlayerInfo(string name) 
+    private int lv, exp, maxExp, curGold, curWood, curMeat;
+    public PlayerInfo(string idPlayer) 
     {
-        this.name = name;
-        this.idPlayer = System.Guid.NewGuid().ToString();
+        this.idPlayer = idPlayer;
         lv = 1;
         exp = 0;
         maxExp = 15;
-        curGold = 50;
-        curOre = 50;
-        curWood = 50;
-        curMeat = 50;
-    }
-    public string getPName()
-    {
-        return this.name;
+        curGold = 10;
+        curWood = 30;
+        curMeat = 15;
     }
     public string getIdPlayer() { return this.idPlayer;}
     public int getLv() { return this.lv;}
@@ -42,16 +35,11 @@ public class PlayerInfo
     }
     public int getMaxExp() { return this.maxExp;}
     public int getCurGold() {  return this.curGold;}
-    public int getCurOre() {  return this.curOre;}
     public int getCurWood() {  return this.curWood;}
     public int getCurMeat() {  return this.curMeat;}
     public void setCurGold(int gold)
     {
         this.curGold += gold;
-    }
-    public void setCurOre(int ore)
-    {
-        this.curOre += ore;
     }
     public void setCurMeat(int meat)
     {

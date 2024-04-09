@@ -2,6 +2,7 @@ using MBT;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MobStatus : MonoBehaviour, MobDataPersistance
 {
@@ -43,6 +44,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         this.maxHealth = data.getMaxHealth();
         this.damage = data.getDamage();
         this.speed = data.getSpeed();
+        this.gameObject.GetComponent<NavMeshAgent>().speed = this.speed;
         this.name = data.getName();
         this.exp = data.getExp();
         this.maxExp = data.getMaxExp();
@@ -62,7 +64,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     {
         infoMob = GameObject.FindWithTag("MobInfo");
         StartCoroutine(openMobStatus());
-        //infoMob.GetComponent<LoadMobInfo>().LoadData(stats);
+        infoMob.GetComponent<LoadMobInfo>().LoadData(stats);
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");

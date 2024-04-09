@@ -54,7 +54,7 @@ public class SelectableUnit : MonoBehaviour
 
     public void MoveTo(GameObject Position)
     {
-
+        isUnderControl.Value = true;
         if (transform.position.x >= Position.transform.position.x)
         {
             FlipLeft();
@@ -117,7 +117,7 @@ public class SelectionManager
 
     public void Select(SelectableUnit Unit)
     {
-        Unit.SetIsUnderControl(true);
+        //Unit.SetIsUnderControl(true);
 
         SelectedUnits.Add(Unit);
         Unit.OnSelected();
@@ -125,7 +125,7 @@ public class SelectionManager
 
     public void Deselect(SelectableUnit Unit)
     {
-        Unit.SetIsUnderControl(false);
+        //Unit.SetIsUnderControl(false);
 
         Unit.OnDeselected();
         SelectedUnits.Remove(Unit);

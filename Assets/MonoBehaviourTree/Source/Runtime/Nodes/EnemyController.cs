@@ -10,6 +10,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private int curHealth, maxHealth, damage, speed;
 
+    [SerializeField]
+    private GameObject m, g;
+
     Blackboard blackboard;
     BoolVariable isDead;
     Collider collider;
@@ -64,6 +67,22 @@ public class EnemyController : MonoBehaviour
 
     public void die()
     {
+        int gold = Random.Range(1, 6);
+        int meat = Random.Range(1, 6);
+        float x, y;
+        for (int i = 0; i < gold; i++)
+        {
+            x = Random.Range(this.transform.position.x - 2, this.transform.position.x + 2);
+            y = Random.Range(this.transform.position.y - 2, this.transform.position.y + 2);
+            Instantiate(g, new Vector3(x, y, transform.position.z), Quaternion.identity);
+        }
+        for (int i = 0; i < meat; i++)
+        {
+            x = Random.Range(this.transform.position.x - 2, this.transform.position.x + 2);
+            y = Random.Range(this.transform.position.y - 2, this.transform.position.y + 2);
+            Instantiate(m, new Vector3(x, y, transform.position.z), Quaternion.identity);
+        }
+
         Destroy(this.gameObject);
     }
 }
