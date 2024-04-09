@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,8 +19,8 @@ public class SummonBanner : MonoBehaviour
     [SerializeField]
     private Sprite selectUnit, unSelectUnit;
     [SerializeField]
-    private GameObject health, damage, speed, meat, gold, wood, ore;
-    private TextMeshProUGUI healthText, damageText, speedText, meatCost, goldCost, woodCost, oreCost;
+    private GameObject health, damage, speed, meat, gold, wood;
+    private TextMeshProUGUI healthText, damageText, speedText, meatCost, goldCost, woodCost;
     [SerializeField]
     private RuntimeAnimatorController wAnim, aAnim, pAnim;
     [SerializeField]
@@ -40,7 +39,6 @@ public class SummonBanner : MonoBehaviour
         speedText = speed.GetComponent<TextMeshProUGUI>();
         woodCost = wood.GetComponent<TextMeshProUGUI>();
         meatCost = meat.GetComponent<TextMeshProUGUI>();
-        oreCost = ore.GetComponent<TextMeshProUGUI>();
         goldCost = gold.GetComponent<TextMeshProUGUI>();
         selectWarrior();
         if (buttonClose != null)
@@ -104,7 +102,6 @@ public class SummonBanner : MonoBehaviour
         meatCost.SetText("60");
         woodCost.SetText("15");
         goldCost.SetText("30");
-        oreCost.SetText("30");
         anim.GetComponent<Animator>().runtimeAnimatorController = wAnim as RuntimeAnimatorController;
     }
     private void selectArcher()
@@ -119,7 +116,6 @@ public class SummonBanner : MonoBehaviour
         meatCost.SetText("60");
         woodCost.SetText("30");
         goldCost.SetText("30");
-        oreCost.SetText("15");
         anim.GetComponent<Animator>().runtimeAnimatorController = aAnim as RuntimeAnimatorController;
     }
     private void selectPawn()
@@ -134,7 +130,6 @@ public class SummonBanner : MonoBehaviour
         meatCost.SetText("40");
         woodCost.SetText("30");
         goldCost.SetText("20");
-        oreCost.SetText("30");
         anim.GetComponent<Animator>().runtimeAnimatorController = pAnim as RuntimeAnimatorController;
     }
 
@@ -148,7 +143,7 @@ public class SummonBanner : MonoBehaviour
         yield return new WaitForSeconds(4.5f);
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
         tempColor = this.gameObject.GetComponent<RawImage>().color;
-        tempColor.a = 100f;
+        tempColor.a = 100.0f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;
         PlaceHolder.gameObject.SetActive(true);
         this.gameObject.gameObject.SetActive(false);

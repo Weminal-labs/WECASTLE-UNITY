@@ -4,6 +4,7 @@ public class CloudSpawner : MonoBehaviour
 {
     public GameObject[] cloudPrefab;
     public float spawnInterval = 30.0f;
+    public float speed = 10.0f;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class CloudSpawner : MonoBehaviour
     void SpawnCloud()
     {
             // Calculate a random delay to spawn the cloud within the spawnInterval
-            float randomDelay = Random.Range(15.0f, spawnInterval);
+            float randomDelay = Random.Range(1.0f, spawnInterval);
 
             // Invoke the SpawnCloudObject method after the random delay
             Invoke("SpawnCloudObject", randomDelay);
@@ -24,8 +25,9 @@ public class CloudSpawner : MonoBehaviour
     void SpawnCloudObject()
     {
         int randomCloud = Random.Range(0, cloudPrefab.Length);
+        GameObject cloud = cloudPrefab[randomCloud];
+        cloud.GetComponent<CloudMovement>().speed = this.speed;
         // Instantiate a new cloud object at a fixed X position (-30, 0, 0)
-        GameObject newCloud = Instantiate(cloudPrefab[randomCloud], new Vector3(-30f, Random.Range(-12.0f, 12.0f), 0), Quaternion.identity);
-
+        Instantiate(cloud, new Vector3(-60f, Random.Range(-30.0f,50.0f), 0), Quaternion.identity);
     }
 }

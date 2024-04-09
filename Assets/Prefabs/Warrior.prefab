@@ -476,7 +476,7 @@ MonoBehaviour:
     x: 1500
     y: 280
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368222}
   children: []
   behaviourTree: {fileID: 0}
@@ -508,7 +508,7 @@ MonoBehaviour:
     x: 1260
     y: 280
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368222}
   children: []
   behaviourTree: {fileID: 0}
@@ -535,7 +535,7 @@ MonoBehaviour:
     x: 1340
     y: 200
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928179}
   children:
   - {fileID: 3739609904739368217}
@@ -562,7 +562,7 @@ MonoBehaviour:
     x: 420
     y: 60
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368311}
   children:
   - {fileID: 6823031203595928162}
@@ -590,7 +590,7 @@ MonoBehaviour:
     x: 420
     y: -160
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 0}
   children:
   - {fileID: 3739609904739368311}
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 0}
+  selectedEditorNode: {fileID: 3739609904739368311}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -645,7 +645,7 @@ MonoBehaviour:
     x: 40
     y: 740
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368292}
   children: []
   behaviourTree: {fileID: 0}
@@ -678,7 +678,7 @@ MonoBehaviour:
     x: -60
     y: 700
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368292}
   children: []
   behaviourTree: {fileID: 0}
@@ -705,7 +705,7 @@ MonoBehaviour:
     x: -60
     y: 600
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368309}
   children:
   - {fileID: 3739609904739368295}
@@ -747,7 +747,7 @@ MonoBehaviour:
     x: -360
     y: 140
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368223}
   children:
   - {fileID: 6823031203595928176}
@@ -793,7 +793,7 @@ MonoBehaviour:
     x: 160
     y: 360
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928095}
   children: []
   behaviourTree: {fileID: 0}
@@ -827,7 +827,7 @@ MonoBehaviour:
     x: 980
     y: 400
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928095}
   children:
   - {fileID: 3739609904739368306}
@@ -871,7 +871,7 @@ MonoBehaviour:
     x: 1040
     y: 680
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368302}
   children: []
   behaviourTree: {fileID: 0}
@@ -904,7 +904,7 @@ MonoBehaviour:
     x: 940
     y: 620
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368302}
   children: []
   behaviourTree: {fileID: 0}
@@ -931,7 +931,7 @@ MonoBehaviour:
     x: 860
     y: 560
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 0}
   children: []
   behaviourTree: {fileID: 0}
@@ -963,7 +963,7 @@ MonoBehaviour:
     x: 120
     y: 780
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368292}
   children: []
   behaviourTree: {fileID: 0}
@@ -995,7 +995,7 @@ MonoBehaviour:
     x: 420
     y: -20
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368220}
   children:
   - {fileID: 3739609904739368223}
@@ -1009,11 +1009,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 0
+    useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0
+    constantValue: 10
   variableToSet:
     useConstant: 0
     mode: 1
@@ -1038,7 +1038,7 @@ MonoBehaviour:
     x: -160
     y: 540
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368312}
   children:
   - {fileID: 3739609904739368292}
@@ -1090,7 +1090,7 @@ MonoBehaviour:
     x: -280
     y: 380
     width: 160
-    height: 45
+    height: 59
   parent: {fileID: 6823031203595928077}
   children:
   - {fileID: 3739609904739368312}
@@ -1136,7 +1136,7 @@ MonoBehaviour:
     x: -280
     y: 460
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368314}
   children:
   - {fileID: 3739609904739368313}
@@ -1163,7 +1163,7 @@ MonoBehaviour:
     x: -500
     y: 560
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368312}
   children:
   - {fileID: 3739609904739368260}
@@ -1215,7 +1215,7 @@ MonoBehaviour:
     x: -1360
     y: 880
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368316}
   children: []
   behaviourTree: {fileID: 0}
@@ -1247,7 +1247,7 @@ MonoBehaviour:
     x: -1420
     y: 820
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368316}
   children: []
   behaviourTree: {fileID: 0}
@@ -1274,7 +1274,7 @@ MonoBehaviour:
     x: -1420
     y: 740
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368266}
   children:
   - {fileID: 3739609904739368319}
@@ -1302,7 +1302,7 @@ MonoBehaviour:
     x: -1220
     y: 1000
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368316}
   children: []
   behaviourTree: {fileID: 0}
@@ -1343,7 +1343,7 @@ MonoBehaviour:
     x: -1040
     y: 280
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928077}
   children:
   - {fileID: 6823031203595928080}
@@ -1389,7 +1389,7 @@ MonoBehaviour:
     x: -1080
     y: 700
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368260}
   children:
   - {fileID: 3739609904739368277}
@@ -1440,7 +1440,7 @@ MonoBehaviour:
     x: -640
     y: 620
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368313}
   children:
   - {fileID: 3739609904739368266}
@@ -1470,7 +1470,7 @@ MonoBehaviour:
     x: -340
     y: 700
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368260}
   children:
   - {fileID: 3739609904739368271}
@@ -1521,7 +1521,7 @@ MonoBehaviour:
     x: -1420
     y: 680
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368260}
   children:
   - {fileID: 3739609904739368316}
@@ -1572,7 +1572,7 @@ MonoBehaviour:
     x: -580
     y: 700
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368260}
   children:
   - {fileID: 3739609904739368272}
@@ -1623,7 +1623,7 @@ MonoBehaviour:
     x: -120
     y: 960
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368271}
   children: []
   behaviourTree: {fileID: 0}
@@ -1650,7 +1650,7 @@ MonoBehaviour:
     x: -240
     y: 900
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368271}
   children: []
   behaviourTree: {fileID: 0}
@@ -1682,7 +1682,7 @@ MonoBehaviour:
     x: -340
     y: 820
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368271}
   children: []
   behaviourTree: {fileID: 0}
@@ -1709,7 +1709,7 @@ MonoBehaviour:
     x: -340
     y: 760
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368261}
   children:
   - {fileID: 3739609904739368270}
@@ -1737,7 +1737,7 @@ MonoBehaviour:
     x: -820
     y: 700
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368260}
   children:
   - {fileID: 3739609904739368276}
@@ -1788,7 +1788,7 @@ MonoBehaviour:
     x: -420
     y: 960
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368272}
   children: []
   behaviourTree: {fileID: 0}
@@ -1815,7 +1815,7 @@ MonoBehaviour:
     x: -520
     y: 900
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368272}
   children: []
   behaviourTree: {fileID: 0}
@@ -1847,7 +1847,7 @@ MonoBehaviour:
     x: -580
     y: 840
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368272}
   children: []
   behaviourTree: {fileID: 0}
@@ -1874,7 +1874,7 @@ MonoBehaviour:
     x: -580
     y: 760
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368267}
   children:
   - {fileID: 3739609904739368275}
@@ -1902,7 +1902,7 @@ MonoBehaviour:
     x: -940
     y: 960
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368277}
   children: []
   behaviourTree: {fileID: 0}
@@ -1929,7 +1929,7 @@ MonoBehaviour:
     x: -1040
     y: 900
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368277}
   children: []
   behaviourTree: {fileID: 0}
@@ -1961,7 +1961,7 @@ MonoBehaviour:
     x: -1080
     y: 820
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368277}
   children: []
   behaviourTree: {fileID: 0}
@@ -1988,7 +1988,7 @@ MonoBehaviour:
     x: -820
     y: 760
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368268}
   children:
   - {fileID: 3739609904739368280}
@@ -2016,7 +2016,7 @@ MonoBehaviour:
     x: -1080
     y: 760
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368257}
   children:
   - {fileID: 3739609904739368279}
@@ -2044,7 +2044,7 @@ MonoBehaviour:
     x: -640
     y: 960
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368276}
   children: []
   behaviourTree: {fileID: 0}
@@ -2071,7 +2071,7 @@ MonoBehaviour:
     x: -760
     y: 900
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368276}
   children: []
   behaviourTree: {fileID: 0}
@@ -2103,7 +2103,7 @@ MonoBehaviour:
     x: -820
     y: 840
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368276}
   children: []
   behaviourTree: {fileID: 0}
@@ -2130,7 +2130,7 @@ MonoBehaviour:
     x: 980
     y: 220
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 0}
   children:
   - {fileID: 6823031203595928095}
@@ -2158,7 +2158,7 @@ MonoBehaviour:
     x: 1240
     y: 780
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368302}
   children: []
   behaviourTree: {fileID: 0}
@@ -2185,7 +2185,7 @@ MonoBehaviour:
     x: 1360
     y: 840
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368302}
   children: []
   behaviourTree: {fileID: 0}
@@ -2217,7 +2217,7 @@ MonoBehaviour:
     x: 1140
     y: 720
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368302}
   children: []
   behaviourTree: {fileID: 0}
@@ -2249,7 +2249,7 @@ MonoBehaviour:
     x: 420
     y: 380
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928095}
   children:
   - {fileID: 6823031203595928094}
@@ -2295,7 +2295,7 @@ MonoBehaviour:
     x: -360
     y: 300
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928176}
   children:
   - {fileID: 3739609904739368256}
@@ -2322,7 +2322,7 @@ MonoBehaviour:
     x: -1400
     y: 480
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928080}
   children:
   - {fileID: 6823031203595928081}
@@ -2373,7 +2373,7 @@ MonoBehaviour:
     x: -1400
     y: 540
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928076}
   children: []
   behaviourTree: {fileID: 0}
@@ -2482,7 +2482,7 @@ MonoBehaviour:
     x: -1040
     y: 360
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368256}
   children:
   - {fileID: 6823031203595928076}
@@ -2510,7 +2510,7 @@ MonoBehaviour:
     x: -1220
     y: 480
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928080}
   children:
   - {fileID: 6823031203595928082}
@@ -2561,7 +2561,7 @@ MonoBehaviour:
     x: -1220
     y: 540
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928083}
   children: []
   behaviourTree: {fileID: 0}
@@ -2670,7 +2670,7 @@ MonoBehaviour:
     x: -1000
     y: 480
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928080}
   children:
   - {fileID: 6823031203595928086}
@@ -2721,7 +2721,7 @@ MonoBehaviour:
     x: -1000
     y: 540
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928087}
   children: []
   behaviourTree: {fileID: 0}
@@ -2830,7 +2830,7 @@ MonoBehaviour:
     x: 980
     y: 300
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368286}
   children:
   - {fileID: 3739609904739368297}
@@ -2858,7 +2858,7 @@ MonoBehaviour:
     x: 420
     y: 460
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739367585}
   children:
   - {fileID: 6823031203595928089}
@@ -2886,7 +2886,7 @@ MonoBehaviour:
     x: 180
     y: 540
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928094}
   children:
   - {fileID: 6823031203595928090}
@@ -2937,7 +2937,7 @@ MonoBehaviour:
     x: 380
     y: 540
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928094}
   children:
   - {fileID: 6823031203595928085}
@@ -2988,7 +2988,7 @@ MonoBehaviour:
     x: 580
     y: 540
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928094}
   children:
   - {fileID: 6823031203595928084}
@@ -3039,7 +3039,7 @@ MonoBehaviour:
     x: 300
     y: 640
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928089}
   children: []
   behaviourTree: {fileID: 0}
@@ -3148,7 +3148,7 @@ MonoBehaviour:
     x: 500
     y: 620
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928088}
   children: []
   behaviourTree: {fileID: 0}
@@ -3257,7 +3257,7 @@ MonoBehaviour:
     x: 700
     y: 600
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928091}
   children: []
   behaviourTree: {fileID: 0}
@@ -3380,7 +3380,7 @@ MonoBehaviour:
     x: -620
     y: -220
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368223}
   children:
   - {fileID: 6823031203595928178}
@@ -3426,7 +3426,7 @@ MonoBehaviour:
     x: -1240
     y: 120
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928160}
   children: []
   behaviourTree: {fileID: 0}
@@ -3458,7 +3458,7 @@ MonoBehaviour:
     x: -1600
     y: 120
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928160}
   children: []
   behaviourTree: {fileID: 0}
@@ -3485,7 +3485,7 @@ MonoBehaviour:
     x: -1480
     y: 20
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928175}
   children:
   - {fileID: 6823031203595928161}
@@ -3513,7 +3513,7 @@ MonoBehaviour:
     x: 180
     y: 660
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 0}
   children: []
   behaviourTree: {fileID: 0}
@@ -3574,7 +3574,7 @@ MonoBehaviour:
     x: -1420
     y: 120
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928160}
   children: []
   behaviourTree: {fileID: 0}
@@ -3607,7 +3607,7 @@ MonoBehaviour:
     x: -1720
     y: 0
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928168}
   children: []
   behaviourTree: {fileID: 0}
@@ -3643,7 +3643,7 @@ MonoBehaviour:
     x: -1280
     y: -100
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928169}
   children:
   - {fileID: 6823031203595928168}
@@ -3670,7 +3670,7 @@ MonoBehaviour:
     x: -1280
     y: -160
     width: 160
-    height: 45
+    height: 59
   parent: {fileID: 6823031203595928178}
   children:
   - {fileID: 6823031203595928174}
@@ -3716,7 +3716,7 @@ MonoBehaviour:
     x: -1700
     y: -60
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928174}
   children:
   - {fileID: 6823031203595928170}
@@ -3782,7 +3782,7 @@ MonoBehaviour:
     x: -1480
     y: -40
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928174}
   children:
   - {fileID: 6823031203595928160}
@@ -3848,7 +3848,7 @@ MonoBehaviour:
     x: -920
     y: -180
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 6823031203595928162}
   children:
   - {fileID: 6823031203595928169}
@@ -3876,7 +3876,7 @@ MonoBehaviour:
     x: -180
     y: 200
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368299}
   children:
   - {fileID: 6823031203595928077}
@@ -3904,7 +3904,7 @@ MonoBehaviour:
     x: 940
     y: 140
     width: 160
-    height: 45
+    height: 44
   parent: {fileID: 3739609904739368223}
   children:
   - {fileID: 3739609904739368222}
