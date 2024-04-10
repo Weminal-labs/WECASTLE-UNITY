@@ -11,9 +11,11 @@ namespace MBTExample
     {
         public Bounds bounds;
         public Vector3Reference blackboardVariable = new Vector3Reference(VarRefMode.DisableConstant);
+        public TransformReference centerReference = new TransformReference(VarRefMode.DisableConstant);
 
         public override NodeResult Execute()
         {
+            bounds.center = centerReference.Value.position;
             // Random values per component inside bounds
             blackboardVariable.Value = new Vector3(
                 Random.Range(bounds.min.x, bounds.max.x),
