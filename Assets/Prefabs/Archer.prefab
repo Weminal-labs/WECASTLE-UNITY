@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 9042837217227788852}
   m_Layer: 8
   m_Name: Archer
-  m_TagString: Mob
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,8 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerInfo
 {
-    private string idPlayer;
-    private int lv, exp, maxExp, curGold, curWood, curMeat;
+    public string idPlayer { get; set; }
+    public int lv { get; set; }
+    public int exp { get; set; }
+    public int maxExp { get; set; }
+    public int curGold { get; set; }
+    public int curWood { get; set; }
+    public int curMeat { get; set; }
     public PlayerInfo(string idPlayer) 
     {
         this.idPlayer = idPlayer;

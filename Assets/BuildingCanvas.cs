@@ -11,7 +11,7 @@ public class BuildingCanvas : MonoBehaviour
     [SerializeField]
     private Button buttonClose;
     [SerializeField]
-    private GameObject container;
+    private GameObject container, timeText;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +30,7 @@ public class BuildingCanvas : MonoBehaviour
     private void Close()
     {
         container.SetActive(false);
+        timeText.SetActive(false);
         this.gameObject.SetActive(false);
     }
 }

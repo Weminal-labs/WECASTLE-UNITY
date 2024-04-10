@@ -21,7 +21,10 @@ namespace MBT
                 return NodeResult.failure;
             }
 
-
+            if(target.Value.GetComponent<TreeStat>().getHp() <= self.Value.GetComponent<MobStatus>().getDamage())
+            {
+                self.Value.GetComponent<MobStatus>().LvUp(3);
+            }
             target.Value.GetComponent<TreeStat>().takeDame(self.Value.GetComponent<MobStatus>().getDamage());
 
             /*            NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();

@@ -15,6 +15,8 @@ public class UnitChose : MonoBehaviour
     private MobStats mobStats;
     [SerializeField]
     private RuntimeAnimatorController[] animMob;
+    [SerializeField]
+    private GameObject textTime;
     // Update is called once per frame
     void Start()
     {
@@ -51,6 +53,10 @@ public class UnitChose : MonoBehaviour
     public void setBuilding(GameObject building)
     {
         this.buildingObj = building;
+        if(this.buildingObj.GetComponent<MobInBuilding>().returnType() == 2 )
+        {
+            textTime.SetActive(true);
+        }
     }
     public void setMobStat(MobStats mob)
     {

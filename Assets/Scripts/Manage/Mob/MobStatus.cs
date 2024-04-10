@@ -50,8 +50,8 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         this.maxExp = data.getMaxExp();
         this.lv = data.getLevel();
         this.history = data.getHistory();
-        this.stats = data;
         this.type = data.getMobType();
+        this.stats = data;
     }
     public void SaveData(ref MobStats data,int exp)
     {
@@ -78,6 +78,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     }
     IEnumerator openMobStatus()
     {
+        LoadData(this.stats);
         yield return new WaitForSeconds(1.5f);
         showInfoMob();
     }
@@ -99,7 +100,11 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
             isDoubleClick = false;
         }
     }
-
+    public void LvUp(int exp)
+    {
+        this.stats.setExp(exp);
+        LoadData(this.stats);
+    }
     IEnumerator DetectDoubleClick()
     {
         isTimeCheckAllowed = false;
@@ -140,5 +145,10 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     public void die()
     { 
         Destroy(this.gameObject);
+    }
+
+    public string getIDMob()
+    {
+        return stats.getId();
     }
 }

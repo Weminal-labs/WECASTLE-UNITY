@@ -18,6 +18,13 @@ public class UnitChosen : MonoBehaviour
 
     public void setMobStat()
     {
+        foreach (GameObject pointer in GameObject.FindGameObjectsWithTag("Ally"))
+        {
+            if (pointer.GetComponent<MobStatus>().getIDMob().CompareTo(mobStats.getId()) == 0)
+            {
+                Debug.Log(pointer.GetComponent<MobStatus>().getIDMob());
+            }
+        }
         this.parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().setMobStat(mobStats);
     }
 }
