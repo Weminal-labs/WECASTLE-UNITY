@@ -38,4 +38,8 @@ public class MobInBuilding : MonoBehaviour
     {
         return type;
     }
+    public int getNumMob()
+    {
+        return this.mob.Count;
+    }
 }

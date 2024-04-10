@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 public class GameController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class GameController : MonoBehaviour
     public GameObject text;
     [SerializeField]
     private GameObject lv, exp, wood, gold, meat;
+    [SerializeField]
+    private string json;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class GameController : MonoBehaviour
         {
             logOut.onClick.AddListener(RequestLogOut);
         }
+        
     }
 
     // Update is called once per frame
@@ -35,6 +39,7 @@ public class GameController : MonoBehaviour
     {
         this.id = id;
         playerInfo = new PlayerInfo(id);
+        Debug.Log(JsonConvert.SerializeObject(playerInfo));
         text.GetComponent<TextMeshProUGUI>().SetText(id);
         lv.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getLv().ToString());
         exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();

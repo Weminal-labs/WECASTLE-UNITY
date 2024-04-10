@@ -15,7 +15,7 @@ public class LoadMobInfo : MonoBehaviour
     [SerializeField]
     private Sprite[] unitIcons;
     [SerializeField]
-    private GameObject health, damage, speed, exp, lv, iconUnit, placeHolderUnit;
+    private GameObject health, damage, speed,maxExp, exp, lv, iconUnit, placeHolderUnit;
     private TextMeshProUGUI healthText, damageText, speedText, expText, lvText;
     [SerializeField]
     private GameObject name, history, placeHolder;
@@ -61,6 +61,8 @@ public class LoadMobInfo : MonoBehaviour
         speedText = speed.GetComponent<TextMeshProUGUI>();
         expText = exp.GetComponent<TextMeshProUGUI>();
         lvText = lv.GetComponent<TextMeshProUGUI>();
+        maxExp.GetComponent<Slider>().maxValue = m_Stats.getMaxExp();
+        maxExp.GetComponent<Slider>().value = m_Stats.getExp();
         name.GetComponent<TextMeshProUGUI>().SetText(m_Stats.getName().ToString());
         history.GetComponent<TextMeshProUGUI>().SetText(m_Stats.getHistory().ToString());
         healthText.SetText(m_Stats.getHealth().ToString() + "/ " + m_Stats.getMaxHealth().ToString());

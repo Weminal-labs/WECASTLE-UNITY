@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 public class SummonBanner : MonoBehaviour
 {
@@ -142,6 +143,7 @@ public class SummonBanner : MonoBehaviour
         Animation.GetComponent<Animator>().SetTrigger("StartSummon");
         yield return new WaitForSeconds(4.5f);
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
+        Debug.Log(JsonConvert.SerializeObject(data));
         tempColor = this.gameObject.GetComponent<RawImage>().color;
         tempColor.a = 100.0f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;

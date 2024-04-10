@@ -7,12 +7,19 @@ using UnityEngine;
 [System.Serializable]
 public class MobStats
 {
-    private string id_mob;
-    private int mob_type;
-    private int health, maxHealth, damage, speed, level, exp, maxExp;
-    private float[] position;
-    private string name, history;
-    private bool inBuilding;
+    public string id_mob { get; set; }
+    public int mob_type { get; set; }
+    public int health { get; set; }
+    public int maxHealth { get; set; }
+    public int damage { get; set; }
+    public int speed { get; set; }
+    public int level { get; set; }
+    public int exp { get; set; }
+    public int maxExp { get; set; }
+    public float[] position { get; set; }
+    public string name { get; set; }
+    public string history { get; set; }
+    public bool inBuilding { get; set; }
     public MobStats() { }
     public MobStats(int mob_type, int minHealth, int maxHealth, int minDamage, int maxDamage, int minSpeed, int maxSpeed, string name, string history)
     {
@@ -62,7 +69,8 @@ public class MobStats
     }
     private void setHealthLvUp()
     {
-        this.health += Random.Range(1, 6);
+        this.maxHealth += Random.Range(1, 6);
+        this.health = this.maxHealth;
     }
     public int getHealth()
     {
@@ -90,7 +98,7 @@ public class MobStats
     }
     public void setExp(int exp)
     {
-        if (this.exp + exp > this.maxExp)
+        if (this.exp + exp >= this.maxExp)
         {
             this.exp = this.exp + exp - this.maxExp;
             this.maxExp = level * 5 + this.maxExp;
