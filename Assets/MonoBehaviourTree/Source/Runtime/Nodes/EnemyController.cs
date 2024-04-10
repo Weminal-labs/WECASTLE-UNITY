@@ -85,4 +85,19 @@ public class EnemyController : MonoBehaviour
 
         Destroy(this.gameObject);
     }
+
+    public void spawnSet(int lvMob)
+    {
+        this.maxHealth = Random.Range(75, 180);
+        this.curHealth = maxHealth;
+        this.damage = Random.Range(30,45);
+        this.speed = 12;
+        for(; lvMob>0;)
+        {
+            this.maxHealth += Random.Range(3, 8);
+            this.curHealth = maxHealth;
+            this.damage += Random.Range(3, 8);
+            lvMob--;
+        }
+    }
 }

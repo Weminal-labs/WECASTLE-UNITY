@@ -73,7 +73,18 @@ public class ManageMobData : MonoBehaviour
     {
         saveMob();
     }
-
+    public int MaxLV()
+    {
+        int max = 1;
+        foreach(MobStats mob in mobStats)
+        {
+            if(mob.getLevel() > max)
+            {
+                max = mob.getLevel();
+            }
+        }
+        return max;
+    }
     private List<MobDataPersistance> FindAllMobData()
     {
         IEnumerable<MobDataPersistance> dataPersistances = FindObjectsOfType<MonoBehaviour>()
