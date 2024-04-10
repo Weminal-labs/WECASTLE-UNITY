@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 4392729601653374081}
+  selectedEditorNode: {fileID: 4392729601653374083}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -3368,6 +3368,7 @@ MonoBehaviour:
     height: 45
   parent: {fileID: 4392729601653374082}
   children:
+  - {fileID: 4392729601653374083}
   - {fileID: 4392729601653374084}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -3438,7 +3439,7 @@ MonoBehaviour:
     y: -60
     width: 160
     height: 45
-  parent: {fileID: 0}
+  parent: {fileID: 4392729601653374085}
   children:
   - {fileID: 4392729601653374081}
   behaviourTree: {fileID: 0}
@@ -3464,7 +3465,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 3
+    constantValue: 3.5
   intReference2:
     useConstant: 1
     mode: 0
@@ -3530,7 +3531,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 3
+    constantValue: 3.5
   intReference2:
     useConstant: 1
     mode: 0

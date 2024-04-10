@@ -10,6 +10,7 @@ TagManager:
   - MobInfo
   - Tree
   - Mob
+  - NavMesh
   layers:
   - Default
   - TransparentFX

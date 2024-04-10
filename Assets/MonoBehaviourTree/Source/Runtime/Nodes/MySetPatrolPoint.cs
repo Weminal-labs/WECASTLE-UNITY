@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using MBT;
+using UnityEngine;
 
 namespace MBTExample
 {
@@ -11,8 +9,7 @@ namespace MBTExample
     {
         public TransformReference variableToSet = new TransformReference(VarRefMode.DisableConstant);
         public Transform[] waypoints;
-        private int index = 0;
-        private int direction = 1;
+        private System.Random random = new System.Random();
 
         public override NodeResult Execute()
         {
@@ -20,19 +17,11 @@ namespace MBTExample
             {
                 return NodeResult.failure;
             }
-            // Ping-pong between waypoints
-            if (direction == 1 && index == waypoints.Length - 1)
-            {
-                direction = -1;
-            }
-            else if (direction == -1 && index == 0)
-            {
-                direction = 1;
-            }
-            index += direction;
+            // Randomly select a waypoint index
+            int randomIndex = random.Next(waypoints.Length);
 
-            // Set blackboard variable with need waypoint (position)
-            variableToSet.Value = waypoints[index];
+            // Set blackboard variable with the selected waypoint (position)
+            variableToSet.Value = waypoints[randomIndex];
             return NodeResult.success;
         }
     }
