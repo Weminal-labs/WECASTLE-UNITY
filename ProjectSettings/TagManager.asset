@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Ally
+  - Slope
+  - MobInfo
+  - Tree
+  - Mob
+  - NavMesh
+  - MOBDATA
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Weather
+  - Water
+  - UI
+  - Enemy
+  - Walkable
+  - Mob
+  - Interactable
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3841673925
+    locked: 0
+  - name: Mob
+    uniqueID: 324573977
+    locked: 0
+  - name: Tree
+    uniqueID: 1621431699
+    locked: 0
+  - name: Weather
+    uniqueID: 1773813399
+    locked: 0
+  - name: Rock
+    uniqueID: 94926423
+    locked: 0
+  - name: Rune
+    uniqueID: 3969781741
+    locked: 0

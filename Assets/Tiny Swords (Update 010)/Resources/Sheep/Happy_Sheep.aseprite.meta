@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: 92fa8cf5a4644dd45a5f15f374495aaf
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 0
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 64
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638482800190517388
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Happy_Sheep_Frame_0
+    originalName: 
+    pivot: {x: 0.4883721, y: 0.57894737}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 92
+      width: 43
+      height: 38
+    spriteID: 6dabfe487fd77234f8e8de68d058499f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 92}
+  - name: Happy_Sheep_Frame_1
+    originalName: 
+    pivot: {x: 0.4883721, y: 0.57894737}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 138
+      width: 43
+      height: 38
+    spriteID: a29b4722301e67e49a5ec4b49998bf46
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 138}
+  - name: Happy_Sheep_Frame_2
+    originalName: 
+    pivot: {x: 0.4883721, y: 0.57894737}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 184
+      width: 43
+      height: 38
+    spriteID: 7bbd45e2daf8fa841a235d7a00c9fdb3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 184}
+  - name: Happy_Sheep_Frame_3
+    originalName: 
+    pivot: {x: 0.4883721, y: 0.57894737}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 4
+      width: 43
+      height: 38
+    spriteID: 931678473f7ab464bb34a8c58ade2b40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 4}
+  - name: Happy_Sheep_Frame_4
+    originalName: 
+    pivot: {x: 0.4883721, y: 0.5945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 142
+      width: 43
+      height: 37
+    spriteID: 9fe05cac7dbf11443afe063b69dd77b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 142}
+  - name: Happy_Sheep_Frame_5
+    originalName: 
+    pivot: {x: 0.47826087, y: 0.6111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 4
+      width: 46
+      height: 36
+    spriteID: 93bc868a535bd84479f4394acecd34a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 4}
+  - name: Happy_Sheep_Frame_6
+    originalName: 
+    pivot: {x: 0.47826087, y: 0.6111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 48
+      width: 46
+      height: 36
+    spriteID: e12f9c7f6d54dbc45b3f4ec5c8b699e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 48}
+  - name: Happy_Sheep_Frame_7
+    originalName: 
+    pivot: {x: 0.47727275, y: 0.5945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 4
+      width: 44
+      height: 37
+    spriteID: cda1fb99621fbee4b96eb84719aba816
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 4}
+  - name: Happy_Sheep_Frame_8
+    originalName: 
+    pivot: {x: 0.4883721, y: 0.57894737}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 50
+      width: 43
+      height: 38
+    spriteID: 501481f8f26c77a408b664ac8c5c61e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 50}
+  - name: Happy_Sheep_Frame_9
+    originalName: 
+    pivot: {x: 0.4883721, y: 0.57894737}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 96
+      width: 43
+      height: 38
+    spriteID: b24c5ff00706af54c97d68f182d43294
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 96}
+  - name: Happy_Sheep_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.45833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 174
+      width: 38
+      height: 48
+    spriteID: b04b28302e497064a8bbe199473cdb5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 174}
+  - name: Happy_Sheep_Frame_11
+    originalName: 
+    pivot: {x: 0.46666667, y: 0.44}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 63
+      width: 45
+      height: 50
+    spriteID: 231b185bbb108d14f8c43f77ee6939d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 63}
+  - name: Happy_Sheep_Frame_12
+    originalName: 
+    pivot: {x: 0.46666667, y: 0.43137255}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 45
+      height: 51
+    spriteID: d8fb00e166bb0484ab8b183b40481b28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Happy_Sheep_Frame_13
+    originalName: 
+    pivot: {x: 0.46666667, y: 0.4888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 121
+      width: 45
+      height: 45
+    spriteID: cfb9af1dc904590438836c7d94621489
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 121}
+  - name: Happy_Sheep_Frame_14
+    originalName: 
+    pivot: {x: 0.4814815, y: 0.73333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 162
+      y: 49
+      width: 54
+      height: 30
+    spriteID: 02467b6f74f6aa2418e09f9cb3c655f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: 49}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1097607552
+    name: Happy_Sheep
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Happy_Sheep_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 43
+        y: 42
+        width: 43
+        height: 38
+      spriteId: 6dabfe487fd77234f8e8de68d058499f
+    - name: Happy_Sheep_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 43
+        y: 42
+        width: 43
+        height: 38
+      spriteId: a29b4722301e67e49a5ec4b49998bf46
+    - name: Happy_Sheep_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 43
+        y: 42
+        width: 43
+        height: 38
+      spriteId: 7bbd45e2daf8fa841a235d7a00c9fdb3
+    - name: Happy_Sheep_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 43
+        y: 42
+        width: 43
+        height: 38
+      spriteId: 931678473f7ab464bb34a8c58ade2b40
+    - name: Happy_Sheep_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 43
+        y: 42
+        width: 43
+        height: 37
+      spriteId: 9fe05cac7dbf11443afe063b69dd77b4
+    - name: Happy_Sheep_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 42
+        y: 42
+        width: 46
+        height: 36
+      spriteId: 93bc868a535bd84479f4394acecd34a9
+    - name: Happy_Sheep_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 42
+        y: 42
+        width: 46
+        height: 36
+      spriteId: e12f9c7f6d54dbc45b3f4ec5c8b699e0
+    - name: Happy_Sheep_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 43
+        y: 42
+        width: 44
+        height: 37
+      spriteId: cda1fb99621fbee4b96eb84719aba816
+    - name: Happy_Sheep_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 43
+        y: 42
+        width: 43
+        height: 38
+      spriteId: 501481f8f26c77a408b664ac8c5c61e6
+    - name: Happy_Sheep_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 43
+        y: 42
+        width: 43
+        height: 38
+      spriteId: b24c5ff00706af54c97d68f182d43294
+    - name: Happy_Sheep_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 45
+        y: 42
+        width: 38
+        height: 48
+      spriteId: b04b28302e497064a8bbe199473cdb5d
+    - name: Happy_Sheep_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 43
+        y: 42
+        width: 45
+        height: 50
+      spriteId: 231b185bbb108d14f8c43f77ee6939d9
+    - name: Happy_Sheep_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 43
+        y: 42
+        width: 45
+        height: 51
+      spriteId: d8fb00e166bb0484ab8b183b40481b28
+    - name: Happy_Sheep_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 43
+        y: 42
+        width: 45
+        height: 45
+      spriteId: cfb9af1dc904590438836c7d94621489
+    - name: Happy_Sheep_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 38
+        y: 42
+        width: 54
+        height: 30
+      spriteId: 02467b6f74f6aa2418e09f9cb3c655f3
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}
