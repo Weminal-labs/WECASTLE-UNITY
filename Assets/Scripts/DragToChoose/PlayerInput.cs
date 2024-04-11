@@ -43,7 +43,7 @@ public class PlayerInput : MonoBehaviour
         {
             Vector3 mousePosition = Input.mousePosition;
             Vector3 target = Camera.main.ScreenToWorldPoint(mousePosition);
-            target.z = -1.9f;
+            target.z = -2.5f;
             Debug.Log("Target position: " + target);
             flagToMove.SetActive(true);
             flagToMove.transform.position = target;
