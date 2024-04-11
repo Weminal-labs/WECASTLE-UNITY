@@ -130,13 +130,9 @@ GameObject:
   - component: {fileID: 4392729601653374140}
   - component: {fileID: 4392729601653374143}
   - component: {fileID: 4392729601653374142}
-<<<<<<< HEAD
-  - component: {fileID: -5836631835619760752}
-=======
   - component: {fileID: 6025099658886111610}
   - component: {fileID: 8131601778179593623}
   - component: {fileID: 5701300024374844929}
->>>>>>> 302d85ba74e0d52ba834be41057595c189d1c2cb
   m_Layer: 8
   m_Name: Warrior_Blue
   m_TagString: Ally
@@ -4682,11 +4678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: Damage
   val: 0
-<<<<<<< HEAD
---- !u!114 &-5836631835619760752
-=======
 --- !u!114 &6025099658886111610
->>>>>>> 302d85ba74e0d52ba834be41057595c189d1c2cb
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4695,11 +4687,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3538675657869612168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
   m_Script: {fileID: 11500000, guid: 092269cfc223d504e9c270e7bd661b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -4762,7 +4749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: FindRange
   val: 7
->>>>>>> 302d85ba74e0d52ba834be41057595c189d1c2cb
 --- !u!1 &5882714394996995661
 GameObject:
   m_ObjectHideFlags: 0

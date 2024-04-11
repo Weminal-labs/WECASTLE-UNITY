@@ -65,10 +65,6 @@ public class UnitChose : MonoBehaviour
             textTime.SetActive(true);
         }
     }
-    public GameObject getBuilding()
-    {
-        return this.buildingObj;
-    }
     public void setMobStat(MobStats mob)
     {
         container.GetComponent<CanUseUnit>().loadMobCanUse(buildingObj.GetComponent<MobInBuilding>().returnType());
