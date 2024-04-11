@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using MBT;
 using UnityEngine;
 using UnityEngine.AI;
-using MBT;
 
 namespace MBTExample
 {
@@ -12,7 +10,8 @@ namespace MBTExample
     {
         public TransformReference destination;
         public NavMeshAgent agent;
-        public float stopDistance = 2f;
+        //public float stopDistance = 2f;
+        public FloatReference stopDistance = new FloatReference(1f);
         [Tooltip("How often target position should be updated")]
         public float updateInterval = 1f;
         private float time = 0;
@@ -23,7 +22,7 @@ namespace MBTExample
             agent.isStopped = false;
             agent.SetDestination(destination.Value.position);
         }
-        
+
         public override NodeResult Execute()
         {
             time += Time.deltaTime;
@@ -40,7 +39,7 @@ namespace MBTExample
                 return NodeResult.running;
             }
             // Check if agent is very close to destination
-            if (agent.remainingDistance < stopDistance)
+            if (agent.remainingDistance < stopDistance.Value)
             {
                 return NodeResult.success;
             }
