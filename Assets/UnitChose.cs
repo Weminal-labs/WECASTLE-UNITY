@@ -17,6 +17,8 @@ public class UnitChose : MonoBehaviour
     private RuntimeAnimatorController[] animMob;
     [SerializeField]
     private GameObject textTime;
+    [SerializeField]
+    private GameObject mob;
     // Update is called once per frame
     void Start()
     {
@@ -29,7 +31,10 @@ public class UnitChose : MonoBehaviour
             buttonMinus.onClick.AddListener(minusMob);
         }
     }
-
+    public void setMob(GameObject mob)
+    {
+        this.mob = mob;
+    }
     private void loadListMob()
     {
         container.SetActive(true);
@@ -57,6 +62,10 @@ public class UnitChose : MonoBehaviour
         {
             textTime.SetActive(true);
         }
+    }
+    public GameObject getBuilding()
+    {
+        return this.buildingObj;
     }
     public void setMobStat(MobStats mob)
     {

@@ -17,10 +17,10 @@ public class PlayerInfo
         this.idPlayer = idPlayer;
         lv = 1;
         exp = 0;
-        maxExp = 15;
-        curGold = 10;
-        curWood = 30;
-        curMeat = 15;
+        maxExp = 10;
+        curGold = 100;
+        curWood = 100;
+        curMeat = 150;
     }
     public string getIdPlayer() { return this.idPlayer;}
     public int getLv() { return this.lv;}

@@ -25,7 +25,12 @@ public class UnitChosen : MonoBehaviour
                 string id = pointer.GetComponent<MobStatus>().getIDMob();
                 foreach(GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
                 {
-
+                    if (id.CompareTo(mob.GetComponent<MobStatus>().getIDMob()) == 0)
+                    {
+                        Transform vect = this.parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().getBuilding().transform;
+                        parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().setMob(mob);
+                        break;
+                    }
                 }
             }
         }

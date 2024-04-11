@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*RequestAddress();*/
-        ReceiveAddress("SSSS");
+        RequestAddress();
+        /*ReceiveAddress("SSSS");*/
         if (logOut != null)
         {
             logOut.onClick.AddListener(RequestLogOut);
@@ -62,5 +62,8 @@ public class GameController : MonoBehaviour
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
     }
-
+    public PlayerInfo getPlayer()
+    {
+        return playerInfo;
+    }
 }
