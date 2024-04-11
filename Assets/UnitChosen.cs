@@ -30,6 +30,8 @@ public class UnitChosen : MonoBehaviour
                         mob.GetComponent<Blackboard>().GetVariable<BoolVariable>("isNearBuilding").Value = true;
 
                         mob.GetComponent<Blackboard>().GetVariable<TransformVariable>("towerTransform").Value = tower;
+                        parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().setMob(mob);
+
                         break;
                     }
                 }

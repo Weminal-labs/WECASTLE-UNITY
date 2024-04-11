@@ -30,7 +30,8 @@ public class SummonBanner : MonoBehaviour
     private GameObject[] spawnUnit;
     private int unit;
     [SerializeField]
-    private GameObject PlaceHolder, Animation;
+    private GameObject PlaceHolder, Animation, playerInfo;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +87,7 @@ public class SummonBanner : MonoBehaviour
         int maxSpeed = Int32.Parse(split[1]);
         string nameMob = name.GetComponentInChildren<TMP_InputField>().text;
         string historyMob = history.GetComponentInChildren<TMP_InputField>().text;
+        playerInfo.GetComponent<GameController>().setMaterials(-Int32.Parse(meatCost.text), -Int32.Parse(goldCost.text), -Int32.Parse(woodCost.text));
         MobStats mob = new MobStats(this.unit, minHealth,  maxHealth, minDamage, maxDamage, minSpeed, maxSpeed, nameMob, historyMob);
         MobStats mobSummon = new MobStats(mob, spawnPosition.transform.position);
         managerDataMob.GetComponent<ManageMobData>().addMob(mobSummon);
@@ -103,6 +105,14 @@ public class SummonBanner : MonoBehaviour
         meatCost.SetText("60");
         woodCost.SetText("15");
         goldCost.SetText("30");
+        if (checkMaterials(30, 60, 15))
+        {
+            buttonSummon.gameObject.SetActive(true);
+        }
+        else
+        {
+            buttonSummon.gameObject.SetActive(false);
+        }
         anim.GetComponent<Animator>().runtimeAnimatorController = wAnim as RuntimeAnimatorController;
     }
     private void selectArcher()
@@ -117,6 +127,14 @@ public class SummonBanner : MonoBehaviour
         meatCost.SetText("60");
         woodCost.SetText("30");
         goldCost.SetText("30");
+        if (checkMaterials(30, 60, 30))
+        {
+            buttonSummon.gameObject.SetActive(true);
+        }
+        else
+        {
+            buttonSummon.gameObject.SetActive(false);
+        }
         anim.GetComponent<Animator>().runtimeAnimatorController = aAnim as RuntimeAnimatorController;
     }
     private void selectPawn()
@@ -131,6 +149,14 @@ public class SummonBanner : MonoBehaviour
         meatCost.SetText("40");
         woodCost.SetText("30");
         goldCost.SetText("20");
+        if (checkMaterials(20, 40, 30))
+        {
+            buttonSummon.gameObject.SetActive(true);
+        }
+        else
+        {
+            buttonSummon.gameObject.SetActive(false);
+        }
         anim.GetComponent<Animator>().runtimeAnimatorController = pAnim as RuntimeAnimatorController;
     }
 
@@ -150,5 +176,13 @@ public class SummonBanner : MonoBehaviour
         this.gameObject.GetComponent<RawImage>().color = tempColor;
         PlaceHolder.gameObject.SetActive(true);
         this.gameObject.gameObject.SetActive(false);
+    }
+    public bool checkMaterials(int g, int m, int w)
+    {
+        if (playerInfo.GetComponent<GameController>().getPlayer().getCurGold() < g || playerInfo.GetComponent<GameController>().getPlayer().getCurMeat() < m || playerInfo.GetComponent<GameController>().getPlayer().getCurWood() < w)
+        {
+            return false;
+        }
+        return true;
     }
 }

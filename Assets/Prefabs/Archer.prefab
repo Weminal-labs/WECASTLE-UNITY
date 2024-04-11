@@ -217,7 +217,6 @@ GameObject:
   - component: {fileID: 6100858137146273322}
   - component: {fileID: 6100858137146273321}
   - component: {fileID: 4751324060471130216}
-  - component: {fileID: 5265226711683285969}
   - component: {fileID: 6950013991569276004}
   - component: {fileID: 6620720041159766504}
   - component: {fileID: 2324348659044765559}
@@ -229,6 +228,9 @@ GameObject:
   - component: {fileID: 7155852746256286072}
   - component: {fileID: 6909978809220390352}
   - component: {fileID: 9042837217227788852}
+<<<<<<< HEAD
+  - component: {fileID: -5495110388809020940}
+=======
   - component: {fileID: 3331423169174679365}
   - component: {fileID: 2850197339009183994}
   - component: {fileID: 8387201899844822699}
@@ -313,8 +315,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 324573977
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 6886756132631272661, guid: bb6518b20ee2a924ab1c6145220133f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4675,18 +4677,6 @@ MonoBehaviour:
   history: 
   id: 
   isDoubleClick: 0
---- !u!114 &5265226711683285969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6433216873833170469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6950013991569276004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5123,7 +5113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashDuration: 0.1
   flashColor: {r: 1, g: 0, b: 0, a: 1}
+<<<<<<< HEAD
+--- !u!114 &-5495110388809020940
+=======
 --- !u!114 &3331423169174679365
+>>>>>>> 302d85ba74e0d52ba834be41057595c189d1c2cb
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5132,6 +5126,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6433216873833170469}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+=======
   m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
