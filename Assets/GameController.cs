@@ -39,7 +39,8 @@ public class GameController : MonoBehaviour
     {
         this.id = id;
         playerInfo = new PlayerInfo(id);
-        Debug.Log(JsonConvert.SerializeObject(playerInfo));
+        PlayerInfoJson info = new PlayerInfoJson(playerInfo);
+        Debug.Log(JsonConvert.SerializeObject(info));
         text.GetComponent<TextMeshProUGUI>().SetText(id);
         lv.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getLv().ToString());
         exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();

@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
+        spawnSet();
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         collider = this.GetComponent<Collider>();
@@ -86,18 +87,20 @@ public class EnemyController : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void spawnSet(int lvMob)
+    public void spawnSet()
     {
+        int lv = Random.Range(1, 10);
         this.maxHealth = Random.Range(75, 180);
         this.curHealth = maxHealth;
         this.damage = Random.Range(30,45);
-        this.speed = 12;
-        for(; lvMob>0;)
+        this.speed = Random.Range(10,15);
+        this.Agent.speed = this.speed;
+        for(; lv>0;)
         {
             this.maxHealth += Random.Range(3, 8);
             this.curHealth = maxHealth;
             this.damage += Random.Range(3, 8);
-            lvMob--;
+            lv--;
         }
     }
 }
