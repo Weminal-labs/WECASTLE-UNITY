@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 8266272231792038604}
   - component: {fileID: 9145753178508961340}
   - component: {fileID: 9006385065101993672}
+  - component: {fileID: 3391657463909320282}
   m_Layer: 6
   m_Name: Torch_Blue
   m_TagString: Enemy
@@ -216,7 +217,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5025354800224441165}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.2
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -3378,3 +3379,15 @@ MonoBehaviour:
     blackboard: {fileID: 2667778874628842957}
     key: target
     constantValue: {fileID: 0}
+--- !u!114 &3391657463909320282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
