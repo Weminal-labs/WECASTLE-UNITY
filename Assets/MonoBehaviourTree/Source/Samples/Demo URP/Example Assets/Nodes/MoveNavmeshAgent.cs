@@ -26,6 +26,11 @@ namespace MBTExample
         public override NodeResult Execute()
         {
             time += Time.deltaTime;
+            //fix
+            if (destination.Value == null)
+            {
+                return NodeResult.failure;
+            }
             // Update destination every given interval
             if (time > updateInterval)
             {
@@ -43,6 +48,8 @@ namespace MBTExample
             {
                 return NodeResult.success;
             }
+
+
             // Check if there is any path (if not pending, it should be set)
             if (agent.hasPath)
             {
