@@ -66,7 +66,6 @@ GameObject:
   - component: {fileID: 5210769356420103166}
   - component: {fileID: 5210769356420103167}
   - component: {fileID: 5210769356420102912}
-  - component: {fileID: 5210769356420103164}
   - component: {fileID: 5210769356420103155}
   - component: {fileID: 5210769356420103156}
   - component: {fileID: 5210769356420103157}
@@ -97,6 +96,9 @@ GameObject:
   - component: {fileID: 5210769356420103131}
   - component: {fileID: 5210769356420103130}
   - component: {fileID: 5210769356420103129}
+  - component: {fileID: 8266272231792038604}
+  - component: {fileID: 9145753178508961340}
+  - component: {fileID: 9006385065101993672}
   m_Layer: 6
   m_Name: Torch_Blue
   m_TagString: Enemy
@@ -239,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 2667778874628842953}
+  selectedEditorNode: {fileID: 0}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -275,6 +277,8 @@ MonoBehaviour:
   - {fileID: 2667778874628842951}
   - {fileID: 5210769356420103156}
   - {fileID: 5210769356420103161}
+  - {fileID: 8266272231792038604}
+  - {fileID: 9145753178508961340}
   masterBlackboard: {fileID: 0}
 --- !u!114 &2667778874628842948
 MonoBehaviour:
@@ -389,10 +393,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 2667778874628842957}
+    key: FindRange
     constantValue: 50
   variableToSet:
     useConstant: 0
@@ -449,7 +453,7 @@ MonoBehaviour:
     height: 45
   parent: {fileID: 2667778874628842954}
   children:
-  - {fileID: 2667778874628842944}
+  - {fileID: 9006385065101993672}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -493,7 +497,7 @@ MonoBehaviour:
     y: 480
     width: 160
     height: 45
-  parent: {fileID: 2667778874628842947}
+  parent: {fileID: 9006385065101993672}
   children:
   - {fileID: 2667778874628842945}
   - {fileID: 5210769356420102945}
@@ -1187,10 +1191,10 @@ MonoBehaviour:
     constantValue: 0
   comparator: 2
   floatReference2:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 2667778874628842957}
+    key: HitRange
     constantValue: 3
   intReference2:
     useConstant: 1
@@ -1239,10 +1243,10 @@ MonoBehaviour:
     constantValue: 0
   comparator: 1
   floatReference2:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 2667778874628842957}
+    key: HitRange
     constantValue: 3
   intReference2:
     useConstant: 1
@@ -1265,7 +1269,7 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 1280
+    x: 1180
     y: 1020
     width: 160
     height: 45
@@ -1292,7 +1296,7 @@ MonoBehaviour:
   title: Move Navmesh Agent
   rect:
     serializedVersion: 2
-    x: 1340
+    x: 1300
     y: 1100
     width: 160
     height: 45
@@ -1308,7 +1312,12 @@ MonoBehaviour:
     key: target
     constantValue: {fileID: 0}
   agent: {fileID: 2667778874628842971}
-  stopDistance: 2
+  stopDistance:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2667778874628842957}
+    key: HitRange
+    constantValue: 0
   updateInterval: 1
 --- !u!114 &5210769356420102942
 MonoBehaviour:
@@ -1960,7 +1969,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 960
-    y: 880
+    y: 860
     width: 160
     height: 45
   parent: {fileID: 5210769356420102934}
@@ -2166,33 +2175,6 @@ MonoBehaviour:
     constantValue: 1
   randomDeviation: 0
   continueOnRestart: 0
---- !u!114 &5210769356420103164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 056841afaed742d4e909e76361b5173f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Repeater
-  rect:
-    serializedVersion: 2
-    x: 260
-    y: 420
-    width: 160
-    height: 45
-  parent: {fileID: 0}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  loops: 1
-  infinite: 1
-  breakOnFailure: 0
 --- !u!114 &5210769356420103155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,3 +3307,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashDuration: 0.1
   flashColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &8266272231792038604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: FindRange
+  val: 50
+--- !u!114 &9145753178508961340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: HitRange
+  val: 3
+--- !u!114 &9006385065101993672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092269cfc223d504e9c270e7bd661b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Detect Enemy 2D Service
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 400
+    width: 160
+    height: 45
+  parent: {fileID: 2667778874628842947}
+  children:
+  - {fileID: 2667778874628842944}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2667778874628842957}
+    key: FindRange
+    constantValue: 50
+  variableToSet:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 2667778874628842957}
+    key: target
+    constantValue: {fileID: 0}

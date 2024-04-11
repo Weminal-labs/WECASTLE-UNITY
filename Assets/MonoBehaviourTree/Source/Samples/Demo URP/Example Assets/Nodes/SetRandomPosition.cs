@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using MBT;
 using UnityEngine;
-using MBT;
 
 namespace MBTExample
 {
