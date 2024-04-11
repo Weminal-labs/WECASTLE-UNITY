@@ -18,9 +18,9 @@ public class PlayerInfo
         lv = 1;
         exp = 0;
         maxExp = 15;
-        curGold = 10;
-        curWood = 30;
-        curMeat = 15;
+        curGold = 100;
+        curWood = 100;
+        curMeat = 100;
     }
     public string getIdPlayer() { return this.idPlayer;}
     public int getLv() { return this.lv;}

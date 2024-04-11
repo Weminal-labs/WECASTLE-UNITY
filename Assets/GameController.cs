@@ -62,5 +62,8 @@ public class GameController : MonoBehaviour
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
     }
-
+    public PlayerInfo getPlayer()
+    {
+        return playerInfo;
+    }
 }
