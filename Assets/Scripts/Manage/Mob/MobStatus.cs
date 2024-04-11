@@ -1,6 +1,5 @@
 using MBT;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,7 +13,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     [SerializeField]
     private string name, history, id;
 
-    Blackboard blackboard ;
+    Blackboard blackboard;
     BoolVariable isDead;
     IntVariable blackBoardDamage;
 
@@ -26,10 +25,11 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     public bool isDoubleClick = false;
     public bool CompareData(string id)
     {
-        if(this.id.CompareTo(id) == 0)
+        if (this.id.CompareTo(id) == 0)
         {
             return true;
-        }else
+        }
+        else
             return false;
     }
     public int getType()
@@ -53,7 +53,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         this.type = data.getMobType();
         this.stats = data;
     }
-    public void SaveData(ref MobStats data,int exp)
+    public void SaveData(ref MobStats data, int exp)
     {
         data.setExp(exp);
         data.setPos(this.gameObject.transform.position);
@@ -74,7 +74,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     IEnumerator openMobStatus()
     {
@@ -84,8 +84,8 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     }
     public void showInfoMob()
     {
-        if(infoMob != null) 
-        { 
+        if (infoMob != null)
+        {
             infoMob.GetComponent<LoadMobInfo>().LoadData(stats);
             infoMob.GetComponent<LoadMobInfo>().OpenMenu();
         }
@@ -112,7 +112,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         {
             if (leftClickNum == 2)
             {
-                showInfoMob() ;
+                showInfoMob();
                 break;
             }
             yield return new WaitForEndOfFrame();
@@ -129,7 +129,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     {
         if (curHealth - damage < 0)
         {
-            isDead.Value = true;            
+            isDead.Value = true;
         }
         else
         {
@@ -143,7 +143,8 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     }
 
     public void die()
-    { 
+    {
+        SelectionManager.Instance.Deselect(this.gameObject.GetComponent<SelectableUnit>());
         Destroy(this.gameObject);
     }
 

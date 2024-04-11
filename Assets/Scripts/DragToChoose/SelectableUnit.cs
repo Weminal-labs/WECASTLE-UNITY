@@ -1,5 +1,4 @@
 using MBT;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,7 +10,7 @@ public class SelectableUnit : MonoBehaviour
     [SerializeField]
     private SpriteRenderer SelectionSprite;
     private Blackboard blackboard;
-    private BoolVariable isUnderControl ;
+    private BoolVariable isUnderControl;
     private TransformVariable pointToMove;
 
     public void SetIsUnderControl(bool value)
@@ -79,13 +78,18 @@ public class SelectableUnit : MonoBehaviour
 
     public void OnSelected()
     {
-        SelectionSprite.gameObject.SetActive(true);
-
+        if (SelectionSprite != null)
+        {
+            SelectionSprite.gameObject.SetActive(true);
+        }
     }
 
     public void OnDeselected()
     {
-        SelectionSprite.gameObject.SetActive(false);
+        if (SelectionSprite != null)
+        {
+            SelectionSprite.gameObject.SetActive(false);
+        }
     }
 }
 

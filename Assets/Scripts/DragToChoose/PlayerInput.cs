@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
@@ -48,9 +47,12 @@ public class PlayerInput : MonoBehaviour
             Debug.Log("Target position: " + target);
             flagToMove.SetActive(true);
             flagToMove.transform.position = target;
-            foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
+            if (FindAnyObjectByType<SelectableUnit>())
             {
-                unit.MoveTo(flagToMove);
+                foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
+                {
+                    unit.MoveTo(flagToMove);
+                }
             }
 
             /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -70,13 +72,13 @@ public class PlayerInput : MonoBehaviour
 
 
             //This is orginal code
-/*            if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))
-            {
-                foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
-                {
-                    unit.MoveTo(Hit.point);
-                }
-            }*/
+            /*            if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))
+                        {
+                            foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
+                            {
+                                unit.MoveTo(Hit.point);
+                            }
+                        }*/
 
 
         }
@@ -150,10 +152,13 @@ public class PlayerInput : MonoBehaviour
         SelectionBox.sizeDelta = new Vector2(Mathf.Abs(width), Mathf.Abs(height));
 
         Bounds bounds = new Bounds(SelectionBox.anchoredPosition, SelectionBox.sizeDelta);
-        if ( FindAnyObjectByType<SelectableUnit>())
+        if (FindAnyObjectByType<SelectableUnit>())
         {
             for (int i = 0; i < SelectionManager.Instance.AvailableUnits.Count; i++)
             {
+                SelectableUnit unit = SelectionManager.Instance.AvailableUnits[i];
+                if (unit == null) // Check if the unit has been destroyed
+                    continue;
                 if (UnitIsInSelectionBox(Camera.WorldToScreenPoint(SelectionManager.Instance.AvailableUnits[i].transform.position), bounds))
                 {
                     if (!SelectionManager.Instance.IsSelected(SelectionManager.Instance.AvailableUnits[i]))
