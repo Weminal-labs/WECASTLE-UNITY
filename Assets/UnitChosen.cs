@@ -22,7 +22,11 @@ public class UnitChosen : MonoBehaviour
         {
             if (pointer.GetComponent<MobStatus>().getIDMob().CompareTo(mobStats.getId()) == 0)
             {
-                Debug.Log(pointer.GetComponent<MobStatus>().getIDMob());
+                string id = pointer.GetComponent<MobStatus>().getIDMob();
+                foreach(GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
+                {
+
+                }
             }
         }
         this.parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().setMobStat(mobStats);

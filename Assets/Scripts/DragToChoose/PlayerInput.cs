@@ -150,21 +150,23 @@ public class PlayerInput : MonoBehaviour
         SelectionBox.sizeDelta = new Vector2(Mathf.Abs(width), Mathf.Abs(height));
 
         Bounds bounds = new Bounds(SelectionBox.anchoredPosition, SelectionBox.sizeDelta);
-
-        for (int i = 0; i < SelectionManager.Instance.AvailableUnits.Count; i++)
+        if ( FindAnyObjectByType<SelectableUnit>())
         {
-            if (UnitIsInSelectionBox(Camera.WorldToScreenPoint(SelectionManager.Instance.AvailableUnits[i].transform.position), bounds))
+            for (int i = 0; i < SelectionManager.Instance.AvailableUnits.Count; i++)
             {
-                if (!SelectionManager.Instance.IsSelected(SelectionManager.Instance.AvailableUnits[i]))
+                if (UnitIsInSelectionBox(Camera.WorldToScreenPoint(SelectionManager.Instance.AvailableUnits[i].transform.position), bounds))
                 {
-                    newlySelectedUnits.Add(SelectionManager.Instance.AvailableUnits[i]);
+                    if (!SelectionManager.Instance.IsSelected(SelectionManager.Instance.AvailableUnits[i]))
+                    {
+                        newlySelectedUnits.Add(SelectionManager.Instance.AvailableUnits[i]);
+                    }
+                    deselectedUnits.Remove(SelectionManager.Instance.AvailableUnits[i]);
                 }
-                deselectedUnits.Remove(SelectionManager.Instance.AvailableUnits[i]);
-            }
-            else
-            {
-                deselectedUnits.Add(SelectionManager.Instance.AvailableUnits[i]);
-                newlySelectedUnits.Remove(SelectionManager.Instance.AvailableUnits[i]);
+                else
+                {
+                    deselectedUnits.Add(SelectionManager.Instance.AvailableUnits[i]);
+                    newlySelectedUnits.Remove(SelectionManager.Instance.AvailableUnits[i]);
+                }
             }
         }
     }

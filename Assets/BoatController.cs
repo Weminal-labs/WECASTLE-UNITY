@@ -8,7 +8,6 @@ public class BoatController : MonoBehaviour
 
     private bool reachedDestination = false;
     [SerializeField] private GameObject enemy;
-
     // Update is called once per frame
     void Update()
     {
@@ -38,10 +37,10 @@ public class BoatController : MonoBehaviour
     {
 
         // Instantiate a new prefab at the current position
-        InstantiateNewPrefab();
-        InstantiateNewPrefab();
+        InstantiateNewPrefab(2);
+        InstantiateNewPrefab(2);
         // Wait for 1 second
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
 
 
@@ -49,7 +48,7 @@ public class BoatController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void InstantiateNewPrefab()
+    void InstantiateNewPrefab(int lv)
     {
         // Define a random offset range
         float offsetX = Random.Range(-1f, 1f);
@@ -59,7 +58,7 @@ public class BoatController : MonoBehaviour
         Vector3 newPosition = transform.position + new Vector3(offsetX, offsetY, 0f);
 
         // Instantiate the new prefab at the new position
-        GameObject newPrefab = Instantiate(enemy, newPosition, Quaternion.identity);
+        Instantiate(enemy, newPosition, Quaternion.identity);
     }
 
 }

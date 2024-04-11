@@ -62,7 +62,7 @@ public class ManageMobData : MonoBehaviour
             {
                 if (data.CompareData(Stats.getId()))
                 {
-                    //data.SaveData(ref Stats);
+                    
                     break;
                 }
             }
@@ -76,13 +76,13 @@ public class ManageMobData : MonoBehaviour
     public int MaxLV()
     {
         int max = 1;
-        foreach(MobStats mob in mobStats)
+        /*foreach(MobStats mob in mobStats)
         {
             if(mob.getLevel() > max)
             {
                 max = mob.getLevel();
             }
-        }
+        }*/
         return max;
     }
     private List<MobDataPersistance> FindAllMobData()

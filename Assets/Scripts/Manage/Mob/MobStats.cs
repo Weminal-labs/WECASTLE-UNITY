@@ -7,19 +7,19 @@ using UnityEngine;
 [System.Serializable]
 public class MobStats
 {
-    public string id_mob { get; set; }
-    public int mob_type { get; set; }
-    public int health { get; set; }
-    public int maxHealth { get; set; }
-    public int damage { get; set; }
-    public int speed { get; set; }
-    public int level { get; set; }
-    public int exp { get; set; }
-    public int maxExp { get; set; }
-    public float[] position { get; set; }
-    public string name { get; set; }
-    public string history { get; set; }
-    public bool inBuilding { get; set; }
+    private string id_mob { get; set; }
+    private int mob_type { get; set; }
+    private int health { get; set; }
+    private int maxHealth { get; set; }
+    private int damage { get; set; }
+    private int speed { get; set; }
+    private int level { get; set; }
+    private int exp { get; set; }
+    private int maxExp { get; set; }
+    private float[] position { get; set; }
+    private string name { get; set; }
+    private string history { get; set; }
+    private bool inBuilding { get; set; }
     public MobStats() { }
     public MobStats(int mob_type, int minHealth, int maxHealth, int minDamage, int maxDamage, int minSpeed, int maxSpeed, string name, string history)
     {
@@ -132,6 +132,10 @@ public class MobStats
         this.position[0] = position.x;
         this.position[1] = position.y;
         this.position[2] = position.z;
+    }
+    public float[] getPos()
+    {
+        return this.position;
     }
 
     private string generateID()
