@@ -27,11 +27,9 @@ public class UnitChosen : MonoBehaviour
                     if (id.CompareTo(mob.GetComponent<MobStatus>().getIDMob()) == 0)
                     {
                         Transform tower = this.parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().getBuilding().transform;
-                        mob.GetComponent<Blackboard>().GetVariable<BoolVariable>("isNearBuilding").Value = true;
+                        mob.GetComponent<Blackboard>().GetVariable<BoolVariable>("isInBuilding").Value = true;
 
                         mob.GetComponent<Blackboard>().GetVariable<TransformVariable>("towerTransform").Value = tower;
-                        parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().setMob(mob);
-
                         break;
                     }
                 }

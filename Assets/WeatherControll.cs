@@ -36,7 +36,7 @@ public class WeatherControll : MonoBehaviour
             cloud.GetComponent<CloudSpawner>().speed = float.Parse(jsonObject["wind_speed"].ToString()) / 10.0f;
             if (Boolean.Parse(jsonObject["is_rain"].ToString()))
             {
-                
+                rain.SetActive(true);
                 float flowWind = 1.0f;
                 float windSpeed = float.Parse(jsonObject["wind_speed"].ToString());
                 if (jsonObject["wind_deg"].ToString().CompareTo("West") == 0)
@@ -45,7 +45,6 @@ public class WeatherControll : MonoBehaviour
                 }
                 rain.GetComponent<ParticleSystem>().startRotation =  flowWind * (Mathf.Atan2(windSpeed, 10.0f) * (180 / Mathf.PI));
                 rain.transform.rotation = Quaternion.Euler(0.0f, 0.0f, -1.0f * flowWind * (Mathf.Atan2(windSpeed, 10.0f) * (180 / Mathf.PI)));
-                StartCoroutine(openRain());
             }
             else if (float.Parse(jsonObject["visibility"].ToString()) / 1000.0f < 2.0f)
             {
@@ -53,11 +52,6 @@ public class WeatherControll : MonoBehaviour
                 fog.GetComponent<SpriteRenderer>().material.SetVector("FogSpeed", new Vector2(float.Parse(jsonObject["wind_speed"].ToString()) / 100.0f, 0.0f));
             }
         }
-    }
-    IEnumerator openRain()
-    {
-        yield return new WaitForSeconds(0.1f);
-        rain.SetActive(true);
     }
 }
 
