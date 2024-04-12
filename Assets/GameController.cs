@@ -1,4 +1,6 @@
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
@@ -26,8 +28,8 @@ public class GameController : MonoBehaviour
     float spawnInterval = 330;
     void Start()
     {
-        /*RequestAddress();*/
-        ReceiveAddress("SSSS");
+        RequestAddress();
+        /*ReceiveAddress("SSSS");*/
         if (logOut != null)
         {
             logOut.onClick.AddListener(RequestLogOut);
@@ -60,10 +62,11 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void ReceiveAddress(string id)
+    public void ReceiveAddress(string json)
     {
-        this.id = id;
-        playerInfo = new PlayerInfo(id);
+        Dictionary<string, object> jsonObject = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+        this.id = jsonObject["id"].ToString();
+        playerInfo = new PlayerInfo(id, Int32.Parse(jsonObject["level"].ToString()), Int32.Parse(jsonObject["exp"].ToString()), Int32.Parse(jsonObject["max_exp"].ToString()), Int32.Parse(jsonObject["gold"].ToString()), Int32.Parse(jsonObject["wood"].ToString()), Int32.Parse(jsonObject["meat"].ToString()));
         PlayerInfoJson info = new PlayerInfoJson(playerInfo);
         Debug.Log(JsonConvert.SerializeObject(info));
         text.GetComponent<TextMeshProUGUI>().SetText(id);

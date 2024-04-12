@@ -12,15 +12,15 @@ public class PlayerInfo
     private int curGold { get; set; }
     private int curWood { get; set; }
     private int curMeat { get; set; }
-    public PlayerInfo(string idPlayer) 
+    public PlayerInfo(string idPlayer, int lv, int exp, int maxExp, int curGold, int curWood, int curMeat) 
     {
         this.idPlayer = idPlayer;
-        lv = 1;
-        exp = 0;
-        maxExp = 15;
-        curGold = 100;
-        curWood = 100;
-        curMeat = 100;
+        this.lv = lv;
+        this.exp = exp;
+        this.maxExp = maxExp;
+        this.curGold = curGold;
+        this.curWood = curMeat;
+        this.curMeat = curWood;
     }
     public string getIdPlayer() { return this.idPlayer;}
     public int getLv() { return this.lv;}
