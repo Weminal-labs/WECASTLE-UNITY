@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BoatController : MonoBehaviour
@@ -37,8 +38,8 @@ public class BoatController : MonoBehaviour
     {
 
         // Instantiate a new prefab at the current position
-        InstantiateNewPrefab(2);
-        InstantiateNewPrefab(2);
+        InstantiateNewPrefab();
+        InstantiateNewPrefab();
         // Wait for 1 second
         yield return new WaitForSeconds(0.5f);
 
@@ -48,7 +49,7 @@ public class BoatController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void InstantiateNewPrefab(int lv)
+    void InstantiateNewPrefab()
     {
         // Define a random offset range
         float offsetX = Random.Range(-1f, 1f);
@@ -56,7 +57,7 @@ public class BoatController : MonoBehaviour
 
         // Calculate the new position with the offset
         Vector3 newPosition = transform.position + new Vector3(offsetX, offsetY, 0f);
-
+        enemy.gameObject.GetComponent<EnemyController>().setLV(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().getPlayer().getLv());
         // Instantiate the new prefab at the new position
         Instantiate(enemy, newPosition, Quaternion.identity);
     }

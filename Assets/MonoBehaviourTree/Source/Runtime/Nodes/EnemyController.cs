@@ -9,7 +9,8 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent Agent;
     [SerializeField]
     private int curHealth, maxHealth, damage, speed;
-
+    [SerializeField]
+    private int lv;
     [SerializeField]
     private GameObject m, g;
 
@@ -65,7 +66,10 @@ public class EnemyController : MonoBehaviour
         }
 
     }
-
+    public void setLV(int lv)
+    {
+        this.lv = lv;
+    }
     public void die()
     {
         int gold = Random.Range(1, 6);
@@ -83,24 +87,23 @@ public class EnemyController : MonoBehaviour
             y = Random.Range(this.transform.position.y - 2, this.transform.position.y + 2);
             Instantiate(m, new Vector3(x, y, transform.position.z), Quaternion.identity);
         }
-
         Destroy(this.gameObject);
     }
 
     public void spawnSet()
     {
-        int lv = Random.Range(1, 3);
+        int lvE = Random.Range(this.lv, this.lv + 3);
         this.maxHealth = Random.Range(40,60);
         this.curHealth = maxHealth;
         this.damage = Random.Range(10,20);
         this.speed = Random.Range(10,15);
         this.Agent.speed = this.speed;
-        for(; lv>0;)
+        for(; lvE>0;)
         {
             this.maxHealth += Random.Range(3, 8);
             this.curHealth = maxHealth;
             this.damage += Random.Range(3, 8);
-            lv--;
+            lvE--;
         }
     }
 }

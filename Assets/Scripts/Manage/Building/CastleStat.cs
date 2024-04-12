@@ -11,7 +11,12 @@ public class CastleStat : MonoBehaviour
     [SerializeField]
     private int hp, maxHp;
     [SerializeField]
-    private GameObject buildingCanvas, buildingIcon, listMob, mob1, mob2, pallette1, pallette2, hpUi;
+    private string name;
+    [SerializeField]
+    private GameObject buildingCanvas, buildingIcon, listMob, mob1, mob2, pallette1, pallette2, hpUi, nameBuilding;
+    [SerializeField]
+    private GameObject[] fire;
+    private int countFire;
     private float firstLeftClickTime;
     private float timeBetweenLeftClick = 0.5f;
     private bool isTimeCheckAllowed = true;
@@ -19,8 +24,8 @@ public class CastleStat : MonoBehaviour
     public bool isDoubleClick = false;
     private void Start()
     {
-        hp = 100;
-        maxHp = 100;
+        hp = 1000;
+        maxHp = 1000;
     }
     private void OnMouseUp()
     {
@@ -42,6 +47,7 @@ public class CastleStat : MonoBehaviour
                 buildingCanvas.SetActive(true);
                 buildingIcon.GetComponent<Image>().sprite = icon;
                 buildingIcon.GetComponent<Image>().SetNativeSize();
+                nameBuilding.GetComponent<TextMeshProUGUI>().SetText(name);
                 mob1.SetActive(false);
                 mob2.SetActive(true);
                 pallette1.GetComponent<UnitChose>().setBuilding(this.gameObject);
@@ -50,12 +56,12 @@ public class CastleStat : MonoBehaviour
                 {
                     if (this.gameObject.GetComponent<MobInBuilding>().countMob() < 2)
                     {
-                        pallette1.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(0));
+                        pallette1.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(0), 0);
                     }
                     else
                     {
-                        pallette1.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(0));
-                        pallette2.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(1));
+                        pallette1.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(0), 0);
+                        pallette2.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(1), 1);
                     }
                 }
                 else
@@ -72,5 +78,31 @@ public class CastleStat : MonoBehaviour
         }
         leftClickNum = 0;
         isTimeCheckAllowed = true;
+    }
+    public void TakeDame(int Damage)
+    {
+        if (hp - Damage < 0)
+        {
+            DesTroyBuilding();
+        }
+        else
+        {
+            hp -= Damage;
+        }
+        if (hp < 750 && countFire < 6)
+        {
+            fire[countFire].SetActive(true);
+            countFire += 1;
+        }
+    }
+    public void DesTroyBuilding()
+    {
+        foreach (GameObject mob in this.gameObject.GetComponent<MobInBuilding>().getAllGameObjectsMob())
+        {
+            mob.SetActive(true);
+            mob.GetComponent<MobStatus>().mobOutBuilding();
+        }
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().loseGame();
+        Destroy(this.gameObject);
     }
 }

@@ -29,7 +29,7 @@ public class PlayerInfo
     {
         if (this.exp + exp >= maxExp)
         {
-            this.exp = this.exp + exp - maxExp;
+            this.exp = (this.exp + exp) - maxExp;
             this.lv += 1;
             this.maxExp = this.maxExp + 5 * lv;
         }
@@ -54,5 +54,10 @@ public class PlayerInfo
     {
         this.curWood += wood;
     }
-
+    public void setLose()
+    {
+        this.curGold = 0;
+        this.curWood = 0;
+        this.curMeat = 0;
+    }
 }

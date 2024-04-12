@@ -130,18 +130,23 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         if (curHealth - damage < 0)
         {
             isDead.Value = true;
+            stats.setHealth(- damage);
         }
         else
         {
             curHealth -= damage;
             DamageEffect damageEffect = GetComponent<DamageEffect>();
+            stats.setHealth(-damage);
             if (damageEffect != null)
             {
                 damageEffect.Flash();
             }
         }
     }
-
+    public void mobOutBuilding()
+    {
+        stats.setInBuilding(false);
+    }
     public void die()
     {
         SelectionManager.Instance.Deselect(this.gameObject.GetComponent<SelectableUnit>());
@@ -151,5 +156,10 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     public string getIDMob()
     {
         return stats.getId();
+    }
+    public void rainWeather()
+    {
+        damage = damage + damage / 10;
+        speed -= 2;
     }
 }

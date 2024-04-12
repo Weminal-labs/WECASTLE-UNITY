@@ -22,7 +22,18 @@ namespace MBT
 
             foreach (Collider eachTarget in colliders)
             {
-                eachTarget.gameObject.GetComponent<MobStatus>().takeDame(self.Value.GetComponent<EnemyController>().getDamage());
+                if (eachTarget.gameObject.tag.CompareTo("Ally") == 0)
+                {
+                    eachTarget.gameObject.GetComponent<MobStatus>().takeDame(self.Value.GetComponent<EnemyController>().getDamage());
+                }
+                if (eachTarget.gameObject.tag.CompareTo("House") == 0)
+                {
+                    eachTarget.gameObject.GetComponent<HouseStat>().TakeDame(self.Value.GetComponent<EnemyController>().getDamage());
+                }
+                if (eachTarget.gameObject.tag.CompareTo("Castle") == 0)
+                {
+                    eachTarget.gameObject.GetComponent<CastleStat>().TakeDame(self.Value.GetComponent<EnemyController>().getDamage());
+                }
             }
 
 

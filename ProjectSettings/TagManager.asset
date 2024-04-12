@@ -12,6 +12,8 @@ TagManager:
   - Mob
   - NavMesh
   - MOBDATA
+  - Castle
+  - House
   layers:
   - Default
   - TransparentFX

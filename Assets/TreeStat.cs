@@ -26,8 +26,8 @@ public class TreeStat : MonoBehaviour
             float y;
             for (int i = 0;i<wood; i++)
             {
-                x = Random.RandomRange(this.transform.position.x - 5f, this.transform.position.x + 5f);
-                y = Random.RandomRange(this.transform.position.y - 5f, this.transform.position.y + 5f);
+                x = Random.RandomRange(this.transform.position.x - 2f, this.transform.position.x + 2f);
+                y = Random.RandomRange(this.transform.position.y - 2f, this.transform.position.y + 2f);
                 Instantiate(w_pref,new Vector3(x,y,transform.position.z),Quaternion.identity);
                 this.gameObject.GetComponent<Animator>().SetTrigger("Chopped");
                 Destroy(this.gameObject);

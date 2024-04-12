@@ -11,7 +11,12 @@ public class HouseStat : MonoBehaviour
     [SerializeField]
     private int hp, maxHp;
     [SerializeField]
-    private GameObject buildingCanvas, buildingIcon, listMob, mob1, mob2, pallette1, hpUi;
+    private string name;
+    [SerializeField]
+    private GameObject buildingCanvas, buildingIcon, listMob, mob1, mob2, pallette1, hpUi, nameBuilding;
+    [SerializeField]
+    private GameObject[] fire;
+    private int countFire;
     private float firstLeftClickTime;
     private float timeBetweenLeftClick = 0.5f;
     private bool isTimeCheckAllowed = true;
@@ -19,8 +24,9 @@ public class HouseStat : MonoBehaviour
     public bool isDoubleClick = false;
     private void Start()
     {
-        hp = 100;
-        maxHp = 100;
+        hp = 450;
+        maxHp = 450;
+        countFire = 0;
     }
     private void OnMouseUp()
     {
@@ -39,9 +45,11 @@ public class HouseStat : MonoBehaviour
         {
             if (leftClickNum == 2)
             {
+
                 buildingCanvas.SetActive(true);
                 buildingIcon.GetComponent<Image>().sprite = icon;
                 buildingIcon.GetComponent<Image>().SetNativeSize();
+                nameBuilding.GetComponent<TextMeshProUGUI>().SetText(name);
                 mob1.SetActive(true);
                 mob2.SetActive(false);
                 pallette1.GetComponent<UnitChose>().setBuilding(this.gameObject);
@@ -49,7 +57,7 @@ public class HouseStat : MonoBehaviour
                 hpUi.GetComponent<Slider>().value = hp;
                 if (this.gameObject.GetComponent<MobInBuilding>().countMob() > 0)
                 {
-                    pallette1.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(0));
+                    pallette1.GetComponent<UnitChose>().loadMobStat(this.gameObject.GetComponent<MobInBuilding>().getMob(0), 0);
                 }
                 else
                 {
@@ -62,5 +70,30 @@ public class HouseStat : MonoBehaviour
         }
         leftClickNum = 0;
         isTimeCheckAllowed = true;
+    }
+    public void TakeDame(int Damage)
+    {
+        if(hp - Damage < 0)
+        {
+            DesTroyBuilding();
+        }
+        else
+        {
+            hp -= Damage;
+        }
+        if(hp < 300 && countFire < 3)
+        {
+            fire[countFire].SetActive(true);
+            countFire += 1;
+        }
+    }
+    public void DesTroyBuilding()
+    {
+        foreach(GameObject mob in this.gameObject.GetComponent<MobInBuilding>().getAllGameObjectsMob())
+        {
+            mob.SetActive(true);
+            mob.GetComponent<MobStatus>().mobOutBuilding();
+        }
+        Destroy(this.gameObject);
     }
 }
