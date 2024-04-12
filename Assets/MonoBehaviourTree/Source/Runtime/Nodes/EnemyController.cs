@@ -83,7 +83,6 @@ public class EnemyController : MonoBehaviour
             y = Random.Range(this.transform.position.y - 2, this.transform.position.y + 2);
             Instantiate(m, new Vector3(x, y, transform.position.z), Quaternion.identity);
         }
-
         Destroy(this.gameObject);
     }
 

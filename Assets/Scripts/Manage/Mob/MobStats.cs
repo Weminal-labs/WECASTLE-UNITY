@@ -63,9 +63,13 @@ public class MobStats
     {
         return id_mob;
     }
-    public void setHealt(int health)
+    public void setHealth(int health)
     {
         this.health += health;
+        if(this.health < 0)
+        {
+            this.health = 0;
+        }
     }
     private void setHealthLvUp()
     {

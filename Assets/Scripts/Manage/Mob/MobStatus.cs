@@ -130,11 +130,13 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         if (curHealth - damage < 0)
         {
             isDead.Value = true;
+            stats.setHealth(- damage);
         }
         else
         {
             curHealth -= damage;
             DamageEffect damageEffect = GetComponent<DamageEffect>();
+            stats.setHealth(-damage);
             if (damageEffect != null)
             {
                 damageEffect.Flash();
