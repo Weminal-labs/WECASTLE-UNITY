@@ -11,7 +11,7 @@ public class SpawnController : MonoBehaviour
 
     void Start()
     {
-        SpawnEnemy();
+        
     }
 
     public void SpawnEnemy()

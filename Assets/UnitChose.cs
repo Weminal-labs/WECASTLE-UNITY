@@ -9,6 +9,7 @@ public class UnitChose : MonoBehaviour
     [SerializeField]
     private Button buttonChose, buttonMinus;
     private MobStats mobStats;
+    private GameObject mobObj;
     [SerializeField]
     private RuntimeAnimatorController[] animMob;
     [SerializeField]
@@ -39,6 +40,9 @@ public class UnitChose : MonoBehaviour
     private void minusMob()
     {
         this.buildingObj.GetComponent<MobInBuilding>().removeMob(mobStats);
+        this.buildingObj.GetComponent<MobInBuilding>().removeObjMob(mobObj);
+        this.mobObj.SetActive(true);
+        this.mobObj = null;
         mobStats.setInBuilding(false);
         this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
@@ -83,10 +87,11 @@ public class UnitChose : MonoBehaviour
         mob.setInBuilding(true);
     }
 
-    public void loadMobStat(MobStats mob)
+    public void loadMobStat(MobStats mob, int num)
     {
         container.GetComponent<CanUseUnit>().loadMobCanUse(buildingObj.GetComponent<MobInBuilding>().returnType());
         this.mobStats = mob;
+        this.mobObj = buildingObj.GetComponent<MobInBuilding>().getObjMOb(num);
         this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
         this.gameObject.transform.GetChild(2).gameObject.SetActive(true);
@@ -119,5 +124,11 @@ public class UnitChose : MonoBehaviour
         this.gameObject.transform.GetChild(6).gameObject.SetActive(false);
         this.gameObject.transform.GetChild(7).gameObject.SetActive(false);
         this.gameObject.transform.GetChild(8).gameObject.SetActive(false);
+    }
+
+    public void SaveMobInBuilding(GameObject mob)
+    {
+        this.mobObj = mob;
+        this.buildingObj.GetComponent<MobInBuilding>().setMob(mob);
     }
 }

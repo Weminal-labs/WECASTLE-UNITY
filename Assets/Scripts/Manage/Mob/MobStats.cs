@@ -36,6 +36,21 @@ public class MobStats
         this.history = history;
         this.inBuilding = false;
     }
+    public MobStats(string id, int mob_type, int maxHealth, int Damage, int Speed, string name, string history)
+    {
+        this.id_mob = id;
+        this.mob_type = mob_type;
+        this.maxHealth = maxHealth;
+        this.health = this.maxHealth;
+        this.damage = Damage;
+        this.speed = Speed;
+        this.level = 1;
+        this.exp = 0;
+        this.maxExp = 5;
+        this.name = name;
+        this.history = history;
+        this.inBuilding = false;
+    }
     public MobStats(MobStats mob, Vector3 position)
     {
         this.mob_type = mob.mob_type;

@@ -143,7 +143,10 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
             }
         }
     }
-
+    public void mobOutBuilding()
+    {
+        stats.setInBuilding(false);
+    }
     public void die()
     {
         SelectionManager.Instance.Deselect(this.gameObject.GetComponent<SelectableUnit>());
@@ -153,5 +156,10 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     public string getIDMob()
     {
         return stats.getId();
+    }
+    public void rainWeather()
+    {
+        damage = damage + damage / 10;
+        speed -= 2;
     }
 }
