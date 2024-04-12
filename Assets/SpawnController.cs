@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnController : MonoBehaviour
 {
     public List<Transform> dropPoints;
     public List<Transform> destinations;
     public List<GameObject> prefabsToInstantiate;
+    [Header("Events")]
+    [SerializeField] UnityEvent OnZoneEnter;
+    [SerializeField] UnityEvent OnZoneLeave;
 
     void Start()
     {
-        
+
     }
 
     public void SpawnEnemy()
     {
+
+
+
         if (dropPoints.Count == 0 || destinations.Count == 0 || prefabsToInstantiate.Count == 0)
         {
             Debug.LogError("Drop points, destinations, or prefabs to instantiate is not set.");

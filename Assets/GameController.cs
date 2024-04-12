@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
-using Newtonsoft.Json;
 
 public class GameController : MonoBehaviour
 {
@@ -20,6 +19,11 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private string json;
     // Start is called before the first frame update
+
+    [SerializeField] UnityEvent OnEnter;
+    [SerializeField] UnityEvent OnLeave;
+    [SerializeField] GameObject spawnController;
+    float spawnInterval = 330;
     void Start()
     {
         /*RequestAddress();*/
@@ -28,8 +32,10 @@ public class GameController : MonoBehaviour
         {
             logOut.onClick.AddListener(RequestLogOut);
         }
-        
+
         time = 10.0f;
+        OnEnter.Invoke();
+
     }
 
     // Update is called once per frame
@@ -81,7 +87,7 @@ public class GameController : MonoBehaviour
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
         int plusEXP = (m + g + w);
-        if( plusEXP > 0 )
+        if (plusEXP > 0)
         {
             playerInfo.setExp(plusEXP);
         }
