@@ -52,7 +52,7 @@ public class CanUseUnit : MonoBehaviour
             {
                 if(mob.getMobType() == type)
                 {
-                    if (!mob.isInBuilding())
+                    if (!mob.isInBuilding()&&mob.getHealth()>0)
                     {
                         pointer.gameObject.SetActive(true);
                         pointer.GetComponent<Image>().enabled = true;
@@ -82,7 +82,7 @@ public class CanUseUnit : MonoBehaviour
             }
             else
             {
-                if (!mob.isInBuilding())
+                if (!mob.isInBuilding()&&mob.getHealth()>0)
                 {
                     pointer.gameObject.SetActive(true);
                     pointer.GetComponent<Image>().enabled = true;

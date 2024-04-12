@@ -7,14 +7,15 @@ using Newtonsoft.Json;
 using System;
 using UnityEngine.Rendering.UI;
 using UnityEngine.Rendering.Universal;
+using Unity.Mathematics;
 
 public class WeatherControll : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cloud, fog, rain, sun,test;
+    private GameObject cloud, fog, rain, sun, test, globalCloud;
     private void Start()
     {
-        /*string json = "{\"city_name\":\"Beijing\",\"clouds\":7,\"country\":\"CN\",\"id\":1115,\"is_rain\":false,\"rain_fall\":\"none\",\"temp\":281,\"visibility\":10000,\"wind_deg\":\"West\",\"wind_speed\":34}";
+        /*string json = "{\"city_name\":\"hue\",\"clouds\":96,\"country\":\"VN\",\"id\":1112,\"is_rain\":false,\"rain_fall\":\"none\",\"temp\":292,\"visibility\":1000,\"wind_deg\":\"East\",\"wind_speed\":16,\"txDigest\":\"6bYfzTRY3kzVG8VA7bU6ijwf47wSxLAhqa9LPCxUswCf\"}";
         ReceiveWeather(json);*/
     }
 
@@ -34,27 +35,30 @@ public class WeatherControll : MonoBehaviour
             sun.GetComponent<Light2D>().intensity = float.Parse(jsonObject["visibility"].ToString()) / 10000.0f;
             //Default Sunny
             cloud.GetComponent<CloudSpawner>().spawnInterval = 100.0f - float.Parse(jsonObject["clouds"].ToString());
-            cloud.GetComponent<CloudSpawner>().speed = float.Parse(jsonObject["wind_speed"].ToString()) / 10.0f;
+            float flowWind = 1.0f;
+            if (jsonObject["wind_deg"].ToString().CompareTo("West") == 0)
+            {
+                flowWind = -1.0f;
+            }
+            globalCloud.transform.localScale = new Vector3(flowWind, 0, 0);
+            cloud.GetComponent<CloudSpawner>().speed = flowWind*float.Parse(jsonObject["wind_speed"].ToString()) / 10.0f;
             if (Boolean.Parse(jsonObject["is_rain"].ToString()))
             {
-                //Start Rain
-                rain.SetActive(true);
-                float flowWind = 1.0f;
+                //Start Rain      
                 float windSpeed = float.Parse(jsonObject["wind_speed"].ToString());
-                if (jsonObject["wind_deg"].ToString().CompareTo("West") == 0)
-                {
-                    flowWind = -1.0f;
-                }
-                rain.GetComponent<ParticleSystem>().startRotation =  flowWind * (Mathf.Atan2(windSpeed, 10.0f) * (180 / Mathf.PI));
-                rain.transform.rotation = Quaternion.Euler(0.0f, 0.0f, -1.0f * flowWind * (Mathf.Atan2(windSpeed, 10.0f) * (180 / Mathf.PI)));
+                rain.GetComponent<ParticleSystem>().startRotation *= flowWind;
+                rain.transform.rotation = Quaternion.Euler(0.0f, 0.0f, flowWind * 20.0f);
                 GameObject ControllMob = GameObject.FindGameObjectWithTag("MOBDATA");
                 ControllMob.GetComponent<ManageMobData>().MobInRain();
+                rain.SetActive(true);
             }
             else if (float.Parse(jsonObject["visibility"].ToString()) / 1000.0f < 2.0f)
             {
                 //Start Fog
                 fog.SetActive(true);
-                fog.GetComponent<SpriteRenderer>().material.SetVector("FogSpeed", new Vector2(float.Parse(jsonObject["wind_speed"].ToString()) / 100.0f, 0.0f));
+                float speedFog = float.Parse(jsonObject["wind_speed"].ToString()) / 100.0f;
+                fog.GetComponent<SpriteRenderer>().material.SetVector("_FogSpeed", new Vector2(speedFog, 0.0f));
+                fog.gameObject.transform.localScale = new Vector3(-1.0f*flowWind*300,100,0);
             }
         }
     }
