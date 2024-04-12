@@ -1,10 +1,10 @@
+using Newtonsoft.Json;
 using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
-using Newtonsoft.Json;
 
 public class GameController : MonoBehaviour
 {
@@ -18,6 +18,11 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private string json;
     // Start is called before the first frame update
+
+    [SerializeField] UnityEvent OnEnter;
+    [SerializeField] UnityEvent OnLeave;
+    [SerializeField] GameObject spawnController;
+    float spawnInterval = 330;
     void Start()
     {
         /*RequestAddress();*/
@@ -26,13 +31,34 @@ public class GameController : MonoBehaviour
         {
             logOut.onClick.AddListener(RequestLogOut);
         }
-        
+
+        StartCoroutine(SpawnControllerRoutine());
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    IEnumerator SpawnControllerRoutine()
+    {
+        while (true)
+        {
+            OnEnter?.Invoke();
+
+            // Instantiate a new SpawnController
+            GameObject newSpawnController = Instantiate(spawnController);
+
+            // Wait for 20 seconds
+            yield return new WaitForSeconds(30f);
+
+            // Destroy the existing SpawnController
+            Destroy(newSpawnController);
+
+            // Start counting down for the next instantiation
+            yield return new WaitForSeconds(spawnInterval - 30f);
+        }
     }
 
     public void ReceiveAddress(string id)
@@ -66,4 +92,6 @@ public class GameController : MonoBehaviour
     {
         return playerInfo;
     }
+
+
 }

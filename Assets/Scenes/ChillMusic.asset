@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: ChillMusic
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: c6c5cd0ee2d7db447be3ac0e13978c23, type: 3}
+  - {fileID: 8300000, guid: 882f38efd0b3ac648b6aad20ea575499, type: 3}
+  - {fileID: 8300000, guid: b82b0d87309722341a8926c780d9426d, type: 3}
+  - {fileID: 8300000, guid: 0f9afe08b776e4544bd5f09c23eccfe8, type: 3}
   _mixerGroup: {fileID: 4129708956731949719, guid: 4f4e7ed1ac2d6214bb932eb3cd788f45, type: 2}
   _noRepeats: 1
   _randomPitch: 1
   _minPitch: 0.5
   _maxPitch: 1.5
   _volume: 1
-  _loop: 0
+  _loop: 1
   _priority: 128
   _stereoPan: 0
   _spatialBlend: 0

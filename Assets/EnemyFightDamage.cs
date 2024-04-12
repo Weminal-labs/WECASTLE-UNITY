@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 namespace MBT
 {
@@ -26,9 +22,7 @@ namespace MBT
 
             foreach (Collider eachTarget in colliders)
             {
-
                 eachTarget.gameObject.GetComponent<MobStatus>().takeDame(self.Value.GetComponent<EnemyController>().getDamage());
-
             }
 
 

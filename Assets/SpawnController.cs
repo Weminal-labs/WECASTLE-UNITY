@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnController : MonoBehaviour
 {
     public List<Transform> dropPoints;
     public List<Transform> destinations;
     public List<GameObject> prefabsToInstantiate;
+    [Header("Events")]
+    [SerializeField] UnityEvent OnZoneEnter;
+    [SerializeField] UnityEvent OnZoneLeave;
 
     void Start()
     {
+
         SpawnEnemy();
     }
 
