@@ -80,6 +80,13 @@ GameObject:
   - component: {fileID: 5490272892618500282}
   - component: {fileID: 3849381155880850875}
   - component: {fileID: 2104064519950138101}
+  - component: {fileID: -1338560530252502002}
+  - component: {fileID: 8514320190814661026}
+  - component: {fileID: 7582867089922358221}
+  - component: {fileID: -8120530273969195555}
+  - component: {fileID: 3071948317615723959}
+  - component: {fileID: 248657532396279815}
+  - component: {fileID: 71276493677135817}
   m_Layer: 8
   m_Name: Pawn_Blue
   m_TagString: Ally
@@ -236,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 1146664859728872277}
+  selectedEditorNode: {fileID: -8120530273969195555}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -278,6 +285,7 @@ MonoBehaviour:
   - {fileID: 1146664859728872258}
   - {fileID: 5830232415592475883}
   - {fileID: 2104064519950138101}
+  - {fileID: 71276493677135817}
   masterBlackboard: {fileID: 0}
 --- !u!114 &1146664859728872201
 MonoBehaviour:
@@ -395,7 +403,7 @@ MonoBehaviour:
     x: 500
     y: -160
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 0}
   children:
   - {fileID: 435519512012042685}
@@ -420,7 +428,7 @@ MonoBehaviour:
     x: 500
     y: 80
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872283}
   children:
   - {fileID: 1146664859728872195}
@@ -463,10 +471,11 @@ MonoBehaviour:
     x: 500
     y: 200
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872192}
   children:
   - {fileID: 1146664859728872252}
+  - {fileID: -1338560530252502002}
   - {fileID: 1146664859728872229}
   - {fileID: 1146664859728872231}
   behaviourTree: {fileID: 0}
@@ -491,7 +500,7 @@ MonoBehaviour:
     x: -460
     y: 120
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872195}
   children:
   - {fileID: 1146664859728872261}
@@ -537,7 +546,7 @@ MonoBehaviour:
     x: -460
     y: 320
     width: 160
-    height: 59
+    height: 45
   parent: {fileID: 1146664859728872261}
   children:
   - {fileID: 1146664859728872241}
@@ -583,7 +592,7 @@ MonoBehaviour:
     x: -460
     y: 380
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872254}
   children:
   - {fileID: 1146664859728872240}
@@ -610,7 +619,7 @@ MonoBehaviour:
     x: -700
     y: 420
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872241}
   children:
   - {fileID: 1146664859728872242}
@@ -662,7 +671,7 @@ MonoBehaviour:
     x: -460
     y: 440
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872241}
   children:
   - {fileID: 1146664859728872248}
@@ -714,7 +723,7 @@ MonoBehaviour:
     x: -680
     y: 560
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872240}
   children: []
   behaviourTree: {fileID: 0}
@@ -750,7 +759,7 @@ MonoBehaviour:
     x: -460
     y: 500
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872243}
   children:
   - {fileID: 1146664859728872251}
@@ -778,7 +787,7 @@ MonoBehaviour:
     x: -460
     y: 580
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872248}
   children: []
   behaviourTree: {fileID: 0}
@@ -805,7 +814,7 @@ MonoBehaviour:
     x: -400
     y: 640
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872248}
   children: []
   behaviourTree: {fileID: 0}
@@ -843,7 +852,7 @@ MonoBehaviour:
     x: -300
     y: 700
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872248}
   children: []
   behaviourTree: {fileID: 0}
@@ -875,7 +884,7 @@ MonoBehaviour:
     x: 920
     y: 320
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872195}
   children:
   - {fileID: 1146664859728872230}
@@ -902,7 +911,7 @@ MonoBehaviour:
     x: 820
     y: 400
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872231}
   children: []
   behaviourTree: {fileID: 0}
@@ -929,7 +938,7 @@ MonoBehaviour:
     x: 1080
     y: 400
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872231}
   children: []
   behaviourTree: {fileID: 0}
@@ -961,7 +970,7 @@ MonoBehaviour:
     x: 120
     y: 262
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872195}
   children:
   - {fileID: 3849381155880850875}
@@ -1007,7 +1016,7 @@ MonoBehaviour:
     x: -20
     y: 540
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872260}
   children:
   - {fileID: 1146664859728872235}
@@ -1053,7 +1062,7 @@ MonoBehaviour:
     x: -20
     y: 600
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872227}
   children:
   - {fileID: 1146664859728872234}
@@ -1081,7 +1090,7 @@ MonoBehaviour:
     x: -100
     y: 700
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872235}
   children:
   - {fileID: 1146664859728872239}
@@ -1132,7 +1141,7 @@ MonoBehaviour:
     x: 100
     y: 700
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872235}
   children:
   - {fileID: 1146664859728872238}
@@ -1183,7 +1192,7 @@ MonoBehaviour:
     x: 300
     y: 700
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872235}
   children:
   - {fileID: 1146664859728872225}
@@ -1234,7 +1243,7 @@ MonoBehaviour:
     x: -100
     y: 800
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872234}
   children: []
   behaviourTree: {fileID: 0}
@@ -1343,7 +1352,7 @@ MonoBehaviour:
     x: 100
     y: 800
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872237}
   children: []
   behaviourTree: {fileID: 0}
@@ -1452,7 +1461,7 @@ MonoBehaviour:
     x: 300
     y: 800
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872236}
   children: []
   behaviourTree: {fileID: 0}
@@ -1561,7 +1570,7 @@ MonoBehaviour:
     x: 600
     y: 540
     width: 160
-    height: 59
+    height: 45
   parent: {fileID: 1146664859728872260}
   children:
   - {fileID: 1146664859728872278}
@@ -1607,7 +1616,7 @@ MonoBehaviour:
     x: 600
     y: 620
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872279}
   children:
   - {fileID: 1146664859728872233}
@@ -1634,7 +1643,7 @@ MonoBehaviour:
     x: 500
     y: 820
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872278}
   children:
   - {fileID: 5490272892618500282}
@@ -1686,7 +1695,7 @@ MonoBehaviour:
     x: 900
     y: 760
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872278}
   children:
   - {fileID: 1146664859728872272}
@@ -1738,7 +1747,7 @@ MonoBehaviour:
     x: 500
     y: 1080
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872286}
   children: []
   behaviourTree: {fileID: 0}
@@ -1770,7 +1779,7 @@ MonoBehaviour:
     x: 920
     y: 920
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872232}
   children:
   - {fileID: 1146664859728872275}
@@ -1798,7 +1807,7 @@ MonoBehaviour:
     x: 780
     y: 980
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872272}
   children: []
   behaviourTree: {fileID: 0}
@@ -1825,7 +1834,7 @@ MonoBehaviour:
     x: 1200
     y: 1020
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872272}
   children: []
   behaviourTree: {fileID: 0}
@@ -1857,7 +1866,7 @@ MonoBehaviour:
     x: 972.6666
     y: 998.6666
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872272}
   children: []
   behaviourTree: {fileID: 0}
@@ -1895,7 +1904,7 @@ MonoBehaviour:
     x: 320
     y: 1040
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872286}
   children: []
   behaviourTree: {fileID: 0}
@@ -1922,7 +1931,7 @@ MonoBehaviour:
     x: 500
     y: 980
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5490272892618500282}
   children:
   - {fileID: 1146664859728872287}
@@ -2022,7 +2031,7 @@ MonoBehaviour:
     x: -80
     y: 460
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872260}
   children: []
   behaviourTree: {fileID: 0}
@@ -2072,7 +2081,7 @@ MonoBehaviour:
     x: -840
     y: 480
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 0}
   children: []
   behaviourTree: {fileID: 0}
@@ -2097,7 +2106,7 @@ MonoBehaviour:
     x: -640
     y: 240
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872261}
   children: []
   behaviourTree: {fileID: 0}
@@ -2147,7 +2156,7 @@ MonoBehaviour:
     x: 120
     y: 400
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 3849381155880850875}
   children:
   - {fileID: 1146664859728872281}
@@ -2175,7 +2184,7 @@ MonoBehaviour:
     x: -460
     y: 180
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872252}
   children:
   - {fileID: 1146664859728872262}
@@ -2216,7 +2225,7 @@ MonoBehaviour:
     x: 640
     y: 1120
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872286}
   children:
   - {fileID: 8261336323206754758}
@@ -2287,7 +2296,7 @@ MonoBehaviour:
     x: 648
     y: 1176.6669
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872270}
   children: []
   behaviourTree: {fileID: 0}
@@ -2323,7 +2332,7 @@ MonoBehaviour:
     x: 500
     y: -80
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872193}
   children:
   - {fileID: 1146664859728872283}
@@ -2351,7 +2360,7 @@ MonoBehaviour:
     x: 814.6666
     y: 1209.3335
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872286}
   children: []
   behaviourTree: {fileID: 0}
@@ -2466,7 +2475,7 @@ MonoBehaviour:
     x: 220
     y: 340
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 1146664859728872229}
   children:
   - {fileID: 1146664859728872260}
@@ -2505,6 +2514,384 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: HitRange
   val: 6
+--- !u!114 &-1338560530252502002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534e3ec7de6cd444e984c2e7f68e42e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Is Set Condition
+  rect:
+    serializedVersion: 2
+    x: -20
+    y: -140
+    width: 160
+    height: 45
+  parent: {fileID: 1146664859728872195}
+  children:
+  - {fileID: 8514320190814661026}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  invert: 0
+  type: 0
+  boolReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 1146664859728872246}
+    key: isDead
+    constantValue: 0
+  objectReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  transformReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+--- !u!114 &8514320190814661026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -80
+    y: -60
+    width: 160
+    height: 45
+  parent: {fileID: -1338560530252502002}
+  children:
+  - {fileID: 7582867089922358221}
+  - {fileID: 248657532396279815}
+  - {fileID: 3071948317615723959}
+  - {fileID: -8120530273969195555}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &7582867089922358221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: -340
+    y: -20
+    width: 160
+    height: 45
+  parent: {fileID: 8514320190814661026}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 1
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 1146664859728872246}
+    key: self
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 1146664859728872246}
+    key: selfGameObject
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 145310437994900321}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1146664859728872245}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-8120530273969195555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: 100
+    y: 40
+    width: 160
+    height: 45
+  parent: {fileID: 8514320190814661026}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 1
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 1146664859728872246}
+    key: selfGameObject
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1146664859728872257}
+        m_TargetAssemblyTypeName: MobStatus, Assembly-CSharp
+        m_MethodName: die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3071948317615723959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -40
+    y: 60
+    width: 160
+    height: 45
+  parent: {fileID: 8514320190814661026}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 1.4
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &248657532396279815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -177.33334
+    y: 40.000015
+    width: 160
+    height: 45
+  parent: {fileID: 8514320190814661026}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 8261336323206754753}
+  animationName: Dead
+  playAnimation: 1
+--- !u!114 &71276493677135817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae15c5e6bcb1714080f2e8296c3d17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: isDead
+  val: 0
 --- !u!1 &3103082452154620747
 GameObject:
   m_ObjectHideFlags: 0

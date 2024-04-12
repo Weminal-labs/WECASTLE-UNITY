@@ -1,5 +1,4 @@
 using Newtonsoft.Json;
-using System.Collections;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
@@ -33,8 +32,10 @@ public class GameController : MonoBehaviour
         {
             logOut.onClick.AddListener(RequestLogOut);
         }
-        
+
         time = 10.0f;
+        OnEnter.Invoke();
+
     }
 
     // Update is called once per frame
@@ -86,7 +87,7 @@ public class GameController : MonoBehaviour
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
         int plusEXP = (m + g + w);
-        if( plusEXP > 0 )
+        if (plusEXP > 0)
         {
             playerInfo.setExp(plusEXP);
         }

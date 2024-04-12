@@ -15,11 +15,14 @@ public class SpawnController : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     public void SpawnEnemy()
     {
+
+
+
         if (dropPoints.Count == 0 || destinations.Count == 0 || prefabsToInstantiate.Count == 0)
         {
             Debug.LogError("Drop points, destinations, or prefabs to instantiate is not set.");

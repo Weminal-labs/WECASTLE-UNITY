@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: WaveSounnd
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 4d764bf9890321b4cad2ea491916677a, type: 3}
+  - {fileID: 8300000, guid: c6c038283837116409a667c2ca77c4c3, type: 3}
+  - {fileID: 8300000, guid: 74cc79977e835bb41a1b000a3b63bfb4, type: 3}
   _mixerGroup: {fileID: -3493607774525687974, guid: 4f4e7ed1ac2d6214bb932eb3cd788f45, type: 2}
-  _noRepeats: 0
+  _noRepeats: 1
   _randomPitch: 1
   _minPitch: 0.5
   _maxPitch: 1.5
