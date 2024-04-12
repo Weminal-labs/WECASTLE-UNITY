@@ -29,7 +29,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         RequestAddress();
-        /*ReceiveAddress("SSSS");*/
+        /*string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
+        ReceiveAddress(json);*/
         if (logOut != null)
         {
             logOut.onClick.AddListener(RequestLogOut);
@@ -64,7 +65,7 @@ public class GameController : MonoBehaviour
 
     public void ReceiveAddress(string json)
     {
-        Dictionary<string, object> jsonObject = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+        Dictionary<string, string> jsonObject = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
         this.id = jsonObject["id"].ToString();
         playerInfo = new PlayerInfo(id, Int32.Parse(jsonObject["level"].ToString()), Int32.Parse(jsonObject["exp"].ToString()), Int32.Parse(jsonObject["max_exp"].ToString()), Int32.Parse(jsonObject["gold"].ToString()), Int32.Parse(jsonObject["wood"].ToString()), Int32.Parse(jsonObject["meat"].ToString()));
         PlayerInfoJson info = new PlayerInfoJson(playerInfo);
@@ -97,13 +98,15 @@ public class GameController : MonoBehaviour
         lv.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getLv().ToString());
         exp.GetComponent<Slider>().value = playerInfo.getExp();
         exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();
-        Debug.Log(playerInfo.getExp());
+        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SavePlayer(JsonConvert.SerializeObject(player));
     }
     public PlayerInfo getPlayer()
     {
         return playerInfo;
     }
-
+    [DllImport("__Internal")]
+    public static extern void SavePlayer(string json);
     public void loseGame()
     {
         playerInfo.setLose();

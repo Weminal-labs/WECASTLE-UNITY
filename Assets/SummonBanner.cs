@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
+using System.Runtime.InteropServices;
 
 public class SummonBanner : MonoBehaviour
 {
@@ -170,6 +171,7 @@ public class SummonBanner : MonoBehaviour
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
         MobStatsForJSON json = new MobStatsForJSON(data);
         Debug.Log(JsonConvert.SerializeObject(json));
+        RequestID(JsonConvert.SerializeObject(json), data.getId());
         tempColor = this.gameObject.GetComponent<RawImage>().color;
         tempColor.a = 100.0f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;
@@ -184,4 +186,6 @@ public class SummonBanner : MonoBehaviour
         }
         return true;
     }
+    [DllImport("__Internal")]
+    public static extern void RequestID(string json, string fakeId);
 }
