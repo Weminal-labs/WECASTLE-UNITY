@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace MBT
 {
@@ -18,7 +16,7 @@ namespace MBT
             {
                 return;
             }
-            position.Value = t.position;
+            t.position = position.Value;
         }
     }
 }

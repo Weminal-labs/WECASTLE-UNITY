@@ -28,6 +28,10 @@ public class UnitChosen : MonoBehaviour
                     {
                         Transform tower = this.parent.GetComponent<CanUseUnit>().getPlace().GetComponent<UnitChose>().getBuilding().transform;
                         mob.GetComponent<Blackboard>().GetVariable<BoolVariable>("isInBuilding").Value = true;
+                        mob.GetComponent<Blackboard>().GetVariable<BoolVariable>("isNearBuilding").Value = true;
+                        Vector3 vector3 = tower.position;
+                        vector3.y += 7f;
+                        mob.GetComponent<Blackboard>().GetVariable<Vector3Variable>("towerVector3").Value = vector3;
 
                         mob.GetComponent<Blackboard>().GetVariable<TransformVariable>("towerTransform").Value = tower;
                         break;
