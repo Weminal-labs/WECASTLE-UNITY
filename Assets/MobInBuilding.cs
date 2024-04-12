@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,4 +41,5 @@ public class MobInBuilding : MonoBehaviour
     {
         return this.mob.Count;
     }
+
 }

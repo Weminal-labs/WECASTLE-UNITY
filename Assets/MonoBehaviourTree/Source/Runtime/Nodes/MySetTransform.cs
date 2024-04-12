@@ -3,7 +3,7 @@ using UnityEngine;
 namespace MBT
 {
     [AddComponentMenu("")]
-    [MBTNode(name = "Tasks/Set Object")]
+    [MBTNode(name = "Tasks/My Set Object")]
     public class MySetTransform : Leaf
     {
         [SerializeField]
@@ -17,11 +17,13 @@ namespace MBT
         {
             if (type == Type.Transform)
             {
-                destinationTransform.Value = sourceTransform.Value;
+                Vector3 newPosition = sourceTransform.Value.position;
+                newPosition.y += 7f; // Adjust Y-axis by adding 7
+                destinationTransform.Value.position = newPosition;
             }
             else
             {
-                destinationGameObject.Value = sourceGameObject.Value;
+                destinationGameObject.Value.transform.position = sourceGameObject.Value.transform.position + Vector3.up * 7f;
             }
             return NodeResult.success;
         }
