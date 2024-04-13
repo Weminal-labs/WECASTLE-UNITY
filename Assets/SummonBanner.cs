@@ -1,12 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using Newtonsoft.Json;
-using System.Runtime.InteropServices;
 
 public class SummonBanner : MonoBehaviour
 {
@@ -87,7 +84,7 @@ public class SummonBanner : MonoBehaviour
         int maxSpeed = Int32.Parse(split[1]);
         string nameMob = name.GetComponentInChildren<TMP_InputField>().text;
         string historyMob = history.GetComponentInChildren<TMP_InputField>().text;
-        MobStats mob = new MobStats(this.unit, minHealth,  maxHealth, minDamage, maxDamage, minSpeed, maxSpeed, nameMob, historyMob);
+        MobStats mob = new MobStats(this.unit, minHealth, maxHealth, minDamage, maxDamage, minSpeed, maxSpeed, nameMob, historyMob);
         MobStats mobSummon = new MobStats(mob, spawnPosition.transform.position);
         managerDataMob.GetComponent<ManageMobData>().addMob(mobSummon);
         StartCoroutine(StartAnimation(mobSummon));
@@ -169,9 +166,10 @@ public class SummonBanner : MonoBehaviour
         Animation.GetComponent<Animator>().SetTrigger("StartSummon");
         yield return new WaitForSeconds(4.5f);
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
-        MobStatsForJSON json = new MobStatsForJSON(data);
+        //This is code for Connect to server to get new ID
+        /*MobStatsForJSON json = new MobStatsForJSON(data);
         Debug.Log(JsonConvert.SerializeObject(json));
-        RequestID(JsonConvert.SerializeObject(json), data.getId());
+        RequestID(JsonConvert.SerializeObject(json), data.getId());*/
         tempColor = this.gameObject.GetComponent<RawImage>().color;
         tempColor.a = 100.0f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;
@@ -180,7 +178,7 @@ public class SummonBanner : MonoBehaviour
     }
     public bool checkM()
     {
-        if(gameControll.GetComponent<GameController>().getPlayer().getCurGold() < Int32.Parse(goldCost.text)|| gameControll.GetComponent<GameController>().getPlayer().getCurWood() < Int32.Parse(woodCost.text)|| gameControll.GetComponent<GameController>().getPlayer().getCurMeat() < Int32.Parse(meatCost.text))
+        if (gameControll.GetComponent<GameController>().getPlayer().getCurGold() < Int32.Parse(goldCost.text) || gameControll.GetComponent<GameController>().getPlayer().getCurWood() < Int32.Parse(woodCost.text) || gameControll.GetComponent<GameController>().getPlayer().getCurMeat() < Int32.Parse(meatCost.text))
         {
             return false;
         }

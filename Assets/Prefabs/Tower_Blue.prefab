@@ -121,6 +121,7 @@ MonoBehaviour:
   - {fileID: 1450014471489995759}
   - {fileID: 1450014472205984363}
   isDoubleClick: 0
+  destroyHouse: {fileID: 4564162451704006011, guid: 3761f8b47a4bf7a418ade7e1e280fde8, type: 3}
 --- !u!114 &8405690710835837803
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 5830232415592475882}
   - component: {fileID: 5830232415592475883}
   - component: {fileID: 7158555230851564469}
-  - component: {fileID: 5490272892618500282}
   - component: {fileID: 2104064519950138101}
   - component: {fileID: -1338560530252502002}
   - component: {fileID: 8514320190814661026}
@@ -87,6 +86,18 @@ GameObject:
   - component: {fileID: 4321892464512967933}
   - component: {fileID: 1584830632176598046}
   - component: {fileID: 7469223806375055065}
+  - component: {fileID: 3018057398422666365}
+  - component: {fileID: 3973487339818346953}
+  - component: {fileID: 9115325218196982153}
+  - component: {fileID: 6792282223254492811}
+  - component: {fileID: 29031641310523360}
+  - component: {fileID: 7192068977307717076}
+  - component: {fileID: 9073554316070466698}
+  - component: {fileID: 7683010573518995758}
+  - component: {fileID: 8417800721737997355}
+  - component: {fileID: 2047571010248339033}
+  - component: {fileID: 1040699105697891375}
+  - component: {fileID: 551733099191579176}
   m_Layer: 8
   m_Name: Pawn_Blue
   m_TagString: Ally
@@ -243,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 7582867089922358221}
+  selectedEditorNode: {fileID: 0}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -286,6 +297,7 @@ MonoBehaviour:
   - {fileID: 5830232415592475883}
   - {fileID: 2104064519950138101}
   - {fileID: 71276493677135817}
+  - {fileID: 3973487339818346953}
   masterBlackboard: {fileID: 0}
 --- !u!114 &1146664859728872201
 MonoBehaviour:
@@ -429,7 +441,7 @@ MonoBehaviour:
     y: 80
     width: 160
     height: 45
-  parent: {fileID: 1146664859728872283}
+  parent: {fileID: 29031641310523360}
   children:
   - {fileID: 1146664859728872195}
   behaviourTree: {fileID: 0}
@@ -1576,13 +1588,13 @@ MonoBehaviour:
   title: Number Condition
   rect:
     serializedVersion: 2
-    x: 500
-    y: 820
+    x: 560
+    y: 740
     width: 160
     height: 45
   parent: {fileID: 1146664859728872278}
   children:
-  - {fileID: 5490272892618500282}
+  - {fileID: 6792282223254492811}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -1836,7 +1848,7 @@ MonoBehaviour:
     y: 980
     width: 160
     height: 45
-  parent: {fileID: 5490272892618500282}
+  parent: {fileID: 3018057398422666365}
   children:
   - {fileID: 1146664859728872287}
   - {fileID: 1146664859728872276}
@@ -1864,12 +1876,12 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 640
-    y: 20
+    y: -20
     width: 160
     height: 59
   parent: {fileID: 435519512012042685}
   children:
-  - {fileID: 1146664859728872192}
+  - {fileID: 29031641310523360}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -2295,49 +2307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5490272892618500282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145310437994900321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783dbcfc05fb545438c1f85c85f8930f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Detect Enemy GameObject Service
-  rect:
-    serializedVersion: 2
-    x: 500
-    y: 900
-    width: 160
-    height: 59
-  parent: {fileID: 1146664859728872233}
-  children:
-  - {fileID: 1146664859728872286}
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  interval: 1
-  randomDeviation: 0
-  callOnEnter: 1
-  mask:
-    serializedVersion: 2
-    m_Bits: 512
-  range:
-    useConstant: 0
-    mode: 0
-    blackboard: {fileID: 1146664859728872246}
-    key: detectRange
-    constantValue: 0
-  variableToSet:
-    useConstant: 0
-    mode: 1
-    blackboard: {fileID: 1146664859728872246}
-    key: targetGameObject
-    constantValue: {fileID: 0}
 --- !u!114 &2104064519950138101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2531,8 +2500,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1146664859728872194}
-        m_TargetAssemblyTypeName: UnityEngine.AI.NavMeshAgent, UnityEngine
-        m_MethodName: set_isStopped
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2540,7 +2509,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   floatEvent:
     m_PersistentCalls:
@@ -2885,6 +2854,385 @@ MonoBehaviour:
     width: 160
     height: 45
   parent: {fileID: 1146664859728872248}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &3018057398422666365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e0da775509f7740982fe6784a0c3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: String Condition
+  rect:
+    serializedVersion: 2
+    x: 640
+    y: 900
+    width: 160
+    height: 45
+  parent: {fileID: 6792282223254492811}
+  children:
+  - {fileID: 1146664859728872286}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  stringReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 1146664859728872246}
+    key: tagTarget
+    constantValue: 
+  stringReference2:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: Tree
+  comparator: 0
+--- !u!114 &3973487339818346953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0da855a1d65c24286c40d81a5cd707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tagTarget
+  val: 
+--- !u!114 &9115325218196982153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e0da775509f7740982fe6784a0c3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: String Condition
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 900
+    width: 160
+    height: 45
+  parent: {fileID: 6792282223254492811}
+  children:
+  - {fileID: 7192068977307717076}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  stringReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 1146664859728872246}
+    key: tagTarget
+    constantValue: 
+  stringReference2:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: House
+  comparator: 0
+--- !u!114 &6792282223254492811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: 640
+    y: 820
+    width: 160
+    height: 45
+  parent: {fileID: 1146664859728872233}
+  children:
+  - {fileID: 9115325218196982153}
+  - {fileID: 3018057398422666365}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &29031641310523360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c85086315c8474e8c472bde57dac9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Detect Enemy Tag Service
+  rect:
+    serializedVersion: 2
+    x: 720
+    y: 80
+    width: 160
+    height: 45
+  parent: {fileID: 1146664859728872283}
+  children:
+  - {fileID: 1146664859728872192}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 1146664859728872246}
+    key: detectRange
+    constantValue: 0
+  variableToSet:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 1146664859728872246}
+    key: tagTarget
+    constantValue: 
+--- !u!114 &7192068977307717076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 960
+    width: 160
+    height: 45
+  parent: {fileID: 9115325218196982153}
+  children:
+  - {fileID: 9073554316070466698}
+  - {fileID: 7683010573518995758}
+  - {fileID: 8417800721737997355}
+  - {fileID: 2047571010248339033}
+  - {fileID: 1040699105697891375}
+  - {fileID: 551733099191579176}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &9073554316070466698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -180
+    y: 1020
+    width: 160
+    height: 45
+  parent: {fileID: 7192068977307717076}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 8261336323206754753}
+  animationName: Build
+  playAnimation: 1
+--- !u!114 &7683010573518995758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -160
+    y: 1080
+    width: 160
+    height: 45
+  parent: {fileID: 7192068977307717076}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.4
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &8417800721737997355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797e3258331046449ab3bcf348a26d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Damage
+  rect:
+    serializedVersion: 2
+    x: -100
+    y: 1140
+    width: 160
+    height: 45
+  parent: {fileID: 7192068977307717076}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  target:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 1146664859728872246}
+    key: targetGameObject
+    constantValue: {fileID: 0}
+  self:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 1146664859728872246}
+    key: selfGameObject
+    constantValue: {fileID: 0}
+--- !u!114 &2047571010248339033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -40
+    y: 1200
+    width: 160
+    height: 45
+  parent: {fileID: 7192068977307717076}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.1
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &1040699105697891375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: 20
+    y: 1260
+    width: 160
+    height: 45
+  parent: {fileID: 7192068977307717076}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 8261336323206754753}
+  animationName: Idle
+  playAnimation: 1
+--- !u!114 &551733099191579176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145310437994900321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 100
+    y: 1320
+    width: 160
+    height: 45
+  parent: {fileID: 7192068977307717076}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0

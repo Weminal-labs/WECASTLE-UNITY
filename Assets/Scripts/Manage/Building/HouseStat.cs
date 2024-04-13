@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +21,9 @@ public class HouseStat : MonoBehaviour
     private bool isTimeCheckAllowed = true;
     private int leftClickNum = 0;
     public bool isDoubleClick = false;
+
+    [SerializeField]
+    private GameObject destroyHouse;
     private void Start()
     {
         hp = 450;
@@ -73,7 +75,7 @@ public class HouseStat : MonoBehaviour
     }
     public void TakeDame(int Damage)
     {
-        if(hp - Damage < 0)
+        if (hp - Damage < 0)
         {
             DesTroyBuilding();
         }
@@ -81,7 +83,7 @@ public class HouseStat : MonoBehaviour
         {
             hp -= Damage;
         }
-        if(hp < 300 && countFire < 3)
+        if (hp < 300 && countFire < 3)
         {
             fire[countFire].SetActive(true);
             countFire += 1;
@@ -89,11 +91,13 @@ public class HouseStat : MonoBehaviour
     }
     public void DesTroyBuilding()
     {
-        foreach(GameObject mob in this.gameObject.GetComponent<MobInBuilding>().getAllGameObjectsMob())
+        foreach (GameObject mob in this.gameObject.GetComponent<MobInBuilding>().getAllGameObjectsMob())
         {
             mob.SetActive(true);
             mob.GetComponent<MobStatus>().mobOutBuilding();
         }
+        Instantiate(destroyHouse, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
+
     }
 }

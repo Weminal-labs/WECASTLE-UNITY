@@ -28,9 +28,11 @@ public class GameController : MonoBehaviour
     float spawnInterval = 330;
     void Start()
     {
-        RequestAddress();
-        /*string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
-        ReceiveAddress(json);*/
+        //This is Conection to the server call user data
+        /*RequestAddress();*/
+        //Fake data
+        string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
+        ReceiveAddress(json);
         if (logOut != null)
         {
             logOut.onClick.AddListener(RequestLogOut);
@@ -98,8 +100,9 @@ public class GameController : MonoBehaviour
         lv.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getLv().ToString());
         exp.GetComponent<Slider>().value = playerInfo.getExp();
         exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();
-        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-        SavePlayer(JsonConvert.SerializeObject(player));
+        //This is code for save player data
+        /*PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SavePlayer(JsonConvert.SerializeObject(player));*/
     }
     public PlayerInfo getPlayer()
     {

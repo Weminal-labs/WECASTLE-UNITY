@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 5127410729211080448}
+  selectedEditorNode: {fileID: 5882714396590605197}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -3393,10 +3393,10 @@ MonoBehaviour:
     constantValue: 0
   comparator: 2
   floatReference2:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5882714396590605193}
+    key: HitRange
     constantValue: 3.5
   intReference2:
     useConstant: 1
@@ -3459,10 +3459,10 @@ MonoBehaviour:
     constantValue: 0
   comparator: 1
   floatReference2:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5882714396590605193}
+    key: HitRange
     constantValue: 3.5
   intReference2:
     useConstant: 1
@@ -4520,8 +4520,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 5882714396590605304}
-        m_TargetAssemblyTypeName: UnityEngine.AI.NavMeshAgent, UnityEngine
-        m_MethodName: set_isStopped
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4529,7 +4529,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   floatEvent:
     m_PersistentCalls:
@@ -4590,7 +4590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 3
+  val: 3.5
 --- !u!114 &5701300024374844929
 MonoBehaviour:
   m_ObjectHideFlags: 0

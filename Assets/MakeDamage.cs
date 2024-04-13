@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace MBT
 {
@@ -21,12 +18,25 @@ namespace MBT
                 return NodeResult.failure;
             }
 
-            if(target.Value.GetComponent<TreeStat>().getHp() <= self.Value.GetComponent<MobStatus>().getDamage())
-            {
-                self.Value.GetComponent<MobStatus>().LvUp(3);
-            }
-            target.Value.GetComponent<TreeStat>().takeDame(self.Value.GetComponent<MobStatus>().getDamage());
 
+            if (target.Value.GetComponent<TreeStat>())
+            {
+                if (target.Value.GetComponent<TreeStat>().getHp() <= self.Value.GetComponent<MobStatus>().getDamage())
+                {
+                    self.Value.GetComponent<MobStatus>().LvUp(3);
+                }
+                target.Value.GetComponent<TreeStat>().takeDame(self.Value.GetComponent<MobStatus>().getDamage());
+
+            }
+            if (target.Value.GetComponent<DestroyHouseFix>())
+            {
+                if (target.Value.GetComponent<DestroyHouseFix>().getHp() <= self.Value.GetComponent<MobStatus>().getDamage())
+                {
+                    self.Value.GetComponent<MobStatus>().LvUp(3);
+                }
+                target.Value.GetComponent<DestroyHouseFix>().takeDame(self.Value.GetComponent<MobStatus>().getDamage());
+
+            }
             /*            NewBehaviourScript newBehaviourScript = target.Value.GetComponent<NewBehaviourScript>();
 
                         newBehaviourScript.TakeDmg(mobStatus.getDamage());*/

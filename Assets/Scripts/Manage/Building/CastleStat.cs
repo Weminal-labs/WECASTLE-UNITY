@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +21,9 @@ public class CastleStat : MonoBehaviour
     private bool isTimeCheckAllowed = true;
     private int leftClickNum = 0;
     public bool isDoubleClick = false;
+    [SerializeField]
+    private GameObject destroyCastle;
+
     private void Start()
     {
         hp = 1000;
@@ -71,7 +73,7 @@ public class CastleStat : MonoBehaviour
                 }
                 hpUi.GetComponent<Slider>().maxValue = maxHp;
                 hpUi.GetComponent<Slider>().value = hp;
-                hpUi.gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(hp.ToString()+"/"+maxHp.ToString());
+                hpUi.gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(hp.ToString() + "/" + maxHp.ToString());
                 break;
             }
             yield return new WaitForEndOfFrame();
@@ -103,6 +105,7 @@ public class CastleStat : MonoBehaviour
             mob.GetComponent<MobStatus>().mobOutBuilding();
         }
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().loseGame();
+        Instantiate(destroyCastle, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }
