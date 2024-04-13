@@ -20,21 +20,21 @@ mergeInto(LibraryManager.library, {
   },
   SaveMob : function(json){
      try {
-      window.dispatchReactUnityEvent("RequestID", UTF8ToString(json));
+      window.dispatchReactUnityEvent("SaveMob", UTF8ToString(json));
     } catch (e) {
       console.warn("Failed to dispatch event");
     }
   },
   SaveListMob : function(json){
      try {
-      window.dispatchReactUnityEvent("RequestID", UTF8ToString(json));
+      window.dispatchReactUnityEvent("SaveListMob", UTF8ToString(json));
     } catch (e) {
       console.warn("Failed to dispatch event");
     }
   },
-  SavePlayer : function(json, fakeID){
+  SavePlayer : function(json){
      try {
-      window.dispatchReactUnityEvent("RequestID", UTF8ToString(json), UTF8ToString(fakeID));
+      window.dispatchReactUnityEvent("SavePlayer", UTF8ToString(json));
     } catch (e) {
       console.warn("Failed to dispatch event");
     }

@@ -24,21 +24,21 @@ public class GameController : MonoBehaviour
 
     [SerializeField] UnityEvent OnEnter;
     [SerializeField] UnityEvent OnLeave;
-    [SerializeField] GameObject spawnController;
+    [SerializeField] GameObject spawnController, loadingScreen, loseScreen;
     float spawnInterval = 330;
     void Start()
     {
         //This is Conection to the server call user data
-        /*RequestAddress();*/
+        RequestAddress();
         //Fake data
-        string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
-        ReceiveAddress(json);
+        /*string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
+        ReceiveAddress(json);*/
         if (logOut != null)
         {
             logOut.onClick.AddListener(LogOutPrePare);
         }
 
-        time = 120.0f;
+        time = 20.0f;
         //OnEnter.Invoke();
 
     }
@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
             spawnEnemy.GetComponent<SpawnController>().SpawnEnemy();
-            time = 60.0f;
+            time = 30.0f;
         }
     }
 
@@ -84,6 +84,8 @@ public class GameController : MonoBehaviour
     public void LogOutPrePare()
     {
         GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
+        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SavePlayer(JsonConvert.SerializeObject(player));
         RequestLogOut();
     }
     [DllImport("__Internal")]
@@ -107,8 +109,8 @@ public class GameController : MonoBehaviour
         exp.GetComponent<Slider>().value = playerInfo.getExp();
         exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();
         //This is code for save player data
-        /*PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-        SavePlayer(JsonConvert.SerializeObject(player));*/
+        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SavePlayer(JsonConvert.SerializeObject(player));
     }
     public PlayerInfo getPlayer()
     {
@@ -122,9 +124,20 @@ public class GameController : MonoBehaviour
         wood.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurWood().ToString());
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
+        GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
+        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SavePlayer(JsonConvert.SerializeObject(player));
+        loseScreen.SetActive(true);
     }
     private float calculatorTime(MobStats mob)
     {
         return 100.0f / (mob.getDamage() / 10.0f);
+    }
+    public void stopLoadingScreen()
+    {
+        if (loadingScreen != null)
+        {
+            loadingScreen.SetActive(false);
+        }
     }
 }
