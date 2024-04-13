@@ -35,10 +35,10 @@ public class GameController : MonoBehaviour
         ReceiveAddress(json);
         if (logOut != null)
         {
-            logOut.onClick.AddListener(RequestLogOut);
+            logOut.onClick.AddListener(LogOutPrePare);
         }
 
-        time = 10.0f;
+        time = 120.0f;
         //OnEnter.Invoke();
 
     }
@@ -60,8 +60,9 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
             spawnEnemy.GetComponent<SpawnController>().SpawnEnemy();
-            time = 30.0f;
+            time = 60.0f;
         }
     }
 
@@ -79,6 +80,11 @@ public class GameController : MonoBehaviour
         wood.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurWood().ToString());
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
+    }
+    public void LogOutPrePare()
+    {
+        GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
+        RequestLogOut();
     }
     [DllImport("__Internal")]
     public static extern void RequestLogOut();
