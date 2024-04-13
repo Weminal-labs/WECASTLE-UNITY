@@ -99,9 +99,9 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = selectUnit;
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
-        healthText.SetText("75-150");
+        healthText.SetText("120-200");
         damageText.SetText("25-50");
-        speedText.SetText("5-10");
+        speedText.SetText("5-7");
         meatCost.SetText("30");
         woodCost.SetText("15");
         goldCost.SetText("30");
@@ -121,9 +121,9 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = unSelectUnit;
         unitArcher.GetComponent<Image>().sprite = selectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
-        healthText.SetText("60-120");
+        healthText.SetText("60-80");
         damageText.SetText("40-80");
-        speedText.SetText("8-12");
+        speedText.SetText("6-8");
         meatCost.SetText("30");
         woodCost.SetText("30");
         goldCost.SetText("30");
@@ -144,8 +144,8 @@ public class SummonBanner : MonoBehaviour
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = selectUnit;
         healthText.SetText("30-40");
-        damageText.SetText("10-25");
-        speedText.SetText("10-15");
+        damageText.SetText("20-35");
+        speedText.SetText("6-8");
         meatCost.SetText("20");
         woodCost.SetText("30");
         goldCost.SetText("20");

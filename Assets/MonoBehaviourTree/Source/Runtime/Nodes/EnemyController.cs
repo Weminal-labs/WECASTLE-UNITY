@@ -93,10 +93,10 @@ public class EnemyController : MonoBehaviour
     public void spawnSet()
     {
         int lvE = Random.Range(this.lv, this.lv + 3);
-        this.maxHealth = Random.Range(40,60);
+        this.maxHealth = Random.Range(40,70);
         this.curHealth = maxHealth;
-        this.damage = Random.Range(10,20);
-        this.speed = Random.Range(10,15);
+        this.damage = Random.Range(15,20);
+        this.speed = Random.Range(5,7);
         this.Agent.speed = this.speed;
         for(; lvE>0;)
         {
