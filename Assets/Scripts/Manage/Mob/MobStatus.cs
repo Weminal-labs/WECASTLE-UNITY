@@ -12,7 +12,6 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     private int curHealth, maxHealth, damage, speed, exp, maxExp, lv, type;
     [SerializeField]
     private string name, history, id;
-
     Blackboard blackboard;
     BoolVariable isDead;
     IntVariable blackBoardDamage;
@@ -56,9 +55,11 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     public void SaveData(ref MobStats data, int exp)
     {
         data.setExp(exp);
-        data.setPos(this.gameObject.transform.position);
     }
-
+    public MobStats GetMobStats()
+    {
+        return this.stats;
+    }
     // Start is called before the first frame update
     void Start()
     {

@@ -41,7 +41,7 @@ public class BoatController : MonoBehaviour
         InstantiateNewPrefab();
         InstantiateNewPrefab();
         // Wait for 1 second
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
 
 

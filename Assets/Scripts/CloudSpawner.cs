@@ -3,6 +3,7 @@ using UnityEngine;
 public class CloudSpawner : MonoBehaviour
 {
     public GameObject[] cloudPrefab;
+    public GameObject cloud;
     public float spawnInterval = 30.0f;
     public float speed = 10.0f;
 
@@ -28,6 +29,6 @@ public class CloudSpawner : MonoBehaviour
         GameObject cloud = cloudPrefab[randomCloud];
         cloud.GetComponent<CloudMovement>().speed = this.speed;
         // Instantiate a new cloud object at a fixed X position (-30, 0, 0)
-        Instantiate(cloud, new Vector3(-60f, Random.Range(-30.0f,50.0f), 0), Quaternion.identity);
+        Instantiate(cloud, new Vector3(-60f*this.cloud.transform.localScale.x, Random.Range(-30.0f,50.0f), 0), Quaternion.identity);
     }
 }

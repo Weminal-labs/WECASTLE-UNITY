@@ -14,7 +14,8 @@ public class JsonToMob
     public int exp { get; set; }
     public int max_exp { get; set; }
     public int location_x { get; set; }
-    public float location_y { get; set; }
+    public int location_y { get; set; }
     public string name { get; set; }
-    public string history { get; set; }
+    public string description { get; set; }
+    public string url { get; set; }
 }

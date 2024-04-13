@@ -146,11 +146,11 @@ public class MobStats
     {
         return history;
     }
-    public void setPos(Vector3 position)
+    public void setPos(Vector3 pos)
     {
-        this.position[0] = position.x;
-        this.position[1] = position.y;
-        this.position[2] = position.z;
+        this.position[0] = pos.x;
+        this.position[1] = pos.y;
+        this.position[2] = pos.z;
     }
     public float[] getPos()
     {
@@ -169,5 +169,9 @@ public class MobStats
     public bool isInBuilding()
     {
         return this.inBuilding;
+    }
+    public void setNewID(string id)
+    {
+        this.id_mob = id;
     }
 }
