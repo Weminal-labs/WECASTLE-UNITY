@@ -25,6 +25,13 @@ mergeInto(LibraryManager.library, {
       console.warn("Failed to dispatch event");
     }
   },
+  SaveListMob : function(json){
+     try {
+      window.dispatchReactUnityEvent("RequestID", UTF8ToString(json));
+    } catch (e) {
+      console.warn("Failed to dispatch event");
+    }
+  },
   SavePlayer : function(json, fakeID){
      try {
       window.dispatchReactUnityEvent("RequestID", UTF8ToString(json), UTF8ToString(fakeID));

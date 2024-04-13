@@ -99,12 +99,17 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = selectUnit;
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
-        healthText.SetText("120-200");
-        damageText.SetText("25-50");
-        speedText.SetText("5-7");
-        meatCost.SetText("30");
+        int lvP = gameControll.GetComponent<GameController>().getPlayer().getLv();
+        int minHealth = 140 + (lvP-1) * 3;
+        int maxHealth = 200 + (lvP - 1) * 3;
+        int minDamage = 25 + (lvP - 1) * 3;
+        int maxDamage = 50 + (lvP - 1) * 3;
+        healthText.SetText(minHealth+"-"+maxHealth);
+        damageText.SetText(minDamage+"-"+maxDamage);
+        speedText.SetText("4-7");
+        meatCost.SetText("40");
         woodCost.SetText("15");
-        goldCost.SetText("30");
+        goldCost.SetText("20");
         if (checkM())
         {
             buttonSummon.gameObject.SetActive(true);
@@ -121,9 +126,14 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = unSelectUnit;
         unitArcher.GetComponent<Image>().sprite = selectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
-        healthText.SetText("60-80");
-        damageText.SetText("40-80");
-        speedText.SetText("6-8");
+        int lvP = gameControll.GetComponent<GameController>().getPlayer().getLv();
+        int minHealth = 60 + (lvP - 1) * 3;
+        int maxHealth = 80 + (lvP - 1) * 3;
+        int minDamage = 40 + (lvP - 1) * 3;
+        int maxDamage = 70 + (lvP - 1) * 3;
+        healthText.SetText(minHealth + "-" + maxHealth);
+        damageText.SetText(minDamage + "-" + maxDamage);
+        speedText.SetText("5-8");
         meatCost.SetText("30");
         woodCost.SetText("30");
         goldCost.SetText("30");
@@ -143,12 +153,17 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = unSelectUnit;
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = selectUnit;
-        healthText.SetText("30-40");
-        damageText.SetText("20-35");
+        int lvP = gameControll.GetComponent<GameController>().getPlayer().getLv();
+        int minHealth = 40 + (lvP - 1) * 3;
+        int maxHealth = 60 + (lvP - 1) * 3;
+        int minDamage = 20 + (lvP - 1) * 3;
+        int maxDamage = 30 + (lvP - 1) * 3;
+        healthText.SetText(minHealth + "-" + maxHealth);
+        damageText.SetText(minDamage + "-" + maxDamage);
         speedText.SetText("6-8");
         meatCost.SetText("20");
-        woodCost.SetText("30");
-        goldCost.SetText("20");
+        woodCost.SetText("20");
+        goldCost.SetText("15");
         if (checkM())
         {
             buttonSummon.gameObject.SetActive(true);

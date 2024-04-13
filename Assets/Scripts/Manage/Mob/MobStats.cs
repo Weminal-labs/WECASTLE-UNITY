@@ -88,7 +88,7 @@ public class MobStats
     }
     private void setHealthLvUp()
     {
-        this.maxHealth += Random.Range(1, 6);
+        this.maxHealth += Random.Range(1, 5);
         this.health = this.maxHealth;
     }
     public int getHealth()
@@ -101,7 +101,7 @@ public class MobStats
     }
     private void setDamageLvUp()
     {
-        this.damage += Random.Range(1, 6);
+        this.damage += Random.Range(1, 5);
     }
     public int getDamage()
     {

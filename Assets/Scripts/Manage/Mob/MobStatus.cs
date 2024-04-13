@@ -132,6 +132,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         {
             isDead.Value = true;
             stats.setHealth(- damage);
+            GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
         }
         else
         {
