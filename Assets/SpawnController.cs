@@ -1,17 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SpawnController : MonoBehaviour
 {
-    public List<Transform> dropPoints;
+    public Transform spawnPoints;
     public List<Transform> destinations;
     public List<GameObject> prefabsToInstantiate;
-    [Header("Events")]
-    [SerializeField] UnityEvent OnZoneEnter;
-    [SerializeField] UnityEvent OnZoneLeave;
 
     void Start()
     {
@@ -20,12 +15,9 @@ public class SpawnController : MonoBehaviour
 
     public void SpawnEnemy()
     {
-
-
-
-        if (dropPoints.Count == 0 || destinations.Count == 0 || prefabsToInstantiate.Count == 0)
+        if (spawnPoints == null || destinations.Count == 0 || prefabsToInstantiate.Count == 0)
         {
-            Debug.LogError("Drop points, destinations, or prefabs to instantiate is not set.");
+            Debug.LogError("Spawn points, destinations, or prefabs to instantiate is not set.");
             return;
         }
 
@@ -40,44 +32,35 @@ public class SpawnController : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        // Randomly select drop point and destination
-        Transform randomDropPoint = GetRandomDropPoint();
         Transform randomDestination = destinations[Random.Range(0, destinations.Count)];
 
         // Calculate the angle between randomDropPoint and randomDestination
-        Vector3 direction = randomDestination.position - randomDropPoint.position;
+        Vector3 direction = randomDestination.position - spawnPoints.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Determine which prefab to instantiate based on angle
-        int index = Mathf.FloorToInt(angle / 360 * prefabsToInstantiate.Count);
-        index = Mathf.Clamp(index, 0, prefabsToInstantiate.Count - 1);
+        int index = 0;
+        if ((angle > 135 && angle <= 180) || (angle >= -180 && angle < -90)) // left
+        {
+            index = 0; // replace with the index of the prefab for left direction
+        }
+        else if (angle > 90 && angle <= 135) // up-left
+        {
+            index = 1; // replace with the index of the prefab for up-left direction
+        }
+        else
+        {
+            Debug.LogError("Invalid direction.");
+            yield break;
+        }
 
         // Instantiate prefab at drop point
-        GameObject instantiatedPrefab = Instantiate(prefabsToInstantiate[index], randomDropPoint.position, Quaternion.identity);
+        GameObject instantiatedPrefab = Instantiate(prefabsToInstantiate[index], spawnPoints.position, Quaternion.identity);
 
         // Move prefab to destination
         instantiatedPrefab.GetComponent<BoatController>().destination = randomDestination;
     }
 
-    Transform GetRandomDropPoint()
-    {
-        // Find the distances between spawn point and drop points
-        var distances = new Dictionary<Transform, float>();
-        foreach (Transform dropPoint in dropPoints)
-        {
-            float distance = Vector3.Distance(transform.position, dropPoint.position);
-            distances.Add(dropPoint, distance);
-        }
-
-        // Sort distances dictionary by value (distance)
-        var sortedDistances = distances.OrderBy(pair => pair.Value);
-
-        // Take the three closest drop points
-        List<Transform> closestDropPoints = sortedDistances.Select(pair => pair.Key).Take(3).ToList();
-
-        // Randomly select drop point from the closest ones
-        return closestDropPoints[Random.Range(0, closestDropPoints.Count)];
-    }
 
     void Update()
     {

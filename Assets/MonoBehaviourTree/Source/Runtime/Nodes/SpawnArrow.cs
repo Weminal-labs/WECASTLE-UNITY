@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace MBT
 {
@@ -15,7 +12,7 @@ namespace MBT
         public FloatReference angleToTarget;
         public GameObjectReference arrowPrefap;
         private float arrowSpeed = 10;
-        private float arrowLifetime = 3;
+        private float arrowLifetime = 5;
         public IntReference Damage;
         public override NodeResult Execute()
         {
@@ -25,19 +22,19 @@ namespace MBT
                 return NodeResult.failure;
             }
 
-                Transform targetTransform = target.Value;
-                Vector3 direction = target.Value.position - self.Value.position;
-                // Spawn arrow at archer's position
-                GameObject arrow = GameObject.Instantiate(arrowPrefap.Value, transform.position, Quaternion.identity);
+            Transform targetTransform = target.Value;
+            Vector3 direction = target.Value.position - self.Value.position;
+            // Spawn arrow at archer's position
+            GameObject arrow = GameObject.Instantiate(arrowPrefap.Value, transform.position, Quaternion.identity);
             arrow.GetComponent<ArrowController>().SetDamage(Damage.Value);
-                // Rotate the arrow to face the enemy
-                arrow.transform.rotation = Quaternion.Euler(0f, 0f, angleToTarget.Value);
+            // Rotate the arrow to face the enemy
+            arrow.transform.rotation = Quaternion.Euler(0f, 0f, angleToTarget.Value);
 
-                // Move the arrow in the direction of the enemy (optional)
-                arrow.GetComponent<Rigidbody>().velocity = direction.normalized * arrowSpeed;
-                GameObject.Destroy(arrow, arrowLifetime);
+            // Move the arrow in the direction of the enemy (optional)
+            arrow.GetComponent<Rigidbody>().velocity = direction.normalized * arrowSpeed;
+            GameObject.Destroy(arrow, arrowLifetime);
 
-            
+
 
             return NodeResult.success;
         }
