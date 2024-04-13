@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowController : MonoBehaviour
@@ -12,7 +10,7 @@ public class ArrowController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<EnemyController>().takeDame(damage);
-
+            GameObject.Destroy(this.gameObject);
         }
 
     }

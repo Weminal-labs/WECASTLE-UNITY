@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 5210769356420102940}
   - component: {fileID: 5210769356420102941}
   - component: {fileID: 5210769356420102942}
-  - component: {fileID: 5210769356420102943}
   - component: {fileID: 5210769356420102934}
   - component: {fileID: 5210769356420102935}
   - component: {fileID: 5210769356420102936}
@@ -65,7 +64,6 @@ GameObject:
   - component: {fileID: 5210769356420102918}
   - component: {fileID: 5210769356420103166}
   - component: {fileID: 5210769356420103167}
-  - component: {fileID: 5210769356420102912}
   - component: {fileID: 5210769356420103155}
   - component: {fileID: 5210769356420103156}
   - component: {fileID: 5210769356420103157}
@@ -76,20 +74,15 @@ GameObject:
   - component: {fileID: 5210769356420103135}
   - component: {fileID: 5210769356420103136}
   - component: {fileID: 5210769356420103137}
-  - component: {fileID: 5210769356420103138}
   - component: {fileID: 5210769356420103139}
   - component: {fileID: 5210769356420103140}
   - component: {fileID: 5210769356420103141}
-  - component: {fileID: 5210769356420103142}
   - component: {fileID: 5210769356420103143}
   - component: {fileID: 5210769356420103145}
-  - component: {fileID: 5210769356420103146}
   - component: {fileID: 5210769356420103147}
   - component: {fileID: 5210769356420103149}
-  - component: {fileID: 5210769356420103150}
   - component: {fileID: 5210769356420103151}
   - component: {fileID: 5210769356420103153}
-  - component: {fileID: 5210769356420103154}
   - component: {fileID: 5210769356420103132}
   - component: {fileID: 5210769356420103133}
   - component: {fileID: 5210769356420103134}
@@ -99,6 +92,13 @@ GameObject:
   - component: {fileID: 8266272231792038604}
   - component: {fileID: 9145753178508961340}
   - component: {fileID: 3391657463909320282}
+  - component: {fileID: 7117140057262640448}
+  - component: {fileID: 7865950150329381225}
+  - component: {fileID: 3373145655100473016}
+  - component: {fileID: 1320348732348980727}
+  - component: {fileID: 5253228247140242498}
+  - component: {fileID: 7831578342356439564}
+  - component: {fileID: 5515308058070116712}
   m_Layer: 6
   m_Name: Torch_Blue
   m_TagString: Enemy
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 0}
+  selectedEditorNode: {fileID: 5210769356420102918}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -354,7 +354,7 @@ MonoBehaviour:
     x: 480
     y: 40
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 0}
   children:
   - {fileID: 5210769356420103131}
@@ -379,7 +379,7 @@ MonoBehaviour:
     x: 480
     y: 140
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420103131}
   children:
   - {fileID: 2667778874628842954}
@@ -422,7 +422,7 @@ MonoBehaviour:
     x: 480
     y: 220
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842953}
   children:
   - {fileID: 5210769356420103155}
@@ -450,7 +450,7 @@ MonoBehaviour:
     x: 100
     y: 340
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842954}
   children:
   - {fileID: 2667778874628842944}
@@ -496,7 +496,7 @@ MonoBehaviour:
     x: 80
     y: 480
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842947}
   children:
   - {fileID: 2667778874628842945}
@@ -523,7 +523,7 @@ MonoBehaviour:
     x: -280
     y: 520
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842944}
   children:
   - {fileID: 2667778874628842946}
@@ -569,7 +569,7 @@ MonoBehaviour:
     x: -280
     y: 600
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842945}
   children:
   - {fileID: 2667778874628842940}
@@ -616,7 +616,7 @@ MonoBehaviour:
     x: -480
     y: 680
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842946}
   children:
   - {fileID: 2667778874628842941}
@@ -667,7 +667,7 @@ MonoBehaviour:
     x: -480
     y: 760
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842940}
   children: []
   behaviourTree: {fileID: 0}
@@ -776,7 +776,7 @@ MonoBehaviour:
     x: -280
     y: 680
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842946}
   children:
   - {fileID: 5210769356420102949}
@@ -827,7 +827,7 @@ MonoBehaviour:
     x: -280
     y: 760
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102948}
   children: []
   behaviourTree: {fileID: 0}
@@ -936,7 +936,7 @@ MonoBehaviour:
     x: -100
     y: 680
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842946}
   children:
   - {fileID: 5210769356420102951}
@@ -987,7 +987,7 @@ MonoBehaviour:
     x: -100
     y: 760
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102950}
   children: []
   behaviourTree: {fileID: 0}
@@ -1096,7 +1096,7 @@ MonoBehaviour:
     x: 300
     y: 540
     width: 160
-    height: 59
+    height: 45
   parent: {fileID: 2667778874628842944}
   children:
   - {fileID: 5210769356420102946}
@@ -1142,7 +1142,7 @@ MonoBehaviour:
     x: 420
     y: 600
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102945}
   children:
   - {fileID: 5210769356420102947}
@@ -1169,7 +1169,7 @@ MonoBehaviour:
     x: 300
     y: 700
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102946}
   children:
   - {fileID: 5210769356420102934}
@@ -1221,7 +1221,7 @@ MonoBehaviour:
     x: 1420
     y: 760
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102946}
   children:
   - {fileID: 5210769356420102942}
@@ -1273,7 +1273,7 @@ MonoBehaviour:
     x: 1180
     y: 1020
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102942}
   children: []
   behaviourTree: {fileID: 0}
@@ -1300,7 +1300,7 @@ MonoBehaviour:
     x: 1300
     y: 1100
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102942}
   children: []
   behaviourTree: {fileID: 0}
@@ -1338,48 +1338,16 @@ MonoBehaviour:
     x: 1420
     y: 880
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102944}
   children:
   - {fileID: 5210769356420102940}
   - {fileID: 5210769356420102941}
-  - {fileID: 5210769356420102943}
+  - {fileID: 7117140057262640448}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
   random: 0
---- !u!114 &5210769356420102943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Wait
-  rect:
-    serializedVersion: 2
-    x: 1480
-    y: 1140
-    width: 160
-    height: 44
-  parent: {fileID: 5210769356420102942}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  time:
-    useConstant: 1
-    mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1
-  randomDeviation: 0
-  continueOnRestart: 0
 --- !u!114 &5210769356420102934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1398,7 +1366,7 @@ MonoBehaviour:
     x: 300
     y: 760
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102947}
   children:
   - {fileID: 5210769356420102933}
@@ -1428,7 +1396,7 @@ MonoBehaviour:
     x: -100
     y: 860
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102934}
   children:
   - {fileID: 5210769356420102936}
@@ -1479,15 +1447,15 @@ MonoBehaviour:
     x: -100
     y: 920
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102935}
   children:
   - {fileID: 5210769356420102937}
   - {fileID: 5210769356420103139}
   - {fileID: 5210769356420103140}
+  - {fileID: 3373145655100473016}
   - {fileID: 5210769356420102938}
   - {fileID: 5210769356420103141}
-  - {fileID: 5210769356420103142}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -1510,7 +1478,7 @@ MonoBehaviour:
     x: -200
     y: 1000
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102936}
   children: []
   behaviourTree: {fileID: 0}
@@ -1535,16 +1503,16 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -120
-    y: 1200
+    y: 1280
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102936}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
   animator: {fileID: 3827975157867874797}
-  animationName: Attack2
+  animationName: Idle
   playAnimation: 1
 --- !u!114 &5210769356420102933
 MonoBehaviour:
@@ -1564,7 +1532,7 @@ MonoBehaviour:
     x: -320
     y: 860
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102934}
   children:
   - {fileID: 5210769356420102929}
@@ -1615,15 +1583,15 @@ MonoBehaviour:
     x: -320
     y: 920
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102933}
   children:
   - {fileID: 5210769356420102930}
   - {fileID: 5210769356420103136}
   - {fileID: 5210769356420103135}
+  - {fileID: 7865950150329381225}
   - {fileID: 5210769356420102932}
   - {fileID: 5210769356420103137}
-  - {fileID: 5210769356420103138}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -1646,7 +1614,7 @@ MonoBehaviour:
     x: -580
     y: 980
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102929}
   children: []
   behaviourTree: {fileID: 0}
@@ -1670,17 +1638,17 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: -440
-    y: 1160
+    x: -420
+    y: 1260
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102929}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
   animator: {fileID: 3827975157867874797}
-  animationName: Attack2
+  animationName: Idle
   playAnimation: 1
 --- !u!114 &5210769356420102928
 MonoBehaviour:
@@ -1700,7 +1668,7 @@ MonoBehaviour:
     x: 120
     y: 860
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102934}
   children:
   - {fileID: 5210769356420102924}
@@ -1751,15 +1719,15 @@ MonoBehaviour:
     x: 120
     y: 920
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102928}
   children:
   - {fileID: 5210769356420102925}
   - {fileID: 5210769356420103143}
   - {fileID: 5210769356420103132}
+  - {fileID: 1320348732348980727}
   - {fileID: 5210769356420102927}
   - {fileID: 5210769356420103145}
-  - {fileID: 5210769356420103146}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -1782,7 +1750,7 @@ MonoBehaviour:
     x: 80
     y: 1000
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102924}
   children: []
   behaviourTree: {fileID: 0}
@@ -1806,17 +1774,17 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 200
-    y: 1180
+    x: 220
+    y: 1280
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102924}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
   animator: {fileID: 3827975157867874797}
-  animationName: Attack2
+  animationName: Idle
   playAnimation: 1
 --- !u!114 &5210769356420102919
 MonoBehaviour:
@@ -1836,7 +1804,7 @@ MonoBehaviour:
     x: 480
     y: 860
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102934}
   children:
   - {fileID: 5210769356420102920}
@@ -1887,15 +1855,15 @@ MonoBehaviour:
     x: 480
     y: 920
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102919}
   children:
   - {fileID: 5210769356420102921}
   - {fileID: 5210769356420103147}
   - {fileID: 5210769356420103133}
+  - {fileID: 5253228247140242498}
   - {fileID: 5210769356420102923}
   - {fileID: 5210769356420103149}
-  - {fileID: 5210769356420103150}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -1918,7 +1886,7 @@ MonoBehaviour:
     x: 320
     y: 980
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102920}
   children: []
   behaviourTree: {fileID: 0}
@@ -1942,17 +1910,17 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 500
-    y: 1160
+    x: 540
+    y: 1260
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102920}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
   animator: {fileID: 3827975157867874797}
-  animationName: Attack6
+  animationName: Idle
   playAnimation: 1
 --- !u!114 &5210769356420102914
 MonoBehaviour:
@@ -1972,7 +1940,7 @@ MonoBehaviour:
     x: 960
     y: 860
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102934}
   children:
   - {fileID: 5210769356420102915}
@@ -2021,17 +1989,17 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 960
-    y: 940
+    y: 920
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102914}
   children:
   - {fileID: 5210769356420102916}
   - {fileID: 5210769356420103151}
   - {fileID: 5210769356420103134}
+  - {fileID: 7831578342356439564}
   - {fileID: 5210769356420102918}
   - {fileID: 5210769356420103153}
-  - {fileID: 5210769356420103154}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -2054,7 +2022,7 @@ MonoBehaviour:
     x: 760
     y: 980
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102915}
   children: []
   behaviourTree: {fileID: 0}
@@ -2078,17 +2046,17 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 880
-    y: 1180
+    x: 920
+    y: 1280
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102915}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
   animator: {fileID: 3827975157867874797}
-  animationName: Attack4
+  animationName: Idle
   playAnimation: 1
 --- !u!114 &5210769356420103166
 MonoBehaviour:
@@ -2108,11 +2076,11 @@ MonoBehaviour:
     x: 920
     y: 300
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842954}
   children:
   - {fileID: 5210769356420103167}
-  - {fileID: 5210769356420102912}
+  - {fileID: 5515308058070116712}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -2132,10 +2100,10 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 920
+    x: 860
     y: 360
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420103166}
   children: []
   behaviourTree: {fileID: 0}
@@ -2144,38 +2112,6 @@ MonoBehaviour:
   animator: {fileID: 3827975157867874797}
   animationName: Idle
   playAnimation: 1
---- !u!114 &5210769356420102912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Wait
-  rect:
-    serializedVersion: 2
-    x: 1140
-    y: 360
-    width: 160
-    height: 44
-  parent: {fileID: 5210769356420103166}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  time:
-    useConstant: 1
-    mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1
-  randomDeviation: 0
-  continueOnRestart: 0
 --- !u!114 &5210769356420103155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2194,7 +2130,7 @@ MonoBehaviour:
     x: -300
     y: 220
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842954}
   children:
   - {fileID: 5210769356420103159}
@@ -2254,7 +2190,7 @@ MonoBehaviour:
     x: -500
     y: 400
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420103159}
   children: []
   behaviourTree: {fileID: 0}
@@ -2281,7 +2217,7 @@ MonoBehaviour:
     x: -300
     y: 400
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420103159}
   children: []
   behaviourTree: {fileID: 0}
@@ -2313,7 +2249,7 @@ MonoBehaviour:
     x: -300
     y: 300
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420103155}
   children:
   - {fileID: 5210769356420103130}
@@ -2342,7 +2278,7 @@ MonoBehaviour:
     x: -120
     y: 400
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420103159}
   children: []
   behaviourTree: {fileID: 0}
@@ -2504,7 +2440,7 @@ MonoBehaviour:
     x: -540
     y: 1040
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102929}
   children: []
   behaviourTree: {fileID: 0}
@@ -2515,7 +2451,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.4
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &5210769356420103137
@@ -2533,10 +2469,10 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: -380
-    y: 1220
+    x: -360
+    y: 1340
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102929}
   children: []
   behaviourTree: {fileID: 0}
@@ -2550,45 +2486,6 @@ MonoBehaviour:
     constantValue: 0.5
   randomDeviation: 0
   continueOnRestart: 0
---- !u!114 &5210769356420103138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5fb697e611da41ba8de1bf7de555f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Enemy Make Fight Damage
-  rect:
-    serializedVersion: 2
-    x: -340
-    y: 1280
-    width: 160
-    height: 59
-  parent: {fileID: 5210769356420102929}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  self:
-    useConstant: 0
-    mode: 0
-    blackboard: {fileID: 2667778874628842957}
-    key: selfGameObject
-    constantValue: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 256
-  range:
-    useConstant: 1
-    mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1.3
 --- !u!114 &5210769356420103139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2607,7 +2504,7 @@ MonoBehaviour:
     x: -180
     y: 1060
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102936}
   children: []
   behaviourTree: {fileID: 0}
@@ -2618,7 +2515,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.4
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &5210769356420103140
@@ -2675,10 +2572,10 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: -80
-    y: 1260
+    x: -60
+    y: 1360
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102936}
   children: []
   behaviourTree: {fileID: 0}
@@ -2692,45 +2589,6 @@ MonoBehaviour:
     constantValue: 0.5
   randomDeviation: 0
   continueOnRestart: 0
---- !u!114 &5210769356420103142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5fb697e611da41ba8de1bf7de555f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Enemy Make Fight Damage
-  rect:
-    serializedVersion: 2
-    x: 0
-    y: 1300
-    width: 160
-    height: 59
-  parent: {fileID: 5210769356420102936}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  self:
-    useConstant: 0
-    mode: 0
-    blackboard: {fileID: 2667778874628842957}
-    key: selfGameObject
-    constantValue: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 256
-  range:
-    useConstant: 1
-    mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1.3
 --- !u!114 &5210769356420103143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2749,7 +2607,7 @@ MonoBehaviour:
     x: 100
     y: 1060
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102924}
   children: []
   behaviourTree: {fileID: 0}
@@ -2760,7 +2618,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.4
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &5210769356420103145
@@ -2778,10 +2636,10 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 260
-    y: 1240
+    x: 280
+    y: 1340
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102924}
   children: []
   behaviourTree: {fileID: 0}
@@ -2795,45 +2653,6 @@ MonoBehaviour:
     constantValue: 0.5
   randomDeviation: 0
   continueOnRestart: 0
---- !u!114 &5210769356420103146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5fb697e611da41ba8de1bf7de555f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Enemy Make Fight Damage
-  rect:
-    serializedVersion: 2
-    x: 320
-    y: 1300
-    width: 160
-    height: 59
-  parent: {fileID: 5210769356420102924}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  self:
-    useConstant: 0
-    mode: 0
-    blackboard: {fileID: 2667778874628842957}
-    key: selfGameObject
-    constantValue: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 256
-  range:
-    useConstant: 1
-    mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1.3
 --- !u!114 &5210769356420103147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,7 +2671,7 @@ MonoBehaviour:
     x: 360
     y: 1040
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102920}
   children: []
   behaviourTree: {fileID: 0}
@@ -2863,7 +2682,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.4
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &5210769356420103149
@@ -2881,10 +2700,10 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 580
-    y: 1220
+    x: 620
+    y: 1320
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102920}
   children: []
   behaviourTree: {fileID: 0}
@@ -2898,45 +2717,6 @@ MonoBehaviour:
     constantValue: 0.5
   randomDeviation: 0
   continueOnRestart: 0
---- !u!114 &5210769356420103150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5fb697e611da41ba8de1bf7de555f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Enemy Make Fight Damage
-  rect:
-    serializedVersion: 2
-    x: 640
-    y: 1280
-    width: 160
-    height: 59
-  parent: {fileID: 5210769356420102920}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  self:
-    useConstant: 0
-    mode: 0
-    blackboard: {fileID: 2667778874628842957}
-    key: selfGameObject
-    constantValue: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 256
-  range:
-    useConstant: 1
-    mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1.3
 --- !u!114 &5210769356420103151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2955,7 +2735,7 @@ MonoBehaviour:
     x: 780
     y: 1040
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102915}
   children: []
   behaviourTree: {fileID: 0}
@@ -2966,7 +2746,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.4
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &5210769356420103153
@@ -2984,10 +2764,10 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 960
-    y: 1240
+    x: 980
+    y: 1340
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420102915}
   children: []
   behaviourTree: {fileID: 0}
@@ -3001,45 +2781,6 @@ MonoBehaviour:
     constantValue: 0.5
   randomDeviation: 0
   continueOnRestart: 0
---- !u!114 &5210769356420103154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5fb697e611da41ba8de1bf7de555f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Enemy Make Fight Damage
-  rect:
-    serializedVersion: 2
-    x: 1020
-    y: 1300
-    width: 160
-    height: 59
-  parent: {fileID: 5210769356420102915}
-  children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  self:
-    useConstant: 0
-    mode: 0
-    blackboard: {fileID: 2667778874628842957}
-    key: selfGameObject
-    constantValue: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 256
-  range:
-    useConstant: 1
-    mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1.3
 --- !u!114 &5210769356420103132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3175,7 +2916,7 @@ MonoBehaviour:
     x: 680
     y: 100
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 2667778874628842952}
   children:
   - {fileID: 2667778874628842953}
@@ -3203,7 +2944,7 @@ MonoBehaviour:
     x: -680
     y: 380
     width: 160
-    height: 44
+    height: 45
   parent: {fileID: 5210769356420103159}
   children: []
   behaviourTree: {fileID: 0}
@@ -3276,6 +3017,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2667778874628842971}
+        m_TargetAssemblyTypeName: UnityEngine.AI.NavMeshAgent, UnityEngine
+        m_MethodName: set_isStopped
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   floatEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3335,7 +3088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 4.5
+  val: 3
 --- !u!114 &3391657463909320282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3348,3 +3101,227 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7117140057262640448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 1460
+    y: 1140
+    width: 160
+    height: 45
+  parent: {fileID: 5210769356420102942}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &7865950150329381225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -462
+    y: 1180.6663
+    width: 160
+    height: 45
+  parent: {fileID: 5210769356420102929}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.1
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &3373145655100473016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -140
+    y: 1200
+    width: 160
+    height: 45
+  parent: {fileID: 5210769356420102936}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.1
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &1320348732348980727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 180
+    y: 1200
+    width: 160
+    height: 45
+  parent: {fileID: 5210769356420102924}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.1
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &5253228247140242498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 460
+    y: 1180
+    width: 160
+    height: 45
+  parent: {fileID: 5210769356420102920}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.1
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &7831578342356439564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 880
+    y: 1200
+    width: 160
+    height: 45
+  parent: {fileID: 5210769356420102915}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.1
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &5515308058070116712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 982.6665
+    y: 401.33356
+    width: 160
+    height: 45
+  parent: {fileID: 5210769356420103166}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0

@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         }
 
         time = 10.0f;
-        OnEnter.Invoke();
+        //OnEnter.Invoke();
 
     }
 
