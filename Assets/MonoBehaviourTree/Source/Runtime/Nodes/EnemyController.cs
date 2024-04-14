@@ -1,6 +1,4 @@
 using MBT;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +15,8 @@ public class EnemyController : MonoBehaviour
     Blackboard blackboard;
     BoolVariable isDead;
     Collider collider;
+    IntVariable blackBoardDamage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +27,14 @@ public class EnemyController : MonoBehaviour
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         collider = this.GetComponent<Collider>();
+        blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
+        blackBoardDamage.Value = damage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void FlipLeft()
     {
@@ -93,12 +95,12 @@ public class EnemyController : MonoBehaviour
     public void spawnSet()
     {
         int lvE = Random.Range(this.lv, this.lv + 3);
-        this.maxHealth = Random.Range(60,80);
+        this.maxHealth = Random.Range(60, 80);
         this.curHealth = maxHealth;
-        this.damage = Random.Range(25,30);
-        this.speed = Random.Range(5,7);
+        this.damage = Random.Range(25, 30);
+        this.speed = Random.Range(5, 7);
         this.Agent.speed = this.speed;
-        for(; lvE>0;)
+        for (; lvE > 0;)
         {
             this.maxHealth += Random.Range(2, 7);
             this.curHealth = maxHealth;

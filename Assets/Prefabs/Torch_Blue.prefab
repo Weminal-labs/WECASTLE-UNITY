@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 5253228247140242498}
   - component: {fileID: 7831578342356439564}
   - component: {fileID: 5515308058070116712}
+  - component: {fileID: -1602854491351729837}
   m_Layer: 6
   m_Name: Torch_Blue
   m_TagString: Enemy
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 0}
+  selectedEditorNode: {fileID: 5210769356420103134}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -279,6 +280,7 @@ MonoBehaviour:
   - {fileID: 5210769356420103161}
   - {fileID: 8266272231792038604}
   - {fileID: 9145753178508961340}
+  - {fileID: -1602854491351729837}
   masterBlackboard: {fileID: 0}
 --- !u!114 &2667778874628842948
 MonoBehaviour:
@@ -2422,6 +2424,12 @@ MonoBehaviour:
     blackboard: {fileID: 0}
     key: 
     constantValue: 1.3
+  damage:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2667778874628842957}
+    key: Damage
+    constantValue: 0
 --- !u!114 &5210769356420103136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2557,6 +2565,12 @@ MonoBehaviour:
     blackboard: {fileID: 0}
     key: 
     constantValue: 1.3
+  damage:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2667778874628842957}
+    key: Damage
+    constantValue: 0
 --- !u!114 &5210769356420103141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2820,6 +2834,12 @@ MonoBehaviour:
     blackboard: {fileID: 0}
     key: 
     constantValue: 1.3
+  damage:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2667778874628842957}
+    key: Damage
+    constantValue: 0
 --- !u!114 &5210769356420103133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2859,6 +2879,12 @@ MonoBehaviour:
     blackboard: {fileID: 0}
     key: 
     constantValue: 1.3
+  damage:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2667778874628842957}
+    key: Damage
+    constantValue: 0
 --- !u!114 &5210769356420103134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2898,6 +2924,12 @@ MonoBehaviour:
     blackboard: {fileID: 0}
     key: 
     constantValue: 1.3
+  damage:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2667778874628842957}
+    key: Damage
+    constantValue: 0
 --- !u!114 &5210769356420103131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,3 +3357,17 @@ MonoBehaviour:
     constantValue: 0.5
   randomDeviation: 0
   continueOnRestart: 0
+--- !u!114 &-1602854491351729837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be6860a83fe93e4bbd689336d96bdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Damage
+  val: 0

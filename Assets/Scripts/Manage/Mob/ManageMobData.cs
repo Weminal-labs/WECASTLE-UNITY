@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-using System.Linq;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
+using UnityEngine;
 
 public class ManageMobData : MonoBehaviour
 {
@@ -15,7 +13,7 @@ public class ManageMobData : MonoBehaviour
     public static ManageMobData instance { get; private set; }
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Debug.LogError("Found more than one Stats Mob Data Manager in this scence.");
         }
@@ -43,9 +41,9 @@ public class ManageMobData : MonoBehaviour
             newMob();
         }
         //load data
-        foreach(MobStats mobStats in mobStats)
+        foreach (MobStats mobStats in mobStats)
         {
-            foreach(MobDataPersistance data in dataPersistances)
+            foreach (MobDataPersistance data in dataPersistances)
             {
                 if (data.CompareData(mobStats.getId()))
                 {
@@ -63,11 +61,11 @@ public class ManageMobData : MonoBehaviour
     public void saveMob()
     {
         List<MobStatsForJSON> jsonList = new List<MobStatsForJSON>();
-        foreach(MobStats mob in mobStats)
+        foreach (MobStats mob in mobStats)
         {
-            foreach(GameObject objMob in GameObject.FindGameObjectsWithTag("Ally"))
+            foreach (GameObject objMob in GameObject.FindGameObjectsWithTag("Ally"))
             {
-                if(objMob.GetComponent<MobStatus>().getIDMob().CompareTo(mob.getId()) == 0)
+                if (objMob.GetComponent<MobStatus>().getIDMob().CompareTo(mob.getId()) == 0)
                 {
                     mob.setPos(objMob.transform.position);
                     jsonList.Add(new MobStatsForJSON(mob));
@@ -75,8 +73,8 @@ public class ManageMobData : MonoBehaviour
                 }
             }
         }
-        string json = JsonConvert.SerializeObject(jsonList);
-        SaveListMob(json);
+        /*        string json = JsonConvert.SerializeObject(jsonList);
+                SaveListMob(json);*/
     }
     [DllImport("__Internal")]
     public static extern void SaveMob(string json);
@@ -109,14 +107,14 @@ public class ManageMobData : MonoBehaviour
                 pointer = new MobStats(mob.id, mob.type_hero, mob.max_health, mob.damage, mob.speed, mob.name, mob.description);
                 addMob(pointer);
                 Instantiate(mobPrefabs[pointer.getMobType()], new Vector3(mob.location_x, mob.location_y), Quaternion.identity).GetComponent<MobStatus>().LoadData(pointer);
-            } 
+            }
         }
     }
     public void LoadNewIdForMob(string id, string fakeId)
     {
-        foreach(GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
+        foreach (GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
         {
-            if(mob.GetComponent<MobStatus>().getIDMob().CompareTo(fakeId) == 0) 
+            if (mob.GetComponent<MobStatus>().getIDMob().CompareTo(fakeId) == 0)
             {
                 mob.GetComponent<MobStatus>().GetMobStats().setNewID(id);
                 break;
@@ -131,7 +129,7 @@ public class ManageMobData : MonoBehaviour
     }
     public void MobInRain()
     {
-        foreach(GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
+        foreach (GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
         {
             mob.GetComponent<MobStatus>().rainWeather();
         }

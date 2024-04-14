@@ -7,7 +7,7 @@ public class BoatController : MonoBehaviour
     public float speed = 1f;
 
     private bool reachedDestination = false;
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject[] enemy;
     // Update is called once per frame
     void Update()
     {
@@ -54,11 +54,12 @@ public class BoatController : MonoBehaviour
         float offsetX = Random.Range(-1f, 1f);
         float offsetY = Random.Range(-1f, 1f);
 
+        GameObject enemyRandom = enemy[Random.Range(0, enemy.Length)];
         // Calculate the new position with the offset
         Vector3 newPosition = transform.position + new Vector3(offsetX, offsetY, 0f);
-        enemy.gameObject.GetComponent<EnemyController>().setLV(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().getPlayer().getLv());
+        enemyRandom.gameObject.GetComponent<EnemyController>().setLV(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().getPlayer().getLv());
         // Instantiate the new prefab at the new position
-        Instantiate(enemy, newPosition, Quaternion.identity);
+        Instantiate(enemyRandom, newPosition, Quaternion.identity);
     }
 
 }

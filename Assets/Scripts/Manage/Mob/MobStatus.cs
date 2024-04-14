@@ -105,6 +105,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     {
         this.stats.setExp(exp);
         LoadData(this.stats);
+        blackBoardDamage.Value = damage;
     }
     IEnumerator DetectDoubleClick()
     {
@@ -131,7 +132,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         if (curHealth - damage < 0)
         {
             isDead.Value = true;
-            stats.setHealth(- damage);
+            stats.setHealth(-damage);
             GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
         }
         else
