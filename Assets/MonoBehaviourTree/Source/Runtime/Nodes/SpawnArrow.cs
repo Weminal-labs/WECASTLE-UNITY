@@ -26,7 +26,7 @@ namespace MBT
             Vector3 direction = target.Value.position - self.Value.position;
             // Spawn arrow at archer's position
             GameObject arrow = GameObject.Instantiate(arrowPrefap.Value, transform.position, Quaternion.identity);
-            arrow.GetComponent<ArrowController>().SetDamage(Damage.Value);
+            arrow.GetComponent<ProjectileController>().SetDamage(Damage.Value);
             // Rotate the arrow to face the enemy
             arrow.transform.rotation = Quaternion.Euler(0f, 0f, angleToTarget.Value);
 

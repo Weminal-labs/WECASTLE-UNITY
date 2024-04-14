@@ -33,7 +33,7 @@ public class ArcherController : MonoBehaviour
         // Spawn arrow at archer's position
         GameObject arrow = GameObject.Instantiate(arrowPrefap, transform.position, Quaternion.identity);
         print(GetComponent<MobStatus>().getDamage());
-        arrow.GetComponent<ArrowController>().SetDamage(this.GetComponent<MobStatus>().getDamage());
+        arrow.GetComponent<ProjectileController>().SetDamage(this.GetComponent<MobStatus>().getDamage());
         // Rotate the arrow to face the enemy
         arrow.transform.rotation = Quaternion.Euler(0f, 0f, angleTarget);
 

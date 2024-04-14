@@ -38,8 +38,7 @@ public class GameController : MonoBehaviour
             logOut.onClick.AddListener(LogOutPrePare);
         }
 
-        time = 20.0f;
-        //OnEnter.Invoke();
+        time = 10.0f;
 
     }
 
@@ -60,6 +59,8 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            OnEnter.Invoke();
+
             GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
             spawnEnemy.GetComponent<SpawnController>().SpawnEnemy();
             time = 30.0f;

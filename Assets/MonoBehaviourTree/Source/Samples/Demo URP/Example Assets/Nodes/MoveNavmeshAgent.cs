@@ -18,9 +18,13 @@ namespace MBTExample
 
         public override void OnEnter()
         {
-            time = 0;
-            agent.isStopped = false;
-            agent.SetDestination(destination.Value.position);
+            if (destination.Value != null)
+            {
+                time = 0;
+                agent.isStopped = false;
+                agent.SetDestination(destination.Value.position);
+            }
+
         }
 
         public override NodeResult Execute()

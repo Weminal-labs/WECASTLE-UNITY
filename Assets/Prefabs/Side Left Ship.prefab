@@ -102,7 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
   speed: 3
-  enemy: {fileID: 5025354800224441165, guid: 2491341d4408249469dde9928ac99847, type: 3}
+  enemy:
+  - {fileID: 5025354800224441165, guid: 2491341d4408249469dde9928ac99847, type: 3}
+  - {fileID: 5025354800224441165, guid: c3131f6836fbc264da83f7ee9476b9c5, type: 3}
 --- !u!210 &-4143328986536911512
 SortingGroup:
   m_ObjectHideFlags: 0

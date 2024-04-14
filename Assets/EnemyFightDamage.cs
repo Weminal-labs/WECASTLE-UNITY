@@ -10,6 +10,7 @@ namespace MBT
         public LayerMask mask = -1;
         [Tooltip("Circle radius")]
         public FloatReference range;
+        public IntReference damage;
 
         public override NodeResult Execute()
         {
@@ -24,15 +25,15 @@ namespace MBT
             {
                 if (eachTarget.gameObject.tag.CompareTo("Ally") == 0)
                 {
-                    eachTarget.gameObject.GetComponent<MobStatus>().takeDame(self.Value.GetComponent<EnemyController>().getDamage());
+                    eachTarget.gameObject.GetComponent<MobStatus>().takeDame(damage.Value);
                 }
                 if (eachTarget.gameObject.tag.CompareTo("House") == 0)
                 {
-                    eachTarget.gameObject.GetComponent<HouseStat>().TakeDame(self.Value.GetComponent<EnemyController>().getDamage());
+                    eachTarget.gameObject.GetComponent<HouseStat>().TakeDame(damage.Value);
                 }
                 if (eachTarget.gameObject.tag.CompareTo("Castle") == 0)
                 {
-                    eachTarget.gameObject.GetComponent<CastleStat>().TakeDame(self.Value.GetComponent<EnemyController>().getDamage());
+                    eachTarget.gameObject.GetComponent<CastleStat>().TakeDame(damage.Value);
                 }
             }
 

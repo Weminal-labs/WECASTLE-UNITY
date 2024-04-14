@@ -1350,6 +1350,7 @@ MonoBehaviour:
   - {fileID: 3186837709712234485, guid: e80ffc4269589bf44aaf560455502bac, type: 3}
   - {fileID: 3075330460163226313, guid: da9f02fae5ed3ca4fb9c347ee2453825, type: 3}
   - {fileID: 2629105423995232924, guid: 0005dfa48bf8ef248b87a83d7e299ea5, type: 3}
+  cloud: {fileID: 0}
   spawnInterval: 3
   speed: 10
 --- !u!1 &233314766
