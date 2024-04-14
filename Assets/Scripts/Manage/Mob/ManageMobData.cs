@@ -78,23 +78,12 @@ public class ManageMobData : MonoBehaviour
     }
     [DllImport("__Internal")]
     public static extern void SaveMob(string json);
+
     [DllImport("__Internal")]
     public static extern void SaveListMob(string json);
     private void OnApplicationQuit()
     {
         saveMob();
-    }
-    public int MaxLV()
-    {
-        int max = 1;
-        /*foreach(MobStats mob in mobStats)
-        {
-            if(mob.getLevel() > max)
-            {
-                max = mob.getLevel();
-            }
-        }*/
-        return max;
     }
     public void loadMobExist(string json)
     {

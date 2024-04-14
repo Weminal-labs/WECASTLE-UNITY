@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 public class SummonBanner : MonoBehaviour
 {
@@ -182,9 +183,8 @@ public class SummonBanner : MonoBehaviour
         yield return new WaitForSeconds(4.5f);
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
         //This is code for Connect to server to get new ID
-        /*MobStatsForJSON json = new MobStatsForJSON(data);
-        Debug.Log(JsonConvert.SerializeObject(json));
-        RequestID(JsonConvert.SerializeObject(json), data.getId());*/
+        MobStatsForJSON json = new MobStatsForJSON(data);
+        RequestID(JsonConvert.SerializeObject(json), data.getId());
         tempColor = this.gameObject.GetComponent<RawImage>().color;
         tempColor.a = 100.0f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;

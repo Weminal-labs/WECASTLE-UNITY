@@ -74,8 +74,8 @@ public class EnemyController : MonoBehaviour
     }
     public void die()
     {
-        int gold = Random.Range(1, 6);
-        int meat = Random.Range(1, 6);
+        int gold = Random.Range(1, 4);
+        int meat = Random.Range(5, 10);
         float x, y;
         for (int i = 0; i < gold; i++)
         {
@@ -94,17 +94,17 @@ public class EnemyController : MonoBehaviour
 
     public void spawnSet()
     {
-        int lvE = Random.Range(this.lv, this.lv + 3);
-        this.maxHealth = Random.Range(60, 80);
+        int lvE = Random.Range(this.lv-1, this.lv + 1);
+        this.maxHealth = Random.Range(60,80);
         this.curHealth = maxHealth;
         this.damage = Random.Range(25, 30);
         this.speed = Random.Range(5, 7);
         this.Agent.speed = this.speed;
         for (; lvE > 0;)
         {
-            this.maxHealth += Random.Range(2, 7);
+            this.maxHealth += Random.Range(2, 5);
             this.curHealth = maxHealth;
-            this.damage += Random.Range(2, 7);
+            this.damage += Random.Range(2, 5);
             lvE--;
         }
     }
