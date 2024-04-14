@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         //This is Conection to the server call user data
-        RequestAddress();
+        /*RequestAddress();*/
         //Fake data
         /*string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
         ReceiveAddress(json);*/
