@@ -9,8 +9,8 @@ public class DestroyHouseFix : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        hp = 700;
-        maxHp = 700;
+        hp = 400;
+        maxHp = 400;
     }
 
     // Update is called once per frame
@@ -32,11 +32,16 @@ public class DestroyHouseFix : MonoBehaviour
     }
     public void FixBuilding()
     {
-        Instantiate(nomalHouse, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
+        nomalHouse.SetActive(true);
+        nomalHouse.GetComponent<HouseStat>().ReBackHouse();
+        this.gameObject.SetActive(false);
     }
     public int getHp()
     {
         return hp;
+    }
+    public void ReBackHouse()
+    {
+        this.hp = this.maxHp;
     }
 }

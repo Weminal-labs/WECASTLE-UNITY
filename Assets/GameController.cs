@@ -17,9 +17,11 @@ public class GameController : MonoBehaviour
     private Button logOut;
     public GameObject text;
     [SerializeField]
-    private GameObject lv, exp, wood, gold, meat, clock, spawnEnemy;
+    private GameObject lv, exp, wood, gold, meat, clock, wave, spawnEnemy;
     [SerializeField]
     private string json;
+    private bool startGame;
+    private int waveCount;
     // Start is called before the first frame update
 
     [SerializeField] UnityEvent OnEnter;
@@ -29,7 +31,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         //This is Conection to the server call user data
-        /*RequestAddress();*/
+        RequestAddress();
         //Fake data
         /*string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
         ReceiveAddress(json);*/
@@ -38,32 +40,40 @@ public class GameController : MonoBehaviour
             logOut.onClick.AddListener(LogOutPrePare);
         }
 
-        time = 10.0f;
-
+        time = 60.0f;
+        startGame = false;
+        waveCount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (time > 0.0f)
+        if(startGame)
         {
-            time -= Time.deltaTime;
+            if (time > 0.0f)
+            {
+                time -= Time.deltaTime;
 
-            // Divide the time by 60
-            float minutes = Mathf.FloorToInt(time / 60);
+                // Divide the time by 60
+                float minutes = Mathf.FloorToInt(time / 60);
 
-            // Returns the remainder
-            float seconds = Mathf.FloorToInt(time % 60);
-            string timeCount = string.Format("{0:00}:{1:00}", minutes, seconds);
-            clock.GetComponent<TextMeshProUGUI>().SetText(timeCount);
-        }
-        else
-        {
-            OnEnter.Invoke();
-
-            GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
-            spawnEnemy.GetComponent<SpawnController>().SpawnEnemy();
-            time = 30.0f;
+                // Returns the remainder
+                float seconds = Mathf.FloorToInt(time % 60);
+                string timeCount = string.Format("{0:00}:{1:00}", minutes, seconds);
+                clock.GetComponent<TextMeshProUGUI>().SetText(timeCount);
+            }
+            else
+            {
+                waveCount += 1;
+                //This is code for save player data
+                PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+                SavePlayer(JsonConvert.SerializeObject(player));
+                OnEnter.Invoke();
+                wave.GetComponent<TextMeshProUGUI>().SetText("Wave: "+waveCount);
+                GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
+                spawnEnemy.GetComponent<SpawnController>().SpawnEnemy();
+                time = 30.0f;
+            }
         }
     }
 
@@ -109,9 +119,7 @@ public class GameController : MonoBehaviour
         lv.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getLv().ToString());
         exp.GetComponent<Slider>().value = playerInfo.getExp();
         exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();
-        //This is code for save player data
-        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-        SavePlayer(JsonConvert.SerializeObject(player));
+        
     }
     public PlayerInfo getPlayer()
     {
@@ -139,6 +147,7 @@ public class GameController : MonoBehaviour
         if (loadingScreen != null)
         {
             loadingScreen.SetActive(false);
+            startGame = true;
         }
     }
 }

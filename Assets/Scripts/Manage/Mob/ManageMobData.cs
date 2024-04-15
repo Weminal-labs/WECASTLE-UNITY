@@ -73,8 +73,8 @@ public class ManageMobData : MonoBehaviour
                 }
             }
         }
-        /*        string json = JsonConvert.SerializeObject(jsonList);
-                SaveListMob(json);*/
+        string json = JsonConvert.SerializeObject(jsonList);
+        SaveListMob(json);
     }
     [DllImport("__Internal")]
     public static extern void SaveMob(string json);
@@ -99,8 +99,11 @@ public class ManageMobData : MonoBehaviour
             }
         }
     }
-    public void LoadNewIdForMob(string id, string fakeId)
+    public void LoadNewIdForMob(string jSon)
     {
+        Dictionary<string, object> jsonObject = JsonConvert.DeserializeObject<Dictionary<string, object>>(jSon);
+        string id = jsonObject["id"].ToString();
+        string fakeId = jsonObject["fakeid"].ToString();
         foreach (GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
         {
             if (mob.GetComponent<MobStatus>().getIDMob().CompareTo(fakeId) == 0)

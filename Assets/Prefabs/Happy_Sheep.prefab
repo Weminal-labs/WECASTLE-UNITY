@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 4137831765694673425}
   - component: {fileID: 4137831765694673428}
   - component: {fileID: 4137831765694673418}
+  - component: {fileID: -687214325842451903}
   m_Layer: 0
   m_Name: Happy_Sheep
   m_TagString: Untagged
@@ -89,8 +90,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 324573977
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 4126667376838499391, guid: 92fa8cf5a4644dd45a5f15f374495aaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -557,3 +558,15 @@ MonoBehaviour:
   agent: {fileID: 4137831765694673443}
   stopDistance: 1
   updateInterval: 1
+--- !u!114 &-687214325842451903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473070423787513157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

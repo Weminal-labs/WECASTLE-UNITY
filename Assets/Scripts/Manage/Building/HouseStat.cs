@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -96,8 +97,26 @@ public class HouseStat : MonoBehaviour
             mob.SetActive(true);
             mob.GetComponent<MobStatus>().mobOutBuilding();
         }
-        Instantiate(destroyHouse, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
+        if(this.gameObject.GetComponent<MobInBuilding>().getNumMob() > 0)
+        {
+            if(this.gameObject.GetComponent<MobInBuilding>().returnType() == 1)
+            {
+                this.gameObject.GetComponent<TowerArcherControll>().MobLeftBuilding();
+            }
+            this.gameObject.GetComponent<MobInBuilding>().removeMob(this.gameObject.GetComponent<MobInBuilding>().getMob(0));
+            this.gameObject.GetComponent<MobInBuilding>().removeObjMob(this.gameObject.GetComponent<MobInBuilding>().getObjMOb(0));
+        }
+        fire[0].SetActive(false);
+        fire[1].SetActive(false);
+        fire[2].SetActive(false);
+        countFire = 0;
+        destroyHouse.SetActive(true);
+        destroyHouse.GetComponent<DestroyHouseFix>().ReBackHouse();
+        this.gameObject.SetActive(false);
 
+    }
+    public void ReBackHouse()
+    {
+        this.hp = this.maxHp;
     }
 }

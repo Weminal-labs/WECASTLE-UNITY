@@ -62,7 +62,17 @@ public class SummonBanner : MonoBehaviour
             unitPawn.onClick.AddListener(selectPawn);
         }
     }
-
+    private void Update()
+    {
+        if (checkM())
+        {
+            buttonSummon.gameObject.SetActive(true);
+        }
+        else
+        {
+            buttonSummon.gameObject.SetActive(false);
+        }
+    }
     private void Close()
     {
         name.GetComponentInChildren<TMP_InputField>().text = "";
@@ -87,6 +97,7 @@ public class SummonBanner : MonoBehaviour
         string historyMob = history.GetComponentInChildren<TMP_InputField>().text;
         MobStats mob = new MobStats(this.unit, minHealth, maxHealth, minDamage, maxDamage, minSpeed, maxSpeed, nameMob, historyMob);
         MobStats mobSummon = new MobStats(mob, spawnPosition.transform.position);
+        mobSummon.setInBuilding(true);
         managerDataMob.GetComponent<ManageMobData>().addMob(mobSummon);
         StartCoroutine(StartAnimation(mobSummon));
         gameControll.GetComponent<GameController>().setMaterials(-Int32.Parse(meatCost.text), -Int32.Parse(goldCost.text), -Int32.Parse(woodCost.text));
@@ -98,9 +109,9 @@ public class SummonBanner : MonoBehaviour
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
         int lvP = gameControll.GetComponent<GameController>().getPlayer().getLv();
-        int minHealth = 140 + (lvP-1) * 3;
-        int maxHealth = 200 + (lvP - 1) * 3;
-        int minDamage = 25 + (lvP - 1) * 3;
+        int minHealth = 300 + (lvP-1) * 3;
+        int maxHealth = 400 + (lvP - 1) * 3;
+        int minDamage = 35 + (lvP - 1) * 3;
         int maxDamage = 50 + (lvP - 1) * 3;
         healthText.SetText(minHealth+"-"+maxHealth);
         damageText.SetText(minDamage+"-"+maxDamage);
@@ -181,6 +192,7 @@ public class SummonBanner : MonoBehaviour
         this.gameObject.GetComponent<RawImage>().color = tempColor;
         Animation.GetComponent<Animator>().SetTrigger("StartSummon");
         yield return new WaitForSeconds(4.5f);
+        data.setInBuilding(false);
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
         //This is code for Connect to server to get new ID
         MobStatsForJSON json = new MobStatsForJSON(data);

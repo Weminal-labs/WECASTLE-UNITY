@@ -15,6 +15,7 @@ TagManager:
   - Castle
   - House
   - Bomb
+  - Building
   layers:
   - Default
   - TransparentFX

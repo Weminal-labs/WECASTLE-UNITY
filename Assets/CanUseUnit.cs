@@ -28,7 +28,6 @@ public class CanUseUnit : MonoBehaviour
     public void loadMobCanUse(int type)
     {
         mobstas = DataMob.GetComponent<ManageMobData>().getListMob();
-        this.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(40, mobstas.Count * 50);
         GameObject buttonTemplate = transform.GetChild(0).gameObject;
         transform.GetChild(0).gameObject.SetActive(false);
         int count = transform.childCount; 

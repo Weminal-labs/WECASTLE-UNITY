@@ -20,4 +20,8 @@ public class TowerArcherControll : MonoBehaviour
             archerStatue.SetActive(false);
         }
     }
+    public void MobLeftBuilding()
+    {
+        archerStatue.SetActive(false);
+    }
 }

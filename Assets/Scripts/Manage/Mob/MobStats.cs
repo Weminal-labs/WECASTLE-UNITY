@@ -88,7 +88,18 @@ public class MobStats
     }
     private void setHealthLvUp()
     {
-        this.maxHealth += Random.Range(1, 5);
+        if(this.mob_type == 0)
+        {
+            this.maxHealth += Random.Range(10, 20);
+        }
+        if (this.mob_type == 1)
+        {
+            this.maxHealth += Random.Range(5, 10);
+        }
+        if (this.mob_type == 2)
+        {
+            this.maxHealth += Random.Range(3, 6);
+        }
         this.health = this.maxHealth;
     }
     public int getHealth()
@@ -101,7 +112,18 @@ public class MobStats
     }
     private void setDamageLvUp()
     {
-        this.damage += Random.Range(1, 5);
+        if (this.mob_type == 0)
+        {
+            this.damage += Random.Range(5, 10);
+        }
+        if (this.mob_type == 1)
+        {
+            this.damage += Random.Range(7, 14);
+        }
+        if (this.mob_type == 2)
+        {
+            this.damage += Random.Range(3, 6);
+        }  
     }
     public int getDamage()
     {
