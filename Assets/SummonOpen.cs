@@ -20,6 +20,7 @@ public class SummonOpen : MonoBehaviour
         {
             firstLeftClickTime = Time.time;
             StartCoroutine(DetectDoubleClick());
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().savePlayerData();
             isDoubleClick = false;
         }
     }

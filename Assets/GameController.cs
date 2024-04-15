@@ -138,6 +138,11 @@ public class GameController : MonoBehaviour
         SavePlayer(JsonConvert.SerializeObject(player));
         loseScreen.SetActive(true);
     }
+    public void savePlayerData()
+    {
+        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SavePlayer(JsonConvert.SerializeObject(player));
+    }
     private float calculatorTime(MobStats mob)
     {
         return 100.0f / (mob.getDamage() / 10.0f);
