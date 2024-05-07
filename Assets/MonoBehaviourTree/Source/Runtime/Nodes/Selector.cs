@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace MBT
 {
@@ -17,7 +15,7 @@ namespace MBT
                 ShuffleList(children);
             }
         }
-        
+
         public override void OnEnter()
         {
             index = 0;

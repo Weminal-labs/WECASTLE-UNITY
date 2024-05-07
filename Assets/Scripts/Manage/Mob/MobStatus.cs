@@ -15,6 +15,8 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     Blackboard blackboard;
     BoolVariable isDead;
     IntVariable blackBoardDamage;
+    BoolVariable block;
+
 
     //DoubleClick to Open
     private float firstLeftClickTime;
@@ -70,6 +72,8 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
         blackBoardDamage.Value = damage;
+        block = blackboard.GetVariable<BoolVariable>("Block");
+
     }
 
     // Update is called once per frame
@@ -129,6 +133,10 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
 
     public void takeDame(int damage)
     {
+        if (block.Value == true)
+        {
+            return;
+        }
         if (curHealth - damage < 0)
         {
             isDead.Value = true;
@@ -162,7 +170,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     }
     public void rainWeather()
     {
-        damage = damage + damage / 10;
+        damage += damage / 10;
         speed -= 2;
     }
 }

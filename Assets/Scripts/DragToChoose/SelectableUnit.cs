@@ -12,6 +12,7 @@ public class SelectableUnit : MonoBehaviour
     private Blackboard blackboard;
     private BoolVariable isUnderControl;
     private TransformVariable pointToMove;
+    private Vector3Variable pointToMoveVector;
 
     public void SetIsUnderControl(bool value)
     {
@@ -29,7 +30,8 @@ public class SelectableUnit : MonoBehaviour
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
         isUnderControl = blackboard.GetVariable<BoolVariable>("isUnderControl");
-        pointToMove = blackboard.GetVariable<TransformVariable>("pointToMove");
+        //pointToMove = blackboard.GetVariable<TransformVariable>("pointToMove");
+        pointToMoveVector = blackboard.GetVariable<Vector3Variable>("pointToMoveVector3");
 
     }
 
@@ -51,19 +53,21 @@ public class SelectableUnit : MonoBehaviour
             pointToMove.Value = 
         }*/
 
-    public void MoveTo(GameObject Position)
+    public void MoveTo(Vector3 Position)
     {
+
         isUnderControl.Value = true;
-        if (transform.position.x >= Position.transform.position.x)
+        if (transform.position.x >= Position.x)
         {
             FlipLeft();
         }
-        else if (transform.position.x < Position.transform.position.x)
+        else if (transform.position.x < Position.x)
         {
             FlipRight();
         }
-        //pointToMove.Value = Position;
-        pointToMove.Value = Position.transform;
+        //Agent.SetDestination(Position);
+        //pointToMove.Value = Position.transform;
+        pointToMoveVector.Value = Position;
     }
 
     public void FlipLeft()

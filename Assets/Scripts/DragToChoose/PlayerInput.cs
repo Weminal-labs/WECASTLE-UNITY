@@ -20,8 +20,6 @@ public class PlayerInput : MonoBehaviour
     private float MouseDownTime;
     private Vector2 StartMousePosition;
 
-    [SerializeField]
-    private GameObject flagToMove;
 
     private HashSet<SelectableUnit> newlySelectedUnits = new HashSet<SelectableUnit>();
     private HashSet<SelectableUnit> deselectedUnits = new HashSet<SelectableUnit>();
@@ -44,16 +42,12 @@ public class PlayerInput : MonoBehaviour
             Vector3 mousePosition = Input.mousePosition;
             Vector3 target = Camera.main.ScreenToWorldPoint(mousePosition);
             target.z = -2.5f;
-            Debug.Log("Target position: " + target);
-            flagToMove.SetActive(true);
-            flagToMove.transform.position = target;
-            if (FindAnyObjectByType<SelectableUnit>())
+
+            foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
             {
-                foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
-                {
-                    unit.MoveTo(flagToMove);
-                }
+                unit.MoveTo(target);
             }
+
 
             /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -74,6 +68,7 @@ public class PlayerInput : MonoBehaviour
             //This is orginal code
             /*            if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit Hit, FloorLayers))
                         {
+                            print("floor");
                             foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
                             {
                                 unit.MoveTo(Hit.point);
@@ -84,8 +79,10 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+
     private void HandleSelectionInputs()
     {
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SelectionBox.sizeDelta = Vector2.zero;
