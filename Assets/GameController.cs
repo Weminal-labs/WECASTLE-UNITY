@@ -27,6 +27,10 @@ public class GameController : MonoBehaviour
     [SerializeField] UnityEvent OnEnter;
     [SerializeField] UnityEvent OnLeave;
     [SerializeField] GameObject spawnController, loadingScreen, loseScreen;
+
+    public GameObject tutor;
+    public Button tutorOpen;
+    public Button tutorClose;
     float spawnInterval = 330;
     void Start()
     {
@@ -39,8 +43,15 @@ public class GameController : MonoBehaviour
         {
             logOut.onClick.AddListener(LogOutPrePare);
         }
-
-        time = 60.0f;
+        if(tutorClose != null)
+        {
+            tutorClose.onClick.AddListener(closeTutor);
+        }
+        if(tutorOpen != null)
+        {
+            tutorOpen.onClick.AddListener(openTutor);
+        }
+        time = 20.0f;
         startGame = false;
         waveCount = 0;
     }
@@ -154,5 +165,13 @@ public class GameController : MonoBehaviour
             loadingScreen.SetActive(false);
             startGame = true;
         }
+    }
+    public void openTutor()
+    {
+        tutor.SetActive(true);
+    }
+    public void closeTutor()
+    {
+        tutor.SetActive(false);
     }
 }

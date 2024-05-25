@@ -66,7 +66,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     void Start()
     {
         infoMob = GameObject.FindWithTag("MobInfo");
-        StartCoroutine(openMobStatus());
+        /*StartCoroutine(openMobStatus());*/
         infoMob.GetComponent<LoadMobInfo>().LoadData(stats);
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
