@@ -1,5 +1,6 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TMPro;
@@ -29,13 +30,15 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject spawnController, loadingScreen, loseScreen;
 
     public GameObject tutor;
+    public GameObject intro;
     public Button tutorOpen;
     public Button tutorClose;
     float spawnInterval = 330;
     void Start()
     {
         //This is Conection to the server call user data
-        RequestAddress();
+        /*RequestAddress();*/
+        StartCoroutine(stopIntro());
         //Fake data
         /*string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
         ReceiveAddress(json);*/
@@ -54,6 +57,7 @@ public class GameController : MonoBehaviour
         time = 20.0f;
         startGame = false;
         waveCount = 0;
+        
     }
 
     // Update is called once per frame
@@ -173,5 +177,11 @@ public class GameController : MonoBehaviour
     public void closeTutor()
     {
         tutor.SetActive(false);
+    }
+    IEnumerator stopIntro()
+    {
+        yield return new WaitForSeconds(11.5f);
+        intro.SetActive(false);
+        tutor.SetActive(true);
     }
 }
