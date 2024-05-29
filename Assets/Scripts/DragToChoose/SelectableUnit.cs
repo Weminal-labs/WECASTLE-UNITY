@@ -23,12 +23,13 @@ public class SelectableUnit : MonoBehaviour
     {
         SelectionManager.Instance.AvailableUnits.Add(this);
         Agent = GetComponent<NavMeshAgent>();
+        Agent.updateRotation = false;
+        Agent.updateUpAxis = false;
         blackboard = GetComponent<Blackboard>();
     }
     private void Start()
     {
-        Agent.updateRotation = false;
-        Agent.updateUpAxis = false;
+
         isUnderControl = blackboard.GetVariable<BoolVariable>("isUnderControl");
         //pointToMove = blackboard.GetVariable<TransformVariable>("pointToMove");
         pointToMoveVector = blackboard.GetVariable<Vector3Variable>("pointToMoveVector3");
