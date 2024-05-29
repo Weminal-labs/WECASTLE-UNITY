@@ -6,5 +6,5 @@ public interface MobDataPersistance
 {
     void LoadData(MobStats data);
     bool CompareData(string id);
-    void SaveData(ref MobStats data,int exp);
+    void SaveData(ref MobStats data);
 }

@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     private Button logOut;
     public GameObject text;
     [SerializeField]
-    private GameObject lv, exp, wood, gold, meat, clock, wave, spawnEnemy;
+    private GameObject wood, gold, meat, clock, wave, spawnEnemy;
     [SerializeField]
     private string json;
     private bool startGame;
@@ -34,14 +34,19 @@ public class GameController : MonoBehaviour
     public Button tutorOpen;
     public Button tutorClose;
     float spawnInterval = 330;
+    [Header("========Hero=============")]
+    [SerializeField]
+    private GameObject[] hero;
+    public Transform spawnPosition;
     void Start()
     {
         //This is Conection to the server call user data
         /*RequestAddress();*/
-        StartCoroutine(stopIntro());
+        //Intro
+        /*StartCoroutine(stopIntro());*/
         //Fake data
-        /*string json = "{\r\nexp: 0,\r\ngold: 90,\r\nid: \"VN\",\r\nlevel: 1,\r\nmax_exp: 5,\r\nmeat: 90,\r\nwood: 90\r\n}";
-        ReceiveAddress(json);*/
+        string json = "{\r\ngold: 90,\r\nid: \"VN\",\r\nmeat: 90,\r\nwood: 90\r\n}";
+        ReceiveAddress(json);
         if (logOut != null)
         {
             logOut.onClick.AddListener(LogOutPrePare);
@@ -57,7 +62,41 @@ public class GameController : MonoBehaviour
         time = 20.0f;
         startGame = false;
         waveCount = 0;
-        
+        MobStats mob;
+        MobStats mobSummon;
+        switch (StaticLobbySend.numHero)
+        {
+            case 0:
+                mob = new MobStats(3,3000, 80, 8);
+                mobSummon = new MobStats(mob, spawnPosition.position);
+                mobSummon.setInBuilding(false);
+                Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
+                break;
+            case 1:
+                mob = new MobStats(4, 3000, 80, 8);
+                mobSummon = new MobStats(mob, spawnPosition.position);
+                mobSummon.setInBuilding(false);
+                Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
+                break;
+            case 2:
+                mob = new MobStats(5, 3000, 80, 8);
+                mobSummon = new MobStats(mob, spawnPosition.position);
+                mobSummon.setInBuilding(false);
+                Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
+                break;
+            case 3:
+                mob = new MobStats(6, 3000, 80, 8);
+                mobSummon = new MobStats(mob, spawnPosition.position);
+                mobSummon.setInBuilding(false);
+                Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
+                break;
+            case 4:
+                mob = new MobStats(7, 3000, 80, 8);
+                mobSummon = new MobStats(mob, spawnPosition.position);
+                mobSummon.setInBuilding(false);
+                Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -82,7 +121,6 @@ public class GameController : MonoBehaviour
                 waveCount += 1;
                 //This is code for save player data
                 PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-                SavePlayer(JsonConvert.SerializeObject(player));
                 OnEnter.Invoke();
                 wave.GetComponent<TextMeshProUGUI>().SetText("Wave: "+waveCount);
                 GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
@@ -96,13 +134,10 @@ public class GameController : MonoBehaviour
     {
         Dictionary<string, string> jsonObject = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
         this.id = jsonObject["id"].ToString();
-        playerInfo = new PlayerInfo(id, Int32.Parse(jsonObject["level"].ToString()), Int32.Parse(jsonObject["exp"].ToString()), Int32.Parse(jsonObject["max_exp"].ToString()), Int32.Parse(jsonObject["gold"].ToString()), Int32.Parse(jsonObject["wood"].ToString()), Int32.Parse(jsonObject["meat"].ToString()));
+        playerInfo = new PlayerInfo(id, Int32.Parse(jsonObject["gold"].ToString()), Int32.Parse(jsonObject["wood"].ToString()), Int32.Parse(jsonObject["meat"].ToString()));
         PlayerInfoJson info = new PlayerInfoJson(playerInfo);
         Debug.Log(JsonConvert.SerializeObject(info));
         text.GetComponent<TextMeshProUGUI>().SetText(id);
-        lv.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getLv().ToString());
-        exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();
-        exp.GetComponent<Slider>().value = playerInfo.getExp();
         wood.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurWood().ToString());
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
@@ -111,13 +146,7 @@ public class GameController : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
         PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-        SavePlayer(JsonConvert.SerializeObject(player));
-        RequestLogOut();
     }
-    [DllImport("__Internal")]
-    public static extern void RequestLogOut();
-    [DllImport("__Internal")]
-    public static extern void RequestAddress();
     public void setMaterials(int m, int g, int w)
     {
         playerInfo.setCurMeat(m);
@@ -126,22 +155,11 @@ public class GameController : MonoBehaviour
         wood.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurWood().ToString());
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
-        int plusEXP = (m + g + w);
-        if (plusEXP > 0)
-        {
-            playerInfo.setExp(plusEXP);
-        }
-        lv.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getLv().ToString());
-        exp.GetComponent<Slider>().value = playerInfo.getExp();
-        exp.GetComponent<Slider>().maxValue = playerInfo.getMaxExp();
-        
     }
     public PlayerInfo getPlayer()
     {
         return playerInfo;
     }
-    [DllImport("__Internal")]
-    public static extern void SavePlayer(string json);
     public void loseGame()
     {
         playerInfo.setLose();
@@ -150,13 +168,12 @@ public class GameController : MonoBehaviour
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
         GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
         PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-        SavePlayer(JsonConvert.SerializeObject(player));
         loseScreen.SetActive(true);
     }
     public void savePlayerData()
     {
-        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-        SavePlayer(JsonConvert.SerializeObject(player));
+        /*PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SavePlayer(JsonConvert.SerializeObject(player));*/
     }
     private float calculatorTime(MobStats mob)
     {

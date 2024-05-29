@@ -23,8 +23,6 @@ public class ManageMobData : MonoBehaviour
     {
         this.dataPersistances = FindAllMobData();
         loadMob();
-        /*string json = "[{\r\n        id: \"0x38dasjlddanddnalsdjknal\",\r\n        type_hero: 1,\r\n        health: 100,\r\n        max_health: 100, \r\n        damage: 12,\r\n        speed: 10,\r\n        level: 1,\r\n        exp: 0,\r\n        max_exp: 100,\r\n        location_x: 1,\r\n        location_y: 1,\r\n        name: \"daxua\",\r\n        description: \"Char 1\"\r\n    }, \r\n    {\r\n        id: \"0x97andajslddanddnalsdjknal\",\r\n        type_hero: 0,\r\n        health: 120,\r\n        max_health: 120, \r\n        damage: 12,\r\n        speed: 10,\r\n        level: 1,\r\n        exp: 0,\r\n        max_exp: 100,\r\n        location_x: 1,\r\n        location_y: 1,\r\n        name: \"sinobuii\",\r\n        description: \"Char 2\"\r\n    }\r\n    ]";
-        loadMobExist(json);*/
     }
     public List<MobStats> getListMob()
     {
@@ -93,7 +91,7 @@ public class ManageMobData : MonoBehaviour
         {
             if (mob.health > 0)
             {
-                pointer = new MobStats(mob.id, mob.type_hero, mob.max_health, mob.damage, mob.speed, mob.name, mob.description);
+                pointer = new MobStats(mob.id, mob.type_hero, mob.max_health, mob.damage, mob.speed);
                 addMob(pointer);
                 Instantiate(mobPrefabs[pointer.getMobType()], new Vector3(mob.location_x, mob.location_y), Quaternion.identity).GetComponent<MobStatus>().LoadData(pointer);
             }

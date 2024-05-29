@@ -8,13 +8,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private int curHealth, maxHealth, damage, speed;
     [SerializeField]
-    private int lv;
-    [SerializeField]
     private GameObject m, g;
 
     Blackboard blackboard;
     BoolVariable isDead;
-    Collider collider;
     IntVariable blackBoardDamage;
 
     // Start is called before the first frame update
@@ -26,7 +23,6 @@ public class EnemyController : MonoBehaviour
         spawnSet();
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
-        collider = this.GetComponent<Collider>();
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
         blackBoardDamage.Value = damage;
     }
@@ -68,10 +64,6 @@ public class EnemyController : MonoBehaviour
         }
 
     }
-    public void setLV(int lv)
-    {
-        this.lv = lv;
-    }
     public void die()
     {
         int gold = Random.Range(1, 4);
@@ -94,18 +86,10 @@ public class EnemyController : MonoBehaviour
 
     public void spawnSet()
     {
-        int lvE = Random.Range(this.lv-1, this.lv + 1);
-        this.maxHealth = Random.Range(60,80);
+        this.maxHealth = 200;
         this.curHealth = maxHealth;
-        this.damage = Random.Range(25, 30);
-        this.speed = Random.Range(5, 7);
+        this.damage = 30;
+        this.speed = 5;
         this.Agent.speed = this.speed;
-        for (; lvE > 0;)
-        {
-            this.maxHealth += Random.Range(2, 5);
-            this.curHealth = maxHealth;
-            this.damage += Random.Range(2, 5);
-            lvE--;
-        }
     }
 }

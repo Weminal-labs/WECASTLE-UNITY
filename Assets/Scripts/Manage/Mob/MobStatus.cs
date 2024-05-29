@@ -9,9 +9,9 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     private GameObject infoMob;
     private MobStats stats;
     [SerializeField]
-    private int curHealth, maxHealth, damage, speed, exp, maxExp, lv, type;
+    private int curHealth, maxHealth, damage, speed, type;
     [SerializeField]
-    private string name, history, id;
+    private string id;
     Blackboard blackboard;
     BoolVariable isDead;
     IntVariable blackBoardDamage;
@@ -46,17 +46,12 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         this.damage = data.getDamage();
         this.speed = data.getSpeed();
         this.gameObject.GetComponent<NavMeshAgent>().speed = this.speed;
-        this.name = data.getName();
-        this.exp = data.getExp();
-        this.maxExp = data.getMaxExp();
-        this.lv = data.getLevel();
-        this.history = data.getHistory();
         this.type = data.getMobType();
         this.stats = data;
     }
-    public void SaveData(ref MobStats data, int exp)
+    public void SaveData(ref MobStats data)
     {
-        data.setExp(exp);
+            
     }
     public MobStats GetMobStats()
     {
@@ -72,7 +67,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
         blackBoardDamage.Value = damage;
-        block = blackboard.GetVariable<BoolVariable>("Block");
+       /* block = blackboard.GetVariable<BoolVariable>("Block");*/
 
     }
 
@@ -105,12 +100,6 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
             isDoubleClick = false;
         }
     }
-    public void LvUp(int exp)
-    {
-        this.stats.setExp(exp);
-        LoadData(this.stats);
-        blackBoardDamage.Value = damage;
-    }
     IEnumerator DetectDoubleClick()
     {
         isTimeCheckAllowed = false;
@@ -133,15 +122,16 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
 
     public void takeDame(int damage)
     {
-        if (block.Value == true)
+        /*if (block.Value == true)
         {
             return;
-        }
+        }*/
+        /*return;*/
         if (curHealth - damage < 0)
         {
             isDead.Value = true;
             stats.setHealth(-damage);
-            GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
+            /*GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();*/
         }
         else
         {

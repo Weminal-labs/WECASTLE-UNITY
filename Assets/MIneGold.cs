@@ -54,7 +54,6 @@ public class MIneGold : MonoBehaviour
             if (inMine)
             {
                 gameController.GetComponent<GameController>().setMaterials(0,Random.Range(3,8),0);
-                gameObject.GetComponent<MobInBuilding>().getMob(0).setExp(5);
                 time = calculatorTime(this.gameObject.GetComponent<MobInBuilding>().getMob(0));
                 textTime.SetActive(true);
                 inMine = true;

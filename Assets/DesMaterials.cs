@@ -22,10 +22,6 @@ public class DesMaterials : MonoBehaviour
 
     IEnumerator destroyThis()
     {
-        foreach (GameObject mob in GameObject.FindGameObjectsWithTag("Ally"))
-        {
-            mob.GetComponent<MobStatus>().LvUp(1);
-        }
         yield return new WaitForSeconds(3.0f);
         Destroy(this.gameObject);
     }

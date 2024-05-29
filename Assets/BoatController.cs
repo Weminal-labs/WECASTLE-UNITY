@@ -57,7 +57,6 @@ public class BoatController : MonoBehaviour
         GameObject enemyRandom = enemy[Random.Range(0, enemy.Length)];
         // Calculate the new position with the offset
         Vector3 newPosition = transform.position + new Vector3(offsetX, offsetY, 0f);
-        enemyRandom.gameObject.GetComponent<EnemyController>().setLV(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().getPlayer().getLv());
         // Instantiate the new prefab at the new position
         Instantiate(enemyRandom, newPosition, Quaternion.identity);
     }

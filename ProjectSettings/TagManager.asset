@@ -16,6 +16,7 @@ TagManager:
   - House
   - Bomb
   - Building
+  - LobbyController
   layers:
   - Default
   - TransparentFX

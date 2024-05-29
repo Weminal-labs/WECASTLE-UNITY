@@ -75,14 +75,10 @@ public class UnitChose : MonoBehaviour
         this.gameObject.transform.GetChild(6).gameObject.SetActive(true);
         this.gameObject.transform.GetChild(7).gameObject.SetActive(true);
         this.gameObject.transform.GetChild(8).gameObject.SetActive(true);
-        this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Slider>().maxValue = mobStats.getMaxExp();
-        this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Slider>().value = mobStats.getExp();
-        this.gameObject.transform.GetChild(1).GetChild(3).GetComponent<TextMeshProUGUI>().SetText(mob.getLevel().ToString());
         this.gameObject.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().SetText(mob.getHealth().ToString() + "/" + mob.getMaxHealth().ToString());
         this.gameObject.transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>().SetText(mob.getDamage().ToString());
         this.gameObject.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().SetText(mob.getSpeed().ToString());
         this.gameObject.transform.GetChild(6).GetComponent<Animator>().runtimeAnimatorController = animMob[mob.getMobType()] as RuntimeAnimatorController;
-        this.gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().SetText(mob.getName().ToString());
         this.buildingObj.GetComponent<MobInBuilding>().addMob(mob);
         mob.setInBuilding(true);
     }
@@ -101,14 +97,10 @@ public class UnitChose : MonoBehaviour
         this.gameObject.transform.GetChild(6).gameObject.SetActive(true);
         this.gameObject.transform.GetChild(7).gameObject.SetActive(true);
         this.gameObject.transform.GetChild(8).gameObject.SetActive(true);
-        this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Slider>().maxValue = mobStats.getMaxExp();
-        this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Slider>().value = mobStats.getExp();
-        this.gameObject.transform.GetChild(1).GetChild(3).GetComponent<TextMeshProUGUI>().SetText(mob.getLevel().ToString());
         this.gameObject.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().SetText(mob.getHealth().ToString() + "/" + mob.getMaxHealth().ToString());
         this.gameObject.transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>().SetText(mob.getDamage().ToString());
         this.gameObject.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().SetText(mob.getSpeed().ToString());
         this.gameObject.transform.GetChild(6).GetComponent<Animator>().runtimeAnimatorController = animMob[mob.getMobType()] as RuntimeAnimatorController;
-        this.gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().SetText(mob.getName().ToString());
         mob.setInBuilding(true);
     }
 

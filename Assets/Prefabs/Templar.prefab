@@ -177,8 +177,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 324573977
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2105513736, guid: dabf1581be151e64994945677fb42ca5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1170,12 +1170,7 @@ MonoBehaviour:
   maxHealth: 200
   damage: 20
   speed: 0
-  exp: 0
-  maxExp: 0
-  lv: 0
   type: 0
-  name: 
-  history: 
   id: 
   isDoubleClick: 0
 --- !u!114 &8040637782310146644

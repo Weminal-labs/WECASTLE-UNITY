@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 public class SummonBanner : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class SummonBanner : MonoBehaviour
     private int unit;
     [SerializeField]
     private GameObject PlaceHolder, Animation, gameControll;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,8 +77,6 @@ public class SummonBanner : MonoBehaviour
     }
     private void Close()
     {
-        name.GetComponentInChildren<TMP_InputField>().text = "";
-        history.GetComponentInChildren<TMP_InputField>().text = "";
         if (summonCanvas != null)
         {
             summonCanvas.gameObject.SetActive(false);
@@ -84,18 +84,7 @@ public class SummonBanner : MonoBehaviour
     }
     private void Summon()
     {
-        string[] split = healthText.text.Split('-');
-        int minHealth = Int32.Parse(split[0]);
-        int maxHealth = Int32.Parse(split[1]);
-        split = damageText.text.Split('-');
-        int minDamage = Int32.Parse(split[0]);
-        int maxDamage = Int32.Parse(split[1]);
-        split = speedText.text.Split('-');
-        int minSpeed = Int32.Parse(split[0]);
-        int maxSpeed = Int32.Parse(split[1]);
-        string nameMob = name.GetComponentInChildren<TMP_InputField>().text;
-        string historyMob = history.GetComponentInChildren<TMP_InputField>().text;
-        MobStats mob = new MobStats(this.unit, minHealth, maxHealth, minDamage, maxDamage, minSpeed, maxSpeed, nameMob, historyMob);
+        MobStats mob = new MobStats(this.unit, Int32.Parse(healthText.text), Int32.Parse(damageText.text), Int32.Parse(speedText.text)) ;
         MobStats mobSummon = new MobStats(mob, spawnPosition.transform.position);
         mobSummon.setInBuilding(true);
         managerDataMob.GetComponent<ManageMobData>().addMob(mobSummon);
@@ -108,17 +97,16 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = selectUnit;
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
-        int lvP = gameControll.GetComponent<GameController>().getPlayer().getLv();
-        int minHealth = 300 + (lvP-1) * 3;
-        int maxHealth = 400 + (lvP - 1) * 3;
-        int minDamage = 35 + (lvP - 1) * 3;
-        int maxDamage = 50 + (lvP - 1) * 3;
-        healthText.SetText(minHealth+"-"+maxHealth);
-        damageText.SetText(minDamage+"-"+maxDamage);
-        speedText.SetText("4-7");
+        int maxHealth = 400;
+        int maxDamage = 50 ;
+        healthText.SetText(maxHealth.ToString());
+        damageText.SetText(maxDamage.ToString());
+        speedText.SetText("5");
         meatCost.SetText("40");
         woodCost.SetText("15");
         goldCost.SetText("20");
+        name.GetComponent<TextMeshProUGUI>().SetText("Warrior");
+        history.GetComponent<TextMeshProUGUI>().SetText("- High HP\n- High Damage\n- Melee weapon");
         if (checkM())
         {
             buttonSummon.gameObject.SetActive(true);
@@ -135,17 +123,16 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = unSelectUnit;
         unitArcher.GetComponent<Image>().sprite = selectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
-        int lvP = gameControll.GetComponent<GameController>().getPlayer().getLv();
-        int minHealth = 60 + (lvP - 1) * 3;
-        int maxHealth = 80 + (lvP - 1) * 3;
-        int minDamage = 40 + (lvP - 1) * 3;
-        int maxDamage = 70 + (lvP - 1) * 3;
-        healthText.SetText(minHealth + "-" + maxHealth);
-        damageText.SetText(minDamage + "-" + maxDamage);
-        speedText.SetText("5-8");
+        int maxHealth = 80;
+        int maxDamage = 60;
+        healthText.SetText(maxHealth.ToString());
+        damageText.SetText(maxDamage.ToString());
+        speedText.SetText("7");
         meatCost.SetText("30");
         woodCost.SetText("30");
         goldCost.SetText("30");
+        name.GetComponent<TextMeshProUGUI>().SetText("Archer");
+        history.GetComponent<TextMeshProUGUI>().SetText("- Low HP\n- Low Damage\n- Can attack with long range");
         if (checkM())
         {
             buttonSummon.gameObject.SetActive(true);
@@ -162,17 +149,16 @@ public class SummonBanner : MonoBehaviour
         unitWarrior.GetComponent<Image>().sprite = unSelectUnit;
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = selectUnit;
-        int lvP = gameControll.GetComponent<GameController>().getPlayer().getLv();
-        int minHealth = 40 + (lvP - 1) * 3;
-        int maxHealth = 60 + (lvP - 1) * 3;
-        int minDamage = 20 + (lvP - 1) * 3;
-        int maxDamage = 30 + (lvP - 1) * 3;
-        healthText.SetText(minHealth + "-" + maxHealth);
-        damageText.SetText(minDamage + "-" + maxDamage);
-        speedText.SetText("6-8");
-        meatCost.SetText("20");
-        woodCost.SetText("20");
-        goldCost.SetText("15");
+        int maxHealth = 40;
+        int maxDamage = 20;
+        healthText.SetText(maxHealth.ToString());
+        damageText.SetText(maxDamage.ToString());
+        speedText.SetText("7");
+        meatCost.SetText("1");
+        woodCost.SetText("1");
+        goldCost.SetText("1");
+        name.GetComponent<TextMeshProUGUI>().SetText("Pawn");
+        history.GetComponent<TextMeshProUGUI>().SetText("- Low HP\n- Low Damage\n- Need for gather materials");
         if (checkM())
         {
             buttonSummon.gameObject.SetActive(true);
@@ -194,9 +180,6 @@ public class SummonBanner : MonoBehaviour
         yield return new WaitForSeconds(4.5f);
         data.setInBuilding(false);
         Instantiate(spawnUnit[unit], spawnPosition.transform.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(data);
-        //This is code for Connect to server to get new ID
-        MobStatsForJSON json = new MobStatsForJSON(data);
-        RequestID(JsonConvert.SerializeObject(json), data.getId());
         tempColor = this.gameObject.GetComponent<RawImage>().color;
         tempColor.a = 100.0f;
         this.gameObject.GetComponent<RawImage>().color = tempColor;
