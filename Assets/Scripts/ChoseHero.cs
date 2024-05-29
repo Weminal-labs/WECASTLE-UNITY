@@ -9,7 +9,7 @@ public class ChoseHero : MonoBehaviour
     [SerializeField]
     private bool[] isLock;
     public GameObject[] btnHero;
-    public GameObject btnChose;
+    public GameObject btnChose, price;
     public Animator review;
     public Animator reviewMain;
     [Header("===========Sprite==============")]
@@ -30,7 +30,8 @@ public class ChoseHero : MonoBehaviour
     private void Start()
     {
         indexChose = 0;
-        if(btnChose != null) 
+        price.SetActive(false);
+        if (btnChose != null) 
         {
             btnChose.GetComponent<Button>().onClick.AddListener(SetChose);
         }
@@ -55,6 +56,7 @@ public class ChoseHero : MonoBehaviour
         else
         {
             btnChose.GetComponent<Image>().sprite = btnSelect;
+            price.SetActive(false);
             text.SetText("Chose");
         }
         curIndex = 0;
@@ -76,11 +78,14 @@ public class ChoseHero : MonoBehaviour
         if (isLock[1])
         {
             btnChose.GetComponent<Image>().sprite = btnBuy;
+            price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "3000";
+            price.SetActive(true);
             text.SetText("Buy");
         }
         else
         {
             btnChose.GetComponent<Image>().sprite = btnSelect;
+            price.SetActive(false);
             text.SetText("Chose");
         }
         curIndex = 1;
@@ -102,11 +107,14 @@ public class ChoseHero : MonoBehaviour
         if (isLock[2])
         {
             btnChose.GetComponent<Image>().sprite = btnBuy;
+            price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "5000";
+            price.SetActive(true);
             text.SetText("Buy");
         }
         else
         {
             btnChose.GetComponent<Image>().sprite = btnSelect;
+            price.SetActive(false);
             text.SetText("Chose");
         }
         curIndex = 2;
@@ -128,11 +136,14 @@ public class ChoseHero : MonoBehaviour
         if (isLock[3])
         {
             btnChose.GetComponent<Image>().sprite = btnBuy;
+            price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "8000";
+            price.SetActive(true);
             text.SetText("Buy");
         }
         else
         {
             btnChose.GetComponent<Image>().sprite = btnSelect;
+            price.SetActive(false);
             text.SetText("Chose");
         }
         curIndex = 3;
@@ -154,11 +165,15 @@ public class ChoseHero : MonoBehaviour
         if (isLock[4])
         {
             btnChose.GetComponent<Image>().sprite = btnBuy;
+            price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "9000";
+            price.SetActive(true);
             text.SetText("Buy");
         }
         else
         {
             btnChose.GetComponent<Image>().sprite = btnSelect;
+            price.SetActive(false);
+            text.SetText("Chose");
         }
         curIndex = 4;
         if (curIndex == indexChose && !isLock[curIndex])
