@@ -8,6 +8,10 @@ public class BoatController : MonoBehaviour
 
     private bool reachedDestination = false;
     [SerializeField] private GameObject[] enemy;
+
+    [SerializeField] private GameObject[] boss;
+
+    public bool isBoss = false;
     // Update is called once per frame
     void Update()
     {
@@ -36,12 +40,19 @@ public class BoatController : MonoBehaviour
     IEnumerator DestroyAfterDelay()
     {
 
-        // Instantiate a new prefab at the current position
-        InstantiateNewPrefab();
-        InstantiateNewPrefab();
+        if (isBoss)
+        {
+            InstantiateNewPrefabBoss();
+        }
+        else
+        {
+            // Instantiate a new prefab at the current position
+            InstantiateNewPrefab();
+            InstantiateNewPrefab();
+        }
+
         // Wait for 1 second
         yield return new WaitForSeconds(1f);
-
 
 
         // Destroy the current game object
@@ -55,6 +66,19 @@ public class BoatController : MonoBehaviour
         float offsetY = Random.Range(-1f, 1f);
 
         GameObject enemyRandom = enemy[Random.Range(0, enemy.Length)];
+        // Calculate the new position with the offset
+        Vector3 newPosition = transform.position + new Vector3(offsetX, offsetY, 0f);
+        // Instantiate the new prefab at the new position
+        Instantiate(enemyRandom, newPosition, Quaternion.identity);
+    }
+    void InstantiateNewPrefabBoss()
+    {
+        // Define a random offset range
+        float offsetX = Random.Range(-1f, 1f);
+        float offsetY = Random.Range(-1f, 1f);
+
+
+        GameObject enemyRandom = boss[StaticLobbySend.numMap];
         // Calculate the new position with the offset
         Vector3 newPosition = transform.position + new Vector3(offsetX, offsetY, 0f);
         // Instantiate the new prefab at the new position

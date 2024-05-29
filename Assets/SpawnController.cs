@@ -13,7 +13,7 @@ public class SpawnController : MonoBehaviour
 
     }
 
-    public void SpawnEnemy()
+    public void SpawnEnemy(int i)
     {
         if (spawnPoints == null || destinations.Count == 0 || prefabsToInstantiate.Count == 0)
         {
@@ -21,14 +21,27 @@ public class SpawnController : MonoBehaviour
             return;
         }
 
-        StartCoroutine(SpawnPrefabAfterDelay(1f));
-        StartCoroutine(SpawnPrefabAfterDelay(3f));
-
-        StartCoroutine(SpawnPrefabAfterDelay(10f));
-        StartCoroutine(SpawnPrefabAfterDelay(12f));
+        for (int j = 0; j <= i; j++)
+        {
+            StartCoroutine(SpawnPrefabAfterDelay(1f, false));
+            StartCoroutine(SpawnPrefabAfterDelay(5f, false));
+        }
     }
 
-    IEnumerator SpawnPrefabAfterDelay(float delay)
+    public void SpawnBoss()
+    {
+        if (spawnPoints == null || destinations.Count == 0 || prefabsToInstantiate.Count == 0)
+        {
+            Debug.LogError("Spawn points, destinations, or prefabs to instantiate is not set.");
+            return;
+        }
+
+
+        StartCoroutine(SpawnPrefabAfterDelay(5f, true));
+
+    }
+
+    IEnumerator SpawnPrefabAfterDelay(float delay, bool isBoss)
     {
         yield return new WaitForSeconds(delay);
 
@@ -54,8 +67,16 @@ public class SpawnController : MonoBehaviour
             yield break;
         }
 
-        // Instantiate prefab at drop point
-        GameObject instantiatedPrefab = Instantiate(prefabsToInstantiate[index], spawnPoints.position, Quaternion.identity);
+        GameObject instantiatedPrefab;
+        if (isBoss)
+        {
+            instantiatedPrefab = Instantiate(prefabsToInstantiate[index + 2], spawnPoints.position, Quaternion.identity);
+
+        }
+        else
+        {
+            instantiatedPrefab = Instantiate(prefabsToInstantiate[index], spawnPoints.position, Quaternion.identity);
+        }
 
         // Move prefab to destination
         instantiatedPrefab.GetComponent<BoatController>().destination = randomDestination;
