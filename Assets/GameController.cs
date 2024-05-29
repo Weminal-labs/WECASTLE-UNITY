@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private string json;
     private bool startGame;
-    private int waveCount;
+    public int waveCount;
     // Start is called before the first frame update
 
     [SerializeField] UnityEvent OnEnter;
@@ -121,13 +121,12 @@ public class GameController : MonoBehaviour
                     winGame();
                 }
                 waveCount += 1;
-                if (waveCount < 5)
-                {
-                    OnEnter.Invoke();
-                    wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
-                    spawnEnemy.GetComponent<SpawnController>().SpawnEnemy(waveCount);
-                }
-                if (waveCount == 5)
+
+                OnEnter.Invoke();
+                wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
+                spawnEnemy.GetComponent<SpawnController>().SpawnEnemy(waveCount);
+
+                if (waveCount == 5 && StaticLobbySend.numMap != 0)
                 {
                     OnEnter.Invoke();
                     wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
