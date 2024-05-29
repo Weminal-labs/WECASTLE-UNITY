@@ -141,8 +141,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 324573977
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 1406975171, guid: d1cff9f04d05f0e47b1c17f4c3772ee1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -200,12 +200,12 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.05
   m_Speed: 3.5
-  m_Acceleration: 7
+  m_Acceleration: 40
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 300
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 0.05
   m_BaseOffset: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 5740445188180490770}
+  selectedEditorNode: {fileID: 7295653617580100694}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -2049,8 +2049,8 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 620
-    y: 1320
+    x: 622.6667
+    y: 1319.3333
     width: 160
     height: 45
   parent: {fileID: 5740445188180490782}
@@ -2483,8 +2483,8 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 1460
-    y: 1140
+    x: 1463.3333
+    y: 1139.3333
     width: 160
     height: 45
   parent: {fileID: 5740445188180490760}
@@ -2497,7 +2497,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.2
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &1560679025758461153
@@ -2625,7 +2625,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.2
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &7943209781884827717
