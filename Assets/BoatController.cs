@@ -65,7 +65,21 @@ public class BoatController : MonoBehaviour
         float offsetX = Random.Range(-1f, 1f);
         float offsetY = Random.Range(-1f, 1f);
 
-        GameObject enemyRandom = enemy[Random.Range(0, enemy.Length)];
+        GameObject enemyRandom;
+
+        if (StaticLobbySend.numMap == 3 && GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().waveCount == 4)
+        {
+            enemyRandom = enemy[1];
+        }
+        else if (StaticLobbySend.numMap != 0)
+        {
+            enemyRandom = enemy[Random.Range(0, enemy.Length)];
+        }
+        else
+        {
+            enemyRandom = enemy[0];
+        }
+
         // Calculate the new position with the offset
         Vector3 newPosition = transform.position + new Vector3(offsetX, offsetY, 0f);
         // Instantiate the new prefab at the new position

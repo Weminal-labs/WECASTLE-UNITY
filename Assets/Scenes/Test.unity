@@ -9937,15 +9937,12 @@ MonoBehaviour:
   health: {fileID: 0}
   damage: {fileID: 0}
   speed: {fileID: 0}
-  maxExp: {fileID: 0}
-  exp: {fileID: 0}
-  lv: {fileID: 0}
+  name: {fileID: 0}
   iconUnit: {fileID: 0}
   placeHolderUnit: {fileID: 0}
-  name: {fileID: 0}
-  history: {fileID: 0}
   placeHolder: {fileID: 0}
   unitAnim: []
+  nameMob: []
 --- !u!1 &1165970912
 GameObject:
   m_ObjectHideFlags: 0
@@ -11067,12 +11064,7 @@ MonoBehaviour:
   maxHealth: 0
   damage: 0
   speed: 0
-  exp: 0
-  maxExp: 0
-  lv: 0
   type: 0
-  name: 
-  history: 
   id: 
   isDoubleClick: 0
 --- !u!114 &1629131286
@@ -15175,13 +15167,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995489127102058234, guid: f91ed0ea3bcbb004c9abc885b1881ab0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995489127102058234, guid: f91ed0ea3bcbb004c9abc885b1881ab0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3995489127102058235, guid: f91ed0ea3bcbb004c9abc885b1881ab0, type: 3}
       propertyPath: m_Name
       value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 3995489127102058235, guid: f91ed0ea3bcbb004c9abc885b1881ab0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f91ed0ea3bcbb004c9abc885b1881ab0, type: 3}
@@ -15345,6 +15345,18 @@ PrefabInstance:
     - target: {fileID: 3201689069495263321, guid: d1c6191790ec80445b712025104e8fd3, type: 3}
       propertyPath: rect.y
       value: 850.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201689069495263366, guid: d1c6191790ec80445b712025104e8fd3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201689069495263366, guid: d1c6191790ec80445b712025104e8fd3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201689069495263366, guid: d1c6191790ec80445b712025104e8fd3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3201689069495263367, guid: d1c6191790ec80445b712025104e8fd3, type: 3}
       propertyPath: m_Name
@@ -15607,13 +15619,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4528984702210684855, guid: d5758d5f116e5f344b843e8ceba654b5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528984702210684855, guid: d5758d5f116e5f344b843e8ceba654b5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 324573977
+      objectReference: {fileID: 0}
     - target: {fileID: 4528984702210684871, guid: d5758d5f116e5f344b843e8ceba654b5, type: 3}
       propertyPath: m_Name
       value: Armored Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 4528984702210684871, guid: d5758d5f116e5f344b843e8ceba654b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5758d5f116e5f344b843e8ceba654b5, type: 3}
@@ -15752,7 +15772,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8040637782310146732, guid: 6e829b8ad384ccc4a91c39efbfa16abd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040637782310146733, guid: 6e829b8ad384ccc4a91c39efbfa16abd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040637782310146733, guid: 6e829b8ad384ccc4a91c39efbfa16abd, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 324573977
       objectReference: {fileID: 0}
     - target: {fileID: 8040637782310146738, guid: 6e829b8ad384ccc4a91c39efbfa16abd, type: 3}
       propertyPath: m_RootOrder
@@ -15989,6 +16017,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7045611887057836711, guid: ee406a943a05ca541af8442beea92529, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045611887057836711, guid: ee406a943a05ca541af8442beea92529, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 324573977
+      objectReference: {fileID: 0}
     - target: {fileID: 7045611887057836712, guid: ee406a943a05ca541af8442beea92529, type: 3}
       propertyPath: range.constantValue
       value: 4
@@ -16015,7 +16051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7045611887057836927, guid: ee406a943a05ca541af8442beea92529, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee406a943a05ca541af8442beea92529, type: 3}
@@ -19701,6 +19737,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6397626724758871848, guid: b00ed7218fb676c449161f1686e586bf, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6397626724758871854, guid: b00ed7218fb676c449161f1686e586bf, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -19752,6 +19792,14 @@ PrefabInstance:
     - target: {fileID: 6397626724758871856, guid: b00ed7218fb676c449161f1686e586bf, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397626724758871857, guid: b00ed7218fb676c449161f1686e586bf, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397626724758871857, guid: b00ed7218fb676c449161f1686e586bf, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b00ed7218fb676c449161f1686e586bf, type: 3}

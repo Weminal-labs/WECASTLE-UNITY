@@ -191,12 +191,12 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.3
   m_Speed: 3.5
-  m_Acceleration: 7
+  m_Acceleration: 40
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 300
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 5210769356420102944}
+  selectedEditorNode: {fileID: 5210769356420102941}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -572,7 +572,6 @@ MonoBehaviour:
   maxHealth: 200
   damage: 20
   speed: 8
-  lv: 2
   m: {fileID: 8366629480068029127, guid: 0c6e3fcf0c72ea24e98e338ac8cf45e8, type: 3}
   g: {fileID: 2223323310675944387, guid: 3a5b3d23443d1aa46ab79f6588368b94, type: 3}
 --- !u!114 &2667778874628842940
@@ -1275,7 +1274,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1300
-    y: 1100
+    y: 1101.3333
     width: 160
     height: 45
   parent: {fileID: 5210769356420102942}
@@ -1884,7 +1883,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.2
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &5515308058070116712

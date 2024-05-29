@@ -48,7 +48,7 @@ namespace MBTExample
                 return NodeResult.running;
             }
             // Check if agent is very close to destination
-            if (agent.remainingDistance < stopDistance.Value)
+            if (agent.remainingDistance <= stopDistance.Value)
             {
                 return NodeResult.success;
             }
