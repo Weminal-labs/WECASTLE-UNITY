@@ -1383,7 +1383,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 288266308}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838520675}
+        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+        m_MethodName: mapArmorOrc
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &288266308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4792,12 +4804,6 @@ MonoBehaviour:
   pInfo: {fileID: 2140882845}
   pHero: {fileID: 1777037033}
   heroControll: {fileID: 88385376}
-  map:
-  - {fileID: 899585205}
-  - {fileID: 1706977073}
-  - {fileID: 1331073188}
-  - {fileID: 288266307}
-  - {fileID: 2019406921}
 --- !u!1 &869526183
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,7 +4964,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 899585206}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838520675}
+        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+        m_MethodName: mapGoblin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899585206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8423,7 +8441,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1331073189}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838520675}
+        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+        m_MethodName: mapTNT
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1331073189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11094,7 +11124,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1706977074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838520675}
+        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+        m_MethodName: mapSkeleton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1706977074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12426,7 +12468,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2019406922}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838520675}
+        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+        m_MethodName: mapEliteOrc
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2019406922
 MonoBehaviour:
   m_ObjectHideFlags: 0

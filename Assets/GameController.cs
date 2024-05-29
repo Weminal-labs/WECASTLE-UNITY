@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,7 +10,6 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     private string id;
-    [SerializeField]
     private float time;
     private PlayerInfo playerInfo;
     [SerializeField]
@@ -27,7 +25,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] UnityEvent OnEnter;
     [SerializeField] UnityEvent OnLeave;
-    [SerializeField] GameObject spawnController, loadingScreen, loseScreen;
+    [SerializeField] GameObject spawnController, loadingScreen, loseScreen, winScreen;
 
     public GameObject tutor;
     public GameObject intro;
@@ -43,7 +41,7 @@ public class GameController : MonoBehaviour
         //This is Conection to the server call user data
         /*RequestAddress();*/
         //Intro
-        /*StartCoroutine(stopIntro());*/
+        StartCoroutine(stopIntro());
         //Fake data
         string json = "{\r\ngold: 90,\r\nid: \"VN\",\r\nmeat: 90,\r\nwood: 90\r\n}";
         ReceiveAddress(json);
@@ -51,11 +49,11 @@ public class GameController : MonoBehaviour
         {
             logOut.onClick.AddListener(LogOutPrePare);
         }
-        if(tutorClose != null)
+        if (tutorClose != null)
         {
             tutorClose.onClick.AddListener(closeTutor);
         }
-        if(tutorOpen != null)
+        if (tutorOpen != null)
         {
             tutorOpen.onClick.AddListener(openTutor);
         }
@@ -67,7 +65,7 @@ public class GameController : MonoBehaviour
         switch (StaticLobbySend.numHero)
         {
             case 0:
-                mob = new MobStats(3,3000, 80, 8);
+                mob = new MobStats(3, 3000, 80, 8);
                 mobSummon = new MobStats(mob, spawnPosition.position);
                 mobSummon.setInBuilding(false);
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
@@ -102,7 +100,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(startGame)
+        if (startGame)
         {
             if (time > 0.0f)
             {
@@ -118,13 +116,24 @@ public class GameController : MonoBehaviour
             }
             else
             {
+                if (waveCount == 6)
+                {
+                    winGame();
+                }
                 waveCount += 1;
-                //This is code for save player data
-                PlayerInfoJson player = new PlayerInfoJson(playerInfo);
-                OnEnter.Invoke();
-                wave.GetComponent<TextMeshProUGUI>().SetText("Wave: "+waveCount);
-                GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
-                spawnEnemy.GetComponent<SpawnController>().SpawnEnemy();
+                if (waveCount < 5)
+                {
+                    OnEnter.Invoke();
+                    wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
+                    spawnEnemy.GetComponent<SpawnController>().SpawnEnemy(waveCount);
+                }
+                if (waveCount == 5)
+                {
+                    OnEnter.Invoke();
+                    wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
+                    spawnEnemy.GetComponent<SpawnController>().SpawnBoss();
+                }
+
                 time = 30.0f;
             }
         }
@@ -170,6 +179,12 @@ public class GameController : MonoBehaviour
         PlayerInfoJson player = new PlayerInfoJson(playerInfo);
         loseScreen.SetActive(true);
     }
+
+    public void winGame()
+    {
+        winScreen.SetActive(true);
+    }
+
     public void savePlayerData()
     {
         /*PlayerInfoJson player = new PlayerInfoJson(playerInfo);
@@ -200,5 +215,6 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(11.5f);
         intro.SetActive(false);
         tutor.SetActive(true);
+        startGame = true;
     }
 }
