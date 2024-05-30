@@ -565,8 +565,8 @@ RectTransform:
   - {fileID: 1556716148}
   - {fileID: 888260931}
   - {fileID: 232880473}
-  m_Father: {fileID: 186404316}
-  m_RootOrder: 1
+  m_Father: {fileID: 2115084932}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1088,7 +1088,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1900610280}
-  - {fileID: 105845302}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1785,8 +1784,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838520675}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+      - m_Target: {fileID: 2115084933}
+        m_TargetAssemblyTypeName: AsyncLoader, Assembly-CSharp
         m_MethodName: mapArmorOrc
         m_Mode: 1
         m_Arguments:
@@ -5280,9 +5279,6 @@ MonoBehaviour:
   - {fileID: 1408741523}
   pageMain: {fileID: 712066282}
   pageHero: {fileID: 480872155}
-  loading: {fileID: 105845299}
-  loadBar: {fileID: 232880472}
-  container: {fileID: 1900610279}
   pInfo: {fileID: 2140882845}
   pHero: {fileID: 1777037033}
   heroControll: {fileID: 88385376}
@@ -5380,7 +5376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &888260931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5546,8 +5542,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838520675}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+      - m_Target: {fileID: 2115084933}
+        m_TargetAssemblyTypeName: AsyncLoader, Assembly-CSharp
         m_MethodName: mapGoblin
         m_Mode: 1
         m_Arguments:
@@ -9451,8 +9447,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838520675}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+      - m_Target: {fileID: 2115084933}
+        m_TargetAssemblyTypeName: AsyncLoader, Assembly-CSharp
         m_MethodName: mapTNT
         m_Mode: 1
         m_Arguments:
@@ -12383,8 +12379,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838520675}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+      - m_Target: {fileID: 2115084933}
+        m_TargetAssemblyTypeName: AsyncLoader, Assembly-CSharp
         m_MethodName: mapSkeleton
         m_Mode: 1
         m_Arguments:
@@ -13938,8 +13934,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838520675}
-        m_TargetAssemblyTypeName: LobbyController, Assembly-CSharp
+      - m_Target: {fileID: 2115084933}
+        m_TargetAssemblyTypeName: AsyncLoader, Assembly-CSharp
         m_MethodName: mapEliteOrc
         m_Mode: 1
         m_Arguments:
@@ -14229,6 +14225,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086474060}
   m_CullTransparentMesh: 1
+--- !u!1 &2115084928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2115084932}
+  - component: {fileID: 2115084931}
+  - component: {fileID: 2115084930}
+  - component: {fileID: 2115084929}
+  - component: {fileID: 2115084933}
+  m_Layer: 5
+  m_Name: Loading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2115084929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115084928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2115084930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115084928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2115084931
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115084928}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
+--- !u!224 &2115084932
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115084928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 105845302}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &2115084933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115084928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf627b35fa18ba459be91c37c99cc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loading: {fileID: 105845299}
+  container: {fileID: 186404312}
+  loadBar: {fileID: 232880472}
 --- !u!1 &2125433179
 GameObject:
   m_ObjectHideFlags: 0

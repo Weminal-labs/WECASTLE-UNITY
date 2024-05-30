@@ -6,4 +6,5 @@ public static class StaticLobbySend
 {
     public static int numHero;
     public static int numMap;
+    public static bool[] listLock;
 }

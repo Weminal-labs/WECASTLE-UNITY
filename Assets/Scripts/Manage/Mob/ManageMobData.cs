@@ -71,14 +71,7 @@ public class ManageMobData : MonoBehaviour
                 }
             }
         }
-        string json = JsonConvert.SerializeObject(jsonList);
-        SaveListMob(json);
     }
-    [DllImport("__Internal")]
-    public static extern void SaveMob(string json);
-
-    [DllImport("__Internal")]
-    public static extern void SaveListMob(string json);
     private void OnApplicationQuit()
     {
         saveMob();

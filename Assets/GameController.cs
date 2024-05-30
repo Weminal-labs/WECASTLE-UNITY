@@ -3,8 +3,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -38,10 +40,20 @@ public class GameController : MonoBehaviour
     public Transform spawnPosition;
     void Start()
     {
+        Debug.Log(StaticLobbySend.numHero);
         //This is Conection to the server call user data
         /*RequestAddress();*/
         //Intro
-        StartCoroutine(stopIntro());
+        if (StaticLobbySend.numMap == 0)
+        {
+            startGame = false;
+            StartCoroutine(stopIntro());
+        }
+        else
+        {
+            startGame = true;
+            intro.SetActive(false);
+        }
         //Fake data
         string json = "{\r\ngold: 90,\r\nid: \"VN\",\r\nmeat: 90,\r\nwood: 90\r\n}";
         ReceiveAddress(json);
@@ -58,10 +70,11 @@ public class GameController : MonoBehaviour
             tutorOpen.onClick.AddListener(openTutor);
         }
         time = 20.0f;
-        startGame = false;
+        
         waveCount = 0;
         MobStats mob;
         MobStats mobSummon;
+
         switch (StaticLobbySend.numHero)
         {
             case 0:
@@ -71,25 +84,25 @@ public class GameController : MonoBehaviour
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
                 break;
             case 1:
-                mob = new MobStats(4, 3000, 80, 8);
+                mob = new MobStats(4, 4500, 90, 8);
                 mobSummon = new MobStats(mob, spawnPosition.position);
                 mobSummon.setInBuilding(false);
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
                 break;
             case 2:
-                mob = new MobStats(5, 3000, 80, 8);
+                mob = new MobStats(5, 12000, 40, 8);
                 mobSummon = new MobStats(mob, spawnPosition.position);
                 mobSummon.setInBuilding(false);
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
                 break;
             case 3:
-                mob = new MobStats(6, 3000, 80, 8);
+                mob = new MobStats(6, 8000, 90, 8);
                 mobSummon = new MobStats(mob, spawnPosition.position);
                 mobSummon.setInBuilding(false);
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
                 break;
             case 4:
-                mob = new MobStats(7, 3000, 80, 8);
+                mob = new MobStats(7, 4000, 150, 8);
                 mobSummon = new MobStats(mob, spawnPosition.position);
                 mobSummon.setInBuilding(false);
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
@@ -152,8 +165,7 @@ public class GameController : MonoBehaviour
     }
     public void LogOutPrePare()
     {
-        GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
-        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
+        SceneManager.LoadSceneAsync(1);
     }
     public void setMaterials(int m, int g, int w)
     {
@@ -174,8 +186,6 @@ public class GameController : MonoBehaviour
         wood.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurWood().ToString());
         meat.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurMeat().ToString());
         gold.GetComponent<TextMeshProUGUI>().SetText(playerInfo.getCurGold().ToString());
-        GameObject.FindGameObjectWithTag("MOBDATA").GetComponent<ManageMobData>().saveMob();
-        PlayerInfoJson player = new PlayerInfoJson(playerInfo);
         loseScreen.SetActive(true);
     }
 
