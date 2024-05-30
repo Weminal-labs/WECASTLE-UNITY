@@ -12,7 +12,7 @@ public class RESTARTGAME : MonoBehaviour
     {
         if (Restart != null)
         {
-            Restart.onClick.AddListener(LoadScene);
+            SceneManager.LoadSceneAsync(1);
         }
     }
 

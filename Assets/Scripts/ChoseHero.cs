@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChoseHero : MonoBehaviour
@@ -23,14 +24,31 @@ public class ChoseHero : MonoBehaviour
     public TextMeshProUGUI textDamage;
     public TextMeshProUGUI textHealth;
     public TextMeshProUGUI textSpeed;
-    private int curIndex = 0;
-    private int indexChose = 0;
+    private int curIndex;
+    private int indexChose;
     [Header("==========Animator=============")]
     public RuntimeAnimatorController[] animator;
+    private void Awake()
+    {
+        price.SetActive(false);
+        if (StaticLobbySend.listLock == null)
+        {
+            indexChose = 0;
+            curIndex = 0;
+            StaticLobbySend.numHero = 0;
+            StaticLobbySend.listLock = isLock;
+        }
+        else
+        {
+            isLock = StaticLobbySend.listLock;
+            indexChose = StaticLobbySend.numHero;
+            curIndex = indexChose;
+        }
+        SetChose();
+    }
     private void Start()
     {
-        indexChose = 0;
-        price.SetActive(false);
+        
         if (btnChose != null) 
         {
             btnChose.GetComponent<Button>().onClick.AddListener(SetChose);
@@ -40,7 +58,6 @@ public class ChoseHero : MonoBehaviour
         btnHero[2].GetComponent<Button>().onClick.AddListener(SetPreviewTemplar);
         btnHero[3].GetComponent<Button>().onClick.AddListener(SetPreviewGuardian);
         btnHero[4].GetComponent<Button>().onClick.AddListener(SetPreviewSwordMaster);
-        curIndex = 0;
     }
     public void SetPreviewSoldier()
     {
@@ -131,7 +148,7 @@ public class ChoseHero : MonoBehaviour
     {
         review.runtimeAnimatorController = animator[3];
         textDamage.SetText("90");
-        textHealth.SetText("6000");
+        textHealth.SetText("8000");
         textSpeed.SetText("6");
         if (isLock[3])
         {
@@ -198,6 +215,7 @@ public class ChoseHero : MonoBehaviour
             GameObject.FindGameObjectWithTag("LobbyController").GetComponent<LobbyController>().upDateLock();
         }
         reviewMain.runtimeAnimatorController = animator[indexChose];
+        StaticLobbySend.listLock = isLock;
         btnChose.SetActive(false);
     }
     public void SetLock(bool[] isLockHero)
