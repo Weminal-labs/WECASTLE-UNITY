@@ -49,6 +49,8 @@ public class EnemyController : MonoBehaviour
 
     public void takeDame(int damage)
     {
+        print(damage);
+
         if (curHealth - damage < 0)
         {
             isDead.Value = true;

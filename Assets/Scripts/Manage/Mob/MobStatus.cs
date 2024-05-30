@@ -16,6 +16,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     BoolVariable isDead;
     IntVariable blackBoardDamage;
     BoolVariable block;
+    BoolVariable? needHeal;
 
 
     //DoubleClick to Open
@@ -51,7 +52,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
     }
     public void SaveData(ref MobStats data)
     {
-            
+
     }
     public MobStats GetMobStats()
     {
@@ -67,15 +68,30 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
         blackBoardDamage.Value = damage;
-       /* block = blackboard.GetVariable<BoolVariable>("Block");*/
+        /* block = blackboard.GetVariable<BoolVariable>("Block");*/
+        needHeal = blackboard.GetVariable<BoolVariable>("needHeal");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (needHeal != null)
+            NeedHeal();
     }
+
+    public void NeedHeal()
+    {
+        if (curHealth < maxHealth)
+        {
+            needHeal.Value = true;
+        }
+        else
+        {
+            needHeal.Value = false;
+        }
+    }
+
     IEnumerator openMobStatus()
     {
         LoadData(this.stats);
@@ -127,6 +143,7 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
             return;
         }*/
         /*return;*/
+        print(damage);
         if (curHealth - damage < 0)
         {
             isDead.Value = true;
@@ -144,6 +161,25 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
             }
         }
     }
+
+    public void heal()
+    {
+        /*if (block.Value == true)
+        {
+            return;
+        }*/
+        /*return;*/
+        if (curHealth + damage > maxHealth)
+        {
+            curHealth = maxHealth;
+        }
+        if (curHealth < maxHealth)
+        {
+            curHealth += damage;
+        }
+
+    }
+
     public void mobOutBuilding()
     {
         stats.setInBuilding(false);

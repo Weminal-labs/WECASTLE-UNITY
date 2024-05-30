@@ -207,6 +207,14 @@ GameObject:
   - component: {fileID: 2263352977246129669}
   - component: {fileID: 2263352977246129670}
   - component: {fileID: 2890149583600529783}
+  - component: {fileID: 4016427276349397182}
+  - component: {fileID: 1994744248505429212}
+  - component: {fileID: 7129144456011391858}
+  - component: {fileID: 1296761274847515879}
+  - component: {fileID: 2683168757686346075}
+  - component: {fileID: 3177385604537190541}
+  - component: {fileID: 6600554069236638786}
+  - component: {fileID: 2827874747490364637}
   m_Layer: 8
   m_Name: Axeman
   m_TagString: Ally
@@ -350,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 2890149583600529602}
+  selectedEditorNode: {fileID: 6600554069236638786}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -394,6 +402,7 @@ MonoBehaviour:
   - {fileID: 2890149583600529616}
   - {fileID: 2890149583600529600}
   - {fileID: 2890149583600529639}
+  - {fileID: 7129144456011391858}
   masterBlackboard: {fileID: 0}
 --- !u!114 &2890149583600529442
 MonoBehaviour:
@@ -842,12 +851,13 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1400
-    y: 340
+    y: 254.66666
     width: 160
     height: 45
   parent: {fileID: 2890149583600529624}
   children:
   - {fileID: 2890149583600529629}
+  - {fileID: 1994744248505429212}
   - {fileID: 2890149583600529618}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -868,8 +878,8 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 1300
-    y: 420
+    x: 1204.0001
+    y: 390.6667
     width: 160
     height: 45
   parent: {fileID: 2890149583600529628}
@@ -895,8 +905,8 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 1500
-    y: 420
+    x: 1677.3334
+    y: 402.00003
     width: 160
     height: 45
   parent: {fileID: 2890149583600529628}
@@ -4116,3 +4126,335 @@ MonoBehaviour:
     blackboard: {fileID: 0}
     key: 
     constantValue: 3
+--- !u!114 &4016427276349397182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534e3ec7de6cd444e984c2e7f68e42e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Is Set Condition
+  rect:
+    serializedVersion: 2
+    x: 1415.9998
+    y: 376.66675
+    width: 160
+    height: 45
+  parent: {fileID: 1994744248505429212}
+  children:
+  - {fileID: 1296761274847515879}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 3
+  invert: 0
+  type: 0
+  boolReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 2890149583600529447}
+    key: needHeal
+    constantValue: 0
+  objectReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  transformReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+--- !u!114 &1994744248505429212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2370820ab6f42c8449d09456ac02d66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Cooldown
+  rect:
+    serializedVersion: 2
+    x: 1414
+    y: 325.33337
+    width: 160
+    height: 45
+  parent: {fileID: 2890149583600529628}
+  children:
+  - {fileID: 4016427276349397182}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 5
+  resetOnChildFailure: 0
+--- !u!114 &7129144456011391858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae15c5e6bcb1714080f2e8296c3d17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: needHeal
+  val: 0
+--- !u!114 &1296761274847515879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8595d37ac5b0f340b7f64ca227f8860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Loop
+  rect:
+    serializedVersion: 2
+    x: 1423.3333
+    y: 431.33334
+    width: 160
+    height: 45
+  parent: {fileID: 4016427276349397182}
+  children:
+  - {fileID: 6600554069236638786}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  loops:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 3
+  infinite:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 1
+  breakOnStatus: 2
+  resultOnFinish: 0
+  resultOnBreak: 1
+--- !u!114 &2683168757686346075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87a7d59c2f4f5745b355141f5c3fb13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Spawn Prefap
+  rect:
+    serializedVersion: 2
+    x: 1264
+    y: 572.00006
+    width: 160
+    height: 45
+  parent: {fileID: 6600554069236638786}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  Prefap:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 4860745385192100381, guid: dc1fb2be36953764085dd05c67c76fbe, type: 3}
+--- !u!114 &3177385604537190541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 1606.6669
+    y: 579.3334
+    width: 160
+    height: 45
+  parent: {fileID: 6600554069236638786}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 2
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &6600554069236638786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 1428.6666
+    y: 491.33344
+    width: 160
+    height: 45
+  parent: {fileID: 1296761274847515879}
+  children:
+  - {fileID: 2683168757686346075}
+  - {fileID: 2827874747490364637}
+  - {fileID: 3177385604537190541}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &2827874747490364637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890149583600529467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: 1427.3334
+    y: 582.6667
+    width: 160
+    height: 45
+  parent: {fileID: 6600554069236638786}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 1
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 2890149583600529447}
+    key: seftGameObject
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2890149583600529601}
+        m_TargetAssemblyTypeName: MobStatus, Assembly-CSharp
+        m_MethodName: heal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []

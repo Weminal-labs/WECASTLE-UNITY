@@ -556,7 +556,12 @@ MonoBehaviour:
     key: RandomPosition
     constantValue: {x: 0, y: 0, z: 0}
   agent: {fileID: 4137831765694673443}
-  stopDistance: 1
+  stopDistance:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 1
   updateInterval: 1
 --- !u!114 &-687214325842451903
 MonoBehaviour:

@@ -9,7 +9,6 @@ namespace MBT
 
 
         public GameObjectReference Prefap;
-        public IntReference Damage;
         public override NodeResult Execute()
         {
             if (Prefap == null)

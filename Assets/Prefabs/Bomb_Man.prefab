@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 5210769356420102941}
+  selectedEditorNode: {fileID: 5210769356420102946}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -1115,8 +1115,8 @@ MonoBehaviour:
   title: Selector
   rect:
     serializedVersion: 2
-    x: 420
-    y: 600
+    x: 402
+    y: 587.33325
     width: 160
     height: 45
   parent: {fileID: 5210769356420102945}
@@ -2297,12 +2297,6 @@ MonoBehaviour:
     blackboard: {fileID: 2667778874628842957}
     key: Explosions
     constantValue: {fileID: 0}
-  Damage:
-    useConstant: 0
-    mode: 0
-    blackboard: {fileID: 2667778874628842957}
-    key: Damage
-    constantValue: 0
 --- !u!114 &9151453879824399437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,7 +2430,7 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: -740
+    x: -739.3333
     y: 500
     width: 160
     height: 45

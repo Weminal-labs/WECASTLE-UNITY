@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 4101730710257006938}
   - component: {fileID: 4101730710257006937}
   - component: {fileID: 4101730710257006936}
+  - component: {fileID: 7146030818809879339}
   m_Layer: 8
   m_Name: Warrior_Blue
   m_TagString: Ally
@@ -348,6 +349,7 @@ MonoBehaviour:
   - {fileID: 7256892681189949445}
   - {fileID: 6589892018500537235}
   - {fileID: 4101730710257006938}
+  - {fileID: 7146030818809879339}
   masterBlackboard: {fileID: 0}
 --- !u!114 &5030362838296548960
 MonoBehaviour:
@@ -469,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 6000150600338569874}
+  selectedEditorNode: {fileID: 2925920866435180802}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -2608,8 +2610,8 @@ MonoBehaviour:
   title: InRange Condition
   rect:
     serializedVersion: 2
-    x: 420
-    y: 580
+    x: 415.33334
+    y: 564.6666
     width: 160
     height: 45
   parent: {fileID: 2925920866435180903}
@@ -3500,10 +3502,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180800
 MonoBehaviour:
@@ -3571,10 +3573,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180807
 MonoBehaviour:
@@ -3638,10 +3640,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180855
 MonoBehaviour:
@@ -3658,7 +3660,7 @@ MonoBehaviour:
   title: Make Fight Damage
   rect:
     serializedVersion: 2
-    x: -1040
+    x: -1039.3334
     y: 1100
     width: 160
     height: 45
@@ -3677,10 +3679,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180848
 MonoBehaviour:
@@ -3780,10 +3782,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180860
 MonoBehaviour:
@@ -3851,10 +3853,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180862
 MonoBehaviour:
@@ -3922,10 +3924,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180856
 MonoBehaviour:
@@ -3975,7 +3977,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -480
-    y: 1120
+    y: 1119.3334
     width: 160
     height: 45
   parent: {fileID: 5030362838296548905}
@@ -3993,10 +3995,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180858
 MonoBehaviour:
@@ -4064,11 +4066,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
-    constantValue: 1.3
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.1
 --- !u!114 &2925920866435180804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4135,10 +4137,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   range:
-    useConstant: 1
+    useConstant: 0
     mode: 0
-    blackboard: {fileID: 0}
-    key: 
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
     constantValue: 1.3
 --- !u!114 &2925920866435180840
 MonoBehaviour:
@@ -4573,7 +4575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 3.5
+  val: 3
 --- !u!114 &6589892018500537235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5204,6 +5206,20 @@ MonoBehaviour:
     blackboard: {fileID: 5030362838296548891}
     key: distanceToPoint
     constantValue: 0
+--- !u!114 &7146030818809879339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: DamageRange
+  val: 1.1
 --- !u!1 &5030362836447183615
 GameObject:
   m_ObjectHideFlags: 0
