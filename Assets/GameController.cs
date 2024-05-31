@@ -3,9 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -25,8 +23,6 @@ public class GameController : MonoBehaviour
     public int waveCount;
     // Start is called before the first frame update
 
-    [SerializeField] UnityEvent OnEnter;
-    [SerializeField] UnityEvent OnLeave;
     [SerializeField] GameObject spawnController, loadingScreen, loseScreen, winScreen;
 
     public GameObject tutor;
@@ -70,7 +66,7 @@ public class GameController : MonoBehaviour
             tutorOpen.onClick.AddListener(openTutor);
         }
         time = 20.0f;
-        
+
         waveCount = 0;
         MobStats mob;
         MobStats mobSummon;
@@ -102,7 +98,7 @@ public class GameController : MonoBehaviour
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
                 break;
             case 4:
-                mob = new MobStats(7, 4000, 150, 8);
+                mob = new MobStats(7, 4000, 150, 12);
                 mobSummon = new MobStats(mob, spawnPosition.position);
                 mobSummon.setInBuilding(false);
                 Instantiate(hero[StaticLobbySend.numHero], spawnPosition.position, Quaternion.identity).GetComponent<MobStatus>().LoadData(mobSummon);
@@ -115,7 +111,11 @@ public class GameController : MonoBehaviour
     {
         if (startGame)
         {
-            if (time > 0.0f)
+            if (time <= 0.0f)
+            {
+                clock.GetComponent<TextMeshProUGUI>().SetText("00:00");
+            }
+            if (time > 0.0f && waveCount != 5)
             {
                 time -= Time.deltaTime;
 
@@ -129,24 +129,24 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                if (waveCount == 6)
+                if (waveCount == 5 && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
                 {
                     winGame();
                 }
-                waveCount += 1;
-
-                OnEnter.Invoke();
-                wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
-                spawnEnemy.GetComponent<SpawnController>().SpawnEnemy(waveCount);
-
-                if (waveCount == 5 && StaticLobbySend.numMap != 0)
+                if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
                 {
-                    OnEnter.Invoke();
+                    waveCount += 1;
                     wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
-                    spawnEnemy.GetComponent<SpawnController>().SpawnBoss();
-                }
+                    spawnEnemy.GetComponent<SpawnController>().SpawnEnemy(waveCount);
 
-                time = 30.0f;
+                    if (waveCount == 5 && StaticLobbySend.numMap != 0)
+                    {
+                        wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
+                        spawnEnemy.GetComponent<SpawnController>().SpawnBoss();
+                    }
+
+                    time = 30.0f;
+                }
             }
         }
     }

@@ -4971,7 +4971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &798950661
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5279,6 +5279,7 @@ MonoBehaviour:
   - {fileID: 1408741523}
   pageMain: {fileID: 712066282}
   pageHero: {fileID: 480872155}
+  ownCoin: {fileID: 0}
   pInfo: {fileID: 2140882845}
   pHero: {fileID: 1777037033}
   heroControll: {fileID: 88385376}
