@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System.Collections;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,8 +10,7 @@ public class LobbyController : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] lockHero;
-    public GameObject pageMain, pageHero;
-    public TextMeshProUGUI ownCoin;
+    public GameObject pageMain, pageHero, loadingContract;
     public Button pInfo, pHero;
     public ChoseHero heroControll;
     // Start is called before the first frame update
@@ -20,9 +20,6 @@ public class LobbyController : MonoBehaviour
         {
             lockHero[i].gameObject.SetActive(heroControll.GetLock()[i]);
         }
-        JsonForAccount json = new JsonForAccount("PLayer123",100,heroControll.GetLock());
-        string sJson = JsonConvert.SerializeObject(json);
-        Debug.Log(sJson);
         pInfo.onClick.AddListener(setPageMain);
         pHero.onClick.AddListener(setPageHero);
     }
@@ -42,11 +39,17 @@ public class LobbyController : MonoBehaviour
         pageMain.SetActive(false);
         pageHero.SetActive(true);
     }
+    [DllImport("__Internal")]
+    public static extern void RequestLogOut();
     public void upDateLock()
     {
         for (int i = 0; i < lockHero.Length; i++)
         {
             lockHero[i].gameObject.SetActive(heroControll.GetLock()[i]);
         }
+    }
+    public void DoneLoad()
+    {
+        loadingContract.SetActive(false);
     }
 }

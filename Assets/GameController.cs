@@ -2,11 +2,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using ZXing;
 
 public class GameController : MonoBehaviour
 {
@@ -33,12 +35,17 @@ public class GameController : MonoBehaviour
     public Button tutorOpen;
     public Button tutorClose;
     float spawnInterval = 330;
-    [Header("========Hero=============")]
+    [Header("==========Hero=============")]
     [SerializeField]
     private GameObject[] hero;
     public Transform spawnPosition;
+    [Header("==========Coin=============")]
+    private int coin;
+
+    public TextMeshProUGUI textCoin;
     void Start()
     {
+        coin = 100;
         Debug.Log(StaticLobbySend.numHero);
         //This is Conection to the server call user data
         /*RequestAddress();*/
@@ -190,9 +197,17 @@ public class GameController : MonoBehaviour
 
     public void winGame()
     {
+        int finalCoin = 0;
+        for(int i = 0; i <= StaticLobbySend.numMap; i++)
+        {
+            finalCoin += (this.coin + this.coin * i);
+        }
+        textCoin.SetText(finalCoin + " Cas");
+        RequestUpdateCoin(finalCoin);
         winScreen.SetActive(true);
     }
-
+    [DllImport("__Internal")]
+    public static extern void RequestUpdateCoin(int coin);
     public void savePlayerData()
     {
         /*PlayerInfoJson player = new PlayerInfoJson(playerInfo);
