@@ -7,7 +7,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using ZXing;
 
 public class GameController : MonoBehaviour
 {
@@ -204,11 +203,11 @@ public class GameController : MonoBehaviour
             finalCoin += (this.coin + this.coin * i);
         }
         textCoin.SetText(finalCoin + " Cas");
-        RequestUpdateCoin(finalCoin);
+        PushRewardForPlayer(finalCoin);
         winScreen.SetActive(true);
     }
     [DllImport("__Internal")]
-    public static extern void RequestUpdateCoin(int coin);
+    public static extern void PushRewardForPlayer(int coin);
     public void savePlayerData()
     {
         /*PlayerInfoJson player = new PlayerInfoJson(playerInfo);
