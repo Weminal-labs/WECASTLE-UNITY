@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     public int waveCount;
     // Start is called before the first frame update
 
-    [SerializeField] GameObject spawnController, loadingScreen, loseScreen, winScreen;
+    [SerializeField] GameObject spawnController, loadingScreen, loseScreen, winScreen, cautionScreen;
 
     public GameObject tutor;
     public GameObject intro;
@@ -129,12 +129,13 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                if (waveCount == 5 && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+                if (waveCount == 6 && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
                 {
                     winGame();
                 }
                 if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
                 {
+
                     waveCount += 1;
                     wave.GetComponent<TextMeshProUGUI>().SetText("Wave: " + waveCount);
                     spawnEnemy.GetComponent<SpawnController>().SpawnEnemy(waveCount);
@@ -146,9 +147,17 @@ public class GameController : MonoBehaviour
                     }
 
                     time = 30.0f;
+                    StartCoroutine(caution(2.0f));
                 }
             }
         }
+    }
+
+    IEnumerator caution(float waitTime)
+    {
+        cautionScreen.SetActive(true);
+        yield return new WaitForSeconds(waitTime);
+        cautionScreen.SetActive(false);
     }
 
     public void ReceiveAddress(string json)
