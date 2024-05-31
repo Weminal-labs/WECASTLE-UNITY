@@ -5279,6 +5279,7 @@ MonoBehaviour:
   - {fileID: 1408741523}
   pageMain: {fileID: 712066282}
   pageHero: {fileID: 480872155}
+  ownCoin: {fileID: 0}
   pInfo: {fileID: 2140882845}
   pHero: {fileID: 1777037033}
   heroControll: {fileID: 88385376}
