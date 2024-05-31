@@ -5,9 +5,7 @@ using TMPro;
 using UnityEngine;
 using Newtonsoft.Json;
 using System;
-using UnityEngine.Rendering.UI;
 using UnityEngine.Rendering.Universal;
-using Unity.Mathematics;
 
 public class WeatherControll : MonoBehaviour
 {
@@ -15,6 +13,7 @@ public class WeatherControll : MonoBehaviour
     private GameObject cloud, fog, rain, sun, test, globalCloud;
     private void Start()
     {
+        RequestWeather();
         /*string json = "{\"city_name\":\"hue\",\"clouds\":96,\"country\":\"VN\",\"id\":1112,\"is_rain\":false,\"rain_fall\":\"none\",\"temp\":292,\"visibility\":1000,\"wind_deg\":\"East\",\"wind_speed\":16,\"txDigest\":\"6bYfzTRY3kzVG8VA7bU6ijwf47wSxLAhqa9LPCxUswCf\"}";
         ReceiveWeather(json);*/
     }

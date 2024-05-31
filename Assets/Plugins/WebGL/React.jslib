@@ -38,5 +38,25 @@ mergeInto(LibraryManager.library, {
     } catch (e) {
       console.warn("Failed to dispatch event");
     }
+  },
+  RequestLobby : function(){
+    window.dispatchReactUnityEvent("RequestLobby");
+  },
+  RequestCoin : function(){
+    window.dispatchReactUnityEvent("RequestCoin");
+  },
+  RequestUpdateCoin : function(coin){
+    try {
+    window.dispatchReactUnityEvent("RequestUpdateCoin", coin);
+    } catch (e) {
+      console.warn("Failed to dispatch event");
+    }
+  },
+  PushRewardForPlayer : function(coin){
+    try {
+    window.dispatchReactUnityEvent("PushRewardForPlayer", coin);
+    } catch (e) {
+      console.warn("Failed to dispatch event");
+    }
   }
 });

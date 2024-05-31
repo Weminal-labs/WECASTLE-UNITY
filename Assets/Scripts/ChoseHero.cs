@@ -1,6 +1,12 @@
+using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,6 +30,7 @@ public class ChoseHero : MonoBehaviour
     public TextMeshProUGUI textDamage;
     public TextMeshProUGUI textHealth;
     public TextMeshProUGUI textSpeed;
+    public TextMeshProUGUI textOwnCoin;
     private int curIndex;
     private int indexChose;
     [Header("==========Animator=============")]
@@ -33,6 +40,7 @@ public class ChoseHero : MonoBehaviour
         price.SetActive(false);
         if (StaticLobbySend.listLock == null)
         {
+            RequestLobby();
             indexChose = 0;
             curIndex = 0;
             StaticLobbySend.numHero = 0;
@@ -40,6 +48,7 @@ public class ChoseHero : MonoBehaviour
         }
         else
         {
+            RequestCoin();
             isLock = StaticLobbySend.listLock;
             indexChose = StaticLobbySend.numHero;
             curIndex = indexChose;
@@ -204,19 +213,35 @@ public class ChoseHero : MonoBehaviour
     }
     public void SetChose()
     {
-        btnHero[indexChose].GetComponent<Image>().sprite = bannerUnSelect;
-        indexChose = curIndex;
-        btnHero[indexChose].GetComponent<Image>().sprite = bannerSelect;
-        StaticLobbySend.numHero = indexChose;
-        textName.SetText(btnHero[indexChose].gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text);
-        if (isLock[indexChose])
+        if (isLock[curIndex])
         {
-            isLock[indexChose] = false;
-            GameObject.FindGameObjectWithTag("LobbyController").GetComponent<LobbyController>().upDateLock();
+            if(Int32.Parse(textOwnCoin.text) >= Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text))
+            {
+                textOwnCoin.SetText((Int32.Parse(textOwnCoin.text) - Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text)).ToString());
+                RequestUpdateCoin(-Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text));
+                isLock[curIndex] = false;
+                GameObject.FindGameObjectWithTag("LobbyController").GetComponent<LobbyController>().upDateLock();
+                btnHero[indexChose].GetComponent<Image>().sprite = bannerUnSelect;
+                indexChose = curIndex;
+                btnHero[indexChose].GetComponent<Image>().sprite = bannerSelect;
+                StaticLobbySend.numHero = indexChose;
+                textName.SetText(btnHero[indexChose].gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text);
+                reviewMain.runtimeAnimatorController = animator[indexChose];
+                StaticLobbySend.listLock = isLock;
+                btnChose.SetActive(false);
+            }
         }
-        reviewMain.runtimeAnimatorController = animator[indexChose];
-        StaticLobbySend.listLock = isLock;
-        btnChose.SetActive(false);
+        else
+        {
+            btnHero[indexChose].GetComponent<Image>().sprite = bannerUnSelect;
+            indexChose = curIndex;
+            btnHero[indexChose].GetComponent<Image>().sprite = bannerSelect;
+            StaticLobbySend.numHero = indexChose;
+            textName.SetText(btnHero[indexChose].gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text);
+            reviewMain.runtimeAnimatorController = animator[indexChose];
+            StaticLobbySend.listLock = isLock;
+            btnChose.SetActive(false);
+        }
     }
     public void SetLock(bool[] isLockHero)
     {
@@ -225,5 +250,22 @@ public class ChoseHero : MonoBehaviour
     public bool[] GetLock()
     {
         return isLock;
+    }
+    [DllImport("__Internal")]
+    public static extern void RequestLobby();
+    [DllImport("__Internal")]
+    public static extern void RequestCoin();
+    [DllImport("__Internal")]
+    public static extern void RequestUpdateCoin(int coin);
+    public void EditCoinGame(int coin)
+    {
+        this.textOwnCoin.SetText(coin.ToString());
+    }
+    public void ReciveDataLobby(string jSon)
+    {
+        Dictionary<string, object> dict = JsonConvert.DeserializeObject<Dictionary<string, object>>(jSon);
+        this.textOwnCoin.SetText(dict["coin"].ToString());
+        bool[] sp = dict["isLock"].ToString().Trim('[',' ',']').Split(',').Select(bool.Parse).ToArray();
+        this.isLock = sp;
     }
 }

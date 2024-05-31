@@ -9,7 +9,8 @@ public class EnemyController : MonoBehaviour
     private int curHealth, maxHealth, damage, speed;
     [SerializeField]
     private GameObject m, g;
-
+    [SerializeField]
+    private int amount;
     Blackboard blackboard;
     BoolVariable isDead;
     IntVariable blackBoardDamage;
