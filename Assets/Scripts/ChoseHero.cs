@@ -267,5 +267,6 @@ public class ChoseHero : MonoBehaviour
         this.textOwnCoin.SetText(dict["coin"].ToString());
         bool[] sp = dict["isLock"].ToString().Trim('[',' ',']').Split(',').Select(bool.Parse).ToArray();
         this.isLock = sp;
+        GameObject.FindGameObjectWithTag("LobbyController").GetComponent<LobbyController>().upDateLock();
     }
 }
