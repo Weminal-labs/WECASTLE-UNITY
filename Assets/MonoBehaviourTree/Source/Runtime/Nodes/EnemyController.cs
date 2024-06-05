@@ -21,7 +21,6 @@ public class EnemyController : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
-        spawnSet();
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
@@ -85,14 +84,5 @@ public class EnemyController : MonoBehaviour
             Instantiate(m, new Vector3(x, y, transform.position.z), Quaternion.identity);
         }
         Destroy(this.gameObject);
-    }
-
-    public void spawnSet()
-    {
-        this.maxHealth = 200;
-        this.curHealth = maxHealth;
-        this.damage = 30;
-        this.speed = 5;
-        this.Agent.speed = this.speed;
     }
 }
