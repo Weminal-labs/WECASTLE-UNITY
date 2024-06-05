@@ -4575,7 +4575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 3
+  val: 2.5
 --- !u!114 &6589892018500537235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,7 +4589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: FindRange
-  val: 7
+  val: 9
 --- !u!114 &4101730710257006939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,7 +5219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: DamageRange
-  val: 1.1
+  val: 1.3
 --- !u!1 &5030362836447183615
 GameObject:
   m_ObjectHideFlags: 0

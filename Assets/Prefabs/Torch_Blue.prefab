@@ -601,6 +601,7 @@ MonoBehaviour:
   speed: 8
   m: {fileID: 8366629480068029127, guid: 0c6e3fcf0c72ea24e98e338ac8cf45e8, type: 3}
   g: {fileID: 2223323310675944387, guid: 3a5b3d23443d1aa46ab79f6588368b94, type: 3}
+  amount: 0
 --- !u!114 &2667778874628842940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,7 +3122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 3
+  val: 1.8
 --- !u!114 &3391657463909320282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3385,4 +3386,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: DamageRange
-  val: 1.1
+  val: 1.3
