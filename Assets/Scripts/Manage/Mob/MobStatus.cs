@@ -169,12 +169,17 @@ public class MobStatus : MonoBehaviour, MobDataPersistance
             return;
         }*/
         /*return;*/
+
         if (curHealth + damage > maxHealth)
         {
+            stats.setHealth(maxHealth - curHealth);
+
             curHealth = maxHealth;
         }
         if (curHealth < maxHealth)
         {
+            stats.setHealth(damage);
+
             curHealth += damage;
         }
 
