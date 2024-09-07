@@ -12,7 +12,7 @@ public class RESTARTGAME : MonoBehaviour
     {
         if (Restart != null)
         {
-            SceneManager.LoadSceneAsync(1);
+            Restart.onClick.AddListener(LoadScene);
         }
     }
 
@@ -23,6 +23,6 @@ public class RESTARTGAME : MonoBehaviour
     }
     private void LoadScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

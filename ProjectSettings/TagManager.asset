@@ -29,7 +29,7 @@ TagManager:
   - Mob
   - Interactable
   - 
-  - 
+  - Decor
   - 
   - 
   - 
@@ -71,4 +71,7 @@ TagManager:
     locked: 0
   - name: Rune
     uniqueID: 3969781741
+    locked: 0
+  - name: Decor
+    uniqueID: 1130756915
     locked: 0
