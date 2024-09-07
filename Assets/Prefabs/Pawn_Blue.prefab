@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 4321892464512967933}
+  selectedEditorNode: {fileID: 1146664859728872262}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -1681,8 +1681,8 @@ MonoBehaviour:
   title: Move Navmesh Agent
   rect:
     serializedVersion: 2
-    x: 972.6666
-    y: 998.6666
+    x: 969.99994
+    y: 1008.66656
     width: 160
     height: 45
   parent: {fileID: 1146664859728872272}
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: detectRange
-  val: 7
+  val: 5
 --- !u!114 &1146664859728872281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,7 +1914,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 8
+    constantValue: 5
   sourceInt:
     useConstant: 1
     mode: 0
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 6
+  val: 2.5
 --- !u!114 &-1338560530252502002
 MonoBehaviour:
   m_ObjectHideFlags: 0

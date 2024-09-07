@@ -4,8 +4,6 @@ using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Newtonsoft.Json;
-using System.Diagnostics;
 
 public class SummonBanner : MonoBehaviour
 {
@@ -84,7 +82,7 @@ public class SummonBanner : MonoBehaviour
     }
     private void Summon()
     {
-        MobStats mob = new MobStats(this.unit, Int32.Parse(healthText.text), Int32.Parse(damageText.text), Int32.Parse(speedText.text)) ;
+        MobStats mob = new MobStats(this.unit, Int32.Parse(healthText.text), Int32.Parse(damageText.text), Int32.Parse(speedText.text));
         MobStats mobSummon = new MobStats(mob, spawnPosition.transform.position);
         mobSummon.setInBuilding(true);
         managerDataMob.GetComponent<ManageMobData>().addMob(mobSummon);
@@ -98,7 +96,7 @@ public class SummonBanner : MonoBehaviour
         unitArcher.GetComponent<Image>().sprite = unSelectUnit;
         unitPawn.GetComponent<Image>().sprite = unSelectUnit;
         int maxHealth = 400;
-        int maxDamage = 50 ;
+        int maxDamage = 50;
         healthText.SetText(maxHealth.ToString());
         damageText.SetText(maxDamage.ToString());
         speedText.SetText("5");
@@ -154,9 +152,9 @@ public class SummonBanner : MonoBehaviour
         healthText.SetText(maxHealth.ToString());
         damageText.SetText(maxDamage.ToString());
         speedText.SetText("7");
-        meatCost.SetText("1");
-        woodCost.SetText("1");
-        goldCost.SetText("1");
+        meatCost.SetText("15");
+        woodCost.SetText("15");
+        goldCost.SetText("15");
         name.GetComponent<TextMeshProUGUI>().SetText("Pawn");
         history.GetComponent<TextMeshProUGUI>().SetText("- Low HP\n- Low Damage\n- Need for gather materials");
         if (checkM())
