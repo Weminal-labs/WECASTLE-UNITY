@@ -41,7 +41,7 @@ public class PlayerInput : MonoBehaviour
         {
             Vector3 mousePosition = Input.mousePosition;
             Vector3 target = Camera.main.ScreenToWorldPoint(mousePosition);
-            target.z = -2.5f;
+            target.z = -3f;
 
             foreach (SelectableUnit unit in SelectionManager.Instance.SelectedUnits)
             {

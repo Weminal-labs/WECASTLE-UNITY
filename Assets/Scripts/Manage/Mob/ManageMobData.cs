@@ -16,8 +16,12 @@ public class ManageMobData : MonoBehaviour
         if (instance != null)
         {
             Debug.LogError("Found more than one Stats Mob Data Manager in this scence.");
+            Destroy(this.gameObject);
         }
-        instance = this;
+        else
+        {
+            instance = this;
+        }
     }
     private void Start()
     {
