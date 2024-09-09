@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TopDownController : MonoBehaviour
@@ -50,12 +48,16 @@ public class TopDownController : MonoBehaviour
         {
             this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Running", false);
         }
-        if(joystick.joyStickVec.y != 0)
+        if (joystick.joyStickVec.y != 0)
         {
-            rb.velocity = new Vector2(joystick.joyStickVec.x*moveSpeed, joystick.joyStickVec.y*moveSpeed);
+            this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Running", true);
+
+            rb.velocity = new Vector2(joystick.joyStickVec.x * moveSpeed, joystick.joyStickVec.y * moveSpeed);
         }
         else
         {
+            this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Running", false);
+
             rb.velocity = Vector2.zero;
         }
     }
@@ -69,7 +71,7 @@ public class TopDownController : MonoBehaviour
             this.transform.localScale = scale;
             isFacingRight = !isFacingRight;
         }
-        if((joystick.joyStickVec.x < 0 && isFacingRight) ||(joystick.joyStickVec.x > 0 && !isFacingRight))
+        if ((joystick.joyStickVec.x < 0 && isFacingRight) || (joystick.joyStickVec.x > 0 && !isFacingRight))
         {
             Vector2 scale = new Vector2(this.transform.localScale.x, this.transform.localScale.y);
             scale.x *= -1;
