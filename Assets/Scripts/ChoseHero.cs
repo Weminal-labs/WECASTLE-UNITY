@@ -1,14 +1,11 @@
 using Newtonsoft.Json;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChoseHero : MonoBehaviour
@@ -57,8 +54,8 @@ public class ChoseHero : MonoBehaviour
     }
     private void Start()
     {
-        
-        if (btnChose != null) 
+
+        if (btnChose != null)
         {
             btnChose.GetComponent<Button>().onClick.AddListener(SetChose);
         }
@@ -215,7 +212,7 @@ public class ChoseHero : MonoBehaviour
     {
         if (isLock[curIndex])
         {
-            if(Int32.Parse(textOwnCoin.text) >= Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text))
+            if (Int32.Parse(textOwnCoin.text) >= Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text))
             {
                 textOwnCoin.SetText((Int32.Parse(textOwnCoin.text) - Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text)).ToString());
                 RequestUpdateCoin(-Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text));
@@ -265,7 +262,7 @@ public class ChoseHero : MonoBehaviour
     {
         Dictionary<string, object> dict = JsonConvert.DeserializeObject<Dictionary<string, object>>(jSon);
         this.textOwnCoin.SetText(dict["coin"].ToString());
-        bool[] sp = dict["isLock"].ToString().Trim('[',' ',']').Split(',').Select(bool.Parse).ToArray();
+        bool[] sp = dict["isLock"].ToString().Trim('[', ' ', ']').Split(',').Select(bool.Parse).ToArray();
         this.isLock = sp;
         GameObject.FindGameObjectWithTag("LobbyController").GetComponent<LobbyController>().upDateLock();
     }

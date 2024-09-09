@@ -47,7 +47,7 @@ public class BoatController : MonoBehaviour
         else
         {
             // Instantiate a new prefab at the current position
-            InstantiateNewPrefab();
+            //InstantiateNewPrefab();
             InstantiateNewPrefab();
         }
 
