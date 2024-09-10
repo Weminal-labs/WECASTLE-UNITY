@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 2667778874628842944}
   - component: {fileID: 2667778874628842945}
   - component: {fileID: 2667778874628842946}
-  - component: {fileID: 2667778874628842942}
   - component: {fileID: 2667778874628842940}
   - component: {fileID: 2667778874628842941}
   - component: {fileID: 5210769356420102948}
@@ -72,6 +71,7 @@ GameObject:
   - component: {fileID: 7279409080736446087}
   - component: {fileID: 6738946483796580470}
   - component: {fileID: 6351368573351096348}
+  - component: {fileID: 6478123260839532514}
   m_Layer: 6
   m_Name: Bomb_Man 1
   m_TagString: Enemy
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 2667778874628842953}
+  selectedEditorNode: {fileID: 0}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -556,25 +556,6 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   random: 0
---- !u!114 &2667778874628842942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de65e4a18964d74a9ccbe732a2f940f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHealth: 200
-  maxHealth: 200
-  damage: 20
-  speed: 8
-  m: {fileID: 8366629480068029127, guid: 0c6e3fcf0c72ea24e98e338ac8cf45e8, type: 3}
-  g: {fileID: 2223323310675944387, guid: 3a5b3d23443d1aa46ab79f6588368b94, type: 3}
-  amount: 0
 --- !u!114 &2667778874628842940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +622,7 @@ MonoBehaviour:
   title: Invoke Unity Event
   rect:
     serializedVersion: 2
-    x: -480
+    x: -481.3333
     y: 760
     width: 160
     height: 45
@@ -702,8 +683,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 6478123260839532514}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: FlipLeft
         m_Mode: 1
         m_Arguments:
@@ -751,7 +732,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -280
-    y: 680
+    y: 679.3333
     width: 160
     height: 45
   parent: {fileID: 2667778874628842946}
@@ -801,8 +782,8 @@ MonoBehaviour:
   title: Invoke Unity Event
   rect:
     serializedVersion: 2
-    x: -280
-    y: 760
+    x: -281.33328
+    y: 758.6667
     width: 160
     height: 45
   parent: {fileID: 5210769356420102948}
@@ -862,8 +843,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 6478123260839532514}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -961,8 +942,8 @@ MonoBehaviour:
   title: Invoke Unity Event
   rect:
     serializedVersion: 2
-    x: -100
-    y: 760
+    x: -100.66667
+    y: 758.6667
     width: 160
     height: 45
   parent: {fileID: 5210769356420102950}
@@ -1022,8 +1003,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 6478123260839532514}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -1117,7 +1098,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 402
-    y: 587.33325
+    y: 586.66656
     width: 160
     height: 45
   parent: {fileID: 5210769356420102945}
@@ -1196,7 +1177,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1420
-    y: 760
+    y: 759.3333
     width: 160
     height: 45
   parent: {fileID: 5210769356420102946}
@@ -1320,7 +1301,6 @@ MonoBehaviour:
   children:
   - {fileID: 5210769356420102940}
   - {fileID: 5210769356420102941}
-  - {fileID: 7117140057262640448}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -1369,8 +1349,8 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 620
-    y: 400
+    x: 600
+    y: 382
     width: 160
     height: 45
   parent: {fileID: 5210769356420103166}
@@ -1608,8 +1588,8 @@ MonoBehaviour:
   gameObjectEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 6478123260839532514}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: die
         m_Mode: 1
         m_Arguments:
@@ -1842,7 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 4
+  val: 1
 --- !u!114 &3391657463909320282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,7 +1830,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
   m_Name: 
@@ -1874,7 +1854,7 @@ MonoBehaviour:
     y: 1140
     width: 160
     height: 45
-  parent: {fileID: 5210769356420102942}
+  parent: {fileID: 0}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -1932,7 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: Explosions
-  val: {fileID: 7825194776191021942, guid: a34f5fc5303375441bb460babee7e426, type: 3}
+  val: {fileID: 7825194776191021942, guid: 6ae6c9b182dee7b4bb24c3bba84c9f29, type: 3}
 --- !u!114 &5613451718227223608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,8 +2172,8 @@ MonoBehaviour:
   gameObjectEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 6478123260839532514}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: die
         m_Mode: 1
         m_Arguments:
@@ -2459,7 +2439,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -496.66696
-    y: 523.33356
+    y: 523.3336
     width: 160
     height: 45
   parent: {fileID: 2667778874628842944}
@@ -2475,3 +2455,19 @@ MonoBehaviour:
     constantValue: 0.5
   randomDeviation: 0
   continueOnRestart: 0
+--- !u!114 &6478123260839532514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e752d235db60a841bf55e9ebd17e181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHealth: 100
+  maxHealth: 100
+  damage: 100
+  speed: 6

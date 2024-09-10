@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 7825194776191021942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 7133743961875210287}
+  selectedEditorNode: {fileID: 388933129849110002}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -223,7 +223,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 120
-    y: 320
+    y: 319.33334
     width: 160
     height: 45
   parent: {fileID: 5948176933497276778}
@@ -297,7 +297,7 @@ MonoBehaviour:
   title: Invoke Unity Event
   rect:
     serializedVersion: 2
-    x: 774
+    x: 774.6667
     y: 380.6667
     width: 160
     height: 45
@@ -420,8 +420,8 @@ MonoBehaviour:
   title: Enemy Make Fight Damage
   rect:
     serializedVersion: 2
-    x: 460
-    y: 440
+    x: 459.3333
+    y: 439.33334
     width: 160
     height: 59
   parent: {fileID: 5948176933497276778}
@@ -517,7 +517,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 220
-    y: 380
+    y: 379.3333
     width: 160
     height: 45
   parent: {fileID: 5948176933497276778}

@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 2667778874628842944}
   - component: {fileID: 2667778874628842945}
   - component: {fileID: 2667778874628842946}
-  - component: {fileID: 2667778874628842942}
   - component: {fileID: 2667778874628842940}
   - component: {fileID: 2667778874628842941}
   - component: {fileID: 5210769356420102948}
@@ -101,6 +100,7 @@ GameObject:
   - component: {fileID: 5515308058070116712}
   - component: {fileID: -1602854491351729837}
   - component: {fileID: 5009588018404406251}
+  - component: {fileID: 7999735674675406446}
   m_Layer: 6
   m_Name: Torch_Blue 1
   m_TagString: Enemy
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 5210769356420103134}
+  selectedEditorNode: {fileID: 5210769356420102951}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -583,25 +583,6 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   random: 0
---- !u!114 &2667778874628842942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de65e4a18964d74a9ccbe732a2f940f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curHealth: 400
-  maxHealth: 400
-  damage: 40
-  speed: 8
-  m: {fileID: 8366629480068029127, guid: 0c6e3fcf0c72ea24e98e338ac8cf45e8, type: 3}
-  g: {fileID: 2223323310675944387, guid: 3a5b3d23443d1aa46ab79f6588368b94, type: 3}
-  amount: 0
 --- !u!114 &2667778874628842940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,8 +710,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 7999735674675406446}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: FlipLeft
         m_Mode: 1
         m_Arguments:
@@ -889,8 +870,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 7999735674675406446}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -1049,8 +1030,8 @@ MonoBehaviour:
   transformEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 7999735674675406446}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: FlipRight
         m_Mode: 1
         m_Arguments:
@@ -1347,7 +1328,6 @@ MonoBehaviour:
   children:
   - {fileID: 5210769356420102940}
   - {fileID: 5210769356420102941}
-  - {fileID: 7117140057262640448}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -2279,8 +2259,8 @@ MonoBehaviour:
   title: Invoke Unity Event
   rect:
     serializedVersion: 2
-    x: -120
-    y: 400
+    x: -120.66669
+    y: 402.66666
     width: 160
     height: 45
   parent: {fileID: 5210769356420103159}
@@ -2343,8 +2323,8 @@ MonoBehaviour:
   gameObjectEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2667778874628842942}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+      - m_Target: {fileID: 7999735674675406446}
+        m_TargetAssemblyTypeName: EnemyControllerVerAptos, Assembly-CSharp
         m_MethodName: die
         m_Mode: 1
         m_Arguments:
@@ -3122,7 +3102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: HitRange
-  val: 1.8
+  val: 0.7
 --- !u!114 &3391657463909320282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,7 +3110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025354800224441165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
   m_Name: 
@@ -3154,7 +3134,7 @@ MonoBehaviour:
     y: 1140
     width: 160
     height: 45
-  parent: {fileID: 5210769356420102942}
+  parent: {fileID: 0}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -3342,8 +3322,8 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 982.6665
-    y: 401.33356
+    x: 1044.6665
+    y: 396.66687
     width: 160
     height: 45
   parent: {fileID: 5210769356420103166}
@@ -3386,4 +3366,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: DamageRange
-  val: 1.3
+  val: 0.7
+--- !u!114 &7999735674675406446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025354800224441165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e752d235db60a841bf55e9ebd17e181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHealth: 400
+  maxHealth: 400
+  damage: 40
+  speed: 8
