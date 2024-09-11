@@ -192,6 +192,6 @@ public class SummonBanner : MonoBehaviour
         }
         return true;
     }
-    [DllImport("__Internal")]
-    public static extern void RequestID(string json, string fakeId);
+    /*[DllImport("__Internal")]
+    public static extern void RequestID(string json, string fakeId);*/
 }

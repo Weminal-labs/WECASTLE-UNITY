@@ -24,10 +24,6 @@ public class TopDownController : MonoBehaviour
     void Update()
     {
         GetInput();
-        /*if(Input.GetMouseButtonDown(0))
-        {
-            this.gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Attack");
-        }*/
     }
     private void FixedUpdate()
     {

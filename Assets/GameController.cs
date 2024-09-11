@@ -212,11 +212,11 @@ public class GameController : MonoBehaviour
             finalCoin += (this.coin + this.coin * i);
         }
         textCoin.SetText(finalCoin + " Cas");
-        PushRewardForPlayer(finalCoin);
+        /*PushRewardForPlayer(finalCoin);*/
         winScreen.SetActive(true);
     }
-    [DllImport("__Internal")]
-    public static extern void PushRewardForPlayer(int coin);
+    /*[DllImport("__Internal")]
+    public static extern void PushRewardForPlayer(int coin);*/
     public void savePlayerData()
     {
         /*PlayerInfoJson player = new PlayerInfoJson(playerInfo);

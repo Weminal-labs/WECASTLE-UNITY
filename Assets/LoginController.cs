@@ -15,13 +15,13 @@ public class LoginController : MonoBehaviour
     private void Start()
     {
         randomizer.PlaySFX();
-        if(loginButton != null)
+        /*if(loginButton != null)
         {
             loginButton.onClick.AddListener(RequestLogin);
-        }
+        }*/
     }
-    [DllImport("__Internal")]
-    public static extern void RequestLogin();
+    /*[DllImport("__Internal")]
+    public static extern void RequestLogin();*/
     private void LoadScene()
     {
         /*randomizer.StopSFX();*/

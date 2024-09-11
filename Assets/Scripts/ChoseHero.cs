@@ -40,7 +40,7 @@ public class ChoseHero : MonoBehaviour
         price.SetActive(false);
         if (StaticLobbySend.listLock == null)
         {
-            RequestLobby();
+            /*RequestLobby();*/
             indexChose = 0;
             curIndex = 0;
             StaticLobbySend.numHero = 0;
@@ -48,7 +48,7 @@ public class ChoseHero : MonoBehaviour
         }
         else
         {
-            RequestCoin();
+            /*RequestCoin();*/
             isLock = StaticLobbySend.listLock;
             indexChose = StaticLobbySend.numHero;
             curIndex = indexChose;
@@ -218,7 +218,7 @@ public class ChoseHero : MonoBehaviour
             if(Int32.Parse(textOwnCoin.text) >= Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text))
             {
                 textOwnCoin.SetText((Int32.Parse(textOwnCoin.text) - Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text)).ToString());
-                RequestUpdateCoin(-Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text));
+               /* RequestUpdateCoin(-Int32.Parse(price.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text));*/
                 isLock[curIndex] = false;
                 GameObject.FindGameObjectWithTag("LobbyController").GetComponent<LobbyController>().upDateLock();
                 btnHero[indexChose].GetComponent<Image>().sprite = bannerUnSelect;
@@ -251,12 +251,12 @@ public class ChoseHero : MonoBehaviour
     {
         return isLock;
     }
-    [DllImport("__Internal")]
+/*    [DllImport("__Internal")]
     public static extern void RequestLobby();
     [DllImport("__Internal")]
     public static extern void RequestCoin();
     [DllImport("__Internal")]
-    public static extern void RequestUpdateCoin(int coin);
+    public static extern void RequestUpdateCoin(int coin);*/
     public void EditCoinGame(int coin)
     {
         this.textOwnCoin.SetText(coin.ToString());

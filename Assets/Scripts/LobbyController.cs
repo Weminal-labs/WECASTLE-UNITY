@@ -39,8 +39,8 @@ public class LobbyController : MonoBehaviour
         pageMain.SetActive(false);
         pageHero.SetActive(true);
     }
-    [DllImport("__Internal")]
-    public static extern void RequestLogOut();
+    /*[DllImport("__Internal")]
+    public static extern void RequestLogOut();*/
     public void upDateLock()
     {
         for (int i = 0; i < lockHero.Length; i++)
