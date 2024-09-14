@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class TopDownController : MonoBehaviour
 {
-    public float moveSpeed = 1.0f;
     public Rigidbody rb;
+    private HeroStats Stats;
 
     private bool isFacingRight;
     private Vector2 movement;
+
+    private bool isAttack;
+
 
     [SerializeField]
     private JoyStickComponent joystick;
@@ -14,7 +17,9 @@ public class TopDownController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Stats = this.GetComponent<HeroStats>();
         isFacingRight = true;
+        isAttack = false;
     }
 
     void Update()
@@ -34,9 +39,13 @@ public class TopDownController : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         // Override with joystick input if present
-        if (joystick.joyStickVec != Vector2.zero)
+        if (joystick.joyStickVec != Vector2.zero && !isAttack)
         {
             movement = joystick.joyStickVec;
+        }
+        if (!isAttack && Input.GetKeyDown(KeyCode.K)){
+            isAttack = !isAttack;
+            this.transform.GetChild(0).GetComponent<AnimationController>().setBeginAttackAnimation();
         }
 
         Flip();
@@ -44,26 +53,33 @@ public class TopDownController : MonoBehaviour
 
     public void SetPos()
     {
-        if (movement != Vector2.zero)
+        if (movement != Vector2.zero && !isAttack)
         {
-            transform.GetChild(0).GetComponent<Animator>().SetBool("Running", true);
             Vector3 movement3D = new Vector3(movement.x, movement.y, 0); // Convert to Vector3
-            rb.MovePosition(rb.position + movement3D * moveSpeed * Time.fixedDeltaTime);
-        }
-        else
-        {
-            transform.GetChild(0).GetComponent<Animator>().SetBool("Running", false);
+            rb.MovePosition(rb.position + movement3D * Stats.getSpeed() * Time.fixedDeltaTime);
+            this.transform.GetChild(0).GetComponent<AnimationController>().setRunAnimation(1);
+        }else{
+            rb.velocity = Vector2.zero;
+            this.transform.GetChild(0).GetComponent<AnimationController>().setRunAnimation(0);
         }
     }
 
     public void Flip()
     {
-        if ((movement.x < 0 && isFacingRight) || (movement.x > 0 && !isFacingRight))
+        if(!isAttack)
         {
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
-            isFacingRight = !isFacingRight;
+            if ((movement.x < 0 && isFacingRight) || (movement.x > 0 && !isFacingRight))
+            {
+                Vector3 scale = transform.localScale;
+                scale.x *= -1;
+                transform.localScale = scale;
+                isFacingRight = !isFacingRight;
+            }
         }
+    }
+
+    public void setAttack(bool isAttack)
+    {
+        this.isAttack = isAttack;
     }
 }

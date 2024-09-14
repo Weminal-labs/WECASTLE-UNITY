@@ -47,7 +47,6 @@ public class HouseStat : MonoBehaviour
         {
             if (leftClickNum == 2)
             {
-
                 buildingCanvas.SetActive(true);
                 buildingIcon.GetComponent<Image>().sprite = icon;
                 buildingIcon.GetComponent<Image>().SetNativeSize();

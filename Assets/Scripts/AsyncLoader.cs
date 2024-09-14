@@ -25,7 +25,6 @@ public class AsyncLoader : MonoBehaviour
         loading.SetActive(true);
         container.SetActive(false);
         StartLoadScene();
-        
     }
     public void mapSkeleton()
     {

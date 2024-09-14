@@ -122153,6 +122153,7 @@ GameObject:
   - component: {fileID: 935360166}
   - component: {fileID: 935360165}
   - component: {fileID: 935360167}
+  - component: {fileID: 935360168}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -122248,6 +122249,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &935360168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935360164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03bb8d864bbec44bb2313e8c07d9ad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1009756839
 GameObject:
   m_ObjectHideFlags: 0
@@ -122260,6 +122273,7 @@ GameObject:
   - component: {fileID: 1009756841}
   - component: {fileID: 1009756843}
   - component: {fileID: 1009756842}
+  - component: {fileID: 1009756844}
   m_Layer: 8
   m_Name: PlayerPos
   m_TagString: Untagged
@@ -122327,6 +122341,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 120
   m_CollisionDetection: 1
+--- !u!114 &1009756844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009756839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b191ce3f0bf8ad4f807fc7921e93a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 10
+  speed: 5
 --- !u!1 &1012632760
 GameObject:
   m_ObjectHideFlags: 0
@@ -123733,7 +123761,7 @@ Tilemap:
       - {fileID: -1999788980, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 1034273460, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 2016548547, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -8, y: 8, z: 0}
@@ -123753,7 +123781,7 @@ Tilemap:
       - {fileID: -1999788980, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 1034273460, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 2016548547, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -4, y: 9, z: 0}
@@ -124198,6 +124226,79 @@ Transform:
   m_Father: {fileID: 1012632761}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1788695555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1788695556}
+  - component: {fileID: 1788695559}
+  - component: {fileID: 1788695558}
+  - component: {fileID: 1788695557}
+  m_Layer: 0
+  m_Name: Colider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1788695556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788695555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1788695557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788695555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3918066, y: 1.3826852, z: 1}
+  m_Center: {x: -2.259419, y: 3.7437246, z: 0}
+--- !u!65 &1788695558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788695555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9502265, y: 1.8082137, z: 1}
+  m_Center: {x: 0.51645327, y: -2.029156, z: 0}
+--- !u!65 &1788695559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788695555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.4139233, y: 1.7438021, z: 1}
+  m_Center: {x: 1.7221835, y: -1.5529013, z: 0}
 --- !u!1 &1912585597
 GameObject:
   m_ObjectHideFlags: 0
