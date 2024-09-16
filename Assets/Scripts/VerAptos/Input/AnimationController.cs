@@ -25,7 +25,7 @@ public class AnimationController : MonoBehaviour
     }
     public void setEndAttackAnimation()
     {
-        topDownController.setAttack(false);
+
     }
     public void setRunAnimation(float speed)
     {

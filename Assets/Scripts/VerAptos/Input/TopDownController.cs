@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TopDownController : MonoBehaviour
@@ -8,8 +11,17 @@ public class TopDownController : MonoBehaviour
     private bool isFacingRight;
     private Vector2 movement;
 
+    [SerializeField]
     private bool isAttack;
 
+    private IEnumerator attackCoroutine;
+
+    [SerializeField]
+    private float attackRange = 2f;
+    [SerializeField]
+    private float attackAngle = 60f;
+    [SerializeField]
+    private LayerMask enemyLayer;
 
     [SerializeField]
     private JoyStickComponent joystick;
@@ -20,6 +32,8 @@ public class TopDownController : MonoBehaviour
         Stats = this.GetComponent<HeroStats>();
         isFacingRight = true;
         isAttack = false;
+        attackCoroutine = AutoAttack();
+        StartCoroutine(attackCoroutine);
     }
 
     void Update()
@@ -42,10 +56,6 @@ public class TopDownController : MonoBehaviour
         if (joystick.joyStickVec != Vector2.zero && !isAttack)
         {
             movement = joystick.joyStickVec;
-        }
-        if (!isAttack && Input.GetKeyDown(KeyCode.K)){
-            isAttack = !isAttack;
-            this.transform.GetChild(0).GetComponent<AnimationController>().setBeginAttackAnimation();
         }
 
         Flip();
@@ -77,9 +87,71 @@ public class TopDownController : MonoBehaviour
             }
         }
     }
+    private IEnumerator AutoAttack()
+    {
+        while (true)
+        {
+            isAttack = false;
+            yield return new WaitForSeconds(2f);
+            if (IsEnemyInCone())
+            {
+                isAttack = true;
+                // Perform attack
+                this.transform.GetChild(0).GetComponent<AnimationController>().setBeginAttackAnimation();
+                yield return new WaitForSeconds(0.8f);
+                DealDamageToEnemiesInRange();
+            }
+        }
+    }
 
+    private bool IsEnemyInCone()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRange, enemyLayer);
+        return hitColliders.Any(c => IsInAttackCone(c.transform.position));
+    }
     public void setAttack(bool isAttack)
     {
         this.isAttack = isAttack;
+    }
+    private bool IsInAttackCone(Vector3 targetPosition)
+    {
+        Vector3 directionToTarget = targetPosition - transform.position;
+        float angle = Vector3.Angle(transform.right, directionToTarget);
+        return angle <= attackAngle / 2;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Vector3 direction = transform.right;
+
+        Vector3 leftDirection = Quaternion.Euler(0, 0, attackAngle / 2) * direction;
+        Vector3 rightDirection = Quaternion.Euler(0, 0, -attackAngle / 2) * direction;
+
+        Gizmos.DrawLine(transform.position, transform.position + leftDirection * attackRange);
+        Gizmos.DrawLine(transform.position, transform.position + rightDirection * attackRange);
+        int segments = 20;
+        Vector3 previousPoint = transform.position + rightDirection * attackRange;
+        for (int i = 1; i <= segments; i++)
+        {
+            float angle = -attackAngle / 2 + (attackAngle * i / segments);
+            Vector3 currentDirection = Quaternion.Euler(0, 0, angle) * direction;
+            Vector3 currentPoint = transform.position + currentDirection * attackRange;
+            Gizmos.DrawLine(previousPoint, currentPoint);
+            previousPoint = currentPoint;
+        }
+
+    }
+    private void DealDamageToEnemiesInRange()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRange, enemyLayer);
+        foreach (var hitCollider in hitColliders)
+        {
+            EnemyControllerVerAptos enemyHealth = hitCollider.GetComponent<EnemyControllerVerAptos>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.takeDame(Stats.getAttack());
+            }
+        }
     }
 }

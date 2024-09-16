@@ -2208,7 +2208,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 1
+    useConstant: 0
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 1
+    useConstant: 0
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2469,7 +2469,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 1
+    useConstant: 0
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2501,7 +2501,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 1
+    useConstant: 0
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2578,7 +2578,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 1
+    useConstant: 0
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2610,7 +2610,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 1
+    useConstant: 0
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -3379,7 +3379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e752d235db60a841bf55e9ebd17e181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHealth: 400
-  maxHealth: 400
+  curHealth: 10
+  maxHealth: 10
   damage: 40
   speed: 8
