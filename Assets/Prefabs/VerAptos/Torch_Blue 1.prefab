@@ -207,7 +207,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.109375, y: 1.515625, z: 0}
+  m_Size: {x: 1.109375, y: 1.515625, z: 0.2}
   m_Center: {x: -0.0703125, y: 0.1796875, z: 0}
 --- !u!195 &2667778874628842971
 NavMeshAgent:
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 5210769356420102951}
+  selectedEditorNode: {fileID: 7117140057262640448}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -300
-    y: 400
+    y: 396.66666
     width: 160
     height: 45
   parent: {fileID: 5210769356420103159}
@@ -2208,7 +2208,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 0
+    useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2428,7 +2428,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -540
-    y: 1040
+    y: 1039.3334
     width: 160
     height: 45
   parent: {fileID: 5210769356420102929}
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 0
+    useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2460,7 +2460,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -360
-    y: 1340
+    y: 1338
     width: 160
     height: 45
   parent: {fileID: 5210769356420102929}
@@ -2469,7 +2469,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 0
+    useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2491,8 +2491,8 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: -180
-    y: 1060
+    x: -179.33334
+    y: 1059.3334
     width: 160
     height: 45
   parent: {fileID: 5210769356420102936}
@@ -2501,7 +2501,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 0
+    useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2578,7 +2578,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 0
+    useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -2610,7 +2610,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   time:
-    useConstant: 0
+    useConstant: 1
     mode: 0
     blackboard: {fileID: 0}
     key: 
@@ -3131,7 +3131,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1460
-    y: 1140
+    y: 1138
     width: 160
     height: 45
   parent: {fileID: 0}

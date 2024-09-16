@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +25,7 @@ public class HeroStats : MonoBehaviour
         sliderHP = UIHP.GetComponent<Slider>();
         sliderHP.maxValue = healthMax;
         sliderHP.value = health;
-        sliderHPEffect = UIHP.transform.GetChild(1).GetComponent<Slider>();
+        sliderHPEffect = UIHP.transform.GetChild(0).GetComponent<Slider>();
         sliderHPEffect.maxValue = healthMax;
         sliderHPEffect.value = health;
     }
@@ -34,32 +33,41 @@ public class HeroStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void setHealth(int health){
-        this.health+=health;
-        if(this.health > healthMax){
+    public void setHealth(int health)
+    {
+        this.health += health;
+        if (this.health > healthMax)
+        {
             this.health = healthMax;
         }
-        if(this.health <= 0){
+        if (this.health <= 0)
+        {
             this.health = 0;
             Debug.Log("Hero is dead");
         }
         sliderHP.value = health;
         StartCoroutine(hpSliderEffect());
     }
-    public int getAttack(){
+    public int getAttack()
+    {
         return attack;
     }
-    public int getSpeed(){
+    public int getSpeed()
+    {
         return speed;
     }
     IEnumerator hpSliderEffect()
     {
-        while(sliderHPEffect.value != sliderHP.value){
-            if(sliderHPEffect.value < sliderHP.value){
+        while (sliderHPEffect.value != sliderHP.value)
+        {
+            if (sliderHPEffect.value < sliderHP.value)
+            {
                 sliderHPEffect.value += 1;
-            }else{
+            }
+            else
+            {
                 sliderHPEffect.value -= 1;
             }
             yield return new WaitForSeconds(0.01f);

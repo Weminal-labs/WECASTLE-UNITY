@@ -25,7 +25,7 @@ namespace MBT
             {
                 if (eachTarget.gameObject.tag.CompareTo("Ally") == 0)
                 {
-                    eachTarget.gameObject.GetComponent<MobStatus>().takeDame(damage.Value);
+                    eachTarget.gameObject.GetComponent<HeroStats>().setHealth(-damage.Value);
                 }
                 if (eachTarget.gameObject.tag.CompareTo("House") == 0)
                 {
