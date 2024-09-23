@@ -26,14 +26,15 @@ namespace MBT
                 if (eachTarget.gameObject.tag.CompareTo("Ally") == 0)
                 {
                     eachTarget.gameObject.GetComponent<HeroStats>().setHealth(-damage.Value);
+                    Debug.Log(damage.Value);
                 }
                 if (eachTarget.gameObject.tag.CompareTo("House") == 0)
                 {
-                    eachTarget.gameObject.GetComponent<HouseStat>().TakeDame(damage.Value);
+                    eachTarget.gameObject.GetComponent<HouseStat>().TakeDame(-damage.Value);
                 }
                 if (eachTarget.gameObject.tag.CompareTo("Castle") == 0)
                 {
-                    eachTarget.gameObject.GetComponent<CastleStat>().TakeDame(damage.Value);
+                    eachTarget.gameObject.GetComponent<CastleStat>().TakeDame(-damage.Value);
                 }
             }
 

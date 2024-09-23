@@ -1,76 +1,78 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class HeroStats : MonoBehaviour
 {
     [Header("Stats")]
-    private int health;
-    private int healthMax;
+    [SerializeField] private int maxHealth = 100;
     [SerializeField] private int attack;
     [SerializeField] private int speed;
+    private int currentHealth;
 
+    [Header("UI Components")]
+    [SerializeField] private Slider healthSlider;
+    [SerializeField] private Slider healthEffectSlider;
 
-    [Header("Component")]
-    [SerializeField]
-    private GameObject UIHP;
-    private Slider sliderHP;
-    private Slider sliderHPEffect;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        health = 100;
-        healthMax = 100;
-        sliderHP = UIHP.GetComponent<Slider>();
-        sliderHP.maxValue = healthMax;
-        sliderHP.value = health;
-        sliderHPEffect = UIHP.transform.GetChild(0).GetComponent<Slider>();
-        sliderHPEffect.maxValue = healthMax;
-        sliderHPEffect.value = health;
+        InitializeHealth();
+        SetupHealthSliders();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InitializeHealth()
     {
-
+        currentHealth = maxHealth;
     }
-    public void setHealth(int health)
+
+    private void SetupHealthSliders()
     {
-        this.health += health;
-        if (this.health > healthMax)
+        if (healthSlider != null)
         {
-            this.health = healthMax;
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = currentHealth;
         }
-        if (this.health <= 0)
+
+        if (healthEffectSlider != null)
         {
-            this.health = 0;
+            healthEffectSlider.maxValue = maxHealth;
+            healthEffectSlider.value = currentHealth;
+        }
+    }
+
+    public void setHealth(int amount)
+    {
+        currentHealth += amount;
+
+        if (healthSlider != null)
+        {
+            healthSlider.value = currentHealth;
+        }
+
+        if (currentHealth <= 0)
+        {
             Debug.Log("Hero is dead");
         }
-        sliderHP.value = health;
-        StartCoroutine(hpSliderEffect());
-    }
-    public int getAttack()
-    {
-        return attack;
-    }
-    public int getSpeed()
-    {
-        return speed;
-    }
-    IEnumerator hpSliderEffect()
-    {
-        while (sliderHPEffect.value != sliderHP.value)
+        if (currentHealth > maxHealth)
         {
-            if (sliderHPEffect.value < sliderHP.value)
-            {
-                sliderHPEffect.value += 1;
-            }
-            else
-            {
-                sliderHPEffect.value -= 1;
-            }
-            yield return new WaitForSeconds(0.01f);
+            currentHealth = maxHealth;
         }
+        StartCoroutine(UpdateHealthEffectSlider());
     }
+
+    private IEnumerator UpdateHealthEffectSlider()
+    {
+        if (healthEffectSlider == null) yield break;
+        yield return new WaitForSeconds(0.5f);
+        while (healthEffectSlider.value > currentHealth)
+        {
+            healthEffectSlider.value -= 1;
+            yield return new WaitForSeconds(0.1f);
+        }
+        healthEffectSlider.value = currentHealth;
+    }
+
+    public int GetAttack() => attack;
+
+    public int GetSpeed() => speed;
 }
