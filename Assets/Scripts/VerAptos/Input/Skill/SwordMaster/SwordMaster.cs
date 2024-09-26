@@ -8,7 +8,7 @@ public class SwordMaster : MonoBehaviour
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private float attackAngle = 60f;
     [SerializeField] private float attackCooldown = 2f;
-    [SerializeField] private float attackDuration = 0.5f;
+    [SerializeField] private float attackDuration = 0.2f;
     [SerializeField] private LayerMask enemyLayer;
 
     [Header("Components")]
@@ -50,7 +50,8 @@ public class SwordMaster : MonoBehaviour
         animationController.setBeginAttackAnimation();
         yield return new WaitForSeconds(0.2f);
         DealDamageToEnemiesInCone();
-
+        yield return new WaitForSeconds(0.4f);
+        DealDamageToEnemiesInCone();
         yield return new WaitForSeconds(attackDuration);
 
         isAttacking = false;
@@ -72,7 +73,7 @@ public class SwordMaster : MonoBehaviour
             {
                 if (hitCollider.TryGetComponent(out EnemyControllerVerAptos enemyHealth))
                 {
-                    enemyHealth.takeDame(heroStats.GetAttack());
+                    enemyHealth.takeDame(heroStats.GetAttack()/2);
                 }
             }
         }
