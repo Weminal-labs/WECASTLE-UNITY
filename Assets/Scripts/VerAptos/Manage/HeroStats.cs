@@ -13,15 +13,21 @@ public class HeroStats : MonoBehaviour
 
     [Header("Level Up")]
     [SerializeField] private List<int> levelUpList = new List<int>{1,1,1,0,0};
+    [SerializeField] private int exp = 0;
+    [SerializeField] private int expToNextLevel = 10;
+    [SerializeField] private int level = 1;
 
     [Header("UI Components")]
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Slider healthEffectSlider;
+    [SerializeField] private Slider expSlider;
+    [SerializeField] private LevelUpUI levelUpUI;
 
     private void Start()
     {
         InitializeHealth();
         SetupHealthSliders();
+        SetupExpSlider();
     }
 
     private void InitializeHealth()
@@ -29,6 +35,14 @@ public class HeroStats : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    private void SetupExpSlider()
+    {
+        if (expSlider != null)
+        {
+            expSlider.maxValue = expToNextLevel;
+            expSlider.value = exp;
+        }
+    }
     private void SetupHealthSliders()
     {
         if (healthSlider != null)
@@ -67,6 +81,18 @@ public class HeroStats : MonoBehaviour
         StartCoroutine(UpdateHealthEffectSlider());
     }
 
+    private void AddExp(int amount)
+    {
+        exp += amount;
+        if (exp >= expToNextLevel)
+        {
+            exp = 0;
+            expToNextLevel *= 2;
+            levelUpUI.LevelUp();
+        }
+        SetupExpSlider();
+    }
+
     private IEnumerator UpdateHealthEffectSlider()
     {
         if (healthEffectSlider == null) yield break;
@@ -84,6 +110,16 @@ public class HeroStats : MonoBehaviour
     public int GetSpeed() => speed;
     public void LevelUp(int index)
     {
+        switch(index){
+            case 0:
+                maxHealth += 50;
+                break;
+            case 1:
+                attack += 10;
+                break;
+            default:
+                break;
+        }
         levelUpList[index]++;
     }
     public List<int> getLevelUpList()

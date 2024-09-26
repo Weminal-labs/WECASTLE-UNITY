@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class JoyStickComponent : MonoBehaviour
+public class JoyStickComponent : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public GameObject joyStick;
     public GameObject joyStickBG;
@@ -48,5 +48,15 @@ public class JoyStickComponent : MonoBehaviour
         joyStickVec = Vector2.zero;
         joyStick.transform.position = joyStickOriginalPos;
         joyStickBG.transform.position = joyStickOriginalPos;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 }

@@ -73,7 +73,7 @@ public class SwordMaster : MonoBehaviour
             {
                 if (hitCollider.TryGetComponent(out EnemyControllerVerAptos enemyHealth))
                 {
-                    enemyHealth.takeDame(heroStats.GetAttack()/2);
+                    enemyHealth.takeDame(heroStats.GetAttack()*heroStats.getLevelUpList()[2]);
                 }
             }
         }
