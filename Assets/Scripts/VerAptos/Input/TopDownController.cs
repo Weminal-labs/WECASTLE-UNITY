@@ -30,6 +30,10 @@ public class TopDownController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseGameManager.instance.IsPaused())
+        {
+            return;
+        }
         if (!isAttack)
         {
             GetInput();
@@ -43,6 +47,10 @@ public class TopDownController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (PauseGameManager.instance.IsPaused())
+        {
+            return;
+        }
         Move();
     }
 

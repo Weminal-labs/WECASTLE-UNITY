@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class HeroStats : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class HeroStats : MonoBehaviour
     [SerializeField] private int attack;
     [SerializeField] private int speed;
     private int currentHealth;
+
+    [Header("Level Up")]
+    [SerializeField] private List<int> levelUpList = new List<int>{1,1,1,0,0};
 
     [Header("UI Components")]
     [SerializeField] private Slider healthSlider;
@@ -42,6 +46,9 @@ public class HeroStats : MonoBehaviour
 
     public void setHealth(int amount)
     {
+        if(PauseGameManager.instance.IsPaused()){
+            return;
+        }
         currentHealth += amount;
 
         if (healthSlider != null)
@@ -75,4 +82,12 @@ public class HeroStats : MonoBehaviour
     public int GetAttack() => attack;
 
     public int GetSpeed() => speed;
+    public void LevelUp(int index)
+    {
+        levelUpList[index]++;
+    }
+    public List<int> getLevelUpList()
+    {
+        return levelUpList;
+    }
 }
