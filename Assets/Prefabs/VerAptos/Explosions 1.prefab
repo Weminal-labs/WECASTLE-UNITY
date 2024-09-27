@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: range
-  val: 4
+  val: 1.2
 --- !u!114 &8187699020480458700
 MonoBehaviour:
   m_ObjectHideFlags: 0

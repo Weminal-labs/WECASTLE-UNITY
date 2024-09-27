@@ -1,10 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using MBT;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class LevelUpUI : MonoBehaviour
@@ -23,7 +20,7 @@ public class LevelUpUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void SpawnRandomElements()
     {
@@ -46,18 +43,20 @@ public class LevelUpUI : MonoBehaviour
             {
                 GameObject spawnedElement = Instantiate(selectedElements[i], spotLevelUpUIElements[i]);
                 int value = GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().getLevelUpList()[spawnedElement.GetComponent<Upgrade>().GetIndex()];
-                spawnedElement.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText("Level:\n" + (value+1).ToString());
+                spawnedElement.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText("Level:\n" + (value + 1).ToString());
                 spotLevelUpUIElements[i].GetComponent<Button>().onClick.AddListener(() => OnSelectOptionLevelUp(spawnedElement.GetComponent<Upgrade>().GetIndex()));
             }
         }
     }
     public void LevelUp()
     {
+        PauseGameManager.instance.PauseGame();
+
         SpawnRandomElements();
         levelUpUI.SetActive(true);
-        PauseGameManager.instance.PauseGame();
     }
-    public void OnSelectOptionLevelUp(int index){
+    public void OnSelectOptionLevelUp(int index)
+    {
         GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().LevelUp(index);
         levelUpUI.SetActive(false);
         PauseGameManager.instance.ResumeGame();

@@ -118590,6 +118590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 5025354800224441165, guid: 1c499858722796142932c749f361d556, type: 3}
+  - {fileID: 3866873906404299025, guid: e32b0aaf38dff6749ae0ff31c0debdfb, type: 3}
   spawnInterval: 5
   spawnArea:
   - {fileID: 577612715}
@@ -118725,7 +118726,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a0f3cb1ac301dcc469d12925633b1a47, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -125108,7 +125109,7 @@ Tilemap:
       - {fileID: -1999788980, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 1034273460, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 2016548547, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 9, y: -1, z: 0}
@@ -125148,7 +125149,7 @@ Tilemap:
       - {fileID: -1999788980, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 1034273460, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
       - {fileID: 2016548547, guid: 0c1e13d22fa1f7542a3289425c7d4c28, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 5, y: 8, z: 0}

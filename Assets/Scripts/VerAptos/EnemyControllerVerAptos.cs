@@ -5,8 +5,11 @@ using UnityEngine.AI;
 public class EnemyControllerVerAptos : MonoBehaviour
 {
     private NavMeshAgent Agent;
+
     [SerializeField]
-    private int curHealth, maxHealth, damage, speed;
+    private int curHealth, maxHealth, damage, speed, exp;
+
+
 
     Blackboard blackboard;
     BoolVariable isDead;
@@ -29,6 +32,7 @@ public class EnemyControllerVerAptos : MonoBehaviour
     {
 
     }
+
     public void FlipLeft()
     {
         gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.y, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
@@ -67,5 +71,16 @@ public class EnemyControllerVerAptos : MonoBehaviour
     {
 
         Destroy(this.gameObject);
+    }
+
+    public void spawnExp()
+    {
+        // Find the HeroStats component
+        HeroStats heroStats = FindObjectOfType<HeroStats>();
+        if (heroStats != null)
+        {
+            // Call the AddExp method
+            heroStats.SendMessage("AddExp", exp);
+        }
     }
 }
