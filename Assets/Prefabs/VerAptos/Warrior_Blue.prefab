@@ -1,0 +1,3874 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2699643033137316122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2925920866435180927}
+  - component: {fileID: 2925920866435180925}
+  - component: {fileID: 2925920866435180926}
+  - component: {fileID: 2795825795914695762}
+  - component: {fileID: 5030362838296548970}
+  - component: {fileID: 1706376184309410575}
+  - component: {fileID: 5030362838296548889}
+  - component: {fileID: 5030362838296548891}
+  - component: {fileID: 5030362838296548960}
+  - component: {fileID: 5030362838296548967}
+  - component: {fileID: 5030362838296548966}
+  - component: {fileID: 5030362838296548965}
+  - component: {fileID: 5030362838296548964}
+  - component: {fileID: 5030362838296548890}
+  - component: {fileID: 5030362838296548895}
+  - component: {fileID: 5030362838296548894}
+  - component: {fileID: 5030362838296548893}
+  - component: {fileID: 5030362838296548883}
+  - component: {fileID: 5030362838296548882}
+  - component: {fileID: 5030362838296548885}
+  - component: {fileID: 5030362838296548878}
+  - component: {fileID: 5030362838296548876}
+  - component: {fileID: 5030362838296548867}
+  - component: {fileID: 5030362838296548865}
+  - component: {fileID: 5030362838296548864}
+  - component: {fileID: 5030362838296548871}
+  - component: {fileID: 5030362838296548870}
+  - component: {fileID: 5030362838296548869}
+  - component: {fileID: 5030362838296548923}
+  - component: {fileID: 5030362838296548922}
+  - component: {fileID: 5030362838296548921}
+  - component: {fileID: 5030362838296548920}
+  - component: {fileID: 5030362838296548925}
+  - component: {fileID: 5030362838296548924}
+  - component: {fileID: 5030362838296548915}
+  - component: {fileID: 5030362838296548914}
+  - component: {fileID: 5030362838296548913}
+  - component: {fileID: 5030362838296548919}
+  - component: {fileID: 5030362838296548918}
+  - component: {fileID: 5030362838296548917}
+  - component: {fileID: 5030362838296548916}
+  - component: {fileID: 5030362838296548906}
+  - component: {fileID: 5030362838296548905}
+  - component: {fileID: 5030362838296548904}
+  - component: {fileID: 5030362838296548911}
+  - component: {fileID: 5030362838296548910}
+  - component: {fileID: 5030362838296548909}
+  - component: {fileID: 5030362838296548908}
+  - component: {fileID: 5030362838296548899}
+  - component: {fileID: 5030362838296548897}
+  - component: {fileID: 2925920866435180916}
+  - component: {fileID: 2925920866435180917}
+  - component: {fileID: 2925920866435180904}
+  - component: {fileID: 2925920866435180905}
+  - component: {fileID: 2925920866435180906}
+  - component: {fileID: 2925920866435180907}
+  - component: {fileID: 2925920866435180910}
+  - component: {fileID: 2925920866435180911}
+  - component: {fileID: 2925920866435180802}
+  - component: {fileID: 2925920866435180800}
+  - component: {fileID: 2925920866435180801}
+  - component: {fileID: 2925920866435180807}
+  - component: {fileID: 2925920866435180854}
+  - component: {fileID: 2925920866435180855}
+  - component: {fileID: 2925920866435180848}
+  - component: {fileID: 2925920866435180850}
+  - component: {fileID: 2925920866435180851}
+  - component: {fileID: 2925920866435180860}
+  - component: {fileID: 2925920866435180861}
+  - component: {fileID: 2925920866435180862}
+  - component: {fileID: 2925920866435180863}
+  - component: {fileID: 2925920866435180856}
+  - component: {fileID: 2925920866435180857}
+  - component: {fileID: 2925920866435180858}
+  - component: {fileID: 2925920866435180859}
+  - component: {fileID: 2925920866435180804}
+  - component: {fileID: 2925920866435180805}
+  - component: {fileID: 2925920866435180840}
+  - component: {fileID: 2925920866435180841}
+  - component: {fileID: 2925920866435180842}
+  - component: {fileID: 2925920866435180843}
+  - component: {fileID: 2925920866435180852}
+  - component: {fileID: 2925920866435180853}
+  - component: {fileID: 2925920866435180847}
+  - component: {fileID: 2925920866435180846}
+  - component: {fileID: 2925920866435180845}
+  - component: {fileID: 2925920866435180844}
+  - component: {fileID: 7256892681189949445}
+  - component: {fileID: 6589892018500537235}
+  - component: {fileID: 4101730710257006939}
+  - component: {fileID: 2886487879036039627}
+  - component: {fileID: 6685158513473663132}
+  - component: {fileID: 7146030818809879339}
+  - component: {fileID: 7307498144458518625}
+  - component: {fileID: 3970199221730793444}
+  - component: {fileID: 703369004819242755}
+  - component: {fileID: 1383906260643409733}
+  - component: {fileID: 518736069609944619}
+  - component: {fileID: 3648352951822923122}
+  - component: {fileID: 4928987832541198124}
+  - component: {fileID: 4510937369678310616}
+  - component: {fileID: 2284937778042325820}
+  - component: {fileID: 2684140040009226903}
+  - component: {fileID: 5223278280262131591}
+  m_Layer: 0
+  m_Name: Warrior_Blue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2925920866435180927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.28, y: 12.84, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5030362836447183614}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2925920866435180925
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7734ccd4116b7db48afa1ebba00eb014, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -5517611178949128519, guid: c0f2596c0306a5a4783c496a198d7b9f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.21875, y: 1.421875}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &2925920866435180926
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17a53f94958c73e4db90679eac020feb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &2795825795914695762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.21875, y: 1.421875, z: 0.2}
+  m_Center: {x: 0.09375, y: 0.0859375, z: 0}
+--- !u!195 &5030362838296548970
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.1
+  m_Speed: 3.5
+  m_Acceleration: 40
+  avoidancePriority: 1
+  m_AngularSpeed: 300
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 0.2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1706376184309410575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b08f5ffb9bc2f4d8af85cce1698e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoMob: {fileID: 2699643033137316122}
+  curHealth: 200
+  maxHealth: 200
+  damage: 20
+  speed: 8
+  type: 0
+  id: 
+  isDoubleClick: 0
+--- !u!114 &5030362838296548889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5f392bbea2fa2499665ed8b604ff86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monoBehaviourTree: {fileID: 5030362838296548964}
+--- !u!114 &5030362838296548891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2217e4d35c0c94ea02cf2166c17e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variables:
+  - {fileID: 5030362838296548890}
+  - {fileID: 5030362838296548883}
+  - {fileID: 5030362838296548885}
+  - {fileID: 5030362838296548922}
+  - {fileID: 2925920866435180840}
+  - {fileID: 2925920866435180847}
+  - {fileID: 2925920866435180844}
+  - {fileID: 7256892681189949445}
+  - {fileID: 6589892018500537235}
+  - {fileID: 7146030818809879339}
+  - {fileID: 703369004819242755}
+  - {fileID: 4928987832541198124}
+  - {fileID: 4510937369678310616}
+  masterBlackboard: {fileID: 0}
+--- !u!114 &5030362838296548960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: 1260
+    y: 280
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548967}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: Idle
+  playAnimation: 1
+--- !u!114 &5030362838296548967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 1340
+    y: 200
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548966}
+  children:
+  - {fileID: 5030362838296548960}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: 423.3333
+    y: 0
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548878}
+  children:
+  - {fileID: 2925920866435180841}
+  - {fileID: 5030362838296548882}
+  - {fileID: 7307498144458518625}
+  - {fileID: 5030362838296548967}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538645f2f9090fd43bc6154b2e89e2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Root
+  rect:
+    serializedVersion: 2
+    x: 420
+    y: -340
+    width: 160
+    height: 45
+  parent: {fileID: 0}
+  children:
+  - {fileID: 2925920866435180807}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &5030362838296548964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEditorNode: {fileID: 2925920866435180904}
+  repeatOnFinish: 0
+  maxExecutionsPerTick: 1000
+  parent: {fileID: 0}
+--- !u!114 &5030362838296548890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc98ff6538275b4c9a8383882546ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: self
+  val: {fileID: 2925920866435180927}
+--- !u!114 &5030362838296548895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec611930975eda44b3c82fc2e9133a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Move Navmesh Agent
+  rect:
+    serializedVersion: 2
+    x: 300
+    y: 820
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548893}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  destination:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: target
+    constantValue: {fileID: 0}
+  agent: {fileID: 5030362838296548970}
+  stopDistance:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: HitRange
+    constantValue: 1
+  updateInterval: 1
+--- !u!114 &5030362838296548894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: 140
+    y: 800
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548893}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: Run
+  playAnimation: 1
+--- !u!114 &5030362838296548893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 240
+    y: 740
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548876}
+  children:
+  - {fileID: 5030362838296548894}
+  - {fileID: 5030362838296548895}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc98ff6538275b4c9a8383882546ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: target
+  val: {fileID: 0}
+--- !u!114 &5030362838296548882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534e3ec7de6cd444e984c2e7f68e42e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Is Set Condition
+  rect:
+    serializedVersion: 2
+    x: -359.3333
+    y: 141.33334
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548966}
+  children:
+  - {fileID: 2925920866435180916}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 3
+  invert: 0
+  type: 2
+  boolReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  objectReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  transformReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: target
+    constantValue: {fileID: 0}
+--- !u!114 &5030362838296548885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: distanceToTarget
+  val: 0
+--- !u!114 &5030362838296548878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092269cfc223d504e9c270e7bd661b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Detect Enemy 2D Service
+  rect:
+    serializedVersion: 2
+    x: 420
+    y: -143.33331
+    width: 160
+    height: 45
+  parent: {fileID: 3970199221730793444}
+  children:
+  - {fileID: 5030362838296548966}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: FindRange
+    constantValue: 7
+  variableToSet:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: target
+    constantValue: {fileID: 0}
+--- !u!114 &5030362838296548876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b95a918be8d9a4f9085201010bdec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Number Condition
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 520
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548865}
+  children:
+  - {fileID: 5030362838296548893}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: distanceToTarget
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  comparator: 1
+  floatReference2:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: HitRange
+    constantValue: 3
+  intReference2:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+--- !u!114 &5030362838296548867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2659d9740e09744b583d40f78bde8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Calculate Distance Service
+  rect:
+    serializedVersion: 2
+    x: -280
+    y: 400
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180916}
+  children:
+  - {fileID: 5030362838296548865}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  transform1:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: target
+    constantValue: {fileID: 0}
+  transform2:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: self
+    constantValue: {fileID: 0}
+  variable:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: distanceToTarget
+    constantValue: 0
+--- !u!114 &5030362838296548865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: -280
+    y: 460
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548867}
+  children:
+  - {fileID: 5030362838296548864}
+  - {fileID: 5030362838296548876}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b95a918be8d9a4f9085201010bdec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Number Condition
+  rect:
+    serializedVersion: 2
+    x: -500
+    y: 560
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548865}
+  children:
+  - {fileID: 5030362838296548925}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: distanceToTarget
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  comparator: 2
+  floatReference2:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: HitRange
+    constantValue: 3
+  intReference2:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+--- !u!114 &5030362838296548871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -1740
+    y: 840
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548869}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &5030362838296548870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -1760
+    y: 780
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548869}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackSide_1
+  playAnimation: 1
+--- !u!114 &5030362838296548869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -1420
+    y: 740
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548915}
+  children:
+  - {fileID: 5030362838296548870}
+  - {fileID: 5030362838296548871}
+  - {fileID: 2925920866435180802}
+  - {fileID: 5030362838296548923}
+  - {fileID: 2925920866435180800}
+  - {fileID: 2925920866435180801}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -1660
+    y: 960
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548869}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackSide_2
+  playAnimation: 1
+--- !u!114 &5030362838296548922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: angleToTarget
+  val: 0
+--- !u!114 &5030362838296548921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f70905df72ab384f9121c4ae509804a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Calculate Angle Service
+  rect:
+    serializedVersion: 2
+    x: -580
+    y: 380
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180916}
+  children:
+  - {fileID: 2925920866435180905}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  transform1:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: target
+    constantValue: {fileID: 0}
+  transform2:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: self
+    constantValue: {fileID: 0}
+  angleVariable:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+--- !u!114 &5030362838296548920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -1160
+    y: 680
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548925}
+  children:
+  - {fileID: 5030362838296548908}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 45
+--- !u!114 &5030362838296548925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: -640
+    y: 620
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548864}
+  children:
+  - {fileID: 5030362838296548915}
+  - {fileID: 5030362838296548920}
+  - {fileID: 5030362838296548917}
+  - {fileID: 5030362838296548914}
+  - {fileID: 5030362838296548924}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -140
+    y: 700
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548925}
+  children:
+  - {fileID: 5030362838296548918}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 225
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 315
+--- !u!114 &5030362838296548915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -1420
+    y: 680
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548925}
+  children:
+  - {fileID: 5030362838296548869}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 135
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 225
+--- !u!114 &5030362838296548914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -640
+    y: 680
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548925}
+  children:
+  - {fileID: 5030362838296548905}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 45
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 135
+--- !u!114 &5030362838296548913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -180
+    y: 980
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548918}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackDown_2
+  playAnimation: 1
+--- !u!114 &5030362838296548919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -340
+    y: 800
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548918}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackDown_1
+  playAnimation: 1
+--- !u!114 &5030362838296548918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -140
+    y: 760
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548924}
+  children:
+  - {fileID: 5030362838296548919}
+  - {fileID: 2925920866435180858}
+  - {fileID: 2925920866435180859}
+  - {fileID: 5030362838296548913}
+  - {fileID: 2925920866435180804}
+  - {fileID: 2925920866435180805}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -920
+    y: 680
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548925}
+  children:
+  - {fileID: 5030362838296548909}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 315
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 360
+--- !u!114 &5030362838296548916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -579.3333
+    y: 999.3334
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548905}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackUp_2
+  playAnimation: 1
+--- !u!114 &5030362838296548906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -720
+    y: 822
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548905}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackUp_1
+  playAnimation: 1
+--- !u!114 &5030362838296548905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -640
+    y: 760
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548914}
+  children:
+  - {fileID: 5030362838296548906}
+  - {fileID: 2925920866435180862}
+  - {fileID: 2925920866435180863}
+  - {fileID: 5030362838296548916}
+  - {fileID: 2925920866435180856}
+  - {fileID: 2925920866435180857}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -1160
+    y: 980
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548908}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackSide_2
+  playAnimation: 1
+--- !u!114 &5030362838296548911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -1260
+    y: 860
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548908}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &5030362838296548910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -1280
+    y: 800
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548908}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackSide_1
+  playAnimation: 1
+--- !u!114 &5030362838296548909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -920
+    y: 740
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548917}
+  children:
+  - {fileID: 5030362838296548897}
+  - {fileID: 2925920866435180850}
+  - {fileID: 2925920866435180851}
+  - {fileID: 5030362838296548899}
+  - {fileID: 2925920866435180860}
+  - {fileID: 2925920866435180861}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -1160
+    y: 740
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548920}
+  children:
+  - {fileID: 5030362838296548910}
+  - {fileID: 5030362838296548911}
+  - {fileID: 2925920866435180854}
+  - {fileID: 5030362838296548904}
+  - {fileID: 2925920866435180848}
+  - {fileID: 2925920866435180855}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &5030362838296548899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -860
+    y: 980
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548909}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackSide_2
+  playAnimation: 1
+--- !u!114 &5030362838296548897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -980
+    y: 800
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548909}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: AttackSide_1
+  playAnimation: 1
+--- !u!114 &2925920866435180916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -280
+    y: 300
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548882}
+  children:
+  - {fileID: 5030362838296548921}
+  - {fileID: 5030362838296548867}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &2925920866435180917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -1400
+    y: 480
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180905}
+  children:
+  - {fileID: 2925920866435180904}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 90
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 270
+--- !u!114 &2925920866435180904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: -1400
+    y: 539.3334
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180917}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 0
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: self
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2699643033137316122}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2925920866435180905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: -820
+    y: 419.33334
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548921}
+  children:
+  - {fileID: 2925920866435180917}
+  - {fileID: 2925920866435180906}
+  - {fileID: 2925920866435180910}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &2925920866435180906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -1220
+    y: 480
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180905}
+  children:
+  - {fileID: 2925920866435180907}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 90
+--- !u!114 &2925920866435180907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: -1220
+    y: 540
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180906}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 0
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: self
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2699643033137316122}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2925920866435180910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: -1000
+    y: 480
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180905}
+  children:
+  - {fileID: 2925920866435180911}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToTarget
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 270
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 360
+--- !u!114 &2925920866435180911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: -1000
+    y: 540
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180910}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 0
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: self
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2699643033137316122}
+        m_TargetAssemblyTypeName: SelectableUnit, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2925920866435180802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -1700
+    y: 900
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548869}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -1620
+    y: 1020
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548869}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -1580
+    y: 1080
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548869}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056841afaed742d4e909e76361b5173f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Repeater
+  rect:
+    serializedVersion: 2
+    x: 560
+    y: -280
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548965}
+  children:
+  - {fileID: 3970199221730793444}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  loops: 1
+  infinite: 1
+  breakOnFailure: 0
+--- !u!114 &2925920866435180854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -1200
+    y: 920
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548908}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -1039.3334
+    y: 1100
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548908}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -1100
+    y: 1040
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548908}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -960
+    y: 860
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548909}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -920
+    y: 920
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548909}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -800
+    y: 1040
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548909}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -760
+    y: 1100
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548909}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -680
+    y: 880
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548905}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -640
+    y: 940
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548905}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -540
+    y: 1060
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548905}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -480
+    y: 1119.3334
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548905}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -300
+    y: 860
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548918}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -240
+    y: 920
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548918}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.1
+--- !u!114 &2925920866435180804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -140
+    y: 1060
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548918}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5889237f45db09343984da0aeea5007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Make Fight Damage
+  rect:
+    serializedVersion: 2
+    x: -80
+    y: 1120
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548918}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  self:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 2699643033137316122}
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
+  range:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: DamageRange
+    constantValue: 1.3
+--- !u!114 &2925920866435180840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae15c5e6bcb1714080f2e8296c3d17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: isDead
+  val: 0
+--- !u!114 &2925920866435180841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534e3ec7de6cd444e984c2e7f68e42e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Is Set Condition
+  rect:
+    serializedVersion: 2
+    x: -1216
+    y: -231.06668
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548966}
+  children:
+  - {fileID: 2925920866435180842}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 3
+  invert: 0
+  type: 0
+  boolReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: isDead
+    constantValue: 0
+  objectReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  transformReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+--- !u!114 &2925920866435180842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: -1220
+    y: -160
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180841}
+  children:
+  - {fileID: 2925920866435180846}
+  - {fileID: 2925920866435180843}
+  - {fileID: 2925920866435180852}
+  - {fileID: 2925920866435180853}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &2925920866435180843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5ec1e88934bc645bc7ee2545360672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set Animation
+  rect:
+    serializedVersion: 2
+    x: -1280
+    y: -60
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180842}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  animator: {fileID: 2925920866435180926}
+  animationName: Dead
+  playAnimation: 1
+--- !u!114 &2925920866435180852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: -1120
+    y: -60
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180842}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 1.3
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &2925920866435180853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: -958.6666
+    y: -60
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180842}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 1
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: selfGameObject
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1706376184309410575}
+        m_TargetAssemblyTypeName: MobStatus, Assembly-CSharp
+        m_MethodName: die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2925920866435180847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdb61a66fcb1c549a844f093811f6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: selfGameObject
+  val: {fileID: 2699643033137316122}
+--- !u!114 &2925920866435180846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47807df5b5587e44bfd9aface30c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Invoke Unity Event
+  rect:
+    serializedVersion: 2
+    x: -1440
+    y: -60
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180842}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  type: 1
+  transformReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  gameObjectReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: selfGameObject
+    constantValue: {fileID: 0}
+  floatReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  boolReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  stringReference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 
+  vector3Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0, z: 0}
+  vector2Reference:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {x: 0, y: 0}
+  transformEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gameObjectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2795825795914695762}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5030362838296548970}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  intEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  boolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  vector3Event:
+    m_PersistentCalls:
+      m_Calls: []
+  vector2Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2925920866435180845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977f50c1dd12827418255bae0e3535ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.1
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &2925920866435180844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be6860a83fe93e4bbd689336d96bdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Damage
+  val: 0
+--- !u!114 &7256892681189949445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: HitRange
+  val: 0.7
+--- !u!114 &6589892018500537235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: FindRange
+  val: 9
+--- !u!114 &4101730710257006939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835a307e87add85499ee5131cb6624a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2886487879036039627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 1383.3333
+    y: 305.33337
+    width: 160
+    height: 45
+  parent: {fileID: 0}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.2
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &6685158513473663132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fe7bc6a9b18e148b82820c7c1c0a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Wait
+  rect:
+    serializedVersion: 2
+    x: 472
+    y: 860.0001
+    width: 160
+    height: 45
+  parent: {fileID: 0}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  time:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.5
+  randomDeviation: 0
+  continueOnRestart: 0
+--- !u!114 &7146030818809879339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: DamageRange
+  val: 0.7
+--- !u!114 &7307498144458518625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 852.0003
+    y: 183.33315
+    width: 160
+    height: 45
+  parent: {fileID: 5030362838296548966}
+  children:
+  - {fileID: 1383906260643409733}
+  - {fileID: 518736069609944619}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &3970199221730793444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092269cfc223d504e9c270e7bd661b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Detect Enemy 2D Service
+  rect:
+    serializedVersion: 2
+    x: 570.6669
+    y: -214.66684
+    width: 160
+    height: 45
+  parent: {fileID: 2925920866435180807}
+  children:
+  - {fileID: 5030362838296548878}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
+  range:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: FindRange
+    constantValue: 100
+  variableToSet:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: hero
+    constantValue: {fileID: 0}
+--- !u!114 &703369004819242755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc98ff6538275b4c9a8383882546ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: hero
+  val: {fileID: 0}
+--- !u!114 &1383906260643409733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f70905df72ab384f9121c4ae509804a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Calculate Angle Service
+  rect:
+    serializedVersion: 2
+    x: 622.66693
+    y: 252.66653
+    width: 160
+    height: 45
+  parent: {fileID: 7307498144458518625}
+  children:
+  - {fileID: 3648352951822923122}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  transform1:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: hero
+    constantValue: {fileID: 0}
+  transform2:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: self
+    constantValue: {fileID: 0}
+  angleVariable:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: angleToHero
+    constantValue: 0
+--- !u!114 &518736069609944619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2659d9740e09744b583d40f78bde8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Calculate Distance Service
+  rect:
+    serializedVersion: 2
+    x: 1000.66693
+    y: 249.3333
+    width: 160
+    height: 45
+  parent: {fileID: 7307498144458518625}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  interval: 1
+  randomDeviation: 0
+  callOnEnter: 1
+  transform1:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: hero
+    constantValue: {fileID: 0}
+  transform2:
+    useConstant: 0
+    mode: 0
+    blackboard: {fileID: 5030362838296548891}
+    key: self
+    constantValue: {fileID: 0}
+  variable:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 5030362838296548891}
+    key: distanceToHero
+    constantValue: 0
+--- !u!114 &3648352951822923122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: 622.6668
+    y: 314.6666
+    width: 160
+    height: 45
+  parent: {fileID: 1383906260643409733}
+  children:
+  - {fileID: 2284937778042325820}
+  - {fileID: 2684140040009226903}
+  - {fileID: 5223278280262131591}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &4928987832541198124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: angleToHero
+  val: 0
+--- !u!114 &4510937369678310616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: distanceToHero
+  val: 0
+--- !u!114 &2284937778042325820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: 440
+    y: 400.66653
+    width: 160
+    height: 45
+  parent: {fileID: 3648352951822923122}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 1
+--- !u!114 &2684140040009226903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: 618.6666
+    y: 400.6665
+    width: 160
+    height: 45
+  parent: {fileID: 3648352951822923122}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 1
+--- !u!114 &5223278280262131591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699643033137316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5172afae8648fce408d5079ceb7bdb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: InRange Condition
+  rect:
+    serializedVersion: 2
+    x: 799.33325
+    y: 401.33316
+    width: 160
+    height: 45
+  parent: {fileID: 3648352951822923122}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 0
+  type: 0
+  floatValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  intValue:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  minRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0
+  maxRange:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 1
+--- !u!1 &5030362836447183615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5030362836447183614}
+  - component: {fileID: 5030362836447183613}
+  m_Layer: 0
+  m_Name: SelectionSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5030362836447183614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030362836447183615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2925920866435180927}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5030362836447183613
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030362836447183615}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7734ccd4116b7db48afa1ebba00eb014, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 324573977
+  m_SortingLayer: 2
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: fd3b419fa4a9d614daf6ff3f2a1bd36d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.31}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0

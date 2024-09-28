@@ -41,17 +41,17 @@ public class LevelUpUI : MonoBehaviour
         {
             if (i < spotLevelUpUIElements.Length)
             {
-                GameObject spawnedElement = Instantiate(selectedElements[i], spotLevelUpUIElements[i]);
-                int value = GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().getLevelUpList()[spawnedElement.GetComponent<Upgrade>().GetIndex()];
+                GameObject spawnedElement = Instantiate(selectedElements[i], spotLevelUpUIElements[i].transform);
+                int index = spawnedElement.GetComponent<Upgrade>().GetIndex();
+                int value = GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().getLevelUpList()[index];
                 spawnedElement.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText("Level:\n" + (value + 1).ToString());
-                spotLevelUpUIElements[i].GetComponent<Button>().onClick.AddListener(() => OnSelectOptionLevelUp(spawnedElement.GetComponent<Upgrade>().GetIndex()));
+                spotLevelUpUIElements[i].GetComponent<Button>().onClick.AddListener(() => OnSelectOptionLevelUp(index));
             }
         }
     }
     public void LevelUp()
     {
         PauseGameManager.instance.PauseGame();
-
         SpawnRandomElements();
         levelUpUI.SetActive(true);
     }
