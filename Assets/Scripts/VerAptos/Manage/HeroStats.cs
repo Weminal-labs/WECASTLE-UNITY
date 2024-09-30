@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,7 @@ public class HeroStats : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Slider healthEffectSlider;
     [SerializeField] private Slider expSlider;
+    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private LevelUpUI levelUpUI;
 
     private void Start()
@@ -73,7 +75,7 @@ public class HeroStats : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Hero is dead");
+            Die();
         }
         if (currentHealth > maxHealth)
         {
@@ -89,6 +91,8 @@ public class HeroStats : MonoBehaviour
         {
             exp = 0;
             expToNextLevel *= 2;
+            level++;
+            levelText.SetText("Lv:\n" + level);
             levelUpUI.LevelUp();
         }
         SetupExpSlider();
@@ -127,5 +131,9 @@ public class HeroStats : MonoBehaviour
     public List<int> getLevelUpList()
     {
         return levelUpList;
+    }
+    public void Die()
+    {
+        this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Death");
     }
 }

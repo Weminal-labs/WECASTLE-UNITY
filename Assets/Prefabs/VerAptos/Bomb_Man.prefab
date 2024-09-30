@@ -2477,6 +2477,7 @@ MonoBehaviour:
   damage: 100
   speed: 6
   exp: 5
+  type: 1
 --- !u!114 &3691360801170504054
 MonoBehaviour:
   m_ObjectHideFlags: 0

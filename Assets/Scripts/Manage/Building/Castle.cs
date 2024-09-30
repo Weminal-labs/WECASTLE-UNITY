@@ -44,7 +44,6 @@ public class Castle : MonoBehaviour
             mob.SetActive(true);
             mob.GetComponent<MobStatus>().mobOutBuilding();
         }
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().loseGame();
         Instantiate(destroyCastle, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }

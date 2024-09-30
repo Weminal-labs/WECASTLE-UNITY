@@ -23,6 +23,17 @@ public class SpawnEnemy : MonoBehaviour
     {
         while (true)
         {
+            if(VerAptosController.instance != null)
+            {
+                if(VerAptosController.instance.wave >= 10)
+                {
+                    spawnInterval = 0.2f;
+                }
+                else
+                {
+                    spawnInterval = 5.0f - VerAptosController.instance.wave*0.5f;
+                }
+            }
             yield return new WaitForSeconds(spawnInterval);
 
             // Randomly select an enemy prefab

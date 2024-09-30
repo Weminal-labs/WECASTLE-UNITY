@@ -10,7 +10,8 @@ public class EnemyControllerVerAptos : MonoBehaviour
     private int curHealth, maxHealth, damage, speed, exp;
 
 
-
+    [SerializeField]
+    private int type;
     Blackboard blackboard;
     BoolVariable isDead;
     IntVariable blackBoardDamage;
@@ -45,14 +46,14 @@ public class EnemyControllerVerAptos : MonoBehaviour
 
     public int getDamage()
     {
-        return damage;
+        return damage*VerAptosController.instance.wave;
     }
 
     public void takeDame(int damage)
     {
         print(damage);
 
-        if (curHealth - damage < 0)
+        if (curHealth - damage <= 0)
         {
             isDead.Value = true;
         }
@@ -69,7 +70,7 @@ public class EnemyControllerVerAptos : MonoBehaviour
     }
     public void die()
     {
-
+        VerAptosController.instance.updatePoints(type);
         Destroy(this.gameObject);
     }
 

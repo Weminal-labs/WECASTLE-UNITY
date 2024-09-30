@@ -26,10 +26,10 @@ public class DarkBolt : MonoBehaviour
                 float distance = Vector3.Distance(pos, hitCollider.transform.position);
                 int damage = GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().GetAttack();
                 int levelSkill = GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().getLevelUpList()[3];
-                float actualDamage = damage * levelSkill;
+                int actualDamage = damage * levelSkill;
 
                 // Apply damage to the enemy
-                enemyHealth.takeDame((int)actualDamage);
+                enemyHealth.takeDame(actualDamage);
             }
         }
     }

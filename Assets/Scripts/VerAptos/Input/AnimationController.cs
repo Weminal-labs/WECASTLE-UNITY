@@ -31,4 +31,8 @@ public class AnimationController : MonoBehaviour
     {
         anim.SetFloat("Speed", speed);
     }
+    public void SetLoseScreen()
+    {
+        VerAptosController.instance.ShowLoseScreen();
+    }
 }

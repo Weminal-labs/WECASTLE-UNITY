@@ -97,4 +97,7 @@ public class TopDownController : MonoBehaviour
     {
         isAttack = attack;
     }
+    public Vector3 GetDirection(){
+        return new Vector3(movement.x, movement.y, 0);
+    }
 }
