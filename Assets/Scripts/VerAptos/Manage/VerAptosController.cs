@@ -67,8 +67,15 @@ public class VerAptosController : MonoBehaviour
 
     public void updatePoints(int type)
     {
-        int calPoints = type * 4 +1;
-        points += calPoints;
+        if(type == -1)
+        {
+            points += 300;
+        }
+        else
+        {
+            int calPoints = type * 4 +1;
+            points += calPoints;
+        }
     }
     [DllImport("__Internal")]
     public static extern void PushRewardForPlayer(int Points);

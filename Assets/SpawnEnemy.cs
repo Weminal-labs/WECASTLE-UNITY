@@ -7,10 +7,16 @@ public class SpawnEnemy : MonoBehaviour
     private GameObject[] enemyPrefabs; // Array to hold the enemy prefabs
 
     [SerializeField]
+    private GameObject[] bossPrefabs;
+    
+    [SerializeField]
     private float spawnInterval = 5.0f; // Time interval between spawns
 
     [SerializeField]
     private BoxCollider[] spawnArea; // BoxCollider to define the spawn area
+
+    [SerializeField]
+    private bool bossSpawned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,13 +31,24 @@ public class SpawnEnemy : MonoBehaviour
         {
             if(VerAptosController.instance != null)
             {
-                if(VerAptosController.instance.wave >= 10)
+                if(VerAptosController.instance.wave >= 5)
                 {
-                    spawnInterval = 0.2f;
+                    spawnInterval = 3f;
+                    if(!bossSpawned)
+                    {
+                        bossSpawned=true;
+                        // Get a random position within the BoxCollider
+                        int randomBossSpawn = Random.Range(0, spawnArea.Length);
+
+                        Vector3 spawnBossPosition = GetRandomPositionInBoxCollider(spawnArea[randomBossSpawn]);
+
+                        // Instantiate the enemy at the random position
+                        Instantiate(bossPrefabs[0], spawnBossPosition, Quaternion.identity);
+                    }
                 }
                 else
                 {
-                    spawnInterval = 5.0f - VerAptosController.instance.wave*0.5f;
+                    spawnInterval = 5.0f - VerAptosController.instance.wave*0.25f;
                 }
             }
             yield return new WaitForSeconds(spawnInterval);

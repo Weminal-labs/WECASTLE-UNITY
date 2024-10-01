@@ -119267,12 +119267,15 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 5025354800224441165, guid: 1c499858722796142932c749f361d556, type: 3}
   - {fileID: 3866873906404299025, guid: e32b0aaf38dff6749ae0ff31c0debdfb, type: 3}
+  bossPrefabs:
+  - {fileID: 7045611887057836927, guid: 81eb10db0be70984d96181380b6a83ec, type: 3}
   spawnInterval: 5
   spawnArea:
   - {fileID: 577612715}
   - {fileID: 685641041}
   - {fileID: 1032916818}
   - {fileID: 2031860529}
+  bossSpawned: 0
 --- !u!1 &606255032
 GameObject:
   m_ObjectHideFlags: 0
@@ -124169,7 +124172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1
-  attackAngle: 80
+  attackAngle: 120
   attackCooldown: 2
   attackDuration: 0.5
   enemyLayer:
@@ -124407,7 +124410,7 @@ MonoBehaviour:
   isFacingRight: 1
   isAttack: 0
   attackRange: 1.2
-  attackAngle: 120
+  attackAngle: 180
   attackCooldown: 1
   enemyLayer:
     serializedVersion: 2

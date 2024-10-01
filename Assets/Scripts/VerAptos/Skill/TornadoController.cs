@@ -76,7 +76,7 @@ public class TornadoController : MonoBehaviour
             {
                 if (hitCollider.TryGetComponent(out EnemyControllerVerAptos enemy))
                 {
-                    enemy.takeDame(damageAmount+5*LevelTornado());
+                    enemy.takeDame(damageAmount+50*LevelTornado());
                     damagedEnemies.Add(hitCollider);
                 }
             }

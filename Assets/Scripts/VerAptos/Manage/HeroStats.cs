@@ -118,7 +118,12 @@ public class HeroStats : MonoBehaviour
         switch (index)
         {
             case 0:
-                maxHealth += 50;
+                maxHealth += levelUpList[0] * 50;
+                currentHealth = maxHealth;
+                healthSlider.maxValue = maxHealth;
+                healthEffectSlider.maxValue = maxHealth;
+                healthSlider.value = maxHealth;
+                healthEffectSlider.value = maxHealth;
                 break;
             case 1:
                 attack += 10;
