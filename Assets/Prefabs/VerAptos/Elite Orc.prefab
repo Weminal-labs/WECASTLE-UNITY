@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 7045611887057836871}
+  selectedEditorNode: {fileID: 7045611887057836872}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1180
-    y: 1020
+    y: 1019.2
     width: 160
     height: 44
   parent: {fileID: 7045611887057836870}
@@ -1458,8 +1458,8 @@ MonoBehaviour:
     height: 44
   parent: {fileID: 7045611887057836871}
   children:
-  - {fileID: 7045611887057836864}
   - {fileID: 7045611887057836880}
+  - {fileID: 7045611887057836864}
   - {fileID: 7045611887057836909}
   - {fileID: 7045611887057836899}
   - {fileID: 7045611887057836716}
@@ -1516,7 +1516,7 @@ MonoBehaviour:
   title: Set Animation
   rect:
     serializedVersion: 2
-    x: 540
+    x: 500
     y: 1380
     width: 160
     height: 44
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 560
+    x: 500
     y: 1440
     width: 160
     height: 44
@@ -2487,7 +2487,7 @@ MonoBehaviour:
     mode: 0
     blackboard: {fileID: 0}
     key: 
-    constantValue: 0.5
+    constantValue: 0.2
   randomDeviation: 0
   continueOnRestart: 0
 --- !u!114 &7045611887057836898
@@ -2601,8 +2601,8 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 982.6665
-    y: 401.33356
+    x: 980
+    y: 400
     width: 160
     height: 44
   parent: {fileID: 7045611887057836893}
@@ -2846,7 +2846,7 @@ MonoBehaviour:
   title: Wait
   rect:
     serializedVersion: 2
-    x: 520
+    x: 500
     y: 1320
     width: 160
     height: 44

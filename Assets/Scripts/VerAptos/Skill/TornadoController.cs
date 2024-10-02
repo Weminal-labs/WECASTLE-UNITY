@@ -11,8 +11,8 @@ public class TornadoController : MonoBehaviour
     [SerializeField] private float lifetime = 2f;
 
     [Header("Damage Settings")]
-    [SerializeField] private int damageAmount = 10;
-    [SerializeField] private float damageInterval = 1f;
+    [SerializeField] private int damageAmount = 15;
+    [SerializeField] private float damageInterval = 0.2f;
     [SerializeField] private LayerMask enemyLayer;
 
     [SerializeField] private Vector3 moveDirection;
@@ -48,12 +48,12 @@ public class TornadoController : MonoBehaviour
         MoveTornado();
 
         // Deal damage if it's time
-        if (damageTimer >= damageInterval)
-        {
-            DealDamageToEnemies();
-            damageTimer = 0f;
-            damagedEnemies.Clear();
-        }
+        DealDamageToEnemies();
+        // if (damageTimer >= damageInterval)
+        // {
+        //     damageTimer = 0f;
+        //     damagedEnemies.Clear();
+        // }
     }
 
     private void MoveTornado()
@@ -76,7 +76,7 @@ public class TornadoController : MonoBehaviour
             {
                 if (hitCollider.TryGetComponent(out EnemyControllerVerAptos enemy))
                 {
-                    enemy.takeDame(damageAmount+50*LevelTornado());
+                    enemy.takeDame(damageAmount+5*LevelTornado());
                     damagedEnemies.Add(hitCollider);
                 }
             }

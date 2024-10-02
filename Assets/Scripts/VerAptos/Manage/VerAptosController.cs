@@ -9,10 +9,11 @@ public class VerAptosController : MonoBehaviour
     public int wave = 1;
     private int points;
     
-    [SerializeField] private float waveInterval = 15f; // Time between waves in seconds
+    [SerializeField] private float waveInterval = 20f; // Time between waves in seconds
 
     public GameObject loseScreen;
     public TextMeshProUGUI waveText;
+    public TextMeshProUGUI waveTimeText;
     public TextMeshProUGUI waveLoseText;
     public TextMeshProUGUI pointsText;
 
@@ -39,8 +40,17 @@ public class VerAptosController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(waveInterval);
-            IncreaseWave();
+            yield return new WaitForSeconds(1.0f);
+            if(waveInterval>0)
+            {
+                waveInterval -= 1.0f;
+                waveTimeText.SetText("00:"+waveInterval.ToString());
+            }
+            else
+            {
+                IncreaseWave();
+                waveInterval = 20.0f;
+            }
         }
     }
 

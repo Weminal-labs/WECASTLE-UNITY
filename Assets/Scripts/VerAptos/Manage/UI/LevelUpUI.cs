@@ -45,6 +45,7 @@ public class LevelUpUI : MonoBehaviour
                 int index = spawnedElement.GetComponent<Upgrade>().GetIndex();
                 int value = GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().getLevelUpList()[index];
                 spawnedElement.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText("Level:\n" + (value + 1).ToString());
+                spotLevelUpUIElements[i].GetComponent<Button>().onClick.RemoveAllListeners();
                 spotLevelUpUIElements[i].GetComponent<Button>().onClick.AddListener(() => OnSelectOptionLevelUp(index));
             }
         }

@@ -46,14 +46,23 @@ public class SwordMaster : MonoBehaviour
         isAttacking = true;
         topDownController.SetAttack(true);
         lastAttackTime = Time.time;
+        if (heroStats.getLevelUpList()[2] >= 10)
+        {
+            attackCooldown = 0.1f;
+            attackDuration = 0.1f;
+        }
+        else
+        {
+            attackCooldown = 2f - 0.1f * heroStats.getLevelUpList()[2];
+            attackDuration = 0.5f - 0.05f*heroStats.getLevelUpList()[2];
+        }
 
         animationController.setBeginAttackAnimation();
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(attackDuration/2);
         DealDamageToEnemiesInCone();
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(attackDuration/2);
         DealDamageToEnemiesInCone();
         yield return new WaitForSeconds(attackDuration);
-
         isAttacking = false;
         topDownController.SetAttack(false);
     }
@@ -66,7 +75,9 @@ public class SwordMaster : MonoBehaviour
 
     private void DealDamageToEnemiesInCone()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRange, enemyLayer);
+        Vector2 pos = transform.position;
+        pos.x -= 0.1f;
+        Collider[] hitColliders = Physics.OverlapSphere(pos, attackRange, enemyLayer);
         foreach (var hitCollider in hitColliders)
         {
             if (IsInAttackCone(hitCollider.transform.position))
@@ -97,8 +108,10 @@ public class SwordMaster : MonoBehaviour
         Vector3 leftDirection = Quaternion.Euler(0, 0, attackAngle / 2) * attackDirection;
         Vector3 rightDirection = Quaternion.Euler(0, 0, -attackAngle / 2) * attackDirection;
 
-        Gizmos.DrawLine(transform.position, transform.position + leftDirection * attackRange);
-        Gizmos.DrawLine(transform.position, transform.position + rightDirection * attackRange);
+        Vector3 pos = transform.position;
+        pos.x -= 0.1f;
+        Gizmos.DrawLine(pos, pos + leftDirection * attackRange);
+        Gizmos.DrawLine(pos, pos + rightDirection * attackRange);
 
         int segments = 20;
         Vector3 previousPoint = transform.position + rightDirection * attackRange;

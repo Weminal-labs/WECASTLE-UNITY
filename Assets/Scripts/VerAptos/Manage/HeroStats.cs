@@ -24,12 +24,22 @@ public class HeroStats : MonoBehaviour
     [SerializeField] private Slider expSlider;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private LevelUpUI levelUpUI;
+    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private TextMeshProUGUI extText;
 
     private void Start()
     {
         InitializeHealth();
         SetupHealthSliders();
         SetupExpSlider();
+        if (extText != null)
+        {
+            extText.SetText(exp + " / " + expToNextLevel);
+        }
+        if (healthText != null)
+        {
+            healthText.SetText(currentHealth + " / " + maxHealth);
+        }
     }
 
     private void InitializeHealth()
@@ -58,6 +68,10 @@ public class HeroStats : MonoBehaviour
             healthEffectSlider.maxValue = maxHealth;
             healthEffectSlider.value = currentHealth;
         }
+        if (healthText != null)
+        {
+            healthText.SetText(currentHealth + " / " + maxHealth);
+        }
     }
 
     public void setHealth(int amount)
@@ -81,6 +95,10 @@ public class HeroStats : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+        if (healthText != null)
+        {
+            healthText.SetText(currentHealth + " / " + maxHealth);
+        }
         StartCoroutine(UpdateHealthEffectSlider());
     }
 
@@ -94,6 +112,10 @@ public class HeroStats : MonoBehaviour
             level++;
             levelText.SetText("Lv:\n" + level);
             levelUpUI.LevelUp();
+        }
+        if(extText != null)
+        {
+            extText.SetText(exp + " / " + expToNextLevel);
         }
         SetupExpSlider();
     }
@@ -124,6 +146,10 @@ public class HeroStats : MonoBehaviour
                 healthEffectSlider.maxValue = maxHealth;
                 healthSlider.value = maxHealth;
                 healthEffectSlider.value = maxHealth;
+                if (healthText != null)
+                {
+                    healthText.SetText(currentHealth + " / " + maxHealth);
+                }
                 break;
             case 1:
                 attack += 10;

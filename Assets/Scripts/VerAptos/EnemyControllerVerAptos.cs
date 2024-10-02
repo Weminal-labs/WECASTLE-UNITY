@@ -22,8 +22,8 @@ public class EnemyControllerVerAptos : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
-        maxHealth += 5 * VerAptosController.instance.wave;
-        curHealth = maxHealth;
+        maxHealth += 20 * VerAptosController.instance.wave;
+        curHealth += maxHealth;
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");

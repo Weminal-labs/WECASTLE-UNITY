@@ -34,15 +34,16 @@ public class TopDownController : MonoBehaviour
         {
             return;
         }
-        if (!isAttack)
-        {
-            GetInput();
-        }
-        else
-        {
-            // Reset movement when attacking
-            movement = Vector2.zero;
-        }
+        GetInput();
+        // if (!isAttack)
+        // {
+        //     GetInput();
+        // }
+        // else
+        // {
+        //     // Reset movement when attacking
+        //     movement = Vector2.zero;
+        // }
     }
 
     private void FixedUpdate()
@@ -59,7 +60,7 @@ public class TopDownController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (joystick.joyStickVec != Vector2.zero && !isAttack)
+        if (joystick.joyStickVec != Vector2.zero) //&& !isAttack)
         {
             movement = joystick.joyStickVec;
         }
@@ -69,7 +70,7 @@ public class TopDownController : MonoBehaviour
 
     private void Move()
     {
-        if (movement != Vector2.zero && !isAttack)
+        if (movement != Vector2.zero) //&& !isAttack)
         {
             Vector3 movement3D = new Vector3(movement.x, movement.y, 0);
             rb.MovePosition(rb.position + movement3D * stats.GetSpeed() * Time.fixedDeltaTime);
