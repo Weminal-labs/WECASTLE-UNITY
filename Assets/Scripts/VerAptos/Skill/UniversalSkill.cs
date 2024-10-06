@@ -48,14 +48,19 @@ public class UniversalSkill : MonoBehaviour
     {
         while (true)
         {
-            if(LevelDarkBolt() > 10){
+            int numberBolt = LevelDarkBolt();
+            if(numberBolt > 10){
                 spawnIntervalDarkBolt = 1f; 
             }else{
-                spawnIntervalDarkBolt = 10f - LevelDarkBolt()*0.5f;
+                spawnIntervalDarkBolt = 10f - numberBolt*0.5f;
             }
             yield return new WaitForSeconds(spawnIntervalDarkBolt);
             if(DarkBoltActive){
-                for (int i = 0; i < boltsPerSpawn*LevelDarkBolt(); i++)
+                if (numberBolt > 5)
+                {
+                    numberBolt = 5;
+                }
+                for (int i = 0; i < boltsPerSpawn*numberBolt; i++)
                 {
                     SpawnDarkBolt();
                     yield return new WaitForSeconds(0.5f);

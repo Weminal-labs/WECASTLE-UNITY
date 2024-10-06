@@ -48,13 +48,11 @@ public class EnemyControllerVerAptos : MonoBehaviour
 
     public int getDamage()
     {
-        return damage+3*VerAptosController.instance.wave;
+        return damage+5*VerAptosController.instance.wave;
     }
 
     public void takeDame(int damage)
     {
-        print(damage);
-
         if (curHealth - damage <= 0)
         {
             isDead.Value = true;

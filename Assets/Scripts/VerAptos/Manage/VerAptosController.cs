@@ -17,6 +17,16 @@ public class VerAptosController : MonoBehaviour
     public TextMeshProUGUI waveLoseText;
     public TextMeshProUGUI pointsText;
 
+    [Header("Place Holder")]
+    [SerializeField] LevelUpUI levelUpUI;
+    [SerializeField] Transform iconHolder;
+    [SerializeField] Transform playerPos;
+    [Header("List Replace")]
+    [SerializeField] GameObject[] listIcon;
+    [SerializeField] GameObject[] listMainSkill;
+    [SerializeField] GameObject[] listCharacter;
+    [Header("UI")]
+    [SerializeField] GameObject loadingScreen;
     private void Awake()
     {
         if (instance == null)
@@ -29,10 +39,14 @@ public class VerAptosController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SettingForGameOpen(1);
+        // loadingScreen.SetActive(true);
+        
     }
 
     private void Start()
     {
+        
         StartCoroutine(IncreaseWaveCoroutine());
     }
 
@@ -44,7 +58,7 @@ public class VerAptosController : MonoBehaviour
             if(waveInterval>0)
             {
                 waveInterval -= 1.0f;
-                waveTimeText.SetText("00:"+waveInterval.ToString());
+                waveTimeText.SetText(waveInterval.ToString());
             }
             else
             {
@@ -87,6 +101,25 @@ public class VerAptosController : MonoBehaviour
             points += calPoints;
         }
     }
+
+
+    public void SettingForGameOpen(int id)
+    {
+        levelUpUI.levelUpUIElements[2] = listMainSkill[id];
+        Instantiate(listIcon[id], iconHolder);
+        Instantiate(listCharacter[id], playerPos);
+        loadingScreen.SetActive(false);
+    }
+
     [DllImport("__Internal")]
-    public static extern void PushRewardForPlayer(int Points);
+    public static extern void PushRewardForPlayer(int points);
+
+    public static void PushRewardForPlayerJS(int points)
+    {
+        #if UNITY_WEBGL && !UNITY_EDITOR
+            PushRewardForPlayer(points);
+        #else
+            Debug.Log($"PushRewardForPlayer called with {points} points");
+        #endif
+    }
 }

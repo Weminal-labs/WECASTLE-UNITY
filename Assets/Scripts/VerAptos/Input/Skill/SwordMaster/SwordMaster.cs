@@ -48,8 +48,8 @@ public class SwordMaster : MonoBehaviour
         lastAttackTime = Time.time;
         if (heroStats.getLevelUpList()[2] >= 10)
         {
-            attackCooldown = 0.1f;
-            attackDuration = 0.1f;
+            attackCooldown = 0.15f;
+            attackDuration = 0.15f;
         }
         else
         {

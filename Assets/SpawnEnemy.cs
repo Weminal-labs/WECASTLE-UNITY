@@ -31,7 +31,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             if(VerAptosController.instance != null)
             {
-                if(VerAptosController.instance.wave >= 15)
+                if(VerAptosController.instance.wave >= 5)
                 {
                     spawnInterval = 1f;
                     if(!bossSpawned)

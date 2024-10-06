@@ -82,14 +82,14 @@ public class HeroStats : MonoBehaviour
         }
         currentHealth += amount;
 
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
         if (healthSlider != null)
         {
             healthSlider.value = currentHealth;
-        }
-
-        if (currentHealth <= 0)
-        {
-            Die();
         }
         if (currentHealth > maxHealth)
         {
@@ -152,7 +152,7 @@ public class HeroStats : MonoBehaviour
                 }
                 break;
             case 1:
-                attack += 10;
+                attack += 20;
                 break;
             default:
                 break;
@@ -166,5 +166,25 @@ public class HeroStats : MonoBehaviour
     public void Die()
     {
         this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("Death");
+    }
+    public void setHealthSkill(int amount)
+    {
+        if(currentHealth - amount <= 0)
+        {
+            currentHealth = 1;
+        }
+        else
+        {
+            currentHealth -= amount;
+        }
+        if (healthText != null)
+        {
+            healthText.SetText(currentHealth + " / " + maxHealth);
+        }
+        StartCoroutine(UpdateHealthEffectSlider());
+    }
+    public int getMaxHealth()
+    {
+        return maxHealth;
     }
 }

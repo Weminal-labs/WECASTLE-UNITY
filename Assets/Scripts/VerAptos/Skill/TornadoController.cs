@@ -11,13 +11,11 @@ public class TornadoController : MonoBehaviour
     [SerializeField] private float lifetime = 2f;
 
     [Header("Damage Settings")]
-    [SerializeField] private int damageAmount = 15;
     [SerializeField] private float damageInterval = 0.2f;
     [SerializeField] private LayerMask enemyLayer;
 
     [SerializeField] private Vector3 moveDirection;
     private float lifetimeTimer;
-    private float damageTimer;
     private HashSet<Collider> damagedEnemies = new HashSet<Collider>();
     private Rigidbody2D rb;
 
@@ -29,14 +27,12 @@ public class TornadoController : MonoBehaviour
     {
         moveDirection = direction.normalized;
         lifetimeTimer = 0f;
-        damageTimer = 0f;
     }
 
     private void Update()
     {
         // Update timers
         lifetimeTimer += Time.deltaTime;
-        damageTimer += Time.deltaTime;
 
         if (lifetimeTimer >= lifetime)
         {
@@ -47,13 +43,8 @@ public class TornadoController : MonoBehaviour
         // Move and rotate the tornado
         MoveTornado();
 
-        // Deal damage if it's time
+        // Deal damage
         DealDamageToEnemies();
-        // if (damageTimer >= damageInterval)
-        // {
-        //     damageTimer = 0f;
-        //     damagedEnemies.Clear();
-        // }
     }
 
     private void MoveTornado()
@@ -69,21 +60,19 @@ public class TornadoController : MonoBehaviour
     private void DealDamageToEnemies()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, circularMotionRadius, enemyLayer);
+        // Cache the HeroStats component
+        HeroStats heroStats = GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>();
+        int damage = heroStats.GetAttack();
+        int levelSkill = heroStats.getLevelUpList()[4];
+        int totalDamage = damage * levelSkill;
 
         foreach (var hitCollider in hitColliders)
         {
-            if (!damagedEnemies.Contains(hitCollider))
+            if (hitCollider.TryGetComponent(out EnemyControllerVerAptos enemy))
             {
-                if (hitCollider.TryGetComponent(out EnemyControllerVerAptos enemy))
-                {
-                    enemy.takeDame(damageAmount+5*LevelTornado());
-                    damagedEnemies.Add(hitCollider);
-                }
+                enemy.takeDame(totalDamage);
             }
         }
-    }
-    private int LevelTornado(){
-        return GameObject.FindGameObjectWithTag("Ally").GetComponent<HeroStats>().getLevelUpList()[4]-1;
     }
 
     private void OnDrawGizmosSelected()

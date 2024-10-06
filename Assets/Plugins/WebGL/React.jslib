@@ -1,9 +1,7 @@
 mergeInto(LibraryManager.library, {
-  PushRewardForPlayer : function(number){
-     try {
-      window.dispatchReactUnityEvent("PushRewardForPlayer", number);
-    } catch (e) {
-      console.warn("Failed to dispatch event");
-    }
+  PushRewardForPlayer: function (points) {
+    const data = { Score: points };
+    const event = new CustomEvent("PushRewardForPlayerEvent", { detail: data });
+    window.dispatchEvent(event);
   },
 });

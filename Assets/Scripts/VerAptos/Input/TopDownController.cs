@@ -25,11 +25,15 @@ public class TopDownController : MonoBehaviour
         isAttack = false;
         rb = GetComponent<Rigidbody>();
         stats = GetComponent<HeroStats>();
-        animationController = transform.GetChild(0).GetComponent<AnimationController>();
+        
     }
 
     private void Update()
     {
+        if (animationController == null)
+        {
+            animationController = transform.GetChild(0).GetComponent<AnimationController>();
+        }
         if (PauseGameManager.instance.IsPaused())
         {
             return;

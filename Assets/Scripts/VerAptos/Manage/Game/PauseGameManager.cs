@@ -37,7 +37,7 @@ public class PauseGameManager : MonoBehaviour
     // Pause game
     public void PauseGame()
     {
-        Time.timeScale = 0.01f;  // Freeze the game
+        Time.timeScale = 0f;  // Freeze the game
 
         isPaused = true;
     }
