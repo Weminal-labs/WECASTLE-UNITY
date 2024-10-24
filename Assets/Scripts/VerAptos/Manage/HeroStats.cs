@@ -85,7 +85,6 @@ public class HeroStats : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            Die();
         }
         if (healthSlider != null)
         {
@@ -98,6 +97,11 @@ public class HeroStats : MonoBehaviour
         if (healthText != null)
         {
             healthText.SetText(currentHealth + " / " + maxHealth);
+        }
+        if(currentHealth<=0)
+        {
+            Die();
+            VerAptosController.instance.ShowLoseScreen();
         }
         StartCoroutine(UpdateHealthEffectSlider());
     }
@@ -140,7 +144,7 @@ public class HeroStats : MonoBehaviour
         switch (index)
         {
             case 0:
-                maxHealth += levelUpList[0] * 50;
+                maxHealth += levelUpList[0] * 20;
                 currentHealth = maxHealth;
                 healthSlider.maxValue = maxHealth;
                 healthEffectSlider.maxValue = maxHealth;
@@ -152,7 +156,7 @@ public class HeroStats : MonoBehaviour
                 }
                 break;
             case 1:
-                attack += 20;
+                attack += 10;
                 break;
             default:
                 break;

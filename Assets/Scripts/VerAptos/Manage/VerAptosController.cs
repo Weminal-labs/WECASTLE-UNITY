@@ -39,7 +39,7 @@ public class VerAptosController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        SettingForGameOpen(1);
+        SettingForGameOpen(0);
         // loadingScreen.SetActive(true);
         
     }
@@ -86,6 +86,11 @@ public class VerAptosController : MonoBehaviour
         loseScreen.SetActive(true);
         waveLoseText.SetText($"Wave: {wave}");
         pointsText.SetText($"Points: {points}");
+        StartCoroutine(updatePointsCoroutine());
+    }
+    public IEnumerator updatePointsCoroutine()
+    {
+        yield return new WaitForSeconds(1.0f);
         PushRewardForPlayer(points);
     }
 

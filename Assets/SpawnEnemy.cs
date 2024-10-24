@@ -18,6 +18,8 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField]
     private bool bossSpawned = false;
 
+    private int spawnLimit = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             if(VerAptosController.instance != null)
             {
-                if(VerAptosController.instance.wave >= 5)
+                if(VerAptosController.instance.wave >= 15)
                 {
                     spawnInterval = 1f;
                     if(!bossSpawned)
@@ -48,11 +50,16 @@ public class SpawnEnemy : MonoBehaviour
                 }
                 else
                 {
-                    spawnInterval = 5.0f - VerAptosController.instance.wave*0.3f;
+                    spawnInterval = 5.0f - VerAptosController.instance.wave*0.6f;
                 }
             }
             yield return new WaitForSeconds(spawnInterval);
-            for (int i =0;i<VerAptosController.instance.wave;i++)
+            int spawn = spawnLimit;
+            if (VerAptosController.instance.wave < 10)
+            {
+                spawn = VerAptosController.instance.wave;
+            }
+            for (int i =0;i<spawn;i++)
             {
                 // Randomly select an enemy prefab
                 int randomIndex = Random.Range(0, enemyPrefabs.Length);

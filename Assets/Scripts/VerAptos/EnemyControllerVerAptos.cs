@@ -22,14 +22,20 @@ public class EnemyControllerVerAptos : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
-        maxHealth += 20 * VerAptosController.instance.wave;
-        curHealth += maxHealth;
+        calmaxHealth();
         blackboard = this.GetComponent<Blackboard>();
         isDead = blackboard.GetVariable<BoolVariable>("isDead");
         blackBoardDamage = blackboard.GetVariable<IntVariable>("Damage");
         blackBoardDamage.Value = damage;
     }
-
+    public void calmaxHealth()
+    {
+        for(int i = 0; i< VerAptosController.instance.wave; i++)
+        {
+            maxHealth += i*5;
+        }
+        curHealth = maxHealth;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -48,7 +54,7 @@ public class EnemyControllerVerAptos : MonoBehaviour
 
     public int getDamage()
     {
-        return damage+5*VerAptosController.instance.wave;
+        return damage+3*VerAptosController.instance.wave;
     }
 
     public void takeDame(int damage)

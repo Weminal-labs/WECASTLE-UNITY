@@ -33,7 +33,6 @@ public class AnimationController : MonoBehaviour
     }
     public void SetLoseScreen()
     {
-        VerAptosController.instance.ShowLoseScreen();
         Destroy(topDownController.gameObject);
     }
 }
