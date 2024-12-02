@@ -12,6 +12,8 @@ public class VerAptosController : MonoBehaviour
     [SerializeField] private float waveInterval = 20f; // Time between waves in seconds
 
     public GameObject loseScreen;
+    public GameObject loseIcon, winIcon;
+    public TextMeshProUGUI textResult;
     public TextMeshProUGUI waveText;
     public TextMeshProUGUI waveTimeText;
     public TextMeshProUGUI waveLoseText;
@@ -26,7 +28,9 @@ public class VerAptosController : MonoBehaviour
     [SerializeField] GameObject[] listMainSkill;
     [SerializeField] GameObject[] listCharacter;
     [Header("UI")]
-    [SerializeField] GameObject loadingScreen;
+    public GameObject loadingScreen;
+
+    public bool isDone;
     private void Awake()
     {
         if (instance == null)
@@ -39,15 +43,16 @@ public class VerAptosController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        SettingForGameOpen(0);
-        // loadingScreen.SetActive(true);
+        isDone = false;
+        /*SettingForGameOpen(0);*/
         
+
     }
 
     private void Start()
     {
-        
-        StartCoroutine(IncreaseWaveCoroutine());
+        GameCanPlay();/*
+        loadingScreen.SetActive(true);*/
     }
 
     private IEnumerator IncreaseWaveCoroutine()
@@ -62,6 +67,10 @@ public class VerAptosController : MonoBehaviour
             }
             else
             {
+                if (wave >= 15)
+                {
+                    break;
+                }
                 IncreaseWave();
                 waveInterval = 20.0f;
             }
@@ -72,7 +81,6 @@ public class VerAptosController : MonoBehaviour
     {
         wave++;
         waveText.SetText("Wave:\n" + wave);
-        // You can add any additional logic here that should occur when the wave increases
     }
 
     // You can keep the Update method if you need it for other purposes
@@ -84,12 +92,30 @@ public class VerAptosController : MonoBehaviour
     public void ShowLoseScreen()
     {
         loseScreen.SetActive(true);
+        loseIcon.SetActive(true);
+        textResult.SetText("You Lose");
         waveLoseText.SetText($"Wave: {wave}");
         pointsText.SetText($"Points: {points}");
-        StartCoroutine(updatePointsCoroutine());
+        if (!isDone)
+        {
+            StartCoroutine(updatePointsCoroutine());
+        }
+    }
+    public void ShowWinScreen()
+    {
+        loseScreen.SetActive(true);
+        winIcon.SetActive(true);
+        textResult.SetText("Victory");
+        waveLoseText.SetText($"Wave: {wave}");
+        pointsText.SetText($"Points: {points}");
+        if (!isDone)
+        {
+            StartCoroutine(updatePointsCoroutine());
+        }
     }
     public IEnumerator updatePointsCoroutine()
     {
+        isDone = true;
         yield return new WaitForSeconds(1.0f);
         PushRewardForPlayer(points);
     }
@@ -99,6 +125,7 @@ public class VerAptosController : MonoBehaviour
         if(type == -1)
         {
             points += 300;
+            ShowWinScreen();
         }
         else
         {
@@ -113,8 +140,13 @@ public class VerAptosController : MonoBehaviour
         levelUpUI.levelUpUIElements[2] = listMainSkill[id];
         Instantiate(listIcon[id], iconHolder);
         Instantiate(listCharacter[id], playerPos);
+        Time.timeScale = 1.0f;
+        StartCoroutine(IncreaseWaveCoroutine());
         loadingScreen.SetActive(false);
     }
+
+    [DllImport("__Internal")]
+    public static extern void GameCanPlay();
 
     [DllImport("__Internal")]
     public static extern void PushRewardForPlayer(int points);

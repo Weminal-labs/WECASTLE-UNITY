@@ -33,7 +33,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             if(VerAptosController.instance != null)
             {
-                if(VerAptosController.instance.wave >= 15)
+                if(VerAptosController.instance.wave % 5 == 0)
                 {
                     spawnInterval = 1f;
                     if(!bossSpawned)
@@ -45,12 +45,28 @@ public class SpawnEnemy : MonoBehaviour
                         Vector3 spawnBossPosition = GetRandomPositionInBoxCollider(spawnArea[randomBossSpawn]);
 
                         // Instantiate the enemy at the random position
-                        Instantiate(bossPrefabs[0], spawnBossPosition, Quaternion.identity);
+                        switch(VerAptosController.instance.wave)
+                        {
+                            case 5:
+                                Instantiate(bossPrefabs[0], spawnBossPosition, Quaternion.identity);
+                                break;
+                            case 10:
+                                Instantiate(bossPrefabs[1], spawnBossPosition, Quaternion.identity);
+                                break;
+                            case 15:
+                                Instantiate(bossPrefabs[2], spawnBossPosition, Quaternion.identity);
+                                StartCoroutine(LastChange());
+                                break;
+                            default:
+                                Instantiate(bossPrefabs[0], spawnBossPosition, Quaternion.identity);
+                                break;
+                        }
                     }
                 }
                 else
                 {
                     spawnInterval = 5.0f - VerAptosController.instance.wave*0.6f;
+                    bossSpawned = false;
                 }
             }
             yield return new WaitForSeconds(spawnInterval);
@@ -89,6 +105,12 @@ public class SpawnEnemy : MonoBehaviour
 
         // Convert local position to world position
         return boxCollider.transform.TransformPoint(randomPosition);
+    }
+    private IEnumerator LastChange()
+    {
+        yield return new WaitForSeconds(60f);
+        VerAptosController.instance.ShowLoseScreen();
+        Time.timeScale = 0f;
     }
 }
 
